@@ -11,7 +11,7 @@ export const VIDEO_CATALOGUE: VideoEntry[] = [
   {
     id: 'jq_M1qDhKnw',
     title: 'From Source to Self: A Spiritual Exploration of ! God, Consciousness , Frequency and more',
-    description: 'A reflective exploration of God, consciousness, free will, spiritual growth, and the soul’s journey beyond material life.',
+    description: "A reflective exploration of God, consciousness, free will, spiritual growth, and the soul's journey beyond material life.",
   },
 ];
 
