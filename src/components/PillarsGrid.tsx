@@ -82,12 +82,12 @@ function PillarCard({
 }) {
   return (
     <div
-      className={`glass-card rounded-2xl p-8 md:p-10 transition-all duration-700 hover:border-gold/20 hover:-translate-y-1 hover:bg-white/[0.05] group ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      className={`relative glass-card rounded-2xl p-8 md:p-10 transition-all duration-700 ${
+        visible ? 'opacity-50 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-12 h-12 rounded-xl bg-gold/[0.08] flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-gold/[0.12]">
+      <div className="w-12 h-12 rounded-xl bg-gold/[0.08] flex items-center justify-center mb-8">
         <Icon className="w-5 h-5 text-gold" strokeWidth={1.5} />
       </div>
 
@@ -100,8 +100,14 @@ function PillarCard({
       </p>
 
       <div className="mt-8 pt-6 border-t border-white/[0.05]">
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold/40 gold-underline pb-0.5 cursor-pointer transition-colors duration-300 hover:text-gold/70">
+        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold/40">
           Explore
+        </span>
+      </div>
+
+      <div className="absolute inset-0 rounded-2xl bg-black/50 backdrop-blur-[2px] flex items-center justify-center">
+        <span className="font-mono text-xs uppercase tracking-[0.3em] text-gold/70 border border-gold/30 px-5 py-2.5 rounded-full">
+          Coming Soon
         </span>
       </div>
     </div>
