@@ -65,6 +65,31 @@
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out both;
+}
+
+.animate-modal-in {
+  animation: modalIn 0.3s ease-out both;
+  animation-delay: 0.05s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

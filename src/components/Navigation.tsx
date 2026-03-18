@@ -4,10 +4,10 @@ import { Hexagon } from 'lucide-react';
 const NAV_LINKS = [
   { label: 'Library', href: '#' },
   { label: 'Philosophy', href: '#manifesto' },
-  { label: 'Webinars', href: '#' },
+  { label: 'Webinars', href: '#', action: 'webinars' as const },
 ];
 
-export default function Navigation() {
+export default function Navigation({ onWebinarsClick }: { onWebinarsClick: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(false);
 
@@ -53,6 +53,11 @@ export default function Navigation() {
             <a
               key={link.label}
               href={link.href}
+              onClick={
+                'action' in link && link.action === 'webinars'
+                  ? (e: React.MouseEvent) => { e.preventDefault(); onWebinarsClick(); }
+                  : undefined
+              }
               className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-starlight/50 gold-underline pb-0.5 transition-colors duration-300 hover:text-starlight"
             >
               {link.label}
