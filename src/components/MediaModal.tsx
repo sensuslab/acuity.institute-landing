@@ -10,8 +10,8 @@ export interface VideoEntry {
 export const VIDEO_CATALOGUE: VideoEntry[] = [
   {
     id: 'jq_M1qDhKnw',
-    title: 'Acuity Webinar',
-    description: 'An introduction to the Acuity framework and its core principles.',
+    title: 'From Source to Self: A Spiritual Exploration of ! God, Consciousness , Frequency and more',
+    description: 'A reflective exploration of God, consciousness, free will, spiritual growth, and the soul’s journey beyond material life.',
   },
 ];
 
