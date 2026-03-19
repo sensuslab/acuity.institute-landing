@@ -1,19 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { X, Play, ExternalLink } from 'lucide-react';
-
-export interface VideoEntry {
-  id: string;
-  title: string;
-  description?: string;
-}
-
-export const VIDEO_CATALOGUE: VideoEntry[] = [
-  {
-    id: 'jq_M1qDhKnw',
-    title: 'From Source to Self: A Spiritual Exploration of ! God, Consciousness , Frequency and more',
-    description: "A reflective exploration of God, consciousness, free will, spiritual growth, and the soul's journey beyond material life.",
-  },
-];
+import { X, Play, ExternalLink, ArrowLeft } from 'lucide-react';
+import { VIDEO_CATALOGUE, type VideoEntry } from '../data/videoCatalogue';
 
 function getThumbnailUrl(videoId: string) {
   return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
@@ -70,6 +57,10 @@ export default function MediaModal({
 
   if (!open) return null;
 
+  const activeEntry = activeVideo
+    ? VIDEO_CATALOGUE.find((v) => v.id === activeVideo)
+    : null;
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div
@@ -80,13 +71,18 @@ export default function MediaModal({
       <div className="relative z-10 w-full max-w-3xl mx-4 max-h-[85vh] overflow-y-auto animate-modal-in">
         <div className="glass-card rounded-2xl border border-white/10 overflow-hidden">
           <div className="flex items-center justify-between px-6 py-5 border-b border-white/[0.06]">
-            <div>
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold/60 block mb-1">
-                Media
+            <div className="flex items-center gap-3">
+              <div>
+                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold/60 block mb-1">
+                  Media
+                </span>
+                <h2 className="text-xl font-light text-starlight tracking-tight">
+                  Webinars
+                </h2>
+              </div>
+              <span className="mt-3.5 font-mono text-[10px] text-starlight/25 bg-white/[0.04] px-2 py-0.5 rounded-full">
+                {VIDEO_CATALOGUE.length}
               </span>
-              <h2 className="text-xl font-light text-starlight tracking-tight">
-                Webinars
-              </h2>
             </div>
             <button
               onClick={handleClose}
@@ -96,20 +92,23 @@ export default function MediaModal({
             </button>
           </div>
 
-          <div className="p-6 space-y-4">
-            {activeVideo ? (
+          <div className="p-6">
+            {activeVideo && activeEntry ? (
               <PlayerView
                 videoId={activeVideo}
+                title={activeEntry.title}
                 onBack={() => setActiveVideo(null)}
               />
             ) : (
-              VIDEO_CATALOGUE.map((video) => (
-                <VideoCard
-                  key={video.id}
-                  video={video}
-                  onPlay={() => setActiveVideo(video.id)}
-                />
-              ))
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {VIDEO_CATALOGUE.map((video) => (
+                  <VideoCard
+                    key={video.id}
+                    video={video}
+                    onPlay={() => setActiveVideo(video.id)}
+                  />
+                ))}
+              </div>
             )}
           </div>
         </div>
@@ -129,7 +128,10 @@ function VideoCard({
 
   return (
     <div className="group rounded-xl overflow-hidden border border-white/[0.06] bg-white/[0.02] hover:border-gold/20 transition-all duration-300">
-      <div className="relative aspect-video cursor-pointer overflow-hidden" onClick={onPlay}>
+      <div
+        className="relative aspect-video cursor-pointer overflow-hidden"
+        onClick={onPlay}
+      >
         <img
           src={getThumbnailUrl(video.id)}
           alt={video.title}
@@ -142,19 +144,19 @@ function VideoCard({
           <div className="absolute inset-0 bg-void-light animate-pulse" />
         )}
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg shadow-gold/20">
-            <Play className="w-6 h-6 text-void fill-void ml-0.5" />
+          <div className="w-12 h-12 rounded-full bg-gold/90 flex items-center justify-center shadow-lg shadow-gold/20">
+            <Play className="w-5 h-5 text-void fill-void ml-0.5" />
           </div>
         </div>
       </div>
 
-      <div className="px-5 py-4 flex items-start justify-between gap-4">
+      <div className="px-4 py-3 flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h3 className="text-sm font-medium text-starlight tracking-tight truncate">
+          <h3 className="text-sm font-medium text-starlight tracking-tight line-clamp-2 leading-snug">
             {video.title}
           </h3>
           {video.description && (
-            <p className="text-xs text-starlight/35 mt-1 line-clamp-2 leading-relaxed">
+            <p className="text-[11px] text-starlight/35 mt-1.5 line-clamp-2 leading-relaxed">
               {video.description}
             </p>
           )}
@@ -175,18 +177,21 @@ function VideoCard({
 
 function PlayerView({
   videoId,
+  title,
   onBack,
 }: {
   videoId: string;
+  title: string;
   onBack: () => void;
 }) {
   return (
     <div>
       <button
         onClick={onBack}
-        className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold/50 hover:text-gold transition-colors duration-200 mb-4"
+        className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-gold/50 hover:text-gold transition-colors duration-200 mb-4"
       >
-        &larr; Back to list
+        <ArrowLeft className="w-3 h-3" />
+        Back to list
       </button>
       <div className="relative aspect-video rounded-xl overflow-hidden border border-white/[0.06]">
         <iframe
@@ -198,6 +203,9 @@ function PlayerView({
           className="absolute inset-0 w-full h-full"
         />
       </div>
+      <p className="mt-3 text-sm font-medium text-starlight/70 tracking-tight">
+        {title}
+      </p>
     </div>
   );
 }
