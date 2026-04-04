@@ -14,6 +14,13 @@ export const VIDEO_CATALOGUE: VideoEntry[] = [
     date: '2025-06-01',
   },
   {
+    id: 'BXAuf_9H4Qw',
+    title: 'Touching on: My Personal Understanding of God',
+    description:
+      'A reflective exploration of God as source, light, consciousness, and creative force—covering spirituality, frequency, heart-mind balance, divine communion, and alignment with purpose, love, and reality.',
+    date: '2025-06-15',
+  },
+  {
     id: 'jq_M1qDhKnw',
     title: 'From Source to Self: A Spiritual Exploration of ! God, Consciousness , Frequency and more',
     description:
