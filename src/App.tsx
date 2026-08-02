@@ -7,6 +7,7 @@ import TrustConstellation from './components/TrustConstellation';
 import Footer from './components/Footer';
 import GrainOverlay from './components/GrainOverlay';
 import MediaModal from './components/MediaModal';
+import LumenNousModal from './components/LumenNousModal';
 
 export default function App() {
   const [mediaOpen, setMediaOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function App() {
       <TrustConstellation />
       <Footer />
       <MediaModal open={mediaOpen} onClose={() => setMediaOpen(false)} />
+      <LumenNousModal />
     </div>
   );
 }

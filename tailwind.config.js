@@ -21,6 +21,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
       },
       animation: {
         'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
