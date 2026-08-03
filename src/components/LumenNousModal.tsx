@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { X, ArrowUpRight } from 'lucide-react';
 
-const LUMENNOUS_URL = 'https://lumennous.up.railway.app';
+const LUMENNOUS_URL = 'https://lumennous.acuity.institute';
 const STORAGE_KEY = 'acuity:lumennous-invite';
-const OPEN_DELAY_MS = 1800;
+const OPEN_DELAY_MS = 3000;
 
 const MOTES = Array.from({ length: 26 }, (_, i) => {
   const seed = (i + 1) * 6151;
@@ -196,7 +196,7 @@ export default function LumenNousModal() {
 
             <div className="mt-7 pt-5 border-t border-white/[0.06]">
               <span className="font-mono text-[10px] text-starlight/20">
-                lumennous.up.railway.app
+                lumennous.acuity.institute
               </span>
             </div>
           </div>
