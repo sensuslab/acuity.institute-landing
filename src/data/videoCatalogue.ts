@@ -7,6 +7,12 @@ export interface VideoEntry {
 
 export const VIDEO_CATALOGUE: VideoEntry[] = [
   {
+    id: 'fUeFnl6o48E',
+    title: 'Two Years of Conscious Arrival',
+    description: 'A story of gnosis, testimony and the ineffable.',
+    date: '2026-08-31',
+  },
+  {
     id: '9B8l94ZUom8',
     title: "Acuity Institute Introduction: Why I'm Doing This",
     description:
