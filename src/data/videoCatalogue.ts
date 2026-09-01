@@ -7,8 +7,8 @@ export interface VideoEntry {
 
 export const VIDEO_CATALOGUE: VideoEntry[] = [
   {
-    id: 'fUeFnl6o48E',
-    title: 'Two Years of Conscious Arrival',
+    id: 'zWrGSHIsuvk',
+    title: 'Ethan James Farrell: Two Years of Conscious Arrival - Gnosis, Testimony and The Ineffable',
     description: 'A story of gnosis, testimony and the ineffable.',
     date: '2026-08-31',
   },
