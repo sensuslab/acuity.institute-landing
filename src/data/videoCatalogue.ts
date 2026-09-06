@@ -7,6 +7,12 @@ export interface VideoEntry {
 
 export const VIDEO_CATALOGUE: VideoEntry[] = [
   {
+    id: 'EV2U55vuXDU',
+    title: 'Faith, Self-Worth and Finding My Voice | A Personal Testimony',
+    description: 'What changes when you begin to understand your experiences-and yourself-differently?',
+    date: '2026-09-06',
+  },
+  {
     id: 'zWrGSHIsuvk',
     title: 'Ethan James Farrell: Two Years of Conscious Arrival - Gnosis, Testimony and The Ineffable',
     description: 'A story of gnosis, testimony and the ineffable.',
