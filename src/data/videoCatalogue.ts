@@ -7,6 +7,12 @@ export interface VideoEntry {
 
 export const VIDEO_CATALOGUE: VideoEntry[] = [
   {
+    id: 'Ndc40wZ046c',
+    title: 'Spiritual Awakening, Boundaries & Self-Worth | Webinar Three',
+    description: 'What changes when you stop sacrificing your peace to keep other people comfortable?',
+    date: '2026-09-07',
+  },
+  {
     id: 'EV2U55vuXDU',
     title: 'Faith, Self-Worth and Finding My Voice | A Personal Testimony',
     description: 'What changes when you begin to understand your experiences-and yourself-differently?',
