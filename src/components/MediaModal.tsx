@@ -2,8 +2,13 @@ import { useState, useEffect, useCallback } from 'react';
 import { X, Play, ExternalLink, ArrowLeft } from 'lucide-react';
 import { VIDEO_CATALOGUE, type VideoEntry } from '../data/videoCatalogue';
 
-function getThumbnailUrl(videoId: string) {
-  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+function getThumbnailCandidates(videoId: string, override?: string) {
+  if (override) return [override];
+  return [
+    `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+    `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
+    `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+  ];
 }
 
 function getEmbedUrl(videoId: string) {
@@ -124,6 +129,8 @@ function VideoCard({
   video: VideoEntry;
   onPlay: () => void;
 }) {
+  const candidates = getThumbnailCandidates(video.id, video.thumbnail);
+  const [srcIndex, setSrcIndex] = useState(0);
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
@@ -133,9 +140,13 @@ function VideoCard({
         onClick={onPlay}
       >
         <img
-          src={getThumbnailUrl(video.id)}
+          src={candidates[srcIndex]}
           alt={video.title}
           onLoad={() => setImgLoaded(true)}
+          onError={() => {
+            setImgLoaded(false);
+            setSrcIndex((i) => (i + 1 < candidates.length ? i + 1 : i));
+          }}
           className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-[1.03] ${
             imgLoaded ? 'opacity-100' : 'opacity-0'
           }`}

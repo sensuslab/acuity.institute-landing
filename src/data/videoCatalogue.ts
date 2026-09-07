@@ -3,6 +3,7 @@ export interface VideoEntry {
   title: string;
   description?: string;
   date?: string;
+  thumbnail?: string;
 }
 
 export const VIDEO_CATALOGUE: VideoEntry[] = [
@@ -23,6 +24,7 @@ export const VIDEO_CATALOGUE: VideoEntry[] = [
     title: 'Ethan James Farrell: Two Years of Conscious Arrival - Gnosis, Testimony and The Ineffable',
     description: 'A story of gnosis, testimony and the ineffable.',
     date: '2026-08-31',
+    thumbnail: 'https://img.youtube.com/vi/zWrGSHIsuvk/sddefault.jpg',
   },
   {
     id: '9B8l94ZUom8',
@@ -35,7 +37,7 @@ export const VIDEO_CATALOGUE: VideoEntry[] = [
     id: 'BXAuf_9H4Qw',
     title: 'Touching on: My Personal Understanding of God',
     description:
-      'A reflective exploration of God as source, light, consciousness, and creative force—covering spirituality, frequency, heart-mind balance, divine communion, and alignment with purpose, love, and reality.',
+      'A reflective exploration of God as source, light, consciousness, and creative force\u2014covering spirituality, frequency, heart-mind balance, divine communion, and alignment with purpose, love, and reality.',
     date: '2025-06-15',
   },
   {
