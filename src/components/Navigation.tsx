@@ -5,9 +5,16 @@ const NAV_LINKS = [
   { label: 'Library', href: '#' },
   { label: 'Philosophy', href: '#manifesto' },
   { label: 'Webinars', href: '#', action: 'webinars' as const },
+  { label: 'Shorts', href: '#', action: 'shorts' as const },
 ];
 
-export default function Navigation({ onWebinarsClick }: { onWebinarsClick: () => void }) {
+export default function Navigation({
+  onWebinarsClick,
+  onShortsClick,
+}: {
+  onWebinarsClick: () => void;
+  onShortsClick: () => void;
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(false);
 
@@ -55,8 +62,16 @@ export default function Navigation({ onWebinarsClick }: { onWebinarsClick: () =>
               href={link.href}
               onClick={
                 'action' in link && link.action === 'webinars'
-                  ? (e: React.MouseEvent) => { e.preventDefault(); onWebinarsClick(); }
-                  : undefined
+                  ? (e: React.MouseEvent) => {
+                      e.preventDefault();
+                      onWebinarsClick();
+                    }
+                  : 'action' in link && link.action === 'shorts'
+                    ? (e: React.MouseEvent) => {
+                        e.preventDefault();
+                        onShortsClick();
+                      }
+                    : undefined
               }
               className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-starlight/50 gold-underline pb-0.5 transition-colors duration-300 hover:text-starlight"
             >
