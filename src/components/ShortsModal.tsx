@@ -2,6 +2,14 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { X, Volume2, VolumeX, ChevronUp, ChevronDown } from 'lucide-react';
 import { SHORTS_CATALOGUE, type ShortEntry } from '../data/shortsCatalogue';
 
+function formatTime(seconds: number) {
+  if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
+  const total = Math.floor(seconds);
+  const m = Math.floor(total / 60);
+  const s = total % 60;
+  return `${m}:${s.toString().padStart(2, '0')}`;
+}
+
 export default function ShortsModal({
   open,
   onClose,
@@ -58,6 +66,7 @@ export default function ShortsModal({
     if (!open) return;
     scrollerRef.current?.scrollTo({ top: 0 });
     setActiveIndex(0);
+    setMuted(true);
   }, [open]);
 
   if (!open) return null;
@@ -157,7 +166,7 @@ export default function ShortsModal({
       )}
 
       {total > 1 && (
-        <p className="absolute bottom-4 inset-x-0 z-20 text-center font-mono text-[9px] uppercase tracking-[0.25em] text-starlight/25 pointer-events-none md:hidden">
+        <p className="absolute bottom-5 inset-x-0 z-20 text-center font-mono text-[9px] uppercase tracking-[0.25em] text-starlight/20 pointer-events-none md:hidden">
           Swipe for next
         </p>
       )}
@@ -206,6 +215,8 @@ function ShortSlide({
   const rootRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [failed, setFailed] = useState(false);
+  const [duration, setDuration] = useState(0);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -214,17 +225,31 @@ function ShortSlide({
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.65) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
             onBecomeActive(index);
           }
         }
       },
-      { threshold: [0.65] }
+      { threshold: [0.55, 0.75, 0.9] }
     );
 
     observer.observe(root);
     return () => observer.disconnect();
   }, [index, onBecomeActive]);
+
+  const tryPlay = useCallback(() => {
+    const video = videoRef.current;
+    if (!video || failed) return;
+    video.defaultMuted = true;
+    video.muted = muted;
+    video.playsInline = true;
+    const play = video.play();
+    if (play !== undefined) {
+      play.catch(() => {
+        // Browsers may still block; a later canplay/visibility retry handles it.
+      });
+    }
+  }, [failed, muted]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -233,23 +258,35 @@ function ShortSlide({
     video.muted = muted;
 
     if (isActive && !failed) {
-      const play = video.play();
-      if (play !== undefined) {
-        play.catch(() => {
-          // Autoplay blocked — stay paused until user interacts.
-        });
-      }
+      tryPlay();
     } else {
       video.pause();
       if (!isActive) {
         try {
           video.currentTime = 0;
+          setCurrent(0);
         } catch {
           // Ignore seek errors on unloaded media.
         }
       }
     }
-  }, [isActive, muted, failed]);
+  }, [isActive, muted, failed, tryPlay]);
+
+  useEffect(() => {
+    if (!isActive || failed) return;
+    const video = videoRef.current;
+    if (!video) return;
+
+    const onReady = () => tryPlay();
+    video.addEventListener('loadeddata', onReady);
+    video.addEventListener('canplay', onReady);
+    return () => {
+      video.removeEventListener('loadeddata', onReady);
+      video.removeEventListener('canplay', onReady);
+    };
+  }, [isActive, failed, tryPlay]);
+
+  const progress = duration > 0 ? Math.min(1, current / duration) : 0;
 
   return (
     <section
@@ -264,11 +301,22 @@ function ShortSlide({
           src={short.src}
           poster={short.poster}
           playsInline
+          autoPlay={isActive}
           loop
-          muted={muted}
+          muted
           preload={isActive || index <= 1 ? 'auto' : 'metadata'}
           onClick={onToggleMute}
           onError={() => setFailed(true)}
+          onLoadedMetadata={(e) => {
+            const d = e.currentTarget.duration;
+            if (Number.isFinite(d)) setDuration(d);
+            if (isActive) tryPlay();
+          }}
+          onTimeUpdate={(e) => setCurrent(e.currentTarget.currentTime)}
+          onDurationChange={(e) => {
+            const d = e.currentTarget.duration;
+            if (Number.isFinite(d)) setDuration(d);
+          }}
         />
       ) : (
         <div className="absolute inset-0 flex items-center justify-center bg-void-light px-8 text-center">
@@ -286,7 +334,26 @@ function ShortSlide({
         }}
       />
 
-      <div className="absolute bottom-0 inset-x-0 z-10 px-5 pb-[max(2rem,env(safe-area-inset-bottom))] pt-16 pointer-events-none">
+      {/* Subtle progress + duration */}
+      <div className="absolute bottom-0 inset-x-0 z-20 px-5 pb-[max(0.65rem,env(safe-area-inset-bottom))] pointer-events-none">
+        <div className="flex items-center justify-end mb-1.5">
+          {duration > 0 && (
+            <span className="font-mono text-[9px] tracking-[0.12em] text-starlight/28 tabular-nums">
+              {formatTime(current)}
+              <span className="text-starlight/15 mx-1">/</span>
+              {formatTime(duration)}
+            </span>
+          )}
+        </div>
+        <div className="h-[1.5px] w-full rounded-full bg-white/[0.08] overflow-hidden">
+          <div
+            className="h-full rounded-full bg-gold/45 transition-[width] duration-150 ease-linear"
+            style={{ width: `${progress * 100}%` }}
+          />
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 inset-x-0 z-10 px-5 pb-[max(2.75rem,calc(env(safe-area-inset-bottom)+2.25rem))] pt-16 pointer-events-none">
         <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-gold/55 mb-2">
           Acuity Short
         </p>
@@ -298,9 +365,11 @@ function ShortSlide({
             {short.description}
           </p>
         )}
-        <p className="mt-4 font-mono text-[9px] uppercase tracking-[0.2em] text-starlight/25">
-          Tap video to {muted ? 'unmute' : 'mute'}
-        </p>
+        {muted && isActive && (
+          <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.2em] text-starlight/22">
+            Tap for sound
+          </p>
+        )}
       </div>
     </section>
   );
