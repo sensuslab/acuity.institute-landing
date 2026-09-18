@@ -1,6 +1,10 @@
 import { Hexagon } from 'lucide-react';
 
-const FOOTER_LINKS = ['Privacy', 'Terms', 'Contact'];
+const FOOTER_LINKS = [
+  { label: 'Privacy', href: '#' },
+  { label: 'Terms', href: '#' },
+  { label: 'Contact', href: '#contact' },
+];
 
 export default function Footer() {
   return (
@@ -34,11 +38,11 @@ export default function Footer() {
         <div className="flex items-center justify-center gap-8 mb-10">
           {FOOTER_LINKS.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="font-mono text-[10px] uppercase tracking-[0.15em] text-starlight/30 gold-underline pb-0.5 transition-colors duration-300 hover:text-starlight/60"
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>

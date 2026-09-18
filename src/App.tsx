@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import ManifestoSection from './components/ManifestoSection';
 import PillarsGrid from './components/PillarsGrid';
 import TrustConstellation from './components/TrustConstellation';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GrainOverlay from './components/GrainOverlay';
 import MediaModal from './components/MediaModal';
@@ -25,6 +26,7 @@ export default function App() {
       <ManifestoSection />
       <PillarsGrid />
       <TrustConstellation />
+      <Contact />
       <Footer />
       <MediaModal open={mediaOpen} onClose={() => setMediaOpen(false)} />
       <ShortsModal open={shortsOpen} onClose={() => setShortsOpen(false)} />
