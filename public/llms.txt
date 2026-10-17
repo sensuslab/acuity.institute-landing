@@ -1,0 +1,11 @@
+# Acuity Institute
+
+> An open reading library and a space for reflective inquiry.
+
+## Available now
+- [Library](https://acuity.institute/library/): searchable source editions, in-page PDF reading, PDF and EPUB downloads. Metadata search only, not full-text or LLM search.
+- [Home](https://acuity.institute/): philosophy, webinars, shorts and contact.
+- [About](https://acuity.institute/about/): the Institute and its founder.
+
+## In development
+The Lens: questions across texts, comparisons and source-grounded AI answers. This functionality is not currently available. Taking Action and myVault are not available.

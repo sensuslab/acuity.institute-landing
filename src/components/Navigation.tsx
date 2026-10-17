@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Hexagon } from 'lucide-react';
 
 const NAV_LINKS = [
-  { label: 'Library', href: '#' },
+  { label: 'Library', href: '/library/' },
   { label: 'Philosophy', href: '#manifesto' },
   { label: 'Webinars', href: '#', action: 'webinars' as const },
   { label: 'Shorts', href: '#', action: 'shorts' as const },
@@ -40,7 +40,7 @@ export default function Navigation({
       }`}
     >
       <div
-        className={`flex items-center gap-4 md:gap-8 px-5 md:px-8 py-2.5 md:py-3 rounded-full border transition-all duration-500 ${
+        className={`flex items-center gap-2 md:gap-8 px-3 md:px-8 py-2.5 md:py-3 rounded-full border transition-all duration-500 ${
           scrolled
             ? 'bg-void/80 border-white/10 backdrop-blur-xl'
             : 'bg-void/40 border-white/[0.05] backdrop-blur-md'
@@ -55,7 +55,7 @@ export default function Navigation({
 
         <div className="h-3 w-px bg-white/10" />
 
-        <div className="flex items-center gap-4 md:gap-6">
+        <div className="flex items-center gap-3 md:gap-6">
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
@@ -73,7 +73,7 @@ export default function Navigation({
                       }
                     : undefined
               }
-              className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-starlight/50 gold-underline pb-0.5 transition-colors duration-300 hover:text-starlight"
+              className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.08em] md:tracking-[0.15em] text-starlight/60 gold-underline pb-0.5 transition-colors duration-300 hover:text-starlight"
             >
               {link.label}
             </a>
@@ -83,3 +83,4 @@ export default function Navigation({
     </nav>
   );
 }
+

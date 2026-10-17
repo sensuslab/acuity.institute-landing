@@ -6,19 +6,19 @@ const PILLARS = [
     title: 'The Archive',
     icon: Box,
     description:
-      'Curated evidence reasoning. A structured approach to analysis through verified knowledge and systematic inquiry.',
+      'An open reading library of ancient wisdom, philosophy and esoteric traditions. Explore source editions in PDF and EPUB.',
   },
   {
     title: 'The Lens',
     icon: Eye,
     description:
-      'Tools for cognitive clarity. Instruments designed to cut through noise and reveal the signal beneath.',
+      'In development: ask questions across texts, compare passages and trace answers to their sources.',
   },
   {
     title: 'Taking Action',
     icon: Shield,
     description:
-      'Transfer the findings from The Lens using your myVault data into actions you can take to protect yourself and others.',
+      'Planned: bring your reading and reflections together to support thoughtful action.',
   },
 ];
 
@@ -83,7 +83,7 @@ function PillarCard({
   return (
     <div
       className={`relative glass-card rounded-2xl p-8 md:p-10 transition-all duration-700 ${
-        visible ? 'opacity-50 translate-y-0' : 'opacity-0 translate-y-8'
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
@@ -95,21 +95,16 @@ function PillarCard({
         {title}
       </h3>
 
-      <p className="text-sm text-starlight/40 font-light leading-relaxed">
+      <p className="text-sm text-starlight/60 font-light leading-relaxed">
         {description}
       </p>
 
       <div className="mt-8 pt-6 border-t border-white/[0.05]">
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold/40">
-          Explore
-        </span>
+        {title === 'The Archive' ? <a href="/library/" className="font-mono text-xs uppercase tracking-widest text-gold">Enter the library →</a> : <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold/70">In development</span>}
       </div>
 
-      <div className="absolute inset-0 rounded-2xl bg-black/50 backdrop-blur-[2px] flex items-center justify-center">
-        <span className="font-mono text-xs uppercase tracking-[0.3em] text-gold/70 border border-gold/30 px-5 py-2.5 rounded-full">
-          Coming Soon
-        </span>
-      </div>
+
     </div>
   );
 }
+

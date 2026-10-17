@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
+const LibraryPage = lazy(() => import('./components/LibraryPage'));
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import ManifestoSection from './components/ManifestoSection';
@@ -12,6 +13,13 @@ import ShortsModal from './components/ShortsModal';
 import LumenNousModal from './components/LumenNousModal';
 
 export default function App() {
+  if (window.location.pathname.replace(/\/+$/, '') === '/library') {
+    return <Suspense fallback={<main className="p-12 text-starlight">Opening the Acuity Library…</main>}><LibraryPage /></Suspense>;
+  }
+  return <HomePage />;
+}
+
+function HomePage() {
   const [mediaOpen, setMediaOpen] = useState(false);
   const [shortsOpen, setShortsOpen] = useState(false);
 
@@ -34,3 +42,4 @@ export default function App() {
     </div>
   );
 }
+

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "tao-te-ching-legge",
+    "title": "Tao Te Ching",
+    "subtitle": "The Tao Teh King, or the Tao and its Characteristics",
+    "author": "Laozi",
+    "translator": "James Legge",
+    "collection": "Eastern wisdom",
+    "period": "Ancient China",
+    "language": "English",
+    "description": "Eighty-one short chapters on the Way, simplicity and the art of living. An invitation to read slowly and return often.",
+    "editionNote": "James Legge's historical English translation. Authorship and dating of the ancient work remain subjects of scholarship. PDF is a reflowed reading edition, not a manuscript facsimile.",
+    "tags": [
+      "Taoism",
+      "Daoism",
+      "philosophy",
+      "contemplation"
+    ],
+    "sourceUrl": "https://www.gutenberg.org/ebooks/216",
+    "sourceId": 216,
+    "rights": "Project Gutenberg lists this edition as public domain in the USA. Its notices and licence are retained; rights can vary by country.",
+    "pdf": "/library/books/tao-te-ching-legge.pdf",
+    "epub": "/library/books/tao-te-ching-legge.epub",
+    "text": "/library/books/tao-te-ching-legge.txt",
+    "accent": "sage",
+    "pages": 37,
+    "pdfBytes": 103198
+  },
+  {
+    "id": "meditations",
+    "title": "Meditations",
+    "subtitle": "Notes on the examined life",
+    "author": "Marcus Aurelius",
+    "translator": "Meric Casaubon",
+    "collection": "Classical philosophy",
+    "period": "Ancient Rome",
+    "language": "English",
+    "description": "Private reflections on attention, duty and what lies within our control. A practical encounter with Stoic thought.",
+    "editionNote": "Historical English translation by Meric Casaubon, with introductory material in the source edition. PDF is a reflowed reading edition; its page numbers are specific to Acuity's PDF.",
+    "tags": [
+      "Stoicism",
+      "ethics",
+      "philosophy",
+      "reflection"
+    ],
+    "sourceUrl": "https://www.gutenberg.org/ebooks/2680",
+    "sourceId": 2680,
+    "rights": "Project Gutenberg lists this edition as public domain in the USA. Its notices and licence are retained; rights can vary by country.",
+    "pdf": "/library/books/meditations.pdf",
+    "epub": "/library/books/meditations.epub",
+    "text": "/library/books/meditations.txt",
+    "accent": "gold",
+    "pages": 155,
+    "pdfBytes": 426238
+  },
+  {
+    "id": "the-kybalion",
+    "title": "The Kybalion",
+    "subtitle": "A study of Hermetic philosophy",
+    "author": "Three Initiates",
+    "translator": null,
+    "collection": "Esoteric traditions",
+    "period": "Modern · 1908",
+    "language": "English",
+    "description": "An influential exploration of seven principles associated with Hermetic philosophy. Read as a modern esoteric interpretation.",
+    "editionNote": "First published in 1908. This is a modern esoteric work, not an ancient Hermetic source. Its historical claims should be considered critically. PDF is a reflowed reading edition.",
+    "tags": [
+      "Hermeticism",
+      "esotericism",
+      "New Thought",
+      "symbolism"
+    ],
+    "sourceUrl": "https://www.gutenberg.org/ebooks/14209",
+    "sourceId": 14209,
+    "rights": "Project Gutenberg lists this edition as public domain in the USA. Its notices and licence are retained; rights can vary by country.",
+    "pdf": "/library/books/the-kybalion.pdf",
+    "epub": "/library/books/the-kybalion.epub",
+    "text": "/library/books/the-kybalion.txt",
+    "accent": "violet",
+    "pages": 84,
+    "pdfBytes": 226687
+  }
+]
