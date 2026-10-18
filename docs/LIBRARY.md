@@ -67,3 +67,7 @@ Keep book IDs and source editions immutable. Add separately versioned text extra
 - TypeScript check, production build and automated integration checks cover bytes/MIME types, PDF ranges, HEAD, missing files, malformed paths, health/video regression, catalogue hashes, search/filter logic, static metadata and sitemap.
 - All three PDFs parse with PDF.js. EPUB ZIP/container XML checks pass. Representative PDF pages were rendered and visually reviewed.
 - Browser visual/interaction QA was unavailable in this managed environment. Before merging, check desktop and phone widths, keyboard focus/escape, rapid page/zoom changes, text mode, downloads, loading failures, and webinar/shorts modals in the deployment preview. This PR is a draft until that review.
+
+## Proposed next viewing modes
+
+See [the reader expansion proposal](LIBRARY-READER-EXPANSION.md) for PDF slide presentation, PPTX-to-PDF preparation, an adjustable EPUB e-reader and the limitations/curation workflow for raw PDF-to-ebook conversion.

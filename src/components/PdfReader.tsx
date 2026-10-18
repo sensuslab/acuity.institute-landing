@@ -3,11 +3,13 @@ import { ArrowDownToLine, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { getDocument, GlobalWorkerOptions, type PDFDocumentProxy, type RenderTask } from 'pdfjs-dist';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 import type { LibraryBook } from '../data/library';
+import { observeReaderViewport } from './readerViewport';
 GlobalWorkerOptions.workerSrc = workerUrl;
 
 export default function PdfReader({ book, onClose }: { book: LibraryBook; onClose: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const surface = useRef<HTMLDivElement>(null);
+  const scrollViewport = useRef<HTMLDivElement>(null);
   const [document, setDocument] = useState<PDFDocumentProxy>();
   const [page, setPage] = useState(1);
   const [zoom, setZoom] = useState(1);
@@ -23,9 +25,8 @@ export default function PdfReader({ book, onClose }: { book: LibraryBook; onClos
     return () => { current?.close(); window.document.body.style.overflow = previousOverflow; };
   }, []);
   useEffect(() => {
-    const el = surface.current; if (!el) return;
-    const observer = new ResizeObserver(entries => setWidth(entries[0].contentRect.width));
-    observer.observe(el); return () => observer.disconnect();
+    const el = scrollViewport.current; if (!el) return;
+    return observeReaderViewport(el, setWidth);
   }, []);
   useEffect(() => {
     if (!book.pdf) return;
@@ -40,7 +41,9 @@ export default function PdfReader({ book, onClose }: { book: LibraryBook; onClos
     if (!document || !surface.current) return;
     let cancelled = false; let task: RenderTask | undefined;
     const container = surface.current;
-    setBusy(true); setError(''); setText(''); container.replaceChildren();
+    // Render offscreen and swap only when complete. Removing the current canvas here
+    // used to toggle the scrollbar and feed a width-change/render/clear loop.
+    setBusy(true); setError('');
     const render = async () => {
       try {
         const pdfPage = await document.getPage(page);
@@ -78,7 +81,7 @@ export default function PdfReader({ book, onClose }: { book: LibraryBook; onClos
     </div>
     <div className="reader-status" role="status">{busy ? `Loading page ${page}…` : `Page ${page} of ${document?.numPages || '…'}`}</div>
     {error && <div className="reader-error" role="alert">{error} <a href={book.pdf}>Open PDF directly</a> · <a href={book.sourceUrl} target="_blank" rel="noreferrer">Original source</a></div>}
-    <div className="reader-scroll"><div ref={surface} className={`reader-surface ${textMode ? 'reader-canvas-hidden' : ''}`} /><div className={textMode ? 'reader-text' : 'sr-only'} aria-label={`Text of page ${page}`} aria-busy={busy}>{text}</div></div>
+    <div ref={scrollViewport} className="reader-scroll"><div ref={surface} className={`reader-surface ${textMode ? 'reader-canvas-hidden' : ''}`} /><div className={textMode ? 'reader-text' : 'sr-only'} aria-label={`Text of page ${page}`} aria-busy={busy}>{busy ? '' : text}</div></div>
     <footer className="reader-footer"><span>{book.author} · Acuity reading edition</span>{book.epub && <a href={book.epub} download>Download EPUB</a>}{book.text && <a href={book.text}>Full plain text</a>}</footer>
   </dialog>;
 }
