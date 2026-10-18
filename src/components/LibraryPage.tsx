@@ -1,8 +1,10 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
-import { ArrowDownToLine, ArrowLeft, ArrowUpRight, BookOpen, Hexagon, Search, X } from 'lucide-react';
-import { books, collections, filterBooks, type LibraryBook } from '../data/library';
+import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
+import { ArrowLeft, ArrowUpRight, BookOpen, Hexagon, Search, X } from 'lucide-react';
+import { books, categories, canReadEbook, filterBooks, type LibraryBook } from '../data/library';
 import './library.css';
+import BookActions, {type ReaderMode} from './BookActions';
 const PdfReader = lazy(() => import('./PdfReader'));
+const EbookReader = lazy(() => import('./EbookReader'));
 
 function selectedFromUrl() {
   return books.find(book => book.id === new URLSearchParams(window.location.search).get('book'));
@@ -13,9 +15,12 @@ export default function LibraryPage() {
   const [format, setFormat] = useState('all');
   const [sort, setSort] = useState('curated');
   const [selected, setSelected] = useState<LibraryBook | undefined>(selectedFromUrl);
-  const [reading, setReading] = useState(false);
+  const [reading, setReading] = useState<ReaderMode | undefined>();
+  const [category, setCategory] = useState('all');
+  const closeReader = useCallback(() => setReading(undefined), []);
+  const readPdf = useCallback(() => setReading('pdf'), []);
   useEffect(() => {
-    const onPop = () => { setSelected(selectedFromUrl()); setReading(false); };
+    const onPop = () => { setSelected(selectedFromUrl()); setReading(undefined); };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, []);
@@ -29,9 +34,9 @@ export default function LibraryPage() {
     const url = new URL(window.location.href); url.searchParams.delete('book');
     window.history.pushState({}, '', url);
   };
-  const filtered = filterBooks(query, collection, format);
+  const filtered = filterBooks(query, collection, format, category);
   if (sort === 'title') filtered.sort((a, b) => a.title.localeCompare(b.title));
-  const reset = () => { setQuery(''); setCollection('All collections'); setFormat('all'); };
+  const reset = () => { setQuery(''); setCollection('All collections'); setFormat('all'); setCategory('all'); };
   return <div className="library-shell">
     <a className="library-skip" href="#catalogue">Skip to books</a>
     <header className="library-nav">
@@ -49,35 +54,35 @@ export default function LibraryPage() {
       <section id="catalogue" className="library-catalogue" aria-label="Browse the library">
         <div className="library-toolbar">
           <label className="library-search"><Search size={19} /><span className="sr-only">Search titles, authors or subjects</span><input type="search" placeholder="Find a text, author or idea…" value={query} onChange={event => setQuery(event.target.value)} />{query && <button aria-label="Clear search" onClick={() => setQuery('')}><X size={18} /></button>}</label>
-          <label className="library-select"><span>Format</span><select value={format} onChange={event => setFormat(event.target.value)}><option value="all">All formats</option><option value="pdf">PDF</option><option value="epub">EPUB</option></select></label>
+          <label className="library-select"><span>Format</span><select value={format} onChange={event => setFormat(event.target.value)}><option value="all">All formats</option><option value="pdf">PDF</option><option value="epub">EPUB</option><option value="ebook">PDF + EPUB</option><option value="pptx">PowerPoint</option></select></label>
           <label className="library-select"><span>Order</span><select value={sort} onChange={event => setSort(event.target.value)}><option value="curated">Curated order</option><option value="title">Title A–Z</option></select></label>
         </div>
-        <div className="library-collections" aria-label="Filter by collection">{['All collections', ...collections].map(name => <button key={name} aria-pressed={collection === name} onClick={() => setCollection(name)}>{name}</button>)}</div>
-        <div className="library-results"><h2>{collection === 'All collections' ? 'The opening collection' : collection}</h2><span role="status">{filtered.length} {filtered.length === 1 ? 'volume' : 'volumes'}</span></div>
+        <div className="library-category-row"><div className="library-collections" aria-label="Filter by category"><button aria-pressed={category === 'all'} onClick={() => setCategory('all')}>All categories</button>{categories.filter(item => item.depth === 0).map(item => <button key={item.key} aria-pressed={category === item.key || category.startsWith(item.key + '/')} onClick={() => setCategory(item.key)}>{item.label} <span>{item.count}</span></button>)}</div><label className="library-select category-select"><span>Category</span><select aria-label="Category" value={category} onChange={event => setCategory(event.target.value)}><option value="all">All categories</option>{categories.map(item => <option key={item.key} value={item.key}>{'— '.repeat(item.depth)}{item.label} ({item.count})</option>)}</select></label></div>
+        <div className="library-results"><h2>{category === 'all' ? 'The opening collection' : categories.find(item => item.key === category)?.path.join(' / ')}</h2><span role="status">{filtered.length} {filtered.length === 1 ? 'volume' : 'volumes'}</span></div>
         {filtered.length ? <div className="library-grid">{filtered.map((book, index) => <article key={book.id} className="library-card">
           <button className={`library-cover cover-${book.accent}`} onClick={() => choose(book)} aria-label={`View ${book.title}`}>
             <span className="cover-top">ACUITY READING EDITIONS <span>{String(index + 1).padStart(2, '0')}</span></span>
             <span className="cover-symbol" aria-hidden="true"><span />✧</span>
             <span className="cover-title">{book.title}</span><span className="cover-author">{book.author}</span><span className="cover-bottom">{book.period}<ArrowUpRight size={16} /></span>
           </button>
-          <div className="library-card-body"><span className="library-eyebrow">{book.collection}</span><h3><button onClick={() => choose(book)}>{book.title}</button></h3><p className="library-byline">{book.translator ? `Translated by ${book.translator}` : book.author}</p><p>{book.description}</p><div className="library-card-meta"><span>{book.language}{book.pages ? ` · ${book.pages} pages` : ''}</span><span>{[book.pdf && 'PDF', book.epub && 'EPUB'].filter(Boolean).join(' / ')}</span></div><button className="library-read-link" onClick={() => { choose(book); if(book.pdf) setReading(true); }}>{book.pdf ? 'Open & read' : 'View edition'}<ArrowUpRight size={17} /></button></div>
+          <div className="library-card-body"><span className="library-eyebrow">{book.categoryLabel}</span><h3><button onClick={() => choose(book)}>{book.title}</button></h3><p className="library-byline">{book.translator ? `Translated by ${book.translator}` : book.author}</p><p>{book.description}</p><div className="library-card-meta"><span>{book.language}{book.pages ? ` · ${book.pages} pages` : ''}</span><span>{[book.pdf && 'PDF', book.epub && 'EPUB', book.pptx && 'PPTX'].filter(Boolean).join(' / ')}</span></div><button className="library-read-link" onClick={() => { choose(book); if(book.pdf) setReading('pdf'); }}>{book.pdf ? 'Open PDF' : 'View edition'}<ArrowUpRight size={17} /></button>{canReadEbook(book) && <button className="library-read-link ebook-launch" onClick={() => { choose(book); setReading('ebook'); }}>Read E-Book <BookOpen size={17}/></button>}</div>
         </article>)}</div> : <div className="library-empty"><BookOpen size={32} /><h3>No volumes found.</h3><p>Try another title, author or subject, or browse the whole collection.</p><button className="library-primary" onClick={reset}>Clear filters</button></div>}
       </section>
       <section className="library-next"><span className="library-eyebrow">A FOUNDATION FOR DEEPER INQUIRY</span><h2>Begin with the source.</h2><p>This is the first chapter of the Acuity Library. Our next step is a workspace for asking questions across texts, comparing passages and tracing answers back to their sources.</p><span className="library-planned">AI-assisted inquiry · In development</span><a href="/#contact">Suggest a text or share an idea <ArrowUpRight size={16} /></a></section>
     </main>
     <footer className="library-footer"><span>© 2026 Acuity Institute</span><p>Historical texts invite interpretation, not unquestioning acceptance.</p><a href="/about/">About Acuity</a></footer>
-    {selected && !reading && <BookDetails book={selected} onClose={closeDetails} onRead={() => setReading(true)} />}
-    {selected && reading && <Suspense fallback={<div className="library-loading" role="status">Opening the reading room… <button onClick={() => setReading(false)}>Cancel</button></div>}><PdfReader book={selected} onClose={() => setReading(false)} /></Suspense>}
+    {selected && !reading && <BookDetails book={selected} onClose={closeDetails} onRead={setReading} />}
+    {selected && reading && <Suspense fallback={<div className="library-loading" role="status">Opening the reading room… <button onClick={closeReader}>Cancel</button></div>}>{reading === 'ebook' && canReadEbook(selected) ? <EbookReader key={selected.id} book={selected} onClose={closeReader} onReadPdf={readPdf}/> : <PdfReader key={selected.id} book={selected} onClose={closeReader} initialPresentation={reading === 'present'}/>}</Suspense>}
   </div>;
 }
 
-function BookDetails({ book, onClose, onRead }: {book: LibraryBook; onClose: () => void; onRead: () => void}) {
+function BookDetails({ book, onClose, onRead }: {book: LibraryBook; onClose: () => void; onRead: (mode: ReaderMode) => void}) {
   const [dialog, setDialog] = useState<HTMLDialogElement | null>(null);
   useEffect(() => { dialog?.showModal(); return () => dialog?.close(); }, [dialog]);
   return <dialog ref={setDialog} className="library-details" onCancel={event => { event.preventDefault(); onClose(); }} aria-labelledby="book-title">
     <button className="library-close" onClick={onClose} aria-label="Close book details" autoFocus><X /></button>
-    <div className="library-eyebrow">{book.collection} / {book.period}</div><h2 id="book-title">{book.title}</h2><p className="library-byline">{book.author}{book.translator && ` · Translation by ${book.translator}`}</p><p>{book.description}</p>
-    <div className="library-downloads">{book.pdf && <button className="library-primary" onClick={onRead}><BookOpen size={17} /> Read PDF</button>}{book.pdf && <a className="library-secondary" href={book.pdf} download><ArrowDownToLine size={16} /> PDF{book.pdfBytes ? ` · ${(book.pdfBytes/1024/1024).toFixed(1)} MB` : ''}</a>}{book.epub && <a className="library-secondary" href={book.epub} download><ArrowDownToLine size={16} /> EPUB</a>}</div>
-    <div className="library-edition"><h3>About this edition</h3><p>{book.editionNote}</p><p>{book.rights}</p><a href={book.sourceUrl} target="_blank" rel="noreferrer">View source at Project Gutenberg <ArrowUpRight size={14} /></a>{book.text && <a href={book.text} target="_blank" rel="noreferrer">Read accessible plain text <ArrowUpRight size={14} /></a>}</div>
+    <div className="library-eyebrow">{book.categoryLabel}{book.period && ` / ${book.period}`}</div><h2 id="book-title">{book.title}</h2><p className="library-byline">{book.author}{book.translator && ` · Translation by ${book.translator}`}</p><p>{book.description}</p>
+    <BookActions book={book} onRead={onRead}/>
+    <div className="library-edition"><h3>About this edition</h3><p>{book.editionNote}</p><p>{book.rights}</p>{book.sourceUrl && <a href={book.sourceUrl} target="_blank" rel="noreferrer">{book.sourceId ? 'View source at Project Gutenberg' : 'View edition source'} <ArrowUpRight size={14} /></a>}{book.text && <a href={book.text} target="_blank" rel="noreferrer">Read accessible plain text <ArrowUpRight size={14} /></a>}</div>
   </dialog>;
 }

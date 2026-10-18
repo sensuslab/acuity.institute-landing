@@ -1,83 +1,83 @@
 [
   {
-    "bookId": "tao-te-ching-legge",
-    "format": "pdf",
-    "path": "/library/books/tao-te-ching-legge.pdf",
-    "bytes": 103198,
-    "sha256": "4dfedf862fca015794bef4b8076cc5b551678925db355de68521a6a2e9c87c65",
-    "source": "https://www.gutenberg.org/ebooks/216",
-    "retrieved": "2026-10-17"
-  },
-  {
-    "bookId": "tao-te-ching-legge",
-    "format": "epub",
-    "path": "/library/books/tao-te-ching-legge.epub",
-    "bytes": 103203,
-    "sha256": "7eee7c2af3328159d2f07b09968907aeb47a9ecb2734ad1340aed1407b59f022",
-    "source": "https://www.gutenberg.org/ebooks/216",
-    "retrieved": "2026-10-17"
-  },
-  {
-    "bookId": "tao-te-ching-legge",
-    "format": "text",
-    "path": "/library/books/tao-te-ching-legge.txt",
-    "bytes": 80552,
-    "sha256": "041568f8dfef3ac6c2deb7699756f9d26d6aa8669647f4ce611b0ed4a95b0db6",
-    "source": "https://www.gutenberg.org/ebooks/216",
-    "retrieved": "2026-10-17"
-  },
-  {
-    "bookId": "meditations",
-    "format": "pdf",
-    "path": "/library/books/meditations.pdf",
-    "bytes": 426238,
-    "sha256": "e5f753ee7c97e972057a5f867b72d872014012169c5f17ba706173f831dd59d2",
-    "source": "https://www.gutenberg.org/ebooks/2680",
-    "retrieved": "2026-10-17"
-  },
-  {
-    "bookId": "meditations",
-    "format": "epub",
-    "path": "/library/books/meditations.epub",
-    "bytes": 454954,
-    "sha256": "f0656010dd96d75ee09912d7c655fb144818a122102b18af78620034cb9c0898",
-    "source": "https://www.gutenberg.org/ebooks/2680",
-    "retrieved": "2026-10-17"
-  },
-  {
-    "bookId": "meditations",
-    "format": "text",
-    "path": "/library/books/meditations.txt",
-    "bytes": 425304,
-    "sha256": "6977474f82a39dd88a4af31a59504821658174d33c177732c54357e4d680b96c",
-    "source": "https://www.gutenberg.org/ebooks/2680",
-    "retrieved": "2026-10-17"
-  },
-  {
     "bookId": "the-kybalion",
     "format": "pdf",
-    "path": "/library/books/the-kybalion.pdf",
     "bytes": 226687,
     "sha256": "3c89315b34cb9696c06bd9c8663b87f07779e7ba5e09eeb10cb72b505f677a58",
     "source": "https://www.gutenberg.org/ebooks/14209",
-    "retrieved": "2026-10-17"
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Esoteric/Hermeticism/the-kybalion.pdf"
   },
   {
     "bookId": "the-kybalion",
     "format": "epub",
-    "path": "/library/books/the-kybalion.epub",
     "bytes": 142878,
     "sha256": "8721251228683c0f28f32e92dd977b8f9831dbbab394238327d977cd0b9a6810",
     "source": "https://www.gutenberg.org/ebooks/14209",
-    "retrieved": "2026-10-17"
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Esoteric/Hermeticism/the-kybalion.epub"
   },
   {
     "bookId": "the-kybalion",
     "format": "text",
-    "path": "/library/books/the-kybalion.txt",
     "bytes": 223890,
     "sha256": "260462075d03da0d7f074baf6a2e3e4883f5207c70f0ad41a7866a95a6ee9a15",
     "source": "https://www.gutenberg.org/ebooks/14209",
-    "retrieved": "2026-10-17"
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Esoteric/Hermeticism/the-kybalion.txt"
+  },
+  {
+    "bookId": "meditations",
+    "format": "pdf",
+    "bytes": 426238,
+    "sha256": "e5f753ee7c97e972057a5f867b72d872014012169c5f17ba706173f831dd59d2",
+    "source": "https://www.gutenberg.org/ebooks/2680",
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Philosophy/Stoicism/meditations.pdf"
+  },
+  {
+    "bookId": "meditations",
+    "format": "epub",
+    "bytes": 454954,
+    "sha256": "f0656010dd96d75ee09912d7c655fb144818a122102b18af78620034cb9c0898",
+    "source": "https://www.gutenberg.org/ebooks/2680",
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Philosophy/Stoicism/meditations.epub"
+  },
+  {
+    "bookId": "meditations",
+    "format": "text",
+    "bytes": 425304,
+    "sha256": "6977474f82a39dd88a4af31a59504821658174d33c177732c54357e4d680b96c",
+    "source": "https://www.gutenberg.org/ebooks/2680",
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Philosophy/Stoicism/meditations.txt"
+  },
+  {
+    "bookId": "tao-te-ching-legge",
+    "format": "pdf",
+    "bytes": 103198,
+    "sha256": "4dfedf862fca015794bef4b8076cc5b551678925db355de68521a6a2e9c87c65",
+    "source": "https://www.gutenberg.org/ebooks/216",
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Scripture/Taoism/tao-te-ching-legge.pdf"
+  },
+  {
+    "bookId": "tao-te-ching-legge",
+    "format": "epub",
+    "bytes": 103203,
+    "sha256": "7eee7c2af3328159d2f07b09968907aeb47a9ecb2734ad1340aed1407b59f022",
+    "source": "https://www.gutenberg.org/ebooks/216",
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Scripture/Taoism/tao-te-ching-legge.epub"
+  },
+  {
+    "bookId": "tao-te-ching-legge",
+    "format": "text",
+    "bytes": 80552,
+    "sha256": "041568f8dfef3ac6c2deb7699756f9d26d6aa8669647f4ce611b0ed4a95b0db6",
+    "source": "https://www.gutenberg.org/ebooks/216",
+    "retrieved": "2026-10-17",
+    "path": "/library/books/Scripture/Taoism/tao-te-ching-legge.txt"
   }
 ]

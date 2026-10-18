@@ -1,0 +1,59 @@
+[
+  {
+    "key": "Esoteric",
+    "label": "Esoteric",
+    "path": [
+      "Esoteric"
+    ],
+    "depth": 0,
+    "count": 1
+  },
+  {
+    "key": "Esoteric/Hermeticism",
+    "label": "Hermeticism",
+    "path": [
+      "Esoteric",
+      "Hermeticism"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Philosophy",
+    "label": "Philosophy",
+    "path": [
+      "Philosophy"
+    ],
+    "depth": 0,
+    "count": 1
+  },
+  {
+    "key": "Philosophy/Stoicism",
+    "label": "Stoicism",
+    "path": [
+      "Philosophy",
+      "Stoicism"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Scripture",
+    "label": "Scripture",
+    "path": [
+      "Scripture"
+    ],
+    "depth": 0,
+    "count": 1
+  },
+  {
+    "key": "Scripture/Taoism",
+    "label": "Taoism",
+    "path": [
+      "Scripture",
+      "Taoism"
+    ],
+    "depth": 1,
+    "count": 1
+  }
+]

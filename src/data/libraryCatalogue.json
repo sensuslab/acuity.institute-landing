@@ -19,12 +19,45 @@
     "sourceUrl": "https://www.gutenberg.org/ebooks/216",
     "sourceId": 216,
     "rights": "Project Gutenberg lists this edition as public domain in the USA. Its notices and licence are retained; rights can vary by country.",
-    "pdf": "/library/books/tao-te-ching-legge.pdf",
-    "epub": "/library/books/tao-te-ching-legge.epub",
-    "text": "/library/books/tao-te-ching-legge.txt",
     "accent": "sage",
     "pages": 37,
-    "pdfBytes": 103198
+    "order": 10,
+    "categoryKey": "Scripture/Taoism",
+    "categoryPath": [
+      "Scripture",
+      "Taoism"
+    ],
+    "categoryLabel": "Scripture / Taoism",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Scripture/Taoism/tao-te-ching-legge.pdf",
+        "bytes": 103198,
+        "sha256": "4dfedf862fca015794bef4b8076cc5b551678925db355de68521a6a2e9c87c65"
+      },
+      {
+        "format": "epub",
+        "url": "/library/books/Scripture/Taoism/tao-te-ching-legge.epub",
+        "bytes": 103203,
+        "sha256": "7eee7c2af3328159d2f07b09968907aeb47a9ecb2734ad1340aed1407b59f022"
+      },
+      {
+        "format": "text",
+        "url": "/library/books/Scripture/Taoism/tao-te-ching-legge.txt",
+        "bytes": 80552,
+        "sha256": "041568f8dfef3ac6c2deb7699756f9d26d6aa8669647f4ce611b0ed4a95b0db6"
+      }
+    ],
+    "pdf": "/library/books/Scripture/Taoism/tao-te-ching-legge.pdf",
+    "pdfBytes": 103198,
+    "epub": "/library/books/Scripture/Taoism/tao-te-ching-legge.epub",
+    "text": "/library/books/Scripture/Taoism/tao-te-ching-legge.txt",
+    "capabilities": {
+      "pdf": true,
+      "ebook": true,
+      "present": true
+    },
+    "kind": "book"
   },
   {
     "id": "meditations",
@@ -46,12 +79,45 @@
     "sourceUrl": "https://www.gutenberg.org/ebooks/2680",
     "sourceId": 2680,
     "rights": "Project Gutenberg lists this edition as public domain in the USA. Its notices and licence are retained; rights can vary by country.",
-    "pdf": "/library/books/meditations.pdf",
-    "epub": "/library/books/meditations.epub",
-    "text": "/library/books/meditations.txt",
     "accent": "gold",
     "pages": 155,
-    "pdfBytes": 426238
+    "order": 20,
+    "categoryKey": "Philosophy/Stoicism",
+    "categoryPath": [
+      "Philosophy",
+      "Stoicism"
+    ],
+    "categoryLabel": "Philosophy / Stoicism",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Philosophy/Stoicism/meditations.pdf",
+        "bytes": 426238,
+        "sha256": "e5f753ee7c97e972057a5f867b72d872014012169c5f17ba706173f831dd59d2"
+      },
+      {
+        "format": "epub",
+        "url": "/library/books/Philosophy/Stoicism/meditations.epub",
+        "bytes": 454954,
+        "sha256": "f0656010dd96d75ee09912d7c655fb144818a122102b18af78620034cb9c0898"
+      },
+      {
+        "format": "text",
+        "url": "/library/books/Philosophy/Stoicism/meditations.txt",
+        "bytes": 425304,
+        "sha256": "6977474f82a39dd88a4af31a59504821658174d33c177732c54357e4d680b96c"
+      }
+    ],
+    "pdf": "/library/books/Philosophy/Stoicism/meditations.pdf",
+    "pdfBytes": 426238,
+    "epub": "/library/books/Philosophy/Stoicism/meditations.epub",
+    "text": "/library/books/Philosophy/Stoicism/meditations.txt",
+    "capabilities": {
+      "pdf": true,
+      "ebook": true,
+      "present": true
+    },
+    "kind": "book"
   },
   {
     "id": "the-kybalion",
@@ -73,11 +139,44 @@
     "sourceUrl": "https://www.gutenberg.org/ebooks/14209",
     "sourceId": 14209,
     "rights": "Project Gutenberg lists this edition as public domain in the USA. Its notices and licence are retained; rights can vary by country.",
-    "pdf": "/library/books/the-kybalion.pdf",
-    "epub": "/library/books/the-kybalion.epub",
-    "text": "/library/books/the-kybalion.txt",
     "accent": "violet",
     "pages": 84,
-    "pdfBytes": 226687
+    "order": 30,
+    "categoryKey": "Esoteric/Hermeticism",
+    "categoryPath": [
+      "Esoteric",
+      "Hermeticism"
+    ],
+    "categoryLabel": "Esoteric / Hermeticism",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Esoteric/Hermeticism/the-kybalion.pdf",
+        "bytes": 226687,
+        "sha256": "3c89315b34cb9696c06bd9c8663b87f07779e7ba5e09eeb10cb72b505f677a58"
+      },
+      {
+        "format": "epub",
+        "url": "/library/books/Esoteric/Hermeticism/the-kybalion.epub",
+        "bytes": 142878,
+        "sha256": "8721251228683c0f28f32e92dd977b8f9831dbbab394238327d977cd0b9a6810"
+      },
+      {
+        "format": "text",
+        "url": "/library/books/Esoteric/Hermeticism/the-kybalion.txt",
+        "bytes": 223890,
+        "sha256": "260462075d03da0d7f074baf6a2e3e4883f5207c70f0ad41a7866a95a6ee9a15"
+      }
+    ],
+    "pdf": "/library/books/Esoteric/Hermeticism/the-kybalion.pdf",
+    "pdfBytes": 226687,
+    "epub": "/library/books/Esoteric/Hermeticism/the-kybalion.epub",
+    "text": "/library/books/Esoteric/Hermeticism/the-kybalion.txt",
+    "capabilities": {
+      "pdf": true,
+      "ebook": true,
+      "present": true
+    },
+    "kind": "book"
   }
 ]

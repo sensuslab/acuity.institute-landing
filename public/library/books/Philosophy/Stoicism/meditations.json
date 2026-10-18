@@ -1,0 +1,24 @@
+{
+  "id": "meditations",
+  "title": "Meditations",
+  "subtitle": "Notes on the examined life",
+  "author": "Marcus Aurelius",
+  "translator": "Meric Casaubon",
+  "collection": "Classical philosophy",
+  "period": "Ancient Rome",
+  "language": "English",
+  "description": "Private reflections on attention, duty and what lies within our control. A practical encounter with Stoic thought.",
+  "editionNote": "Historical English translation by Meric Casaubon, with introductory material in the source edition. PDF is a reflowed reading edition; its page numbers are specific to Acuity's PDF.",
+  "tags": [
+    "Stoicism",
+    "ethics",
+    "philosophy",
+    "reflection"
+  ],
+  "sourceUrl": "https://www.gutenberg.org/ebooks/2680",
+  "sourceId": 2680,
+  "rights": "Project Gutenberg lists this edition as public domain in the USA. Its notices and licence are retained; rights can vary by country.",
+  "accent": "gold",
+  "pages": 155,
+  "order": 20
+}

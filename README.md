@@ -2,7 +2,7 @@
 
 React/Vite landing page with webinars, shorts and the Acuity Open Library.
 
-Use Node 22.13+ (`nvm use`).
+Use Node 22.13+ (`nvm use`). The build indexes curated files and nested categories before compiling the app.
 
 ```sh
 npm ci
@@ -16,4 +16,4 @@ npm start
 - [Review of the supplied SEO fixes](docs/SEO-REVIEW.md)
 - [Third-party notices](docs/THIRD-PARTY.md)
 
-The server uses `PORT` (default 8080). Existing short videos use `SHORTS_DIR` (default `/data/shorts`). Library editions are included in the build. AI querying is planned, not implemented in this phase.
+The server uses `PORT` (default 8080). Existing short videos use `SHORTS_DIR` (default `/data/shorts`). Library editions are included in the build. Paired PDF/EPUB records enable the ebook reader; PDFs also support slide presentation. AI querying is planned, not implemented in this phase.

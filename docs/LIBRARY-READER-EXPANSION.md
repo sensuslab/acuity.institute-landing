@@ -1,8 +1,8 @@
 # Acuity reader expansion proposal
 
-Status: proposed expansion, 18 October 2026. Only the PDF flashing repair is implemented in this change. The existing library portal, catalogue, source editions, themes and download links remain the foundation.
+Status: the PDF presentation mode, paired PDF/EPUB reader, folder-based catalogue and curator PowerPoint conversion command are implemented, 18 October 2026. Raw-PDF OCR/reconstruction remains outside the application: curators supply completed editions. The existing library portal, catalogue, source editions, themes and download links remain the foundation.
 
-## Product direction
+## Original design and delivery rationale
 
 One edition in the library, with viewing modes suited to its assets:
 

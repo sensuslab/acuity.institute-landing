@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT) || 8080;
 const DIST = path.join(__dirname, 'dist');
+const libraryRedirects = new Map(Object.entries(fs.existsSync(path.join(DIST,'library/redirects.json')) ? JSON.parse(fs.readFileSync(path.join(DIST,'library/redirects.json'),'utf8')) : {}).map(([source,target]) => [decodeURIComponent(source),target]));
 const SHORTS_DIR = process.env.SHORTS_DIR || '/data/shorts';
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
@@ -14,7 +15,7 @@ const MIME = {
   '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp',
   '.ico': 'image/x-icon', '.woff': 'font/woff', '.woff2': 'font/woff2',
   '.mp4': 'video/mp4', '.webm': 'video/webm', '.pdf': 'application/pdf',
-  '.epub': 'application/epub+zip', '.txt': 'text/plain; charset=utf-8',
+  '.epub': 'application/epub+zip', '.pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation', '.txt': 'text/plain; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8', '.wasm': 'application/wasm',
 };
 function safeJoin(root, decoded) {
@@ -64,6 +65,7 @@ const server = http.createServer((req, res) => {
   }
   if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405, {Allow:'GET, HEAD, OPTIONS'}).end(); return; }
   if (pathname === '/health') { res.writeHead(200, {'Content-Type':'text/plain'}).end(req.method === 'HEAD' ? undefined : 'ok'); return; }
+  if (libraryRedirects.has(pathname)) {res.writeHead(308, {Location:libraryRedirects.get(pathname)}).end();return;}
   if (pathname.startsWith('/shorts/')) {
     const file = safeJoin(SHORTS_DIR, pathname.slice('/shorts/'.length));
     if (!file) { res.writeHead(400).end('Bad request'); return; }

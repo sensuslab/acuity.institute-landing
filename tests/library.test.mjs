@@ -29,7 +29,7 @@ test('Catalogue files match their provenance hashes and usable formats',()=>{
     assert.ok(book.pdf || book.epub);assert.match(book.sourceUrl,/^https:\/\//);
     for(const fmt of ['pdf','epub','text']){
       if (!book[fmt]) continue;
-      const bytes=fs.readFileSync('public'+book[fmt]);
+      const bytes=fs.readFileSync('public'+decodeURIComponent(book[fmt]));
       const record=manifest.find(r=>r.bookId===book.id && r.format===fmt);
       assert.equal(createHash('sha256').update(bytes).digest('hex'),record.sha256);
       assert.equal(bytes.length,record.bytes);
@@ -56,12 +56,12 @@ test('PDF and EPUB downloads return correct bytes and content types',async()=>{
       if (!b[fmt]) continue;
       const res=await fetch(origin+b[fmt]);assert.equal(res.status,200);
       assert.equal(res.headers.get('content-type'),fmt==='pdf'?'application/pdf':'application/epub+zip');
-      assert.deepEqual(Buffer.from(await res.arrayBuffer()),fs.readFileSync('public'+b[fmt]));
+      assert.deepEqual(Buffer.from(await res.arrayBuffer()),fs.readFileSync('public'+decodeURIComponent(b[fmt])));
     }
   }
 });
 test('PDF GET ranges, suffix ranges, HEAD and unsatisfiable ranges',async()=>{
-  const url=origin+books[0].pdf;const bytes=fs.readFileSync('public'+books[0].pdf);
+  const url=origin+books[0].pdf;const bytes=fs.readFileSync('public'+decodeURIComponent(books[0].pdf));
   for(const [range,start,end] of [['bytes=0-31',0,31],['bytes=-32',bytes.length-32,bytes.length-1],['bytes=32-',32,bytes.length-1]]){
     const res=await fetch(url,{headers:{Range:range}});assert.equal(res.status,206);
     assert.equal(res.headers.get('content-range'),`bytes ${start}-${end}/${bytes.length}`);
@@ -98,4 +98,9 @@ test('Metadata search combines words, collection and format filters',async()=>{
   assert.equal(filterBooks('tao', 'Esoteric traditions','all').length,0);
   assert.equal(filterBooks('not-a-real-book', 'All collections','all').length,0);
   assert.equal(filterBooks('', 'All collections','all').length,books.length);
+});
+
+test('Old download links redirect to the same categorised edition',async()=>{
+ const res=await fetch(origin+'/library/books/meditations.pdf',{redirect:'manual'});
+ assert.equal(res.status,308);assert.equal(res.headers.get('location'),books.find(b=>b.id==='meditations').pdf);
 });

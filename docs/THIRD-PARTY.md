@@ -5,3 +5,5 @@
 - DejaVu Serif: embedded in the generated PDFs. Font copyright/licensing is retained in `DEJAVU-LICENSE.txt`.
 - The favicon and OG artwork were supplied by the site owner in `acuity-seo-fixes.zip`.
 - Existing React, Vite, Tailwind, Lucide and other dependency licences remain with their respective packages.
+
+- EPUB.js: BSD-2-Clause, with JSZip (MIT or GPLv3 dual licence; used under MIT). Dependency notices remain in the installed packages.
