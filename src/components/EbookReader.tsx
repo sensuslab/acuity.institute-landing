@@ -3,6 +3,7 @@ import ePub, {type Book, type Contents, type Location, type NavItem, type Rendit
 import { ArrowDownToLine, ChevronLeft, ChevronRight, Maximize, Minimize, X } from 'lucide-react';
 import { canReadEbook, type LibraryBook } from '../data/library';
 import { useReaderDialog } from './useReaderDialog';
+import { settleEbookNavigation } from './ebookNavigation';
 import { ebookPreferenceKey, parseEbookPreferences } from './ebookPreferences';
 
 type Chapter={label:string;href:string;depth:number};
@@ -42,8 +43,10 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
     const rendition=engine.current;if(!rendition||busyRef.current)return;
     busyRef.current=true;setBusy(true);setError('');
     try{
-      if(typeof target==='object')await rendition.display(target.href);
-      else if(target==='next')await rendition.next();else await rendition.prev();
+      await settleEbookNavigation(rendition,async()=>{
+        if(typeof target==='object')await rendition.display(target.href);
+        else if(target==='next')await rendition.next();else await rendition.prev();
+      });
     }catch{setError('That page could not be opened. Try another chapter or use the PDF edition.');}
     finally{busyRef.current=false;setBusy(false);}
   },[]);
@@ -121,8 +124,8 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
           setPosition(`${chapter?.label||'Reading'} · page ${location.start.displayed.page} of ${location.start.displayed.total} in section`);
           persist();
         });
-        try {await rendition.display(locationRef.current);}
-        catch {if(!locationRef.current)throw new Error('Cannot display EPUB');locationRef.current=undefined;await rendition.display();}
+        try {await settleEbookNavigation(rendition,()=>rendition!.display(locationRef.current));}
+        catch {if(!locationRef.current)throw new Error('Cannot display EPUB');locationRef.current=undefined;await settleEbookNavigation(rendition,()=>rendition!.display());}
         if(cancelled)return;
         let previousWidth=element.clientWidth,previousHeight=element.clientHeight;
         resize=new ResizeObserver(()=>{
@@ -151,10 +154,16 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
   useEffect(()=>{
     const rendition=engine.current;if(!rendition)return;
     const anchor=locationRef.current;
-    rendition.themes.override('font-size',`${fontSize}px`,true);persist();
-    const frame=requestAnimationFrame(()=>{if(anchor)void rendition.display(anchor).catch(()=>{});});
-    return()=>cancelAnimationFrame(frame);
+    let cancelled=false;busyRef.current=true;setBusy(true);
+    rendition.themes.override('font-size',`${fontSize}px`,true);
+    const frame=requestAnimationFrame(()=>{
+      void settleEbookNavigation(rendition,()=>rendition.display(anchor)).catch(()=>{
+        if(!cancelled)setError('Text sizing could not finish. Try another size or the PDF edition.');
+      }).finally(()=>{if(!cancelled){persist();busyRef.current=false;setBusy(false);}});
+    });
+    return()=>{cancelled=true;cancelAnimationFrame(frame);};
   },[fontSize,persist]);
+  const adjustFont=(value:number)=>{if(!busyRef.current)setFontSize(Math.max(16,Math.min(32,value)));};
   const rememberChange=(enabled:boolean)=>{
     rememberRef.current=enabled;setRemember(enabled);
     if(enabled)persist();else try{localStorage.removeItem(storageKey);}catch{/* Optional storage. */}
@@ -166,7 +175,7 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
   };
   return <dialog ref={dialog} className="library-reader ebook-reader" aria-labelledby="ebook-title" onCancel={cancel} onKeyDown={keyboard}><div className="reader-application">
     <header className="reader-heading"><div><span className="library-eyebrow">ACUITY / E-BOOK</span><h2 id="ebook-title">{book.title}</h2></div><div className="reader-actions"><a href={book.epub} download aria-label="Download EPUB"><ArrowDownToLine size={19}/></a><button onClick={()=>void toggleFullscreen()} aria-label={fullscreen?'Exit fullscreen':'Enter fullscreen'}>{fullscreen?<Minimize size={20}/>:<Maximize size={20}/>}</button><button autoFocus aria-label="Close ebook reader" onClick={onClose}><X size={23}/></button></div></header>
-    <div className="ebook-toolbar"><label className="ebook-chapters"><span className="sr-only">Contents</span><select aria-label="Contents" value={activeChapter} disabled={busy||!chapters.length} onChange={event=>void navigate({href:event.target.value})}><option value="" disabled>Contents</option>{chapters.map((chapter,index)=><option key={`${chapter.href}-${index}`} value={chapter.href}>{'— '.repeat(chapter.depth)}{chapter.label}</option>)}</select></label><div className="ebook-font"><button aria-label="Decrease font size" disabled={busy||fontSize<=16} onClick={()=>setFontSize(size=>Math.max(16,size-2))}>A−</button><label><span className="sr-only">Text size</span><input aria-label="Text size" disabled={busy} type="range" min={16} max={32} step={2} value={fontSize} onChange={event=>setFontSize(Number(event.target.value))}/></label><button aria-label="Increase font size" disabled={busy||fontSize>=32} onClick={()=>setFontSize(size=>Math.min(32,size+2))}>A+</button><span>{fontSize}px</span></div><label className="ebook-remember"><input type="checkbox" checked={remember} onChange={event=>rememberChange(event.target.checked)}/> Remember my place on this device</label></div>
+    <div className="ebook-toolbar"><label className="ebook-chapters"><span className="sr-only">Contents</span><select aria-label="Contents" value={activeChapter} disabled={busy||!chapters.length} onChange={event=>void navigate({href:event.target.value})}><option value="" disabled>Contents</option>{chapters.map((chapter,index)=><option key={`${chapter.href}-${index}`} value={chapter.href}>{'— '.repeat(chapter.depth)}{chapter.label}</option>)}</select></label><div className="ebook-font"><button aria-label="Decrease font size" disabled={busy||fontSize<=16} onClick={()=>adjustFont(fontSize-2)}>A−</button><label><span className="sr-only">Text size</span><input aria-label="Text size" disabled={busy} type="range" min={16} max={32} step={2} value={fontSize} onChange={event=>adjustFont(Number(event.target.value))}/></label><button aria-label="Increase font size" disabled={busy||fontSize>=32} onClick={()=>adjustFont(fontSize+2)}>A+</button><span>{fontSize}px</span></div><label className="ebook-remember"><input type="checkbox" checked={remember} onChange={event=>rememberChange(event.target.checked)}/> Remember my place on this device</label></div>
     <div className="reader-status" role="status">{fullscreenError|| (busy?'Preparing your page…':position)}</div>
     {error&&<div className="ebook-error" role="alert"><p>{error}</p><button onClick={()=>setRetry(value=>value+1)}>Retry EPUB</button><button onClick={onReadPdf}>Read PDF instead</button><a href={book.epub} download>Download EPUB</a></div>}
     <div className="ebook-paper" aria-busy={busy}><button className="ebook-edge edge-left" aria-label="Previous ebook page" disabled={busy||atStart} onClick={()=>void navigate('prev')}><ChevronLeft/></button><div ref={stage} className="ebook-stage"/><button className="ebook-edge edge-right" aria-label="Next ebook page" disabled={busy||atEnd} onClick={()=>void navigate('next')}><ChevronRight/></button></div>
