@@ -24,7 +24,10 @@ export function useReaderDialog(onClose: () => void) {
       if (document.fullscreenElement && dialog.current?.contains(document.fullscreenElement)) await document.exitFullscreen();
       else if (target?.requestFullscreen) await target.requestFullscreen();
       else setFullscreenError('Browser fullscreen is unavailable. The reader already fills this window.');
-    } catch {setFullscreenError('Fullscreen was unavailable. You can keep reading in this window.');}
+    } catch (reason) {
+      console.warn('Acuity: browser fullscreen request was declined',reason);
+      setFullscreenError('Fullscreen was unavailable. You can keep reading in this window.');
+    }
   };
   const cancel = (event: React.SyntheticEvent<HTMLDialogElement>) => {
     event.preventDefault();
