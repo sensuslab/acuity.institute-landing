@@ -82,6 +82,7 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
           'body':{'font-family':'"Times New Roman", Times, "Liberation Serif", serif !important','line-height':'1.65 !important','padding':'0 28px !important'},
           'p, li, div, blockquote, span, td':{'color':'#111111 !important','font-family':'"Times New Roman", Times, "Liberation Serif", serif !important','background':'transparent !important'},
           'p, li, blockquote':{'font-size':'1em !important'},
+          'pre, code':{'font-family':'"Times New Roman", Times, serif !important','font-size':'1em !important','white-space':'pre-wrap !important','color':'#111111 !important','background':'transparent !important'},
           'h1, h2, h3, h4, h5, h6':{'font-family':'"Times New Roman", Times, serif !important','color':'#111111 !important'},
           'img, svg':{'max-width':'100% !important','object-fit':'contain'},
           'a':{'color':'#274e75 !important'}
@@ -104,7 +105,18 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
           if(cancelled)return;
           locationRef.current=location.start.cfi;setAtStart(location.atStart);setAtEnd(location.atEnd);
           const current=location.start.href.split('#')[0];
-          const chapter=toc.find(item=>item.href.split('#')[0]===current||item.href.split('#')[0].endsWith('/'+current));
+          const candidates=toc.filter(item=>item.href.split('#')[0]===current||item.href.split('#')[0].endsWith('/'+current));
+          let chapter=candidates[0];
+          // A single XHTML section may contain many TOC anchors. Choose the last
+          // anchor before the visible CFI, rather than the first title in that file.
+          try {
+            const node=rendition?.getRange(location.start.cfi).startContainer;
+            for(const item of candidates){
+              const fragment=item.href.split('#')[1];
+              const anchor=fragment&&node?.ownerDocument?.getElementById(decodeURIComponent(fragment));
+              if(anchor&&node&&(anchor===node||anchor.contains(node)||(anchor.compareDocumentPosition(node)&4)))chapter=item;
+            }
+          }catch{/* Some fixed-layout editions cannot resolve a text CFI. */}
           setActiveChapter(chapter?.href||'');
           setPosition(`${chapter?.label||'Reading'} · page ${location.start.displayed.page} of ${location.start.displayed.total} in section`);
           persist();
@@ -152,12 +164,12 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
     if(event.key==='ArrowRight'||event.key==='PageDown'){event.preventDefault();turnRef.current(book.direction==='rtl'?'prev':'next');}
     else if(event.key==='ArrowLeft'||event.key==='PageUp'){event.preventDefault();turnRef.current(book.direction==='rtl'?'next':'prev');}
   };
-  return <dialog ref={dialog} className="library-reader ebook-reader" aria-labelledby="ebook-title" onCancel={cancel} onKeyDown={keyboard}>
+  return <dialog ref={dialog} className="library-reader ebook-reader" aria-labelledby="ebook-title" onCancel={cancel} onKeyDown={keyboard}><div className="reader-application">
     <header className="reader-heading"><div><span className="library-eyebrow">ACUITY / E-BOOK</span><h2 id="ebook-title">{book.title}</h2></div><div className="reader-actions"><a href={book.epub} download aria-label="Download EPUB"><ArrowDownToLine size={19}/></a><button onClick={()=>void toggleFullscreen()} aria-label={fullscreen?'Exit fullscreen':'Enter fullscreen'}>{fullscreen?<Minimize size={20}/>:<Maximize size={20}/>}</button><button autoFocus aria-label="Close ebook reader" onClick={onClose}><X size={23}/></button></div></header>
     <div className="ebook-toolbar"><label className="ebook-chapters"><span className="sr-only">Contents</span><select aria-label="Contents" value={activeChapter} disabled={busy||!chapters.length} onChange={event=>void navigate({href:event.target.value})}><option value="" disabled>Contents</option>{chapters.map((chapter,index)=><option key={`${chapter.href}-${index}`} value={chapter.href}>{'— '.repeat(chapter.depth)}{chapter.label}</option>)}</select></label><div className="ebook-font"><button aria-label="Decrease font size" disabled={fontSize<=16} onClick={()=>setFontSize(size=>Math.max(16,size-2))}>A−</button><label><span className="sr-only">Text size</span><input aria-label="Text size" type="range" min={16} max={32} step={2} value={fontSize} onChange={event=>setFontSize(Number(event.target.value))}/></label><button aria-label="Increase font size" disabled={fontSize>=32} onClick={()=>setFontSize(size=>Math.min(32,size+2))}>A+</button><span>{fontSize}px</span></div><label className="ebook-remember"><input type="checkbox" checked={remember} onChange={event=>rememberChange(event.target.checked)}/> Remember my place on this device</label></div>
     <div className="reader-status" role="status">{fullscreenError|| (busy?'Preparing your page…':position)}</div>
     {error&&<div className="ebook-error" role="alert"><p>{error}</p><button onClick={()=>setRetry(value=>value+1)}>Retry EPUB</button><button onClick={onReadPdf}>Read PDF instead</button><a href={book.epub} download>Download EPUB</a></div>}
     <div className="ebook-paper" aria-busy={busy}><button className="ebook-edge edge-left" aria-label="Previous ebook page" disabled={busy||atStart} onClick={()=>void navigate('prev')}><ChevronLeft/></button><div ref={stage} className="ebook-stage"/><button className="ebook-edge edge-right" aria-label="Next ebook page" disabled={busy||atEnd} onClick={()=>void navigate('next')}><ChevronRight/></button></div>
     <footer className="reader-footer ebook-footer"><button disabled={busy||atStart} onClick={()=>void navigate('prev')}><ChevronLeft size={16}/> Previous</button><span>{book.author} · {remember?'Position saved on this device':'Session reading'}</span><button disabled={busy||atEnd} onClick={()=>void navigate('next')}>Next <ChevronRight size={16}/></button></footer>
-  </dialog>;
+  </div></dialog>;
 }

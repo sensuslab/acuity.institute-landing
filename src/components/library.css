@@ -48,3 +48,8 @@
 .ebook-error button,.ebook-error a {display:inline-block;text-decoration:underline;margin:8px 18px 0 0}
 @media(max-width:700px){.library-category-row{gap:16px}.category-select{width:100%}.category-select select{max-width:none}.ebook-toolbar{padding:8px 12px;gap:10px}.ebook-chapters{max-width:48%}.ebook-font{gap:6px}.ebook-font input{max-width:62px}.ebook-font button{min-width:32px}.ebook-font>span{display:none}.ebook-remember{width:100%;font-size:10px}.ebook-stage{left:32px;right:32px}.ebook-edge{width:29px}.ebook-footer{gap:6px}.ebook-footer>span{max-width:40%;text-align:center;font-size:9px}.presentation-edge{width:35px}.reader-actions{gap:10px}}
 @media(prefers-reduced-motion:reduce){.presentation-page{animation:none}}
+
+/* Fullscreen targets the application wrapper: HTML dialog itself is excluded
+   by the Fullscreen API. Both modes retain their own palette and flex layout. */
+.reader-application {display:flex;flex-direction:column;width:100%;height:100%;min-height:0;background:inherit;color:inherit}
+.reader-application:fullscreen {width:100vw;height:100dvh}
