@@ -1,0 +1,630 @@
+{
+  "version": 1,
+  "collection": "NotebookLM - Web Library",
+  "snapshotDate": "2026-10-19",
+  "files": [
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-007-endogenous-technologies.pdf",
+      "originalFilename": "007 - Stillness, Spiritual Sight, and Contemplative Physiology - Endogenous Technologies.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=007+-+Stillness%2C+Spiritual+Sight%2C+and+Contemplative+Physiology+-+Endogenous+Technologies.pdf",
+      "bytes": 22683037,
+      "sha256": "db198240674e17cfb80a4807cf0a4994c1c643b4f0a9dee426f3316b0c517dbe"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-007-hyperdimensional-wisdom.pdf",
+      "originalFilename": "007 - Stillness, Spiritual Sight, and Contemplative Physiology - Hyperdimensional Wisdom.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=007+-+Stillness%2C+Spiritual+Sight%2C+and+Contemplative+Physiology+-+Hyperdimensional+Wisdom.pdf",
+      "bytes": 21110114,
+      "sha256": "aa2a7f35361f59ccb982ca66368a7f382cece7fb9033939ffeff0b5c1b66171c"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-008-the-celestial-paradox.pdf",
+      "originalFilename": "008 - Celestial Signs in Biblical and Apocryphal Texts - The Celestial Paradox.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=008+-+Celestial+Signs+in+Biblical+and+Apocryphal+Texts+-+The+Celestial+Paradox.pdf",
+      "bytes": 18459061,
+      "sha256": "68c8bab9a92bbeb80a80ddeb8bbd0ce28889247ed133d489851ce1f43c00c81f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-009-gnostic-cryptography.pdf",
+      "originalFilename": "009 - Ancient Gnostic Baptism Rituals and the Book of Jeu - Gnostic Cryptography.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=009+-+Ancient+Gnostic+Baptism+Rituals+and+the+Book+of+Jeu+-+Gnostic+Cryptography.pdf",
+      "bytes": 19677000,
+      "sha256": "c97daf8caf6555069a3c6741f8378dd5b565805fae039f1a18e8b8c138e98d69"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-009-the-gnostic-ascent.pdf",
+      "originalFilename": "009 - Ancient Gnostic Baptism Rituals and the Book of Jeu - The Gnostic Ascent.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=009+-+Ancient+Gnostic+Baptism+Rituals+and+the+Book+of+Jeu+-+The+Gnostic+Ascent.pdf",
+      "bytes": 26044566,
+      "sha256": "f9197cb437192bfddd3a311d8536fe6edf92eef66f69856eaa1b170bbbb64fd6"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-010-the-astral-codex.pdf",
+      "originalFilename": "010 - Gnostic Ritual Geometry and Jungian Mandalas - The Astral Codex.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=010+-+Gnostic+Ritual+Geometry+and+Jungian+Mandalas+-+The+Astral+Codex.pdf",
+      "bytes": 13803989,
+      "sha256": "bb2a33488f22d4e90d68d8c798ea8239a61d5ff9bb175602acb1e520ced52e90"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-011-the-ascent-architecture.pdf",
+      "originalFilename": "011 - Seven Spheres of Ascent - The Ascent Architecture.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=011+-+Seven+Spheres+of+Ascent+-+The+Ascent+Architecture.pdf",
+      "bytes": 19521652,
+      "sha256": "618c84085e089a76640f48290d81081db670c32b316793fe8a1c6f337a898c6e"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-011-the-golden-pathway.pdf",
+      "originalFilename": "011 - Seven Spheres of Ascent - The Golden Pathway.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=011+-+Seven+Spheres+of+Ascent+-+The+Golden+Pathway.pdf",
+      "bytes": 20367203,
+      "sha256": "b78210fa91668243b1b4a197400c89cc7284b2fbd842ef1b0c586e9915aa95cd"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-012-celestial-order-and-faith.pdf",
+      "originalFilename": "012 - Celestial Traditions and Motifs - Celestial Order and Faith.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=012+-+Celestial+Traditions+and+Motifs+-+Celestial+Order+and+Faith.pdf",
+      "bytes": 17563919,
+      "sha256": "ed1a831b9d74ed30a98420577a6bf1b0e2fc534b4e7f8e80a88e0a389339109f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-019-the-crown-of-barbelo.pdf",
+      "originalFilename": "019 - The Crown of Barbello Awakening the Mirror of Awareness - The Crown of Barbelo.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=019+-+The+Crown+of+Barbello+Awakening+the+Mirror+of+Awareness+-+The+Crown+of+Barbelo.pdf",
+      "bytes": 21587552,
+      "sha256": "c06a139b4db62d380b247c62e20e24fb7843973d6c28dea8f7f8eaca1f31659e"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-020-the-trimorphic-protennoia.pdf",
+      "originalFilename": "020 - The Three Forms of First Thought - The Trimorphic Protennoia.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=020+-+The+Three+Forms+of+First+Thought+-+The+Trimorphic+Protennoia.pdf",
+      "bytes": 22741809,
+      "sha256": "dada1e421ba58b834fad32ec381b95393f102a9aee6ad3903f7d131e16812aec"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-027-the-divine-codex.pdf",
+      "originalFilename": "027 - The Divine Codex Cube and Quantum Crucifixion - THE DIVINE CODEX.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=027+-+The+Divine+Codex+Cube+and+Quantum+Crucifixion+-+THE+DIVINE+CODEX.pdf",
+      "bytes": 19088415,
+      "sha256": "a0be22fa6ddfe120cd0a9854e1fe1ddc09f5f4dc762cec4e58772141c92a9832"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-047-the-architecture-of-success.pdf",
+      "originalFilename": "047 - Sure Secrets of Success and Mental Improvement - The Architecture of Success.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=047+-+Sure+Secrets+of+Success+and+Mental+Improvement+-+The+Architecture+of+Success.pdf",
+      "bytes": 21583931,
+      "sha256": "b15867a63bca4cb5e6150db26b9e177e5589786b540a0090cc267d94742a874f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-048-the-golden-cosmic-architecture.pdf",
+      "originalFilename": "048 - The Firmament Vaulted Dome of the Earth - The Golden Cosmic Architecture.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=048+-+The+Firmament+Vaulted+Dome+of+the+Earth+-+The+Golden+Cosmic+Architecture.pdf",
+      "bytes": 23598535,
+      "sha256": "63f3fff7ffc76342ab2359985eb0659c49a5f91f618db5597c54fb150f6db177"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-049-the-third-eye-code.pdf",
+      "originalFilename": "049 - The Third Eye Code Awakening the Pineal Gland - The Third Eye Code.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=049+-+The+Third+Eye+Code+Awakening+the+Pineal+Gland+-+The+Third+Eye+Code.pdf",
+      "bytes": 31855554,
+      "sha256": "5689ad63e8704074deba7b9736b111cc1cb53ccc350225e0d39b062681169e8a"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-050-the-authentic-creator.pdf",
+      "originalFilename": "050 - The Authentic Creator A Guide to Creative Truth - THE AUTHENTIC CREATOR.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=050+-+The+Authentic+Creator+A+Guide+to+Creative+Truth+-+THE+AUTHENTIC+CREATOR.pdf",
+      "bytes": 15894696,
+      "sha256": "6a50187ba407179b3ebb11a1bf648a90dc3283f5d0f8b35a550016882a9d5b1f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-051-the-emerald-blueprint.pdf",
+      "originalFilename": "051 - The Alchemical Path of the Emerald Tablet - The Emerald Blueprint.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=051+-+The+Alchemical+Path+of+the+Emerald+Tablet+-+The+Emerald+Blueprint.pdf",
+      "bytes": 25805313,
+      "sha256": "5fe55ee41376803d35650eac5aef6289cac9b417175b8ba890af60566f9bd68b"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-052-bio-digital-convergence.pdf",
+      "originalFilename": "052 - Neural Modulation and Synthetic Biological Interfaces - BIO-DIGITAL CONVERGENCE.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=052+-+Neural+Modulation+and+Synthetic+Biological+Interfaces+-+BIO-DIGITAL+CONVERGENCE.pdf",
+      "bytes": 27015794,
+      "sha256": "14a91bfcef746c3e6f00255a4b3dde8ca11553c3feb73d69169b4a1c665600c8"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-053-the-celestial-codex.pdf",
+      "originalFilename": "053 - We Want to Live The Primal Diet - THE CELESTIAL CODEX.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=053+-+We+Want+to+Live+The+Primal+Diet+-+THE+CELESTIAL+CODEX.pdf",
+      "bytes": 24143495,
+      "sha256": "b9af84f30c78f95717127e1dd5c88d0c4706cce7160b328335d5507fa30df35f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-054-archeology-of-the-mind.pdf",
+      "originalFilename": "054 - The Dragons of Eden - Archeology of the Mind.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=054+-+The+Dragons+of+Eden+-+Archeology+of+the+Mind.pdf",
+      "bytes": 22101015,
+      "sha256": "801d883cdcd748a130537aeabed0588cd8e1856f0e5492970fc6ac935559a19a"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-057-the-solomon-blueprint.pdf",
+      "originalFilename": "057 - The Wisedome of Solomon - The Solomon Blueprint.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=057+-+The+Wisedome+of+Solomon+-+The+Solomon+Blueprint.pdf",
+      "bytes": 27530015,
+      "sha256": "0c73f2a4b88c4b3db4ae791ca0778b305b680de1d777c1efcc73051055957100"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-058-the-cosmic-astrolabe.pdf",
+      "originalFilename": "058 - The Arcane Foundations of Religious Systems - The Cosmic Astrolabe.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=058+-+The+Arcane+Foundations+of+Religious+Systems+-+The+Cosmic+Astrolabe.pdf",
+      "bytes": 33085988,
+      "sha256": "85faceeb326823dd2ef694a7bb64b40a37538278026a8dd1abce9d9573ecc96f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-059-the-persian-roots-of-western-faith.pdf",
+      "originalFilename": "059 - The Word of the Lord via Persia - The Persian Roots of Western Faith.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=059+-+The+Word+of+the+Lord+via+Persia+-+The+Persian+Roots+of+Western+Faith.pdf",
+      "bytes": 29584293,
+      "sha256": "54ce1e33df37edaddd257e26e14ad2eb87ba164312e484dd9d64028164f141c6"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-060-spiritual-defense-codex.pdf",
+      "originalFilename": "060 - Daily Armor for Modern Battles - Spiritual Defense Codex.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=060+-+Daily+Armor+for+Modern+Battles+-+Spiritual+Defense+Codex.pdf",
+      "bytes": 23593216,
+      "sha256": "f1d5e2215ce4eb102addf9dced9430ca2a715bfa2545aa129ee043e2aeb62405"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-062-architectures-of-order.pdf",
+      "originalFilename": "062 - The Art of Divine Protection in Neo-Assyrian Sculpture - Architectures of Order.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=062+-+The+Art+of+Divine+Protection+in+Neo-Assyrian+Sculpture+-+Architectures+of+Order.pdf",
+      "bytes": 18225872,
+      "sha256": "352bc97954dcc1cb7c3ffc81d9c522ff0d51a7a24555ae339c2423dc91d03b21"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-062-assyrian-metaphysical-machinery.pdf",
+      "originalFilename": "062 - The Art of Divine Protection in Neo-Assyrian Sculpture - Assyrian Metaphysical Machinery.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=062+-+The+Art+of+Divine+Protection+in+Neo-Assyrian+Sculpture+-+Assyrian+Metaphysical+Machinery.pdf",
+      "bytes": 9530664,
+      "sha256": "22cbdf3c484af9d5af54cf5fafb1aa81b4a19888997ad9c9624deb0304bb1419"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-062-assyrian-ritual-engines.pdf",
+      "originalFilename": "062 - The Art of Divine Protection in Neo-Assyrian Sculpture - Assyrian Ritual Engines.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=062+-+The+Art+of+Divine+Protection+in+Neo-Assyrian+Sculpture+-+Assyrian+Ritual+Engines.pdf",
+      "bytes": 13894383,
+      "sha256": "94f7b54d4a6789f98ebcdb0344abe557b95c58dc5982fe9e4f10f546acc1c300"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-072-the-law-of-one.pdf",
+      "originalFilename": "072 - The Ra Contact Volume II Teaching the Law of One - The Law of One.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=072+-+The+Ra+Contact+Volume+II+Teaching+the+Law+of+One+-+The+Law+of+One.pdf",
+      "bytes": 22307935,
+      "sha256": "9fac10863894f6af349435e7c061681fb6eb3fb38349876a8ce5bf1048c966c6"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-184-the-bagua-somatic-blueprint.pdf",
+      "originalFilename": "184 - Sacred Bagua Configurations Ancient Daoist Hand Seals - The Bagua Somatic Blueprint.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=184+-+Sacred+Bagua+Configurations+Ancient+Daoist+Hand+Seals+-+The+Bagua+Somatic+Blueprint.pdf",
+      "bytes": 6359063,
+      "sha256": "b051dccdde24f7d444d898279f36f1426f1b33266a6724de4989b8df05d5b1f7"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-184-the-energetic-schematic.pdf",
+      "originalFilename": "184 - Sacred Bagua Configurations Ancient Daoist Hand Seals - The Energetic Schematic.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=184+-+Sacred+Bagua+Configurations+Ancient+Daoist+Hand+Seals+-+The+Energetic+Schematic.pdf",
+      "bytes": 10685491,
+      "sha256": "5a6536b63368e6653edbc120d03a0f4219b3076e84bd131ea36c7a0a62c1f83b"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-191-architecture-of-consciousness.pdf",
+      "originalFilename": "191 - Esoteric Wisdom A Guide to Metaphysical Knowledge - ARCHITECTURE OF CONSCIOUSNESS.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=191+-+Esoteric+Wisdom+A+Guide+to+Metaphysical+Knowledge+-+ARCHITECTURE+OF+CONSCIOUSNESS.pdf",
+      "bytes": 11855572,
+      "sha256": "c98b3100777f2dfc166d82f512e77854397486967ac56e291c71fec9c34ba996"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-208-the-acuity-initiation.pdf",
+      "originalFilename": "208 - The Universal Blueprint of Christ Consciousness - The Acuity Initiation.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=208+-+The+Universal+Blueprint+of+Christ+Consciousness+-+The+Acuity+Initiation.pdf",
+      "bytes": 8850511,
+      "sha256": "6d38baf3ec335ae489ae6454dbce43ea8e644c707ee213182f94834c45b24a94"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-208-the-atmanic-singularity.pdf",
+      "originalFilename": "208 - The Universal Blueprint of Christ Consciousness - The Atmanic Singularity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=208+-+The+Universal+Blueprint+of+Christ+Consciousness+-+The+Atmanic+Singularity.pdf",
+      "bytes": 11427670,
+      "sha256": "11120679eb23a1b074db117103e81d24218fbba436c6d88c92e71ed53c50a5fb"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-208-the-christ-frequency.pdf",
+      "originalFilename": "208 - The Universal Blueprint of Christ Consciousness - The Christ Frequency.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=208+-+The+Universal+Blueprint+of+Christ+Consciousness+-+The+Christ+Frequency.pdf",
+      "bytes": 6972316,
+      "sha256": "e4d66b08636fd0ea81349eb03d0c18da6d60251a5ac6876aedd6acb354cd1536"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-217-koyaanisqatsi-and-the-physics-of-disharmony.pdf",
+      "originalFilename": "217 - The Hopi Prophecy Sovereignty and the Path of Purification - Koyaanisqatsi and the Physics of Disharmony.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=217+-+The+Hopi+Prophecy+Sovereignty+and+the+Path+of+Purification+-+Koyaanisqatsi+and+the+Physics+of+Disharmony.pdf",
+      "bytes": 7650247,
+      "sha256": "456f579c0c56a6341472a8a52867dd869acdc14f8e38e300316f0b61ea978e5e"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-217-the-fourth-world-covenant.pdf",
+      "originalFilename": "217 - The Hopi Prophecy Sovereignty and the Path of Purification - The Fourth World Covenant.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=217+-+The+Hopi+Prophecy+Sovereignty+and+the+Path+of+Purification+-+The+Fourth+World+Covenant.pdf",
+      "bytes": 15177170,
+      "sha256": "e61da859e2ab0066676d780757174db4fd73c7d0d890682802a4d8e35c4b35b7"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-217-the-sandstone-prophecy.pdf",
+      "originalFilename": "217 - The Hopi Prophecy Sovereignty and the Path of Purification - The Sandstone Prophecy.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=217+-+The+Hopi+Prophecy+Sovereignty+and+the+Path+of+Purification+-+The+Sandstone+Prophecy.pdf",
+      "bytes": 15113450,
+      "sha256": "fb1256f4e4ab56e99230850dd1ff13c6e0cdab32ac94481593649a7bbf5dec80"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-218-sophia-unveiled.pdf",
+      "originalFilename": "218 - Best P The Forbidden Gospel of Divine Wisdom - Sophia Unveiled.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=218+-+Best+P+The+Forbidden+Gospel+of+Divine+Wisdom+-+Sophia+Unveiled.pdf",
+      "bytes": 13032688,
+      "sha256": "d4af304ad2a09db4d681a7adb0cc2e061403da77d1e2203aaafb01771eea8d76"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-218-the-sophia-prophecy.pdf",
+      "originalFilename": "218 - Best P The Forbidden Gospel of Divine Wisdom - The Sophia Prophecy.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=218+-+Best+P+The+Forbidden+Gospel+of+Divine+Wisdom+-+The+Sophia+Prophecy.pdf",
+      "bytes": 12982669,
+      "sha256": "376195fe1d3e975d74beeed2da6f9fc3038dee48de3ce4959fd5759aede6b0c0"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-219-the-sumerian-transmission.pdf",
+      "originalFilename": "219 - Sumerian Records and the Origins of Celestial Knowledge - THE SUMERIAN TRANSMISSION.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=219+-+Sumerian+Records+and+the+Origins+of+Celestial+Knowledge+-+THE+SUMERIAN+TRANSMISSION.pdf",
+      "bytes": 12287721,
+      "sha256": "138484bac59437ef28eeff66d9b2b9487a46560460214c2c8b911d4c60e0afe8"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-220-architecture-of-paranoia.pdf",
+      "originalFilename": "220 - The Curse of Canaan A Demonology of History - ARCHITECTURE OF PARANOIA.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=220+-+The+Curse+of+Canaan+A+Demonology+of+History+-+ARCHITECTURE+OF+PARANOIA.pdf",
+      "bytes": 8582364,
+      "sha256": "2c9a684787fcede752922d04aa07d406bbf8d00b5be82be041527d5994fd6cdc"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-221-decoding-covert-influence.pdf",
+      "originalFilename": "221 - Dem Empirical Matrix of Modern Occult and Coercive Influence - Decoding Covert Influence.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=221+-+Dem+Empirical+Matrix+of+Modern+Occult+and+Coercive+Influence+-+Decoding+Covert+Influence.pdf",
+      "bytes": 15419240,
+      "sha256": "7d1f05098af02eb9e3837e606e2cc6c56ce53b5f5654726d3678790c58307466"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-221-shadows-of-influence.pdf",
+      "originalFilename": "221 - Dem Empirical Matrix of Modern Occult and Coercive Influence - Shadows of Influence.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=221+-+Dem+Empirical+Matrix+of+Modern+Occult+and+Coercive+Influence+-+Shadows+of+Influence.pdf",
+      "bytes": 11512850,
+      "sha256": "277bf9a6ca783975ee8e16ea48029e3dfe7a9736b62aa071876642048efddd5d"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-221-the-architecture-of-belief.pdf",
+      "originalFilename": "221 - Dem Empirical Matrix of Modern Occult and Coercive Influence - The Architecture of Belief.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=221+-+Dem+Empirical+Matrix+of+Modern+Occult+and+Coercive+Influence+-+The+Architecture+of+Belief.pdf",
+      "bytes": 10344898,
+      "sha256": "58df27e8d0f3d5aed858a4c5257dfc7a5e71f8fd766da75d56adfd331923439f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-222-the-labyrinth-of-shadows.pdf",
+      "originalFilename": "222 - The Hidden Evil Investigating Organized Vigilante Stalking - The Labyrinth of Shadows.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=222+-+The+Hidden+Evil+Investigating+Organized+Vigilante+Stalking+-+The+Labyrinth+of+Shadows.pdf",
+      "bytes": 8383020,
+      "sha256": "c44605f9b299ad4fbb23546bccb2e7bfc56765a9ba5272091c49bc834d743087"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-223-the-gate-to-wisdom.pdf",
+      "originalFilename": "223 - Selections from the Writings of the Báb - The Gate to Wisdom.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=223+-+Selections+from+the+Writings+of+the+B%C3%A1b+-+The+Gate+to+Wisdom.pdf",
+      "bytes": 8318554,
+      "sha256": "df24aea64a2b3f41e45f6138c4649380b6e9636ef867a3a645ef16859736b26a"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-225-the-divine-cipher.pdf",
+      "originalFilename": "225 - The Kitáb-i-Íqán The Book of Certitude - The Divine Cipher.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=225+-+The+Kit%C3%A1b-i-%C3%8Dq%C3%A1n+The+Book+of+Certitude+-+The+Divine+Cipher.pdf",
+      "bytes": 8917969,
+      "sha256": "ead3e948c346103d64ca4678e67b232576c18a56cab40c65d2a081eb3d8af483"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-226-cosmic-architecture.pdf",
+      "originalFilename": "226 - Gleanings from the Writings of Bahá’u’lláh - Cosmic Architecture.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=226+-+Gleanings+from+the+Writings+of+Bah%C3%A1%E2%80%99u%E2%80%99ll%C3%A1h+-+Cosmic+Architecture.pdf",
+      "bytes": 9492398,
+      "sha256": "bd5b0df1beeb9cc2d46f75df60456b389854e883d4720541e19e3de5dfac5d0b"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-239-architecture-of-the-gnostic-void.pdf",
+      "originalFilename": "239 - Pistis Sophia A Gnostic Miscellany and the Books of Savior - Architecture of the Gnostic Void.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=239+-+Pistis+Sophia+A+Gnostic+Miscellany+and+the+Books+of+Savior+-+Architecture+of+the+Gnostic+Void.pdf",
+      "bytes": 21156790,
+      "sha256": "6daf3aace4ac7c1c1c8a33b4355ceb411bf5a62fff6d6e4d332398d2d91d19b0"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-241-the-celestial-codex.pdf",
+      "originalFilename": "241 - The Solar Messiah Astrological Origins of the Savior Archetype - THE CELESTIAL CODEX.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=241+-+The+Solar+Messiah+Astrological+Origins+of+the+Savior+Archetype+-+THE+CELESTIAL+CODEX.pdf",
+      "bytes": 10093791,
+      "sha256": "e3aa46f6c8f25f02cceb9578711bc81376bb7191e6fec8bb8d70707627d7dc91"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-242-the-gnostic-map.pdf",
+      "originalFilename": "242 - The Gnostic Architecture of the Seven Heavens - The Gnostic Map.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=242+-+The+Gnostic+Architecture+of+the+Seven+Heavens+-+The+Gnostic+Map.pdf",
+      "bytes": 23435349,
+      "sha256": "0767e31bf1f2a6b14a3c6b88f43ccaff9a96c7fef7c692f7731ae083e5dfa808"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-243-the-buried-transmission.pdf",
+      "originalFilename": "243 - The Lost Frequency Reclaiming the Sacred Name of Source - THE BURIED TRANSMISSION.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=243+-+The+Lost+Frequency+Reclaiming+the+Sacred+Name+of+Source+-+THE+BURIED+TRANSMISSION.pdf",
+      "bytes": 20134298,
+      "sha256": "9b8f4a47d0080a2bb5e52e441591009cc8f238c3c742ea3c0762181cd1c140f2"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-253-the-architecture-of-cosmic-order.pdf",
+      "originalFilename": "253 - The Prophetic Visions and Judgments of Enoch - THE ARCHITECTURE OF COSMIC ORDER.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=253+-+The+Prophetic+Visions+and+Judgments+of+Enoch+-+THE+ARCHITECTURE+OF+COSMIC+ORDER.pdf",
+      "bytes": 21706789,
+      "sha256": "65a8a49e6b6c6ee3431bee718249998d005be517899ada782b05c6f590894663"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-254-the-gnostic-impulse.pdf",
+      "originalFilename": "254 - The Forbidden God Gnosticism and the Architecture of Spiritual Awakening - THE GNOSTIC IMPULSE.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=254+-+The+Forbidden+God+Gnosticism+and+the+Architecture+of+Spiritual+Awakening+-+THE+GNOSTIC+IMPULSE.pdf",
+      "bytes": 23106953,
+      "sha256": "2f945d704fb904a42f7e7cd90064a18e691b1a7ee6fe7ec761eb73378db447f6"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-255-anatomy-of-ascension.pdf",
+      "originalFilename": "255 - The Serpent Science Kundalini Illumination and the Sacral Secret - Anatomy of Ascension.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=255+-+The+Serpent+Science+Kundalini+Illumination+and+the+Sacral+Secret+-+Anatomy+of+Ascension.pdf",
+      "bytes": 22482681,
+      "sha256": "64469c89ccb971a24d6151b224217909ce941d57b70a12bdef6aaf796e46fa86"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-255-astro-biochemic-ascension.pdf",
+      "originalFilename": "255 - The Serpent Science Kundalini Illumination and the Sacral Secret - Astro-Biochemic Ascension.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=255+-+The+Serpent+Science+Kundalini+Illumination+and+the+Sacral+Secret+-+Astro-Biochemic+Ascension.pdf",
+      "bytes": 22149704,
+      "sha256": "14194251873595a9e06b0c9fa26f8f3d8ce763ca16b1aef9230433a1ffcfde13"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-257-illuminated-ascent.pdf",
+      "originalFilename": "257 - The Seven Heavens A Gnostic Ascent of the Breath - Illuminated Ascent.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=257+-+The+Seven+Heavens+A+Gnostic+Ascent+of+the+Breath+-+Illuminated+Ascent.pdf",
+      "bytes": 11157273,
+      "sha256": "722baca2d833edb32572d320eb4a323416c01a5f7f3e6797095efcb7c4fe3163"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-257-the-seven-heavens.pdf",
+      "originalFilename": "257 - The Seven Heavens A Gnostic Ascent of the Breath - The Seven Heavens.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=257+-+The+Seven+Heavens+A+Gnostic+Ascent+of+the+Breath+-+The+Seven+Heavens.pdf",
+      "bytes": 10997019,
+      "sha256": "ac71bd40c66710cf17fb569fef0c9d4cfcefacc04be3b07d7b63de767dcd45d5"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-258-solomon-seals.pdf",
+      "originalFilename": "258 - The Solomonic Activation Recovering the Seven Seals of Sovereignty - Solomon Seals.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=258+-+The+Solomonic+Activation+Recovering+the+Seven+Seals+of+Sovereignty+-+Solomon+Seals.pdf",
+      "bytes": 16852432,
+      "sha256": "37461a7c2ad9c46a519ec72ff1c020b6b033b5302c180d9ac52936e232e8e91c"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-263-celestial-blueprint.pdf",
+      "originalFilename": "263 - The Birth and Wisdom of Ganesha - Celestial Blueprint.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=263+-+The+Birth+and+Wisdom+of+Ganesha+-+Celestial+Blueprint.pdf",
+      "bytes": 24896411,
+      "sha256": "100fceb3b0348009b0e678e920d6f4be545cb83369122e63a3ce78c39b5a01e6"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-263-the-architecture-of-wisdom.pdf",
+      "originalFilename": "263 - The Birth and Wisdom of Ganesha - The Architecture of Wisdom.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=263+-+The+Birth+and+Wisdom+of+Ganesha+-+The+Architecture+of+Wisdom.pdf",
+      "bytes": 20349647,
+      "sha256": "4a116154a6c2ac9e8fcd897bb8a5ced8618324fde9437b500416678dc5bc2a46"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-271-architecture-of-the-soul.pdf",
+      "originalFilename": "271 - The Seven Forbidden Archangels and the Map of Consciousness - ARCHITECTURE OF THE SOUL.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=271+-+The+Seven+Forbidden+Archangels+and+the+Map+of+Consciousness+-+ARCHITECTURE+OF+THE+SOUL.pdf",
+      "bytes": 14409005,
+      "sha256": "5d569663dcf9c2ecf6a6d620b2e6526783ff234684a89d4da6d27636391395ac"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-273-decoding-mary.pdf",
+      "originalFilename": "273 - The Gospel of Mary Oxford Early Christian Gospel Texts - DECODING MARY.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=273+-+The+Gospel+of+Mary+Oxford+Early+Christian+Gospel+Texts+-+DECODING+MARY.pdf",
+      "bytes": 9214522,
+      "sha256": "b1b30a54bc3cd7f6b89ed1befcda4be000439a988738342124a0e48d0ef4c8c7"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-274-pathways-to-the-infinite.pdf",
+      "originalFilename": "274 - The Architecture of Sentience A Global Consciousness Synthesis - PATHWAYS TO THE INFINITE.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=274+-+The+Architecture+of+Sentience+A+Global+Consciousness+Synthesis+-+PATHWAYS+TO+THE+INFINITE.pdf",
+      "bytes": 18437216,
+      "sha256": "ba358d0bde9a32636dc962ce736fce13eeac615049fd421677c492fd03383299"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-280-the-luminous-cartography.pdf",
+      "originalFilename": "280 - The Gnosis of the Light - THE LUMINOUS CARTOGRAPHY.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=280+-+The+Gnosis+of+the+Light+-+THE+LUMINOUS+CARTOGRAPHY.pdf",
+      "bytes": 26020167,
+      "sha256": "a0af6cea73e01b0e7788ba7d42a6dcbeab5716abcf062e67ce33f2ef274c99ac"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-280-the-architecture-of-gnosis.pdf",
+      "originalFilename": "280 - The Gnosis of the Light - The Architecture of Gnosis.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=280+-+The+Gnosis+of+the+Light+-+The+Architecture+of+Gnosis.pdf",
+      "bytes": 25806707,
+      "sha256": "c0418c197080e47756fe2ceda5de833ea4e6bcad3dfc27042b31f58773bd81b0"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-289-architecting-consciousness.pdf",
+      "originalFilename": "289 - Raja Yoga Conquering the Internal Nature - Architecting Consciousness.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=289+-+Raja+Yoga+Conquering+the+Internal+Nature+-+Architecting+Consciousness.pdf",
+      "bytes": 11971278,
+      "sha256": "39dd8e015e8d09e270156e41371d0e0e3565afe29e5ddc29bdef798bf8a3f4f7"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-289-the-architecture-of-liberation.pdf",
+      "originalFilename": "289 - Raja Yoga Conquering the Internal Nature - The Architecture of Liberation.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=289+-+Raja+Yoga+Conquering+the+Internal+Nature+-+The+Architecture+of+Liberation.pdf",
+      "bytes": 8154923,
+      "sha256": "29f12ab2b7fb1388c66a2202a905d7864ce8ff1eb78dcfb73191f4e0b1379ad8"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-294-the-celestial-archetype-2.pdf",
+      "originalFilename": "294 - Pigera-Adamas The Celestial Archetype of the Sethian Gnostic Adam - THE CELESTIAL ARCHETYPE 2.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=294+-+Pigera-Adamas+The+Celestial+Archetype+of+the+Sethian+Gnostic+Adam+-+THE+CELESTIAL+ARCHETYPE+2.pdf",
+      "bytes": 12507390,
+      "sha256": "67fe8836581111a3c23b1868ab3c25fbefe6469642582c0fc8a81611bd5bdcae"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-294-the-celestial-archetype.pdf",
+      "originalFilename": "294 - Pigera-Adamas The Celestial Archetype of the Sethian Gnostic Adam - The Celestial Archetype.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=294+-+Pigera-Adamas+The+Celestial+Archetype+of+the+Sethian+Gnostic+Adam+-+The+Celestial+Archetype.pdf",
+      "bytes": 14051496,
+      "sha256": "ef94c4365abd6159a2ded8ea5e66313d244df2c7d5633f50256c7786e36bd374"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-297-enochian-synthesis.pdf",
+      "originalFilename": "297 - The Book of Knowledge The Keys of Enoch - Enochian Synthesis.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=297+-+The+Book+of+Knowledge+The+Keys+of+Enoch+-+Enochian+Synthesis.pdf",
+      "bytes": 13359062,
+      "sha256": "90ebe33aa1b3cef61980f2cd12d23fbe8477666dcc1c9e0eb980981f2c945682"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-297-illuminated-cosmic-codex.pdf",
+      "originalFilename": "297 - The Book of Knowledge The Keys of Enoch - Illuminated Cosmic Codex.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=297+-+The+Book+of+Knowledge+The+Keys+of+Enoch+-+Illuminated+Cosmic+Codex.pdf",
+      "bytes": 16496162,
+      "sha256": "67f53ecd5271f42169c497b1c1bd732da68930f1b5e5c7cfa13b5e9d44c4da15"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-298-the-enochian-keys.pdf",
+      "originalFilename": "298 - The Book of Knowledge The Keys of Enoch - The Enochian Keys.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=298+-+The+Book+of+Knowledge+The+Keys+of+Enoch+-+The+Enochian+Keys.pdf",
+      "bytes": 18506245,
+      "sha256": "635ceb4e1260d8c4784be19443605131ac74eb41863b125e73f77f8d853dcd2e"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-308-the-divine-paradox.pdf",
+      "originalFilename": "308 - The Thunder, Perfect Mind Paradoxes of the Divine Gnosis - The Divine Paradox.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=308+-+The+Thunder%2C+Perfect+Mind+Paradoxes+of+the+Divine+Gnosis+-+The+Divine+Paradox.pdf",
+      "bytes": 13816701,
+      "sha256": "e30586bd147267ef0ec5d6286a214e0ba4506b3a5558ac0ab92ccd46524338bb"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-308-the-gnostic-paradox.pdf",
+      "originalFilename": "308 - The Thunder, Perfect Mind Paradoxes of the Divine Gnosis - The Gnostic Paradox.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=308+-+The+Thunder%2C+Perfect+Mind+Paradoxes+of+the+Divine+Gnosis+-+The+Gnostic+Paradox.pdf",
+      "bytes": 14643286,
+      "sha256": "d3ec1e486b4182897b8f62655291f9dcbe04a5c025317018bc105bb3acc0e55f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-325-navigating-the-deep-mind.pdf",
+      "originalFilename": "325 - Jung The Complete Research Compendium and Seminar Guide - Navigating the Deep Mind.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=325+-+Jung+The+Complete+Research+Compendium+and+Seminar+Guide+-+Navigating+the+Deep+Mind.pdf",
+      "bytes": 15652964,
+      "sha256": "8fe8146b20044b120f24db8beabbcad6eeb4300067ff151728bb74c28fe2001f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-338-creative-evolution.pdf",
+      "originalFilename": "338 - Élan Vital Bergson’s Philosophy of Creative Evolution - CREATIVE EVOLUTION.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=338+-+%C3%89lan+Vital+Bergson%E2%80%99s+Philosophy+of+Creative+Evolution+-+CREATIVE+EVOLUTION.pdf",
+      "bytes": 16401770,
+      "sha256": "649bc1d7079312a7dd836fc92eba63656bb6d6d0449022b399697800a1e141a1"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-338-the-new-vitalism.pdf",
+      "originalFilename": "338 - Élan Vital Bergson’s Philosophy of Creative Evolution - The New Vitalism.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=338+-+%C3%89lan+Vital+Bergson%E2%80%99s+Philosophy+of+Creative+Evolution+-+The+New+Vitalism.pdf",
+      "bytes": 18635793,
+      "sha256": "6629fd8eda894ddd17de59f9701501008da61a4d70e99a5fa893b501dc35321f"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-338-elan-vital.pdf",
+      "originalFilename": "338 - Élan Vital Bergson’s Philosophy of Creative Evolution - ÉLAN VITAL.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=338+-+%C3%89lan+Vital+Bergson%E2%80%99s+Philosophy+of+Creative+Evolution+-+%C3%89LAN+VITAL.pdf",
+      "bytes": 13042761,
+      "sha256": "574b2143d3b9d7f267677bca2a080395c2f912ccb5efce8551a776e7d6a21ed1"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-341-rootwork-sovereignty.pdf",
+      "originalFilename": "341 - Hoodoo Traditions Roots, Rituals, and Van Van Oil - Rootwork Sovereignty.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=341+-+Hoodoo+Traditions+Roots%2C+Rituals%2C+and+Van+Van+Oil+-+Rootwork+Sovereignty.pdf",
+      "bytes": 18961226,
+      "sha256": "891f31eeccc6808d08883dddfd559f143a48486a9ece497d2cbf47de61646253"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-341-the-metaphysics-of-resistance.pdf",
+      "originalFilename": "341 - Hoodoo Traditions Roots, Rituals, and Van Van Oil - The Metaphysics of Resistance.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=341+-+Hoodoo+Traditions+Roots%2C+Rituals%2C+and+Van+Van+Oil+-+The+Metaphysics+of+Resistance.pdf",
+      "bytes": 14477936,
+      "sha256": "5e6510ca8323c6c021d4e13a2d7edc4c84cbc65735e3febebf906eedf5689a47"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-348-the-sacred-signature.pdf",
+      "originalFilename": "348 - The Sacred Signature The Biblical Significance of Seven - THE SACRED SIGNATURE.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=348+-+The+Sacred+Signature+The+Biblical+Significance+of+Seven+-+THE+SACRED+SIGNATURE.pdf",
+      "bytes": 22982488,
+      "sha256": "d1e441b00932d30875f20e638a005adb7a2a026fe996f4380c8e5a2bdb6eed91"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-351-the-forgotten-current.pdf",
+      "originalFilename": "351 - Isis Sophia The Lost Wisdom of the Inner Temple - The Forgotten Current.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=351+-+Isis+Sophia+The+Lost+Wisdom+of+the+Inner+Temple+-+The+Forgotten+Current.pdf",
+      "bytes": 18631609,
+      "sha256": "adeb2d8342dd8ecc14bf2fc55fcb6a66b72974374b80e7e5955aeb4e420b3b15"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-352-architecture-of-gnosis.pdf",
+      "originalFilename": "352 - The Monad Gnostic Paths to the Source of Consciousness - Architecture of Gnosis.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=352+-+The+Monad+Gnostic+Paths+to+the+Source+of+Consciousness+-+Architecture+of+Gnosis.pdf",
+      "bytes": 22195692,
+      "sha256": "c58f60b1f8f96722dce2aea64d8e83dd1210d17d92bbd676a8afeffb4525fc0e"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-353-architecture-of-awakening.pdf",
+      "originalFilename": "353 - The Monad Source of Gnostic Consciousness and Divine Origin - Architecture of Awakening.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=353+-+The+Monad+Source+of+Gnostic+Consciousness+and+Divine+Origin+-+Architecture+of+Awakening.pdf",
+      "bytes": 18894653,
+      "sha256": "36cb331517f7ae86b0f74da69f4a943b9d2bec2dd41722dde7385c651dc62004"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-354-the-self-declaration-code.pdf",
+      "originalFilename": "354 - The Gnostic Code of Source Consciousness - The Self Declaration Code.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=354+-+The+Gnostic+Code+of+Source+Consciousness+-+The+Self+Declaration+Code.pdf",
+      "bytes": 28302479,
+      "sha256": "4ceb69d6a8617d59d4ba17ff508085e68e814a96aef7260b7e7cf1bd42817d04"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-363-the-atlas-of-consciousness.pdf",
+      "originalFilename": "363 - Astral Projection Neuroscience, Tradition, and Subjective Realities - The Atlas of Consciousness.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=363+-+Astral+Projection+Neuroscience%2C+Tradition%2C+and+Subjective+Realities+-+The+Atlas+of+Consciousness.pdf",
+      "bytes": 28531757,
+      "sha256": "1bf7d1accf224d7edf1266e05362aff73730dacb789df57c529557cfd319d6d1"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-364-the-out-of-body-experience.pdf",
+      "originalFilename": "364 - The Astral Frontier A Multidisciplinary Study of Out-of-Body Consciousne - The Out of Body Experience.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=364+-+The+Astral+Frontier+A+Multidisciplinary+Study+of+Out-of-Body+Consciousne+-+The+Out+of+Body+Experience.pdf",
+      "bytes": 14580904,
+      "sha256": "95c13266bff30cd7894cca1b82adc65d25ee8ecf2d9504c6d0afd198591711dd"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-373-decoding-reality.pdf",
+      "originalFilename": "373 - The Universal Frequency Five Ancient Truths Decoded - Decoding Reality.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=373+-+The+Universal+Frequency+Five+Ancient+Truths+Decoded+-+Decoding+Reality.pdf",
+      "bytes": 12742035,
+      "sha256": "3934c25d8275300d7a12bbe0a4613e931c8a9a7e562d67238ad9a01389b2b025"
+    }
+  ]
+}

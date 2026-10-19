@@ -38,6 +38,25 @@
     "count": 1
   },
   {
+    "key": "Presentations",
+    "label": "Presentations",
+    "path": [
+      "Presentations"
+    ],
+    "depth": 0,
+    "count": 89
+  },
+  {
+    "key": "Presentations/NotebookLM",
+    "label": "NotebookLM decks",
+    "path": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "depth": 1,
+    "count": 89
+  },
+  {
     "key": "Scripture",
     "label": "Scripture",
     "path": [

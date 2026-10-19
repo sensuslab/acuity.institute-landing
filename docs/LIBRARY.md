@@ -63,6 +63,14 @@ A minimal companion `dhammapada.json`:
 
 ## Curation workflow
 
+### Imported research slide decks
+
+The curator-provided **NotebookLM – Web Library** Dropbox folder supplies 89 PDF-only decks under `Presentations/NotebookLM/`. Each variant is a separate record, even where multiple decks share a numbered source topic. The original filename, page count, download size and source link are retained. These are modern research presentations, not editions of the ancient works they discuss; the collection attribution is Acuity Institute, separate from the authors of the historical works discussed.
+
+The 1.56 GB of imported PDFs are deliberately excluded from Git history. `content/library-imports.json` pins each reviewed file's destination, original filename, byte size and SHA-256. `npm run library:fetch` downloads missing or changed local copies. Catalogue sync, development and production builds run this step automatically before scanning, so deployed readers and downloads still use Acuity-hosted files rather than a Dropbox iframe or temporary link. No new database, storage account or secrets are required.
+
+The first clean build needs internet access, disk space for the source files and build output, and continuing download access to the shared Dropbox folder. Later builds reuse a valid local cache when available. A missing, changed or unavailable source stops the build instead of publishing a partial collection. To replace a deck, review the new PDF and update its pinned size/hash and metadata together. To remove a deck, remove its manifest entry, companion JSON and local PDF together. Moving a deck also requires updating the manifest destination and `.gitignore` pattern. All these records expose PDF reading, presentation and PDF download; none exposes an E-Book launcher.
+
 1. Complete OCR, textual formatting and any EPUB preparation before publication. Do not invent an EPUB for a document that cannot be faithfully prepared.
 2. Put the source PDF and, where available, its reviewed EPUB beside the metadata file. For untranscribed image-only material, publish the PDF alone.
 3. Run `npm run catalogue:sync` and review `src/data/libraryCatalogue.json`, `src/data/libraryCategories.json` and `public/library/provenance.json`.
