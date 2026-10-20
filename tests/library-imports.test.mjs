@@ -55,7 +55,7 @@ test('Import retries transient errors and rejects unsafe destination paths', asy
 test('Every imported deck has a distinct PDF-only presentation record with its reviewed identity', () => {
   const imports = JSON.parse(fs.readFileSync('content/library-imports.json','utf8')).files;
   const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
-  assert.equal(imports.length,89);
+  assert.equal(imports.length,98);
   const importedBooks = books.filter(book => book.categoryKey === 'Presentations/NotebookLM');
   assert.equal(importedBooks.length,imports.length);
   for (const entry of imports) {
@@ -86,7 +86,7 @@ test('A temporary HTTP 200 HTML page is retried without relaxing the PDF checksu
   assert.deepEqual(fs.readFileSync(path.join(root,entry.path)),bytes);
 });
 
-test('Rate limit retries respect Retry-After and request starts are paced across workers', async t => {
+test('Rate limit retries respect Retry-After and pace subsequent requests', async t => {
   const {bytes, options} = fixture(t);
   let calls = 0;
   const waits = [];

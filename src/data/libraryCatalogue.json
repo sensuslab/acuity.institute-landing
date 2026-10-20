@@ -744,6 +744,53 @@
     "kind": "presentation"
   },
   {
+    "id": "presentation-043-pathway-of-initiation",
+    "title": "Pathway of Initiation",
+    "subtitle": "The All-Seeing Eye Ancient Wisdom for Modern Problems",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "The All-Seeing Eye Ancient Wisdom for Modern Problems. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=043+-+The+All-Seeing+Eye+Ancient+Wisdom+for+Modern+Problems+-+Pathway+of+Initiation+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "043",
+      "The All-Seeing Eye Ancient Wisdom for Modern Problems"
+    ],
+    "accent": "gold",
+    "pages": 18,
+    "order": 1043,
+    "originalFilename": "043 - The All-Seeing Eye Ancient Wisdom for Modern Problems - Pathway of Initiation - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-043-pathway-of-initiation.pdf",
+        "bytes": 21261857,
+        "sha256": "5af1afc38122c8fe2ccc07c6103fdce711c1c355a96f97d33fac9e7e19f6380f"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-043-pathway-of-initiation.pdf",
+    "pdfBytes": 21261857,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
     "id": "presentation-047-the-architecture-of-success",
     "title": "The Architecture of Success",
     "subtitle": "Sure Secrets of Success and Mental Improvement",
@@ -1112,6 +1159,53 @@
     ],
     "pdf": "/library/books/Presentations/NotebookLM/presentation-054-archeology-of-the-mind.pdf",
     "pdfBytes": 22101015,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
+    "id": "presentation-054-the-arc-of-intelligence",
+    "title": "The Arc of Intelligence",
+    "subtitle": "The Dragons of Eden",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "The Dragons of Eden. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=054+-+The+Dragons+of+Eden+-+The+Arc+of+Intelligence+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "054",
+      "The Dragons of Eden"
+    ],
+    "accent": "gold",
+    "pages": 16,
+    "order": 1054,
+    "originalFilename": "054 - The Dragons of Eden - The Arc of Intelligence - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-054-the-arc-of-intelligence.pdf",
+        "bytes": 20404190,
+        "sha256": "c875f3725779f85d9a0dedbad4b9a0eeae94f28990a40dabe20f57fbd92d2661"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-054-the-arc-of-intelligence.pdf",
+    "pdfBytes": 20404190,
     "capabilities": {
       "pdf": true,
       "ebook": false,
@@ -1825,6 +1919,53 @@
     "kind": "presentation"
   },
   {
+    "id": "presentation-217-the-cosmic-balance",
+    "title": "The Cosmic Balance",
+    "subtitle": "The Hopi Prophecy Sovereignty and the Path of Purification",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "The Hopi Prophecy Sovereignty and the Path of Purification. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=217+-+The+Hopi+Prophecy+Sovereignty+and+the+Path+of+Purification+-+The+Cosmic+Balance+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "217",
+      "The Hopi Prophecy Sovereignty and the Path of Purification"
+    ],
+    "accent": "gold",
+    "pages": 18,
+    "order": 1217,
+    "originalFilename": "217 - The Hopi Prophecy Sovereignty and the Path of Purification - The Cosmic Balance - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-217-the-cosmic-balance.pdf",
+        "bytes": 23767784,
+        "sha256": "81acf98713a6f6506992057903dc28b03e279e7d078cd2c5f8aac3d18b480f09"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-217-the-cosmic-balance.pdf",
+    "pdfBytes": 23767784,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
     "id": "presentation-217-the-fourth-world-covenant",
     "title": "The Fourth World Covenant",
     "subtitle": "The Hopi Prophecy Sovereignty and the Path of Purification",
@@ -2342,6 +2483,53 @@
     "kind": "presentation"
   },
   {
+    "id": "presentation-224-the-illuminated-labyrinth",
+    "title": "The Illuminated Labyrinth",
+    "subtitle": "The Hidden Evil An Investigation Into Organized Stalking",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "The Hidden Evil An Investigation Into Organized Stalking. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=224+-+The+Hidden+Evil+An+Investigation+Into+Organized+Stalking+-+The+Illuminated+Labyrinth+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "224",
+      "The Hidden Evil An Investigation Into Organized Stalking"
+    ],
+    "accent": "gold",
+    "pages": 18,
+    "order": 1224,
+    "originalFilename": "224 - The Hidden Evil An Investigation Into Organized Stalking - The Illuminated Labyrinth - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-224-the-illuminated-labyrinth.pdf",
+        "bytes": 22938106,
+        "sha256": "c1446f2814807131682f79c2ee55674ed1cb2728d078d5c474f20bdaddbb0d63"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-224-the-illuminated-labyrinth.pdf",
+    "pdfBytes": 22938106,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
     "id": "presentation-225-the-divine-cipher",
     "title": "The Divine Cipher",
     "subtitle": "The Kitáb-i-Íqán The Book of Certitude",
@@ -2428,6 +2616,53 @@
     ],
     "pdf": "/library/books/Presentations/NotebookLM/presentation-226-cosmic-architecture.pdf",
     "pdfBytes": 9492398,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
+    "id": "presentation-226-the-cosmic-architecture-of-revelation",
+    "title": "The Cosmic Architecture of Revelation",
+    "subtitle": "Gleanings from the Writings of Baha'u'llah",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "Gleanings from the Writings of Baha'u'llah. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=226+-+Gleanings+from+the+Writings+of+Baha%27u%27llah+-+The+Cosmic+Architecture+of+Revelation+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "226",
+      "Gleanings from the Writings of Baha'u'llah"
+    ],
+    "accent": "gold",
+    "pages": 20,
+    "order": 1226,
+    "originalFilename": "226 - Gleanings from the Writings of Baha'u'llah - The Cosmic Architecture of Revelation - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-226-the-cosmic-architecture-of-revelation.pdf",
+        "bytes": 25705714,
+        "sha256": "3f4f720b709e2c312d9db5cb121557a63828d4dfaedacca733cdda0e783ffd60"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-226-the-cosmic-architecture-of-revelation.pdf",
+    "pdfBytes": 25705714,
     "capabilities": {
       "pdf": true,
       "ebook": false,
@@ -2812,6 +3047,53 @@
     "kind": "presentation"
   },
   {
+    "id": "presentation-255-the-anatomy-of-enlightenment",
+    "title": "The Anatomy of Enlightenment",
+    "subtitle": "The Serpent Science Kundalini Illumination and the Sacral Secret",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "The Serpent Science Kundalini Illumination and the Sacral Secret. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=255+-+The+Serpent+Science+Kundalini+Illumination+and+the+Sacral+Secret+-+The+Anatomy+of+Enlightenment+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "255",
+      "The Serpent Science Kundalini Illumination and the Sacral Secret"
+    ],
+    "accent": "gold",
+    "pages": 19,
+    "order": 1255,
+    "originalFilename": "255 - The Serpent Science Kundalini Illumination and the Sacral Secret - The Anatomy of Enlightenment - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-255-the-anatomy-of-enlightenment.pdf",
+        "bytes": 24670122,
+        "sha256": "79f31909bc648067401b6af837f1b60a45782634976e87b6cd3e857d8d5d1d72"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-255-the-anatomy-of-enlightenment.pdf",
+    "pdfBytes": 24670122,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
     "id": "presentation-257-illuminated-ascent",
     "title": "Illuminated Ascent",
     "subtitle": "The Seven Heavens A Gnostic Ascent of the Breath",
@@ -3180,6 +3462,53 @@
     ],
     "pdf": "/library/books/Presentations/NotebookLM/presentation-274-pathways-to-the-infinite.pdf",
     "pdfBytes": 18437216,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
+    "id": "presentation-274-portals-of-perception",
+    "title": "Portals of Perception",
+    "subtitle": "The Architecture of Sentience A Global Consciousness Synthesis",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "The Architecture of Sentience A Global Consciousness Synthesis. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=274+-+The+Architecture+of+Sentience+A+Global+Consciousness+Synthesis+-+Portals+of+Perception+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "274",
+      "The Architecture of Sentience A Global Consciousness Synthesis"
+    ],
+    "accent": "gold",
+    "pages": 15,
+    "order": 1274,
+    "originalFilename": "274 - The Architecture of Sentience A Global Consciousness Synthesis - Portals of Perception - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-274-portals-of-perception.pdf",
+        "bytes": 21029759,
+        "sha256": "b4eefe0e635dabba98c45642b6575aaea1b91777618e8d92bb6442c23b67df77"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-274-portals-of-perception.pdf",
+    "pdfBytes": 21029759,
     "capabilities": {
       "pdf": true,
       "ebook": false,
@@ -4034,6 +4363,53 @@
     "kind": "presentation"
   },
   {
+    "id": "presentation-348-the-sacred-signature-acuity",
+    "title": "The Sacred Signature (Acuity edition)",
+    "subtitle": "The Sacred Signature The Biblical Significance of Seven",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "The Sacred Signature The Biblical Significance of Seven. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=348+-+The+Sacred+Signature+The+Biblical+Significance+of+Seven+-+The+Sacred+Signature+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "348",
+      "The Sacred Signature The Biblical Significance of Seven"
+    ],
+    "accent": "gold",
+    "pages": 20,
+    "order": 1348,
+    "originalFilename": "348 - The Sacred Signature The Biblical Significance of Seven - The Sacred Signature - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-348-the-sacred-signature-acuity.pdf",
+        "bytes": 24807676,
+        "sha256": "065e1f4f1b6d5cb84dd9a2030dcffdcc081661e4aaff5d473bf1843f91a04d20"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-348-the-sacred-signature-acuity.pdf",
+    "pdfBytes": 24807676,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
     "id": "presentation-351-the-forgotten-current",
     "title": "The Forgotten Current",
     "subtitle": "Isis Sophia The Lost Wisdom of the Inner Temple",
@@ -4214,6 +4590,53 @@
     ],
     "pdf": "/library/books/Presentations/NotebookLM/presentation-354-the-self-declaration-code.pdf",
     "pdfBytes": 28302479,
+    "capabilities": {
+      "pdf": true,
+      "ebook": false,
+      "present": true
+    },
+    "kind": "presentation"
+  },
+  {
+    "id": "presentation-363-consciousness-beyond-form",
+    "title": "Consciousness Beyond Form",
+    "subtitle": "Astral Projection Neuroscience, Tradition, and Subjective Realities",
+    "author": "Acuity Institute",
+    "collection": "Research presentations",
+    "period": "Contemporary research presentation",
+    "language": "English",
+    "description": "Astral Projection Neuroscience, Tradition, and Subjective Realities. A widescreen research slide deck from the Acuity Institute collection.",
+    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
+    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
+    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=363+-+Astral+Projection+Neuroscience%2C+Tradition%2C+and+Subjective+Realities+-+Consciousness+Beyond+Form+-+acuity.pdf",
+    "tags": [
+      "presentation",
+      "slide deck",
+      "NotebookLM",
+      "363",
+      "Astral Projection Neuroscience, Tradition, and Subjective Realities"
+    ],
+    "accent": "gold",
+    "pages": 21,
+    "order": 1363,
+    "originalFilename": "363 - Astral Projection Neuroscience, Tradition, and Subjective Realities - Consciousness Beyond Form - acuity.pdf",
+    "translator": null,
+    "categoryKey": "Presentations/NotebookLM",
+    "categoryPath": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "categoryLabel": "Presentations / NotebookLM decks",
+    "assets": [
+      {
+        "format": "pdf",
+        "url": "/library/books/Presentations/NotebookLM/presentation-363-consciousness-beyond-form.pdf",
+        "bytes": 27506006,
+        "sha256": "c8634fa6c987d7ea65ff0a15bed9eb305e04456c9d6d0c681738d088e95bfece"
+      }
+    ],
+    "pdf": "/library/books/Presentations/NotebookLM/presentation-363-consciousness-beyond-form.pdf",
+    "pdfBytes": 27506006,
     "capabilities": {
       "pdf": true,
       "ebook": false,

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "collection": "NotebookLM - Web Library",
-  "snapshotDate": "2026-10-19",
+  "snapshotDate": "2026-10-20",
   "files": [
     {
       "path": "public/library/books/Presentations/NotebookLM/presentation-007-endogenous-technologies.pdf",
@@ -88,6 +88,13 @@
       "sha256": "a0be22fa6ddfe120cd0a9854e1fe1ddc09f5f4dc762cec4e58772141c92a9832"
     },
     {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-043-pathway-of-initiation.pdf",
+      "originalFilename": "043 - The All-Seeing Eye Ancient Wisdom for Modern Problems - Pathway of Initiation - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=043+-+The+All-Seeing+Eye+Ancient+Wisdom+for+Modern+Problems+-+Pathway+of+Initiation+-+acuity.pdf",
+      "bytes": 21261857,
+      "sha256": "5af1afc38122c8fe2ccc07c6103fdce711c1c355a96f97d33fac9e7e19f6380f"
+    },
+    {
       "path": "public/library/books/Presentations/NotebookLM/presentation-047-the-architecture-of-success.pdf",
       "originalFilename": "047 - Sure Secrets of Success and Mental Improvement - The Architecture of Success.pdf",
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=047+-+Sure+Secrets+of+Success+and+Mental+Improvement+-+The+Architecture+of+Success.pdf",
@@ -142,6 +149,13 @@
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=054+-+The+Dragons+of+Eden+-+Archeology+of+the+Mind.pdf",
       "bytes": 22101015,
       "sha256": "801d883cdcd748a130537aeabed0588cd8e1856f0e5492970fc6ac935559a19a"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-054-the-arc-of-intelligence.pdf",
+      "originalFilename": "054 - The Dragons of Eden - The Arc of Intelligence - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=054+-+The+Dragons+of+Eden+-+The+Arc+of+Intelligence+-+acuity.pdf",
+      "bytes": 20404190,
+      "sha256": "c875f3725779f85d9a0dedbad4b9a0eeae94f28990a40dabe20f57fbd92d2661"
     },
     {
       "path": "public/library/books/Presentations/NotebookLM/presentation-057-the-solomon-blueprint.pdf",
@@ -249,6 +263,13 @@
       "sha256": "456f579c0c56a6341472a8a52867dd869acdc14f8e38e300316f0b61ea978e5e"
     },
     {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-217-the-cosmic-balance.pdf",
+      "originalFilename": "217 - The Hopi Prophecy Sovereignty and the Path of Purification - The Cosmic Balance - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=217+-+The+Hopi+Prophecy+Sovereignty+and+the+Path+of+Purification+-+The+Cosmic+Balance+-+acuity.pdf",
+      "bytes": 23767784,
+      "sha256": "81acf98713a6f6506992057903dc28b03e279e7d078cd2c5f8aac3d18b480f09"
+    },
+    {
       "path": "public/library/books/Presentations/NotebookLM/presentation-217-the-fourth-world-covenant.pdf",
       "originalFilename": "217 - The Hopi Prophecy Sovereignty and the Path of Purification - The Fourth World Covenant.pdf",
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=217+-+The+Hopi+Prophecy+Sovereignty+and+the+Path+of+Purification+-+The+Fourth+World+Covenant.pdf",
@@ -326,6 +347,13 @@
       "sha256": "df24aea64a2b3f41e45f6138c4649380b6e9636ef867a3a645ef16859736b26a"
     },
     {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-224-the-illuminated-labyrinth.pdf",
+      "originalFilename": "224 - The Hidden Evil An Investigation Into Organized Stalking - The Illuminated Labyrinth - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=224+-+The+Hidden+Evil+An+Investigation+Into+Organized+Stalking+-+The+Illuminated+Labyrinth+-+acuity.pdf",
+      "bytes": 22938106,
+      "sha256": "c1446f2814807131682f79c2ee55674ed1cb2728d078d5c474f20bdaddbb0d63"
+    },
+    {
       "path": "public/library/books/Presentations/NotebookLM/presentation-225-the-divine-cipher.pdf",
       "originalFilename": "225 - The Kitáb-i-Íqán The Book of Certitude - The Divine Cipher.pdf",
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=225+-+The+Kit%C3%A1b-i-%C3%8Dq%C3%A1n+The+Book+of+Certitude+-+The+Divine+Cipher.pdf",
@@ -338,6 +366,13 @@
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=226+-+Gleanings+from+the+Writings+of+Bah%C3%A1%E2%80%99u%E2%80%99ll%C3%A1h+-+Cosmic+Architecture.pdf",
       "bytes": 9492398,
       "sha256": "bd5b0df1beeb9cc2d46f75df60456b389854e883d4720541e19e3de5dfac5d0b"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-226-the-cosmic-architecture-of-revelation.pdf",
+      "originalFilename": "226 - Gleanings from the Writings of Baha'u'llah - The Cosmic Architecture of Revelation - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=226+-+Gleanings+from+the+Writings+of+Baha%27u%27llah+-+The+Cosmic+Architecture+of+Revelation+-+acuity.pdf",
+      "bytes": 25705714,
+      "sha256": "3f4f720b709e2c312d9db5cb121557a63828d4dfaedacca733cdda0e783ffd60"
     },
     {
       "path": "public/library/books/Presentations/NotebookLM/presentation-239-architecture-of-the-gnostic-void.pdf",
@@ -396,6 +431,13 @@
       "sha256": "14194251873595a9e06b0c9fa26f8f3d8ce763ca16b1aef9230433a1ffcfde13"
     },
     {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-255-the-anatomy-of-enlightenment.pdf",
+      "originalFilename": "255 - The Serpent Science Kundalini Illumination and the Sacral Secret - The Anatomy of Enlightenment - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=255+-+The+Serpent+Science+Kundalini+Illumination+and+the+Sacral+Secret+-+The+Anatomy+of+Enlightenment+-+acuity.pdf",
+      "bytes": 24670122,
+      "sha256": "79f31909bc648067401b6af837f1b60a45782634976e87b6cd3e857d8d5d1d72"
+    },
+    {
       "path": "public/library/books/Presentations/NotebookLM/presentation-257-illuminated-ascent.pdf",
       "originalFilename": "257 - The Seven Heavens A Gnostic Ascent of the Breath - Illuminated Ascent.pdf",
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=257+-+The+Seven+Heavens+A+Gnostic+Ascent+of+the+Breath+-+Illuminated+Ascent.pdf",
@@ -452,11 +494,11 @@
       "sha256": "ba358d0bde9a32636dc962ce736fce13eeac615049fd421677c492fd03383299"
     },
     {
-      "path": "public/library/books/Presentations/NotebookLM/presentation-280-the-luminous-cartography.pdf",
-      "originalFilename": "280 - The Gnosis of the Light - THE LUMINOUS CARTOGRAPHY.pdf",
-      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=280+-+The+Gnosis+of+the+Light+-+THE+LUMINOUS+CARTOGRAPHY.pdf",
-      "bytes": 26020167,
-      "sha256": "a0af6cea73e01b0e7788ba7d42a6dcbeab5716abcf062e67ce33f2ef274c99ac"
+      "path": "public/library/books/Presentations/NotebookLM/presentation-274-portals-of-perception.pdf",
+      "originalFilename": "274 - The Architecture of Sentience A Global Consciousness Synthesis - Portals of Perception - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=274+-+The+Architecture+of+Sentience+A+Global+Consciousness+Synthesis+-+Portals+of+Perception+-+acuity.pdf",
+      "bytes": 21029759,
+      "sha256": "b4eefe0e635dabba98c45642b6575aaea1b91777618e8d92bb6442c23b67df77"
     },
     {
       "path": "public/library/books/Presentations/NotebookLM/presentation-280-the-architecture-of-gnosis.pdf",
@@ -464,6 +506,13 @@
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=280+-+The+Gnosis+of+the+Light+-+The+Architecture+of+Gnosis.pdf",
       "bytes": 25806707,
       "sha256": "c0418c197080e47756fe2ceda5de833ea4e6bcad3dfc27042b31f58773bd81b0"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-280-the-luminous-cartography.pdf",
+      "originalFilename": "280 - The Gnosis of the Light - THE LUMINOUS CARTOGRAPHY.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=280+-+The+Gnosis+of+the+Light+-+THE+LUMINOUS+CARTOGRAPHY.pdf",
+      "bytes": 26020167,
+      "sha256": "a0af6cea73e01b0e7788ba7d42a6dcbeab5716abcf062e67ce33f2ef274c99ac"
     },
     {
       "path": "public/library/books/Presentations/NotebookLM/presentation-289-architecting-consciousness.pdf",
@@ -543,18 +592,18 @@
       "sha256": "649bc1d7079312a7dd836fc92eba63656bb6d6d0449022b399697800a1e141a1"
     },
     {
-      "path": "public/library/books/Presentations/NotebookLM/presentation-338-the-new-vitalism.pdf",
-      "originalFilename": "338 - Élan Vital Bergson’s Philosophy of Creative Evolution - The New Vitalism.pdf",
-      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=338+-+%C3%89lan+Vital+Bergson%E2%80%99s+Philosophy+of+Creative+Evolution+-+The+New+Vitalism.pdf",
-      "bytes": 18635793,
-      "sha256": "6629fd8eda894ddd17de59f9701501008da61a4d70e99a5fa893b501dc35321f"
-    },
-    {
       "path": "public/library/books/Presentations/NotebookLM/presentation-338-elan-vital.pdf",
       "originalFilename": "338 - Élan Vital Bergson’s Philosophy of Creative Evolution - ÉLAN VITAL.pdf",
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=338+-+%C3%89lan+Vital+Bergson%E2%80%99s+Philosophy+of+Creative+Evolution+-+%C3%89LAN+VITAL.pdf",
       "bytes": 13042761,
       "sha256": "574b2143d3b9d7f267677bca2a080395c2f912ccb5efce8551a776e7d6a21ed1"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-338-the-new-vitalism.pdf",
+      "originalFilename": "338 - Élan Vital Bergson’s Philosophy of Creative Evolution - The New Vitalism.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=338+-+%C3%89lan+Vital+Bergson%E2%80%99s+Philosophy+of+Creative+Evolution+-+The+New+Vitalism.pdf",
+      "bytes": 18635793,
+      "sha256": "6629fd8eda894ddd17de59f9701501008da61a4d70e99a5fa893b501dc35321f"
     },
     {
       "path": "public/library/books/Presentations/NotebookLM/presentation-341-rootwork-sovereignty.pdf",
@@ -569,6 +618,13 @@
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=341+-+Hoodoo+Traditions+Roots%2C+Rituals%2C+and+Van+Van+Oil+-+The+Metaphysics+of+Resistance.pdf",
       "bytes": 14477936,
       "sha256": "5e6510ca8323c6c021d4e13a2d7edc4c84cbc65735e3febebf906eedf5689a47"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-348-the-sacred-signature-acuity.pdf",
+      "originalFilename": "348 - The Sacred Signature The Biblical Significance of Seven - The Sacred Signature - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=348+-+The+Sacred+Signature+The+Biblical+Significance+of+Seven+-+The+Sacred+Signature+-+acuity.pdf",
+      "bytes": 24807676,
+      "sha256": "065e1f4f1b6d5cb84dd9a2030dcffdcc081661e4aaff5d473bf1843f91a04d20"
     },
     {
       "path": "public/library/books/Presentations/NotebookLM/presentation-348-the-sacred-signature.pdf",
@@ -604,6 +660,13 @@
       "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=354+-+The+Gnostic+Code+of+Source+Consciousness+-+The+Self+Declaration+Code.pdf",
       "bytes": 28302479,
       "sha256": "4ceb69d6a8617d59d4ba17ff508085e68e814a96aef7260b7e7cf1bd42817d04"
+    },
+    {
+      "path": "public/library/books/Presentations/NotebookLM/presentation-363-consciousness-beyond-form.pdf",
+      "originalFilename": "363 - Astral Projection Neuroscience, Tradition, and Subjective Realities - Consciousness Beyond Form - acuity.pdf",
+      "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=1&preview=363+-+Astral+Projection+Neuroscience%2C+Tradition%2C+and+Subjective+Realities+-+Consciousness+Beyond+Form+-+acuity.pdf",
+      "bytes": 27506006,
+      "sha256": "c8634fa6c987d7ea65ff0a15bed9eb305e04456c9d6d0c681738d088e95bfece"
     },
     {
       "path": "public/library/books/Presentations/NotebookLM/presentation-363-the-atlas-of-consciousness.pdf",
