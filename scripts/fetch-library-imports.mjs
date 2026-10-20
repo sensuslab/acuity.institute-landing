@@ -4,6 +4,7 @@ import {createHash, randomUUID} from 'node:crypto';
 import {Readable, Transform} from 'node:stream';
 import {pipeline} from 'node:stream/promises';
 import {fileURLToPath} from 'node:url';
+import {setTimeout as delay} from 'node:timers/promises';
 
 async function matches(file, entry) {
   try {
@@ -20,7 +21,8 @@ async function matches(file, entry) {
 // Imported binaries are pinned to reviewed bytes, then served locally by the app.
 // No Dropbox requests, credentials or temporary download links reach the reader.
 export async function hydrateLibraryImports({root, manifestPath = path.join(root, 'content/library-imports.json'),
-  fetchImpl = globalThis.fetch, concurrency = 4, attempts = 3, timeoutMs = 120_000, log = console.log} = {}) {
+  fetchImpl = globalThis.fetch, concurrency = 2, attempts = 5, timeoutMs = 120_000,
+  requestIntervalMs = 1_100, retryBaseMs = 2_000, wait = delay, log = console.log} = {}) {
   if (!fs.existsSync(manifestPath)) return {downloaded: 0, cached: 0};
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
   if (manifest.version !== 1 || !Array.isArray(manifest.files)) throw new Error('Unsupported library import manifest');
@@ -35,6 +37,15 @@ export async function hydrateLibraryImports({root, manifestPath = path.join(root
       new URL(entry.sourceUrl).protocol !== 'https:') throw new Error(`Invalid import identity: ${entry.path}`);
     return {...entry, target: path.join(root, entry.path)};
   });
+  // Space request starts across workers: Dropbox can return a 200 HTML page
+  // when a shared folder is fetched too quickly. Never accept it as a PDF.
+  let nextRequestAt = 0;
+  async function pace() {
+    const now = Date.now();
+    const scheduled = Math.max(now, nextRequestAt);
+    nextRequestAt = scheduled + requestIntervalMs;
+    if (scheduled > now) await wait(scheduled - now);
+  }
   const result = {downloaded: 0, cached: 0};
   let next = 0;
   const errors = [];
@@ -46,11 +57,23 @@ export async function hydrateLibraryImports({root, manifestPath = path.join(root
         fs.mkdirSync(path.dirname(entry.target), {recursive: true});
         for (let attempt = 1; attempt <= attempts; attempt++) {
           const temporary = entry.target + '.' + randomUUID() + '.part';
+          let retryAfterMs = 0;
           try {
+            await pace();
             const response = await fetchImpl(entry.sourceUrl, {signal: AbortSignal.timeout(timeoutMs)});
+            const retryAfter = response.headers.get('retry-after');
+            if (retryAfter) {
+              const seconds = Number(retryAfter);
+              retryAfterMs = Math.min(60_000, Math.max(0, Number.isFinite(seconds)
+                ? seconds * 1_000 : Date.parse(retryAfter) - Date.now()) || 0);
+            }
             if (response.status !== 200 || !response.body) {
               await response.body?.cancel();
               throw new Error(`Download returned HTTP ${response.status}`);
+            }
+            if (/text\/html|application\/json/i.test(response.headers.get('content-type') || '')) {
+              await response.body.cancel();
+              throw new Error('Download returned a temporary page instead of PDF bytes');
             }
             let bytes = 0;
             const limit = new Transform({transform(chunk, encoding, done) {
@@ -58,13 +81,16 @@ export async function hydrateLibraryImports({root, manifestPath = path.join(root
               done(bytes > entry.bytes ? new Error('Source exceeds pinned file size') : null, chunk);
             }});
             await pipeline(Readable.fromWeb(response.body), limit, fs.createWriteStream(temporary, {flags: 'wx'}));
-            if (!(await matches(temporary, entry))) throw new Error('Source size or SHA-256 differs from reviewed PDF');
+            if (!(await matches(temporary, entry))) throw new Error(`Source size or SHA-256 differs from reviewed PDF (${bytes}/${entry.bytes} bytes)`);
             fs.renameSync(temporary, entry.target);
             result.downloaded++;
             log(`Fetched ${result.downloaded + result.cached}/${jobs.length}: ${path.basename(entry.path)}`);
             break;
           } catch (error) {
             if (attempt === attempts) throw new Error(`${entry.path}: ${error.message}`);
+            const backoffMs = Math.max(retryAfterMs, Math.min(30_000, retryBaseMs * 2 ** (attempt - 1)));
+            log(`Retry ${attempt}/${attempts - 1} for ${path.basename(entry.path)} in ${backoffMs}ms: ${error.message}`);
+            await wait(backoffMs);
           } finally {
             fs.rmSync(temporary, {force: true});
           }

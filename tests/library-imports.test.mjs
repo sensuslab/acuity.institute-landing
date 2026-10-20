@@ -15,7 +15,7 @@ function fixture(t, overrides = {}) {
     sha256:createHash('sha256').update(bytes).digest('hex'), ...overrides};
   fs.mkdirSync(path.join(root, 'content'));
   fs.writeFileSync(path.join(root, 'content/library-imports.json'), JSON.stringify({version:1, files:[entry]}));
-  return {root, bytes, entry, options:{root, log:() => {}}};
+  return {root, bytes, entry, options:{root, requestIntervalMs:0, retryBaseMs:0, log:() => {}}};
 }
 
 test('Imported PDFs use verified local copies and repair a changed cache', async t => {
@@ -70,4 +70,31 @@ test('Every imported deck has a distinct PDF-only presentation record with its r
     assert.equal(book.assets[0].sha256,entry.sha256);
     assert.equal(book.assets[0].bytes,entry.bytes);
   }
+});
+
+
+test('A temporary HTTP 200 HTML page is retried without relaxing the PDF checksum', async t => {
+  const {root, bytes, entry, options} = fixture(t);
+  let calls = 0;
+  const waits = [];
+  await hydrateLibraryImports({...options, retryBaseMs:25, wait:async ms => {waits.push(ms);}, fetchImpl:async () => {
+    if (++calls === 1) return new Response('<html>Try again later</html>', {headers:{'content-type':'text/html'}});
+    return new Response(bytes);
+  }});
+  assert.equal(calls,2);
+  assert.deepEqual(waits,[25]);
+  assert.deepEqual(fs.readFileSync(path.join(root,entry.path)),bytes);
+});
+
+test('Rate limit retries respect Retry-After and request starts are paced across workers', async t => {
+  const {bytes, options} = fixture(t);
+  let calls = 0;
+  const waits = [];
+  await hydrateLibraryImports({...options, requestIntervalMs:100, wait:async ms => {waits.push(ms);}, fetchImpl:async () => {
+    if (++calls === 1) return new Response('Try later', {status:429,headers:{'retry-after':'2'}});
+    return new Response(bytes);
+  }});
+  assert.equal(calls,2);
+  assert.equal(waits[0],2000);
+  assert.ok(waits[1] > 0 && waits[1] <= 100);
 });
