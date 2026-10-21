@@ -6,7 +6,7 @@
   "collection": "Research presentations",
   "period": "Contemporary research presentation",
   "language": "English",
-  "description": "The Gnostic Architecture of the Seven Heavens. A widescreen research slide deck from the Acuity Institute collection.",
+  "description": "Presents the Gnostic seven heavens as a map of present psychological reality and offers a path of 'activation' without specialist study. A modern research presentation from the Acuity Institute collection.",
   "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
   "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
   "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=242+-+The+Gnostic+Architecture+of+the+Seven+Heavens+-+The+Gnostic+Map.pdf",
@@ -15,7 +15,9 @@
     "slide deck",
     "NotebookLM",
     "242",
-    "The Gnostic Architecture of the Seven Heavens"
+    "The Gnostic Architecture of the Seven Heavens",
+    "Gnosticism",
+    "seven heavens"
   ],
   "accent": "gold",
   "pages": 18,

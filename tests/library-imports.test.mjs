@@ -53,7 +53,8 @@ test('Import retries transient errors and rejects unsafe destination paths', asy
 });
 
 test('Every imported deck has a distinct PDF-only presentation record with its reviewed identity', () => {
-  const imports = JSON.parse(fs.readFileSync('content/library-imports.json','utf8')).files;
+  const imports = JSON.parse(fs.readFileSync('content/library-imports.json','utf8')).files
+    .filter(entry => entry.path.startsWith('public/library/books/Presentations/NotebookLM/'));
   const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
   assert.equal(imports.length,98);
   const importedBooks = books.filter(book => book.categoryKey === 'Presentations/NotebookLM');
@@ -97,4 +98,27 @@ test('Rate limit retries respect Retry-After and pace subsequent requests', asyn
   assert.equal(calls,2);
   assert.equal(waits[0],2000);
   assert.ok(waits[1] > 0 && waits[1] <= 100);
+});
+
+test('Imported curator ebooks pin both a PDF and an EPUB and enable the e-reader', () => {
+  const imports = JSON.parse(fs.readFileSync('content/library-imports.json','utf8')).files
+    .filter(entry => !entry.path.startsWith('public/library/books/Presentations/'));
+  const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
+  const stems = new Set(imports.map(entry => entry.path.replace(/\.(pdf|epub)$/,'')));
+  assert.equal(imports.length, stems.size * 2);
+  for (const stem of stems) {
+    const url = '/' + stem.slice('public/'.length).split('/').map(encodeURIComponent).join('/');
+    const book = books.find(book => book.pdf === url + '.pdf');
+    assert.ok(book, stem);
+    assert.equal(book.epub, url + '.epub');
+    assert.deepEqual(book.capabilities, {pdf:true,ebook:true,present:true});
+  }
+});
+
+test('Imported EPUB paths are accepted alongside PDFs', async t => {
+  const bytes = Buffer.from('PK\u0003\u0004epub');
+  const {root, entry, options} = fixture(t, {path:'public/library/books/Scripture/Test/book.epub', bytes:bytes.length,
+    sha256:createHash('sha256').update(bytes).digest('hex')});
+  assert.deepEqual(await hydrateLibraryImports({...options, fetchImpl:async () => new Response(bytes)}), {downloaded:1,cached:0});
+  assert.deepEqual(fs.readFileSync(path.join(root, entry.path)), bytes);
 });

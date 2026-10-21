@@ -28,9 +28,9 @@ export async function hydrateLibraryImports({root, manifestPath = path.join(root
   if (manifest.version !== 1 || !Array.isArray(manifest.files)) throw new Error('Unsupported library import manifest');
   const seen = new Set();
   const jobs = manifest.files.map(entry => {
-    if (!/^public\/library\/books\/.+\.pdf$/.test(entry.path || '') || entry.path.includes('\\') ||
+    if (!/^public\/library\/books\/.+\.(pdf|epub)$/.test(entry.path || '') || entry.path.includes('\\') ||
       entry.path.split('/').some(part => !part || part === '.' || part === '..') || seen.has(entry.path.toLowerCase())) {
-      throw new Error(`Invalid or duplicate imported PDF path: ${entry.path}`);
+      throw new Error(`Invalid or duplicate imported file path: ${entry.path}`);
     }
     seen.add(entry.path.toLowerCase());
     if (!Number.isSafeInteger(entry.bytes) || entry.bytes < 5 || !/^[a-f0-9]{64}$/.test(entry.sha256 || '') ||
@@ -73,7 +73,7 @@ export async function hydrateLibraryImports({root, manifestPath = path.join(root
             }
             if (/text\/html|application\/json/i.test(response.headers.get('content-type') || '')) {
               await response.body.cancel();
-              throw new Error('Download returned a temporary page instead of PDF bytes');
+              throw new Error('Download returned a temporary page instead of file bytes');
             }
             let bytes = 0;
             const limit = new Transform({transform(chunk, encoding, done) {
@@ -81,7 +81,7 @@ export async function hydrateLibraryImports({root, manifestPath = path.join(root
               done(bytes > entry.bytes ? new Error('Source exceeds pinned file size') : null, chunk);
             }});
             await pipeline(Readable.fromWeb(response.body), limit, fs.createWriteStream(temporary, {flags: 'wx'}));
-            if (!(await matches(temporary, entry))) throw new Error(`Source size or SHA-256 differs from reviewed PDF (${bytes}/${entry.bytes} bytes)`);
+            if (!(await matches(temporary, entry))) throw new Error(`Source size or SHA-256 differs from reviewed file (${bytes}/${entry.bytes} bytes)`);
             fs.renameSync(temporary, entry.target);
             result.downloaded++;
             log(`Fetched ${result.downloaded + result.cached}/${jobs.length}: ${path.basename(entry.path)}`);
@@ -100,7 +100,7 @@ export async function hydrateLibraryImports({root, manifestPath = path.join(root
   }
   await Promise.all(Array.from({length: Math.min(concurrency, jobs.length)}, worker));
   if (errors.length) throw new AggregateError(errors, 'Library import failed; catalogue build stopped');
-  if (jobs.length) log(`Verified ${jobs.length} imported PDFs (${result.downloaded} fetched, ${result.cached} cached).`);
+  if (jobs.length) log(`Verified ${jobs.length} imported files (${result.downloaded} fetched, ${result.cached} cached).`);
   return result;
 }
 

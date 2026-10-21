@@ -6,7 +6,7 @@
   "collection": "Research presentations",
   "period": "Contemporary research presentation",
   "language": "English",
-  "description": "The Alchemical Path of the Emerald Tablet. A widescreen research slide deck from the Acuity Institute collection.",
+  "description": "Decodes the Emerald Tablet as a staged alchemy of personal transformation, pairing each operation with a planet and metal and comparing the formula to modern physics. A modern research presentation from the Acuity Institute collection.",
   "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
   "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
   "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=051+-+The+Alchemical+Path+of+the+Emerald+Tablet+-+The+Emerald+Blueprint.pdf",
@@ -15,7 +15,10 @@
     "slide deck",
     "NotebookLM",
     "051",
-    "The Alchemical Path of the Emerald Tablet"
+    "The Alchemical Path of the Emerald Tablet",
+    "alchemy",
+    "Emerald Tablet",
+    "Hermeticism"
   ],
   "accent": "gold",
   "pages": 20,

@@ -71,6 +71,10 @@ The imported PDF binaries are deliberately excluded from Git history. `content/l
 
 The first clean build needs internet access, disk space for the source files and build output, and continuing download access to the shared Dropbox folder. Later builds reuse a valid local cache when available. A missing, changed or unavailable source stops the build instead of publishing a partial collection. To replace a deck, review the new PDF and update its pinned size/hash and metadata together. To remove a deck, remove its manifest entry, companion JSON and local PDF together. Moving a deck also requires updating the manifest destination and `.gitignore` pattern. All these records expose PDF reading, presentation and PDF download; none exposes an E-Book launcher.
 
+### Curator ebook collection
+
+The curator's organised ebook collection (63 records, snapshot: 21 October 2026) is published with both a PDF and an EPUB per record, so each exposes Read PDF, Present and Read E-Book. Binaries come from the curator's **Ebooks** Dropbox folder (`EPUB/` and `PDF/` subfolders) and are pinned in the same `content/library-imports.json` manifest as the decks; the importer accepts `.pdf` and `.epub` destinations. They live under their categories (e.g. `Scripture/Bahai/`, `Esoteric/Occult/`, `Original Works/Ethan James Farrell/`); the matching `.gitignore` patterns keep the binaries out of Git while the companion JSON is committed. Rights statements record the known basis only; records marked "rights to be confirmed" must be cleared before public release. Scanned works note that their EPUB is OCR-derived. The Tao Te Ching record keeps its `tao-te-ching-legge` id and path but now uses the collection's edition.
+
 1. Complete OCR, textual formatting and any EPUB preparation before publication. Do not invent an EPUB for a document that cannot be faithfully prepared.
 2. Put the source PDF and, where available, its reviewed EPUB beside the metadata file. For untranscribed image-only material, publish the PDF alone.
 3. Run `npm run catalogue:sync` and review `src/data/libraryCatalogue.json`, `src/data/libraryCategories.json` and `public/library/provenance.json`.

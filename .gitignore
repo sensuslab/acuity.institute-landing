@@ -29,3 +29,37 @@ public/library/books/Presentations/NotebookLM/*.pdf
 public/library/books/Presentations/NotebookLM/.*
 public/library/books/**/*.part
 
+
+# Curator ebook collection binaries (PDF + EPUB) are hydrated from content/library-imports.json.
+public/library/books/Esoteric/Christian Mysticism/*.epub
+public/library/books/Esoteric/Christian Mysticism/*.pdf
+public/library/books/Esoteric/Occult/*.epub
+public/library/books/Esoteric/Occult/*.pdf
+public/library/books/Esoteric/Taoist Practice/*.epub
+public/library/books/Esoteric/Taoist Practice/*.pdf
+public/library/books/Health/Wellbeing/*.epub
+public/library/books/Health/Wellbeing/*.pdf
+public/library/books/Miscellaneous/General/*.epub
+public/library/books/Miscellaneous/General/*.pdf
+public/library/books/Original Works/Ethan James Farrell/*.epub
+public/library/books/Original Works/Ethan James Farrell/*.pdf
+public/library/books/Philosophy/Neoplatonism/*.epub
+public/library/books/Philosophy/Neoplatonism/*.pdf
+public/library/books/Philosophy/Vedanta/*.epub
+public/library/books/Philosophy/Vedanta/*.pdf
+public/library/books/Scripture/Bahai/*.epub
+public/library/books/Scripture/Bahai/*.pdf
+public/library/books/Scripture/Buddhism/*.epub
+public/library/books/Scripture/Buddhism/*.pdf
+public/library/books/Scripture/Christian/*.epub
+public/library/books/Scripture/Christian/*.pdf
+public/library/books/Scripture/Gnostic/*.epub
+public/library/books/Scripture/Gnostic/*.pdf
+public/library/books/Scripture/Islam/*.epub
+public/library/books/Scripture/Islam/*.pdf
+public/library/books/Scripture/Judaism/*.epub
+public/library/books/Scripture/Judaism/*.pdf
+public/library/books/Scripture/Taoism/*.epub
+public/library/books/Scripture/Taoism/*.pdf
+public/library/books/Scripture/Zoroastrianism/*.epub
+public/library/books/Scripture/Zoroastrianism/*.pdf

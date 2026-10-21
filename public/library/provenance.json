@@ -1,5 +1,21 @@
 [
   {
+    "bookId": "the-dark-night-of-the-soul",
+    "format": "pdf",
+    "bytes": 10607022,
+    "sha256": "3845d2b049bf2c26f22bb5025230d69ed36a92f81cc53a844797f8ffe3a105e1",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Christian%20Mysticism/the-dark-night-of-the-soul.pdf"
+  },
+  {
+    "bookId": "the-dark-night-of-the-soul",
+    "format": "epub",
+    "bytes": 387362,
+    "sha256": "072de4880118539dce68e386405423c57ad3b63cd15c557763c7f490d6a5327a",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Christian%20Mysticism/the-dark-night-of-the-soul.epub"
+  },
+  {
     "bookId": "the-kybalion",
     "format": "pdf",
     "bytes": 226687,
@@ -27,6 +43,646 @@
     "path": "/library/books/Esoteric/Hermeticism/the-kybalion.txt"
   },
   {
+    "bookId": "alchemy-of-personal-transformation",
+    "format": "pdf",
+    "bytes": 1411855,
+    "sha256": "33602fbce9e9d98744b9afa18beb23bb34958cc48703fc0a0dcb1fdbac2348e7",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/alchemy-of-personal-transformation.pdf"
+  },
+  {
+    "bookId": "alchemy-of-personal-transformation",
+    "format": "epub",
+    "bytes": 374536,
+    "sha256": "c2fd50f2bb9005e0d5248119caf6d1969bf87cc052f502940b91485ca6be0537",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/alchemy-of-personal-transformation.epub"
+  },
+  {
+    "bookId": "ancient-magic-magnetism-and-psychic-forces",
+    "format": "pdf",
+    "bytes": 599535,
+    "sha256": "60a3329e545c070b4efe6a989eac66baa783c6b72b7639334a2c4aac61a40d5b",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/ancient-magic-magnetism-and-psychic-forces.pdf"
+  },
+  {
+    "bookId": "ancient-magic-magnetism-and-psychic-forces",
+    "format": "epub",
+    "bytes": 150379,
+    "sha256": "050166f87a2f3a4a672aee2453e2897bd72e9d0e9e18254c05739e9628b413ec",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/ancient-magic-magnetism-and-psychic-forces.epub"
+  },
+  {
+    "bookId": "how-to-win-or-sure-secrets-of-success",
+    "format": "pdf",
+    "bytes": 973120,
+    "sha256": "4016de4d74369a54f90c1730373ab06af513b2a9ea249bc82926163e2a3726a0",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/how-to-win-or-sure-secrets-of-success.pdf"
+  },
+  {
+    "bookId": "how-to-win-or-sure-secrets-of-success",
+    "format": "epub",
+    "bytes": 271108,
+    "sha256": "f0d2844401b79621270eaa8d8c4a815b03f8338271e5dfabb23936eb15427e5b",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/how-to-win-or-sure-secrets-of-success.epub"
+  },
+  {
+    "bookId": "melchizedek-or-the-secret-doctrine-of-the-bible",
+    "format": "pdf",
+    "bytes": 17387575,
+    "sha256": "27e4d8c9a1b5521c46d8bb1441c32601a74b9e95e6b4bccb01dbb0c95b1f53a5",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/melchizedek-or-the-secret-doctrine-of-the-bible.pdf"
+  },
+  {
+    "bookId": "melchizedek-or-the-secret-doctrine-of-the-bible",
+    "format": "epub",
+    "bytes": 18297464,
+    "sha256": "7114fda4a887ccabee0a354497698f1665b561a9ed9b3bda10a93ac4c551995c",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/melchizedek-or-the-secret-doctrine-of-the-bible.epub"
+  },
+  {
+    "bookId": "philosophy-of-occultism",
+    "format": "pdf",
+    "bytes": 705210,
+    "sha256": "71f926248c1668b42cc5d9d491f3ffd2a70e6822dd1e6a746a20e296c7e25b74",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/philosophy-of-occultism.pdf"
+  },
+  {
+    "bookId": "philosophy-of-occultism",
+    "format": "epub",
+    "bytes": 165492,
+    "sha256": "18695d66fe3f89b1f51a245452a6d47acfe1a772fe35016b4bed7bd7942d904b",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/philosophy-of-occultism.epub"
+  },
+  {
+    "bookId": "psychometry-its-science-and-law-of-unfoldment",
+    "format": "pdf",
+    "bytes": 41136094,
+    "sha256": "873cd82da89c93e8d81f6b1d5aa9084bca7a3b21dc1faa6be5d5a8345d95c0b4",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/psychometry-its-science-and-law-of-unfoldment.pdf"
+  },
+  {
+    "bookId": "psychometry-its-science-and-law-of-unfoldment",
+    "format": "epub",
+    "bytes": 38177504,
+    "sha256": "4046cbdb9c137d680cc58bfcdee48536f99aa6b41484cbd222d9784351138882",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/psychometry-its-science-and-law-of-unfoldment.epub"
+  },
+  {
+    "bookId": "sacred-geometry-an-a-z-reference-guide",
+    "format": "pdf",
+    "bytes": 647465,
+    "sha256": "46f1816091035934ab397e565737e21339d37993b54a26f14ca13b4404847064",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/sacred-geometry-an-a-z-reference-guide.pdf"
+  },
+  {
+    "bookId": "sacred-geometry-an-a-z-reference-guide",
+    "format": "epub",
+    "bytes": 116300,
+    "sha256": "01ee694a2a15d3ed0c64dc6af5f99701b3ab857795deee2292de4a85d1229c74",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/sacred-geometry-an-a-z-reference-guide.epub"
+  },
+  {
+    "bookId": "sacred-geometry",
+    "format": "pdf",
+    "bytes": 122566,
+    "sha256": "ff2b42f6fa50e73e90e57354ab638d10697991c8725be3354deeaf290c587ed5",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/sacred-geometry.pdf"
+  },
+  {
+    "bookId": "sacred-geometry",
+    "format": "epub",
+    "bytes": 19631,
+    "sha256": "b1ed06a5ce5e9b7cd2bbd743b4bb26f934d5050cdc9527a6a1ea6cd43ff29a7d",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/sacred-geometry.epub"
+  },
+  {
+    "bookId": "secrets-of-religion",
+    "format": "pdf",
+    "bytes": 390911,
+    "sha256": "f1b8cf5327aeca0d5fc45421cdf621c237f3c5a4852a1aa526d8ffb78c0577c6",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/secrets-of-religion.pdf"
+  },
+  {
+    "bookId": "secrets-of-religion",
+    "format": "epub",
+    "bytes": 77738,
+    "sha256": "d083c64073330bfa2f3917f27d2d407440fd2824ad4b37cd0700a0f5fdbfc8f1",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/secrets-of-religion.epub"
+  },
+  {
+    "bookId": "telekinesis-power-secrets",
+    "format": "pdf",
+    "bytes": 310577,
+    "sha256": "2b13d7bc85bf6bb5534fdc1e89477d8f12772be2e6175765307d678c61c86a30",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/telekinesis-power-secrets.pdf"
+  },
+  {
+    "bookId": "telekinesis-power-secrets",
+    "format": "epub",
+    "bytes": 55001,
+    "sha256": "2294f23208db13098d855e084ad846a2fbcbfa3b942fead77adbc210af6c655a",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/telekinesis-power-secrets.epub"
+  },
+  {
+    "bookId": "the-all-seeing-eye",
+    "format": "pdf",
+    "bytes": 329638,
+    "sha256": "3721449909f80de3e0d4bc31063e9f9f3147a5283efcf637d171e47f8b8eb8cb",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-all-seeing-eye.pdf"
+  },
+  {
+    "bookId": "the-all-seeing-eye",
+    "format": "epub",
+    "bytes": 60585,
+    "sha256": "0301dcb6f77505190d6cc92a2871c7d0c5eadf9c49a37d3e94ab342eebe77a4b",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-all-seeing-eye.epub"
+  },
+  {
+    "bookId": "the-book-of-knowledge-the-keys-of-enoch",
+    "format": "pdf",
+    "bytes": 29487473,
+    "sha256": "aa5c12b154438b00b1e55779a526ea0d1866b414053d80d68447b097c0a2344b",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-book-of-knowledge-the-keys-of-enoch.pdf"
+  },
+  {
+    "bookId": "the-book-of-knowledge-the-keys-of-enoch",
+    "format": "epub",
+    "bytes": 24763766,
+    "sha256": "dba7ef881d613fa04fdcad0f93b1021f9f333bf0a77c5f3b513dc7f17819aae4",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-book-of-knowledge-the-keys-of-enoch.epub"
+  },
+  {
+    "bookId": "the-cosmic-game",
+    "format": "pdf",
+    "bytes": 903835,
+    "sha256": "2d8a15e754d73b1951cf6a37932f145a85d3ace3b3ee2b9efca620d31fc7a4e1",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-cosmic-game.pdf"
+  },
+  {
+    "bookId": "the-cosmic-game",
+    "format": "epub",
+    "bytes": 228940,
+    "sha256": "6e726ebc438c52da0458880b40e851c677845ec9c67ed91e313967b85643bf3d",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-cosmic-game.epub"
+  },
+  {
+    "bookId": "the-key-to-the-universe-forgotten-books-edition",
+    "format": "pdf",
+    "bytes": 1443453,
+    "sha256": "258c203e6eea7a495082009f3880b320f8227c021b1bfffea2b1ebdeb8e6b3b0",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-key-to-the-universe-forgotten-books-edition.pdf"
+  },
+  {
+    "bookId": "the-key-to-the-universe-forgotten-books-edition",
+    "format": "epub",
+    "bytes": 273449,
+    "sha256": "073b3db3654094e31890926cfd2f2a26a1561b564be08ebbae6eddf873ec1a9c",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-key-to-the-universe-forgotten-books-edition.epub"
+  },
+  {
+    "bookId": "the-key-to-the-universe",
+    "format": "pdf",
+    "bytes": 1820139,
+    "sha256": "384697a153c1612c01c9c4eaa6847f4a55b37f457056963c0c3128a1593a88be",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-key-to-the-universe.pdf"
+  },
+  {
+    "bookId": "the-key-to-the-universe",
+    "format": "epub",
+    "bytes": 405801,
+    "sha256": "b21a2ae262c05511769bdf4f85e3765c5570b5d54cf112052232cf7d124b47c8",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-key-to-the-universe.epub"
+  },
+  {
+    "bookId": "the-ra-contact-volume-1",
+    "format": "pdf",
+    "bytes": 13319098,
+    "sha256": "d20cfa4b1e0f8e4317491aeba4b0b574828609dedb6efcc9fc817f30aca299e6",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-ra-contact-volume-1.pdf"
+  },
+  {
+    "bookId": "the-ra-contact-volume-1",
+    "format": "epub",
+    "bytes": 2209350,
+    "sha256": "69a0305a1f173f344a83a7cc6ffabb02557cb111f1bd1d795ff99b5adbbb5cbe",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-ra-contact-volume-1.epub"
+  },
+  {
+    "bookId": "the-ra-contact-volume-2",
+    "format": "pdf",
+    "bytes": 9648660,
+    "sha256": "046eb947d47c061cc273a672a7d4d0133f3e448af466845d0aa8ab2f6bdc86be",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-ra-contact-volume-2.pdf"
+  },
+  {
+    "bookId": "the-ra-contact-volume-2",
+    "format": "epub",
+    "bytes": 1448809,
+    "sha256": "c3ae66a4a3bfd5ac1a1d2fdd632eb6d7740776cd838713607b080aae8555f469",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/the-ra-contact-volume-2.epub"
+  },
+  {
+    "bookId": "third-eye-and-life",
+    "format": "pdf",
+    "bytes": 408477,
+    "sha256": "6dae62eb440dd60a33b7025143c18e2424678dcae242f321c577a55c5531753e",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/third-eye-and-life.pdf"
+  },
+  {
+    "bookId": "third-eye-and-life",
+    "format": "epub",
+    "bytes": 64381,
+    "sha256": "34bcdc6581264c93307a4733b491fe7eca2c0faa001c264604f21ed8ae6c58bc",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Occult/third-eye-and-life.epub"
+  },
+  {
+    "bookId": "thought-forms",
+    "format": "pdf",
+    "bytes": 3362362,
+    "sha256": "980c8b56a738c74eee9c1db9dd93926dd9b0b5ddb03fee6e981e3f2f4e68e5ff",
+    "source": "https://www.gutenberg.org/ebooks/16269",
+    "path": "/library/books/Esoteric/Occult/thought-forms.pdf"
+  },
+  {
+    "bookId": "thought-forms",
+    "format": "epub",
+    "bytes": 2725185,
+    "sha256": "e44c845168e0dfb43a295c9ad3c3cf09d9f00843c82275d7b74a82c8eef96e55",
+    "source": "https://www.gutenberg.org/ebooks/16269",
+    "path": "/library/books/Esoteric/Occult/thought-forms.epub"
+  },
+  {
+    "bookId": "the-sexual-teachings-of-the-jade-dragon",
+    "format": "pdf",
+    "bytes": 647292,
+    "sha256": "d25fb91a23cc2e0da79f9d99877f14c6094c384bbffe77edb036204e2448184a",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Taoist%20Practice/the-sexual-teachings-of-the-jade-dragon.pdf"
+  },
+  {
+    "bookId": "the-sexual-teachings-of-the-jade-dragon",
+    "format": "epub",
+    "bytes": 114818,
+    "sha256": "9b446e9b6d0d39f7578b26a794863f1dbb56b594193f9aa5fbb645f920818b09",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Esoteric/Taoist%20Practice/the-sexual-teachings-of-the-jade-dragon.epub"
+  },
+  {
+    "bookId": "dirty-electricity",
+    "format": "pdf",
+    "bytes": 432577,
+    "sha256": "1d475eae18261d6215f344a43fb79b140ec88bbec2dd740a6134c598192acd33",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Health/Wellbeing/dirty-electricity.pdf"
+  },
+  {
+    "bookId": "dirty-electricity",
+    "format": "epub",
+    "bytes": 95119,
+    "sha256": "572d67efda45a3722be9e198ba66bd97958d392b96209c6741e54bf27a363533",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Health/Wellbeing/dirty-electricity.epub"
+  },
+  {
+    "bookId": "magnetic-brain",
+    "format": "pdf",
+    "bytes": 57926,
+    "sha256": "9b40a014efe8dd0b8e86fc8498162208b3aaa637480ecbff8e2d804959e2e919",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Health/Wellbeing/magnetic-brain.pdf"
+  },
+  {
+    "bookId": "magnetic-brain",
+    "format": "epub",
+    "bytes": 5003,
+    "sha256": "4a8cec074139382168de2377aaff4d2422beec961c0c2e63376cabdd98040bbf",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Health/Wellbeing/magnetic-brain.epub"
+  },
+  {
+    "bookId": "principles-of-reiki-in-life",
+    "format": "pdf",
+    "bytes": 52436,
+    "sha256": "7d2e8aa4cbb3183143e307d6b4ee8822f8b56fa1c30d93a32c28148637261449",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Health/Wellbeing/principles-of-reiki-in-life.pdf"
+  },
+  {
+    "bookId": "principles-of-reiki-in-life",
+    "format": "epub",
+    "bytes": 4578,
+    "sha256": "5a267adb73726de7b8287276512a8ba320a00ff477f2ef079e5d6e34d4a04c03",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Health/Wellbeing/principles-of-reiki-in-life.epub"
+  },
+  {
+    "bookId": "the-primal-diet",
+    "format": "pdf",
+    "bytes": 1385539,
+    "sha256": "ffa7c8b701206eaae9adb9d7be9921fa3c85fef9d0a00e7427db2a9c6439903c",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Health/Wellbeing/the-primal-diet.pdf"
+  },
+  {
+    "bookId": "the-primal-diet",
+    "format": "epub",
+    "bytes": 315862,
+    "sha256": "55730b520c10f3dafdc3e0f6b5ac38bc96a9528a435939bd9e9b7e09cb034bcf",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Health/Wellbeing/the-primal-diet.epub"
+  },
+  {
+    "bookId": "curse-of-canaan",
+    "format": "pdf",
+    "bytes": 2153039,
+    "sha256": "a6dd39b8ecaf87f4bd8e45b03df1a0746829543a075a0fdcb58c77fa11714471",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/curse-of-canaan.pdf"
+  },
+  {
+    "bookId": "curse-of-canaan",
+    "format": "epub",
+    "bytes": 691477,
+    "sha256": "c7f84a61eb8fb233c4128b672a6511fbd65e3cee8dc0710444cf74faf78ca1f7",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/curse-of-canaan.epub"
+  },
+  {
+    "bookId": "free-energy",
+    "format": "pdf",
+    "bytes": 953370,
+    "sha256": "485dfecb3c47c8c3acbbccbc26ff76bbcb5f3688df60d972a9d255bc9615ec96",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/free-energy.pdf"
+  },
+  {
+    "bookId": "free-energy",
+    "format": "epub",
+    "bytes": 201262,
+    "sha256": "6d77559b25644896dbb483921355583875a3c7904c5a8c3987266a94175c4541",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/free-energy.epub"
+  },
+  {
+    "bookId": "the-48-laws-of-power",
+    "format": "pdf",
+    "bytes": 2329454,
+    "sha256": "6cd8bbfc247437f691198eb0990aa9e7ab8e3812127630141c4b30a7cb7e0266",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-48-laws-of-power.pdf"
+  },
+  {
+    "bookId": "the-48-laws-of-power",
+    "format": "epub",
+    "bytes": 631469,
+    "sha256": "f1ffad847c30d1ca692c5e143680cde0089f2be0e12bc0c8d18c8baa7adaf3cd",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-48-laws-of-power.epub"
+  },
+  {
+    "bookId": "the-authentic-creator-creative-truth",
+    "format": "pdf",
+    "bytes": 145011,
+    "sha256": "266c7e93674c5ba19d5ced3f8ab52e11d9bd4f2c22d5851c5b5c0a3a7d13b6e4",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-authentic-creator-creative-truth.pdf"
+  },
+  {
+    "bookId": "the-authentic-creator-creative-truth",
+    "format": "epub",
+    "bytes": 13275,
+    "sha256": "eaf4aa690a82745ea1faeead30bcc099e0388e92e07cd4c9a214e0981053ff1c",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-authentic-creator-creative-truth.epub"
+  },
+  {
+    "bookId": "the-dragons-of-eden",
+    "format": "pdf",
+    "bytes": 530139,
+    "sha256": "011d855815019cb0be3f601a2e2acc97d6d1eb2b40821eb570e7fd82b7cb6966",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-dragons-of-eden.pdf"
+  },
+  {
+    "bookId": "the-dragons-of-eden",
+    "format": "epub",
+    "bytes": 142450,
+    "sha256": "af6a305e995554ac3ccfdaf0eedfafba52e1ca9391620d9aa12218f8ccffff75",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-dragons-of-eden.epub"
+  },
+  {
+    "bookId": "the-hidden-evil",
+    "format": "pdf",
+    "bytes": 753111,
+    "sha256": "0c653b3ad1de441043f3c8428f0507cd22b377f7614746fa940aec353211a07c",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-hidden-evil.pdf"
+  },
+  {
+    "bookId": "the-hidden-evil",
+    "format": "epub",
+    "bytes": 103893,
+    "sha256": "08ad2eeb3a4e48cc936f8a0e1d4964fda614204aade35e06c9e78b8604789f44",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-hidden-evil.epub"
+  },
+  {
+    "bookId": "the-rockefeller-files",
+    "format": "pdf",
+    "bytes": 750392,
+    "sha256": "02dd6d11070508c63c865c57e93841e3db3f9942576e0f8582361e27e5431dc7",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-rockefeller-files.pdf"
+  },
+  {
+    "bookId": "the-rockefeller-files",
+    "format": "epub",
+    "bytes": 172374,
+    "sha256": "74f0bbd5f0aa314450cb3f7cd9b6bd611ab917aa73365d6cbb066d2b809d7f45",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Miscellaneous/General/the-rockefeller-files.epub"
+  },
+  {
+    "bookId": "a-quantum-coherence-corpus",
+    "format": "pdf",
+    "bytes": 561064,
+    "sha256": "5139c300e8f22b630bc4c4bb5021f07b3943def747c4f391cfa8b1f94da84d3d",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/a-quantum-coherence-corpus.pdf"
+  },
+  {
+    "bookId": "a-quantum-coherence-corpus",
+    "format": "epub",
+    "bytes": 42634,
+    "sha256": "61509a19322891d29cc64a168697c99911dc6acd3a7bbe4cfc575fba224979dd",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/a-quantum-coherence-corpus.epub"
+  },
+  {
+    "bookId": "adam-kadmon-and-the-anthropos",
+    "format": "pdf",
+    "bytes": 889774,
+    "sha256": "ff2d75b49c3cc6456e52f66ce55b82f33518b0f24c5275a56080d0818f3e1f91",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/adam-kadmon-and-the-anthropos.pdf"
+  },
+  {
+    "bookId": "adam-kadmon-and-the-anthropos",
+    "format": "epub",
+    "bytes": 137050,
+    "sha256": "d03ffc75b7ef269e260121ff8c6a949cee67b5b933228d12b5d90d8ae32540eb",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/adam-kadmon-and-the-anthropos.epub"
+  },
+  {
+    "bookId": "quantum-prayers-coherence-consciousness-and-the-art-of-aligned-prayer",
+    "format": "pdf",
+    "bytes": 184029,
+    "sha256": "4a44fc5dffd156cdf91206e513da4e0c9460bc0f9f188fddd0a62f988b8082ed",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/quantum-prayers-coherence-consciousness-and-the-art-of-aligned-prayer.pdf"
+  },
+  {
+    "bookId": "quantum-prayers-coherence-consciousness-and-the-art-of-aligned-prayer",
+    "format": "epub",
+    "bytes": 16092,
+    "sha256": "92baadb7e00c98fb526a34696877e8a07f00f0e8adc82146e5b9e7ce8ff5d4e8",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/quantum-prayers-coherence-consciousness-and-the-art-of-aligned-prayer.epub"
+  },
+  {
+    "bookId": "the-first-form-anthropos-and-adam-kadmon",
+    "format": "pdf",
+    "bytes": 227531,
+    "sha256": "1b25dea1131aa3d710d0a631b3d2a1ec2e0e165c5600ef24ae248a5fd21e1b06",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/the-first-form-anthropos-and-adam-kadmon.pdf"
+  },
+  {
+    "bookId": "the-first-form-anthropos-and-adam-kadmon",
+    "format": "epub",
+    "bytes": 38264,
+    "sha256": "f465577569bac467673dc66f5d33eacad11ebd2109d6ff369380cfe3b32dcb7c",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/the-first-form-anthropos-and-adam-kadmon.epub"
+  },
+  {
+    "bookId": "the-human-before-the-world",
+    "format": "pdf",
+    "bytes": 284890,
+    "sha256": "807a086ae3664188097bd9011e54f5ead4dbabaadfe05dcfabbd24915b0b6e80",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/the-human-before-the-world.pdf"
+  },
+  {
+    "bookId": "the-human-before-the-world",
+    "format": "epub",
+    "bytes": 35058,
+    "sha256": "11ff09f1cabd4fc8e04570b345386f3c63e7ebf63d65a5e083137809f713897e",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/the-human-before-the-world.epub"
+  },
+  {
+    "bookId": "the-living-measure",
+    "format": "pdf",
+    "bytes": 160009,
+    "sha256": "db01ed6a100c242f69c7d08e675cd9b6e7c596c545bab3240e0830da68f336d0",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/the-living-measure.pdf"
+  },
+  {
+    "bookId": "the-living-measure",
+    "format": "epub",
+    "bytes": 91366,
+    "sha256": "a2b3dd7f17586c58cb9873261cfd12050c4efaef9ce526f019c8480824dbd161",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/the-living-measure.epub"
+  },
+  {
+    "bookId": "the-stone-watchers-a-history-of-rapa-nui-and-the-moai",
+    "format": "pdf",
+    "bytes": 238690,
+    "sha256": "e35c357e5a4e3d6b09b2277dfa9f54ab91a5c4ce5c59cebccc0bba7cf0f433fe",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/the-stone-watchers-a-history-of-rapa-nui-and-the-moai.pdf"
+  },
+  {
+    "bookId": "the-stone-watchers-a-history-of-rapa-nui-and-the-moai",
+    "format": "epub",
+    "bytes": 28802,
+    "sha256": "704df5a1e1422d786e92a9efcaa4c548906a718e13ed9b9f4322fe854c9d288e",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Original%20Works/Ethan%20James%20Farrell/the-stone-watchers-a-history-of-rapa-nui-and-the-moai.epub"
+  },
+  {
+    "bookId": "de-mysteriis-greek-english-dillon-and-clarke-2003",
+    "format": "pdf",
+    "bytes": 1746889,
+    "sha256": "2c305e0d9fb229c7238b763d2e4004bb5544cfa7ea2c0e337049530b897b94e4",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Philosophy/Neoplatonism/de-mysteriis-greek-english-dillon-and-clarke-2003.pdf"
+  },
+  {
+    "bookId": "de-mysteriis-greek-english-dillon-and-clarke-2003",
+    "format": "epub",
+    "bytes": 648668,
+    "sha256": "b59b555bc791804581b532933e259a02aecc249559b91fd141763f97d617acd8",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Philosophy/Neoplatonism/de-mysteriis-greek-english-dillon-and-clarke-2003.epub"
+  },
+  {
+    "bookId": "on-the-mysteries-taylor-translation",
+    "format": "pdf",
+    "bytes": 1014120,
+    "sha256": "46307fa677e0f42144f71ab2584216b80b721e8b804e2cf0a5ed130d7f9cd160",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Philosophy/Neoplatonism/on-the-mysteries-taylor-translation.pdf"
+  },
+  {
+    "bookId": "on-the-mysteries-taylor-translation",
+    "format": "epub",
+    "bytes": 132715,
+    "sha256": "0269b8990aac7a1b1a830c6d9ebbebfd133e45eae64a0926864710b32479a238",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Philosophy/Neoplatonism/on-the-mysteries-taylor-translation.epub"
+  },
+  {
     "bookId": "meditations",
     "format": "pdf",
     "bytes": 426238,
@@ -52,6 +708,22 @@
     "source": "https://www.gutenberg.org/ebooks/2680",
     "retrieved": "2026-10-17",
     "path": "/library/books/Philosophy/Stoicism/meditations.txt"
+  },
+  {
+    "bookId": "raja-yoga",
+    "format": "pdf",
+    "bytes": 636494,
+    "sha256": "859dc9d267535f48e44a246762fe5bab8b4c301594f81a84eb24465b7ef0d37b",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Philosophy/Vedanta/raja-yoga.pdf"
+  },
+  {
+    "bookId": "raja-yoga",
+    "format": "epub",
+    "bytes": 172566,
+    "sha256": "b22a33313204716a2c78e9ffc679005b5f0a5d04aefcb5651e00fa3a6856df16",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Philosophy/Vedanta/raja-yoga.epub"
   },
   {
     "bookId": "presentation-007-endogenous-technologies",
@@ -152,10 +824,10 @@
   {
     "bookId": "presentation-043-pathway-of-initiation",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-043-pathway-of-initiation.pdf",
     "bytes": 21261857,
     "sha256": "5af1afc38122c8fe2ccc07c6103fdce711c1c355a96f97d33fac9e7e19f6380f",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=043+-+The+All-Seeing+Eye+Ancient+Wisdom+for+Modern+Problems+-+Pathway+of+Initiation+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=043+-+The+All-Seeing+Eye+Ancient+Wisdom+for+Modern+Problems+-+Pathway+of+Initiation+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-043-pathway-of-initiation.pdf"
   },
   {
     "bookId": "presentation-047-the-architecture-of-success",
@@ -224,10 +896,10 @@
   {
     "bookId": "presentation-054-the-arc-of-intelligence",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-054-the-arc-of-intelligence.pdf",
     "bytes": 20404190,
     "sha256": "c875f3725779f85d9a0dedbad4b9a0eeae94f28990a40dabe20f57fbd92d2661",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=054+-+The+Dragons+of+Eden+-+The+Arc+of+Intelligence+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=054+-+The+Dragons+of+Eden+-+The+Arc+of+Intelligence+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-054-the-arc-of-intelligence.pdf"
   },
   {
     "bookId": "presentation-057-the-solomon-blueprint",
@@ -352,10 +1024,10 @@
   {
     "bookId": "presentation-217-the-cosmic-balance",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-217-the-cosmic-balance.pdf",
     "bytes": 23767784,
     "sha256": "81acf98713a6f6506992057903dc28b03e279e7d078cd2c5f8aac3d18b480f09",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=217+-+The+Hopi+Prophecy+Sovereignty+and+the+Path+of+Purification+-+The+Cosmic+Balance+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=217+-+The+Hopi+Prophecy+Sovereignty+and+the+Path+of+Purification+-+The+Cosmic+Balance+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-217-the-cosmic-balance.pdf"
   },
   {
     "bookId": "presentation-217-the-fourth-world-covenant",
@@ -448,10 +1120,10 @@
   {
     "bookId": "presentation-224-the-illuminated-labyrinth",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-224-the-illuminated-labyrinth.pdf",
     "bytes": 22938106,
     "sha256": "c1446f2814807131682f79c2ee55674ed1cb2728d078d5c474f20bdaddbb0d63",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=224+-+The+Hidden+Evil+An+Investigation+Into+Organized+Stalking+-+The+Illuminated+Labyrinth+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=224+-+The+Hidden+Evil+An+Investigation+Into+Organized+Stalking+-+The+Illuminated+Labyrinth+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-224-the-illuminated-labyrinth.pdf"
   },
   {
     "bookId": "presentation-225-the-divine-cipher",
@@ -472,10 +1144,10 @@
   {
     "bookId": "presentation-226-the-cosmic-architecture-of-revelation",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-226-the-cosmic-architecture-of-revelation.pdf",
     "bytes": 25705714,
     "sha256": "3f4f720b709e2c312d9db5cb121557a63828d4dfaedacca733cdda0e783ffd60",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=226+-+Gleanings+from+the+Writings+of+Baha%27u%27llah+-+The+Cosmic+Architecture+of+Revelation+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=226+-+Gleanings+from+the+Writings+of+Baha%27u%27llah+-+The+Cosmic+Architecture+of+Revelation+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-226-the-cosmic-architecture-of-revelation.pdf"
   },
   {
     "bookId": "presentation-239-architecture-of-the-gnostic-void",
@@ -544,10 +1216,10 @@
   {
     "bookId": "presentation-255-the-anatomy-of-enlightenment",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-255-the-anatomy-of-enlightenment.pdf",
     "bytes": 24670122,
     "sha256": "79f31909bc648067401b6af837f1b60a45782634976e87b6cd3e857d8d5d1d72",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=255+-+The+Serpent+Science+Kundalini+Illumination+and+the+Sacral+Secret+-+The+Anatomy+of+Enlightenment+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=255+-+The+Serpent+Science+Kundalini+Illumination+and+the+Sacral+Secret+-+The+Anatomy+of+Enlightenment+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-255-the-anatomy-of-enlightenment.pdf"
   },
   {
     "bookId": "presentation-257-illuminated-ascent",
@@ -616,10 +1288,10 @@
   {
     "bookId": "presentation-274-portals-of-perception",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-274-portals-of-perception.pdf",
     "bytes": 21029759,
     "sha256": "b4eefe0e635dabba98c45642b6575aaea1b91777618e8d92bb6442c23b67df77",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=274+-+The+Architecture+of+Sentience+A+Global+Consciousness+Synthesis+-+Portals+of+Perception+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=274+-+The+Architecture+of+Sentience+A+Global+Consciousness+Synthesis+-+Portals+of+Perception+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-274-portals-of-perception.pdf"
   },
   {
     "bookId": "presentation-280-the-architecture-of-gnosis",
@@ -760,10 +1432,10 @@
   {
     "bookId": "presentation-348-the-sacred-signature-acuity",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-348-the-sacred-signature-acuity.pdf",
     "bytes": 24807676,
     "sha256": "065e1f4f1b6d5cb84dd9a2030dcffdcc081661e4aaff5d473bf1843f91a04d20",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=348+-+The+Sacred+Signature+The+Biblical+Significance+of+Seven+-+The+Sacred+Signature+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=348+-+The+Sacred+Signature+The+Biblical+Significance+of+Seven+-+The+Sacred+Signature+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-348-the-sacred-signature-acuity.pdf"
   },
   {
     "bookId": "presentation-348-the-sacred-signature",
@@ -808,10 +1480,10 @@
   {
     "bookId": "presentation-363-consciousness-beyond-form",
     "format": "pdf",
-    "path": "/library/books/Presentations/NotebookLM/presentation-363-consciousness-beyond-form.pdf",
     "bytes": 27506006,
     "sha256": "c8634fa6c987d7ea65ff0a15bed9eb305e04456c9d6d0c681738d088e95bfece",
-    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=363+-+Astral+Projection+Neuroscience%2C+Tradition%2C+and+Subjective+Realities+-+Consciousness+Beyond+Form+-+acuity.pdf"
+    "source": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=363+-+Astral+Projection+Neuroscience%2C+Tradition%2C+and+Subjective+Realities+-+Consciousness+Beyond+Form+-+acuity.pdf",
+    "path": "/library/books/Presentations/NotebookLM/presentation-363-consciousness-beyond-form.pdf"
   },
   {
     "bookId": "presentation-363-the-atlas-of-consciousness",
@@ -838,30 +1510,339 @@
     "path": "/library/books/Presentations/NotebookLM/presentation-373-decoding-reality.pdf"
   },
   {
+    "bookId": "gleanings-from-the-writings-of-bahaullah",
+    "format": "pdf",
+    "bytes": 1365432,
+    "sha256": "37b290a4c5566fd46029f5871381a938427b0fbc3a261b6ff037be434703dec0",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Bahai/gleanings-from-the-writings-of-bahaullah.pdf"
+  },
+  {
+    "bookId": "gleanings-from-the-writings-of-bahaullah",
+    "format": "epub",
+    "bytes": 168018,
+    "sha256": "62f212d341a5ca2a3a33751a64522f67daa4de119a96b2e4d69a32fdba721c93",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Bahai/gleanings-from-the-writings-of-bahaullah.epub"
+  },
+  {
+    "bookId": "selections-from-the-writings-of-the-bab",
+    "format": "pdf",
+    "bytes": 1268095,
+    "sha256": "ff672c0f9c30f011586eef7854c9c7562f7b722cc27330aa4497148a5bba2a22",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Bahai/selections-from-the-writings-of-the-bab.pdf"
+  },
+  {
+    "bookId": "selections-from-the-writings-of-the-bab",
+    "format": "epub",
+    "bytes": 186464,
+    "sha256": "ed89fab94b44920def8700c97356640f6868fa59c778e705343201974c285dc9",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Bahai/selections-from-the-writings-of-the-bab.epub"
+  },
+  {
+    "bookId": "the-hidden-words",
+    "format": "pdf",
+    "bytes": 268702,
+    "sha256": "fe64b5e0558c13edcd00d61974433d805ce14bd6383ee42c3cc0854078653922",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Bahai/the-hidden-words.pdf"
+  },
+  {
+    "bookId": "the-hidden-words",
+    "format": "epub",
+    "bytes": 21716,
+    "sha256": "b08f5ed09a79927fae8f959a97b786cf44f4d290b182ea62368bffc84ce64365",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Bahai/the-hidden-words.epub"
+  },
+  {
+    "bookId": "the-kitab-i-iqan",
+    "format": "pdf",
+    "bytes": 1180801,
+    "sha256": "31c71ef2dd395d7352ba958f92b09d5bebb98e91c1a224063bf1a3df2b05ea04",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Bahai/the-kitab-i-iqan.pdf"
+  },
+  {
+    "bookId": "the-kitab-i-iqan",
+    "format": "epub",
+    "bytes": 106372,
+    "sha256": "ba71c4acf6243bfae63c33afd549a33218558d840b2d4a3ee11f773e36d872a9",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Bahai/the-kitab-i-iqan.epub"
+  },
+  {
+    "bookId": "the-diamond-sutra",
+    "format": "pdf",
+    "bytes": 1399871,
+    "sha256": "c84f4147082c93cabbfaa0247d4019236f77055ddbcc731f4ea38c4780c5101b",
+    "source": "https://www.gutenberg.org/ebooks/64623",
+    "path": "/library/books/Scripture/Buddhism/the-diamond-sutra.pdf"
+  },
+  {
+    "bookId": "the-diamond-sutra",
+    "format": "epub",
+    "bytes": 370276,
+    "sha256": "e5de1489894c314c6cfdb5753d0b3abb8816a59ed5f66e8c2372a5daf7dbed21",
+    "source": "https://www.gutenberg.org/ebooks/64623",
+    "path": "/library/books/Scripture/Buddhism/the-diamond-sutra.epub"
+  },
+  {
+    "bookId": "geneva-bible-1560-part-1-pages-1-600",
+    "format": "pdf",
+    "bytes": 5839493,
+    "sha256": "d3cc03c05264cad0ff3a1bb8ecb2025a86d93d37fb471c0403da32f8a005b2ef",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/geneva-bible-1560-part-1-pages-1-600.pdf"
+  },
+  {
+    "bookId": "geneva-bible-1560-part-1-pages-1-600",
+    "format": "epub",
+    "bytes": 1546709,
+    "sha256": "0db6b74cf8ed25b87e8183ca3c96aa572943187c32ad342dd96607ebd2ffd8fc",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/geneva-bible-1560-part-1-pages-1-600.epub"
+  },
+  {
+    "bookId": "geneva-bible-1560-tables-pages-1201-1224",
+    "format": "pdf",
+    "bytes": 389460,
+    "sha256": "2015e83d93ad3faeaac9529aef7e2b0db78d7e8a9223c89cacc874dd4d6c508f",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/geneva-bible-1560-tables-pages-1201-1224.pdf"
+  },
+  {
+    "bookId": "geneva-bible-1560-tables-pages-1201-1224",
+    "format": "epub",
+    "bytes": 73441,
+    "sha256": "8db131b1c827f2bd497806fd147585824888b0e5313143e2a1d02adbc68b4fb7",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/geneva-bible-1560-tables-pages-1201-1224.epub"
+  },
+  {
+    "bookId": "geneva-bible",
+    "format": "pdf",
+    "bytes": 11568118,
+    "sha256": "c2262552a9d89a45add61bd9024599934d18d0de2226bb2112fca91d00f10a80",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/geneva-bible.pdf"
+  },
+  {
+    "bookId": "geneva-bible",
+    "format": "epub",
+    "bytes": 3096667,
+    "sha256": "dd9d3f2da773e09d1ad2a4263d4c3b35518463e6e3715d241071d48d1b146e22",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/geneva-bible.epub"
+  },
+  {
+    "bookId": "gods-elect-people",
+    "format": "pdf",
+    "bytes": 6015603,
+    "sha256": "b5729d8f81d3ff9f274051d631a69ed31374585c8cd6f84f7fc91e3734a06780",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/gods-elect-people.pdf"
+  },
+  {
+    "bookId": "gods-elect-people",
+    "format": "epub",
+    "bytes": 1602249,
+    "sha256": "55ecf5b3b927c4bbce5ade23a4519aeee5d3eb1d000a8a1d5bb5f0fe078eacc0",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/gods-elect-people.epub"
+  },
+  {
+    "bookId": "spiritual-warfare-prayers",
+    "format": "pdf",
+    "bytes": 927392,
+    "sha256": "177ec1226d66623158ea29df4ad8e3c6a656d6464b615a3a57f0c31983b9895e",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/spiritual-warfare-prayers.pdf"
+  },
+  {
+    "bookId": "spiritual-warfare-prayers",
+    "format": "epub",
+    "bytes": 114076,
+    "sha256": "ae7d68ee35f4b1e93c8ec958e40a13436d826eee19eda3e28a41c2fdd799515a",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/spiritual-warfare-prayers.epub"
+  },
+  {
+    "bookId": "the-firmament-vaulted-dome-of-the-earth",
+    "format": "pdf",
+    "bytes": 1384620,
+    "sha256": "c8e40f6b72d321f70c5e88ec1e3f067d4ce7221d5ad10e3136b25f9c88fa9222",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/the-firmament-vaulted-dome-of-the-earth.pdf"
+  },
+  {
+    "bookId": "the-firmament-vaulted-dome-of-the-earth",
+    "format": "epub",
+    "bytes": 282873,
+    "sha256": "440f1486fa542a6155160fbaa6bbba9d422f946b33d2cc401c52eb7bdbec0f62",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/the-firmament-vaulted-dome-of-the-earth.epub"
+  },
+  {
+    "bookId": "the-wisdom-of-solomon",
+    "format": "pdf",
+    "bytes": 164120,
+    "sha256": "d3375a47d3b085d74d4120489a4a0e75839490d7999be3b68c321f4978319732",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/the-wisdom-of-solomon.pdf"
+  },
+  {
+    "bookId": "the-wisdom-of-solomon",
+    "format": "epub",
+    "bytes": 36512,
+    "sha256": "caad60e1c9785916dbc3365de0502d5c2583ef55c0e0ecf04ef4ada30515a154",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/the-wisdom-of-solomon.epub"
+  },
+  {
+    "bookId": "the-wisdome-of-solomon-geneva-apocrypha",
+    "format": "pdf",
+    "bytes": 232219,
+    "sha256": "9479802257417f739dc28cdc5fb0f94fee7d9998b193b96b9d89ef6ba31c9622",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/the-wisdome-of-solomon-geneva-apocrypha.pdf"
+  },
+  {
+    "bookId": "the-wisdome-of-solomon-geneva-apocrypha",
+    "format": "epub",
+    "bytes": 38513,
+    "sha256": "e39dcfa4efc8092ef1bfd15eb85af807ee725b33ba7956988785894b2599b05e",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Christian/the-wisdome-of-solomon-geneva-apocrypha.epub"
+  },
+  {
+    "bookId": "pistis-sophia",
+    "format": "pdf",
+    "bytes": 1913054,
+    "sha256": "1386ed7a0373c1b0da38c8e7fbb5a7e2dc03f8bb6fbb26edac0b650ed94f2fd3",
+    "source": "https://www.gutenberg.org/ebooks/76266",
+    "path": "/library/books/Scripture/Gnostic/pistis-sophia.pdf"
+  },
+  {
+    "bookId": "pistis-sophia",
+    "format": "epub",
+    "bytes": 305181,
+    "sha256": "1c492d5ef8527a65e18dfe0b5547828f43db6c22718ad9b74f0cbca2007e9356",
+    "source": "https://www.gutenberg.org/ebooks/76266",
+    "path": "/library/books/Scripture/Gnostic/pistis-sophia.epub"
+  },
+  {
+    "bookId": "the-books-of-jeu-and-the-untitled-text-in-the-bruce-codex",
+    "format": "pdf",
+    "bytes": 13557376,
+    "sha256": "0c4d0f95c424dd1ca7479206b8f3096c4f22ca160689e4916cb1996b1b0238f4",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Gnostic/the-books-of-jeu-and-the-untitled-text-in-the-bruce-codex.pdf"
+  },
+  {
+    "bookId": "the-books-of-jeu-and-the-untitled-text-in-the-bruce-codex",
+    "format": "epub",
+    "bytes": 377810,
+    "sha256": "4de3ed3e217b6ef5dc8ba5524d73b433a04ecb5a20a1a4267899b993d45a99b2",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Gnostic/the-books-of-jeu-and-the-untitled-text-in-the-bruce-codex.epub"
+  },
+  {
+    "bookId": "the-gospel-of-mary",
+    "format": "pdf",
+    "bytes": 2452942,
+    "sha256": "ab465cbb16d67d87029066e06ba52d8a0033b1e99d74206cea71757ee8791041",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Gnostic/the-gospel-of-mary.pdf"
+  },
+  {
+    "bookId": "the-gospel-of-mary",
+    "format": "epub",
+    "bytes": 330452,
+    "sha256": "1c11a6cbf0f609aec2f509571ade5cd907d3d7abcc263ad6e2ac09fb9d57fa91",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Gnostic/the-gospel-of-mary.epub"
+  },
+  {
+    "bookId": "the-nag-hammadi-library",
+    "format": "pdf",
+    "bytes": 2255028,
+    "sha256": "c9e8cab15c2e5545557fa2607ad682de11363da4f871f0ba994e0b7215259e3e",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Gnostic/the-nag-hammadi-library.pdf"
+  },
+  {
+    "bookId": "the-nag-hammadi-library",
+    "format": "epub",
+    "bytes": 429163,
+    "sha256": "bca39acba37dcb31d009fc9cc2774ace57b41d9ddb8762fd446d7890f90103cf",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Gnostic/the-nag-hammadi-library.epub"
+  },
+  {
+    "bookId": "the-sacred-books-of-the-east-the-quran-part-ii",
+    "format": "pdf",
+    "bytes": 26945051,
+    "sha256": "0ec7e5c7ef05b4199a82ba33807c5d38eb73310eb7c2e8e05ac5d6a950ae3348",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Islam/the-sacred-books-of-the-east-the-quran-part-ii.pdf"
+  },
+  {
+    "bookId": "the-sacred-books-of-the-east-the-quran-part-ii",
+    "format": "epub",
+    "bytes": 304549,
+    "sha256": "8cb37993b1bed39d167e19aae76a6bbfa8a1cc27cec926de398e48c71e7b192c",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Islam/the-sacred-books-of-the-east-the-quran-part-ii.epub"
+  },
+  {
+    "bookId": "the-torah-the-five-books-of-moses",
+    "format": "pdf",
+    "bytes": 5979937,
+    "sha256": "508aa8cc79f77cdcbba80876dbfc7ad700e16c47aaf6e2bb93bbd9bc4feb9b3f",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Judaism/the-torah-the-five-books-of-moses.pdf"
+  },
+  {
+    "bookId": "the-torah-the-five-books-of-moses",
+    "format": "epub",
+    "bytes": 489435,
+    "sha256": "56525b6f8c6d59d9feef2476eb7ece2234fb0436e2e52ef8648144a948a9c07b",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Judaism/the-torah-the-five-books-of-moses.epub"
+  },
+  {
     "bookId": "tao-te-ching-legge",
     "format": "pdf",
-    "bytes": 103198,
-    "sha256": "4dfedf862fca015794bef4b8076cc5b551678925db355de68521a6a2e9c87c65",
+    "bytes": 403108,
+    "sha256": "bb2f0901d433b93fc8167bd4cfd54305ebbbac3e2b80f6ae1974c2a95c0ba222",
     "source": "https://www.gutenberg.org/ebooks/216",
-    "retrieved": "2026-10-17",
     "path": "/library/books/Scripture/Taoism/tao-te-ching-legge.pdf"
   },
   {
     "bookId": "tao-te-ching-legge",
     "format": "epub",
-    "bytes": 103203,
-    "sha256": "7eee7c2af3328159d2f07b09968907aeb47a9ecb2734ad1340aed1407b59f022",
+    "bytes": 100179,
+    "sha256": "21164fee17c399ab7ead0226d26b0560d08b3969b773c574f3d563a0375f21e3",
     "source": "https://www.gutenberg.org/ebooks/216",
-    "retrieved": "2026-10-17",
     "path": "/library/books/Scripture/Taoism/tao-te-ching-legge.epub"
   },
   {
-    "bookId": "tao-te-ching-legge",
-    "format": "text",
-    "bytes": 80552,
-    "sha256": "041568f8dfef3ac6c2deb7699756f9d26d6aa8669647f4ce611b0ed4a95b0db6",
-    "source": "https://www.gutenberg.org/ebooks/216",
-    "retrieved": "2026-10-17",
-    "path": "/library/books/Scripture/Taoism/tao-te-ching-legge.txt"
+    "bookId": "zoroaster",
+    "format": "pdf",
+    "bytes": 833759,
+    "sha256": "9171efd8e6f85cc5e69ea9e7c226f6cc8df50c83119261a7e772d94bcc1efc5a",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Zoroastrianism/zoroaster.pdf"
+  },
+  {
+    "bookId": "zoroaster",
+    "format": "epub",
+    "bytes": 215416,
+    "sha256": "0f2834a7142dd2dddf1361159a1ae18806cd772effd3d3f25030ca66241afecf",
+    "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+    "path": "/library/books/Scripture/Zoroastrianism/zoroaster.epub"
   }
 ]

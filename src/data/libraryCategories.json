@@ -6,6 +6,16 @@
       "Esoteric"
     ],
     "depth": 0,
+    "count": 22
+  },
+  {
+    "key": "Esoteric/Christian Mysticism",
+    "label": "Christian Mysticism",
+    "path": [
+      "Esoteric",
+      "Christian Mysticism"
+    ],
+    "depth": 1,
     "count": 1
   },
   {
@@ -19,13 +29,100 @@
     "count": 1
   },
   {
+    "key": "Esoteric/Occult",
+    "label": "Occult",
+    "path": [
+      "Esoteric",
+      "Occult"
+    ],
+    "depth": 1,
+    "count": 19
+  },
+  {
+    "key": "Esoteric/Taoist Practice",
+    "label": "Taoist Practice",
+    "path": [
+      "Esoteric",
+      "Taoist Practice"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Health",
+    "label": "Health",
+    "path": [
+      "Health"
+    ],
+    "depth": 0,
+    "count": 4
+  },
+  {
+    "key": "Health/Wellbeing",
+    "label": "Wellbeing",
+    "path": [
+      "Health",
+      "Wellbeing"
+    ],
+    "depth": 1,
+    "count": 4
+  },
+  {
+    "key": "Miscellaneous",
+    "label": "Miscellaneous",
+    "path": [
+      "Miscellaneous"
+    ],
+    "depth": 0,
+    "count": 7
+  },
+  {
+    "key": "Miscellaneous/General",
+    "label": "General",
+    "path": [
+      "Miscellaneous",
+      "General"
+    ],
+    "depth": 1,
+    "count": 7
+  },
+  {
+    "key": "Original Works",
+    "label": "Original Works",
+    "path": [
+      "Original Works"
+    ],
+    "depth": 0,
+    "count": 7
+  },
+  {
+    "key": "Original Works/Ethan James Farrell",
+    "label": "Ethan James Farrell",
+    "path": [
+      "Original Works",
+      "Ethan James Farrell"
+    ],
+    "depth": 1,
+    "count": 7
+  },
+  {
     "key": "Philosophy",
     "label": "Philosophy",
     "path": [
       "Philosophy"
     ],
     "depth": 0,
-    "count": 1
+    "count": 4
+  },
+  {
+    "key": "Philosophy/Neoplatonism",
+    "label": "Neoplatonism",
+    "path": [
+      "Philosophy",
+      "Neoplatonism"
+    ],
+    "depth": 1,
+    "count": 2
   },
   {
     "key": "Philosophy/Stoicism",
@@ -33,6 +130,16 @@
     "path": [
       "Philosophy",
       "Stoicism"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Philosophy/Vedanta",
+    "label": "Vedanta",
+    "path": [
+      "Philosophy",
+      "Vedanta"
     ],
     "depth": 1,
     "count": 1
@@ -63,6 +170,66 @@
       "Scripture"
     ],
     "depth": 0,
+    "count": 21
+  },
+  {
+    "key": "Scripture/Bahai",
+    "label": "Bahai",
+    "path": [
+      "Scripture",
+      "Bahai"
+    ],
+    "depth": 1,
+    "count": 4
+  },
+  {
+    "key": "Scripture/Buddhism",
+    "label": "Buddhism",
+    "path": [
+      "Scripture",
+      "Buddhism"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Scripture/Christian",
+    "label": "Christian",
+    "path": [
+      "Scripture",
+      "Christian"
+    ],
+    "depth": 1,
+    "count": 8
+  },
+  {
+    "key": "Scripture/Gnostic",
+    "label": "Gnostic",
+    "path": [
+      "Scripture",
+      "Gnostic"
+    ],
+    "depth": 1,
+    "count": 4
+  },
+  {
+    "key": "Scripture/Islam",
+    "label": "Islam",
+    "path": [
+      "Scripture",
+      "Islam"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Scripture/Judaism",
+    "label": "Judaism",
+    "path": [
+      "Scripture",
+      "Judaism"
+    ],
+    "depth": 1,
     "count": 1
   },
   {
@@ -71,6 +238,16 @@
     "path": [
       "Scripture",
       "Taoism"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Scripture/Zoroastrianism",
+    "label": "Zoroastrianism",
+    "path": [
+      "Scripture",
+      "Zoroastrianism"
     ],
     "depth": 1,
     "count": 1

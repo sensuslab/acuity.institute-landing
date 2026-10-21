@@ -6,7 +6,7 @@
   "collection": "Research presentations",
   "period": "Contemporary research presentation",
   "language": "English",
-  "description": "Neural Modulation and Synthetic Biological Interfaces. A widescreen research slide deck from the Acuity Institute collection.",
+  "description": "Examines superparamagnetic iron oxide nanoparticles (SPIONs) and magnetic fields as possible interfaces for remotely stimulating neural proteins, framed as a 'bio-digital convergence'. A modern research presentation from the Acuity Institute collection.",
   "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
   "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
   "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=052+-+Neural+Modulation+and+Synthetic+Biological+Interfaces+-+BIO-DIGITAL+CONVERGENCE.pdf",
@@ -15,7 +15,10 @@
     "slide deck",
     "NotebookLM",
     "052",
-    "Neural Modulation and Synthetic Biological Interfaces"
+    "Neural Modulation and Synthetic Biological Interfaces",
+    "nanotechnology",
+    "neuroscience",
+    "magnetogenetics"
   ],
   "accent": "gold",
   "pages": 22,
