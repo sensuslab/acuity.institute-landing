@@ -3754,56 +3754,6 @@
     "kind": "presentation"
   },
   {
-    "id": "presentation-027-the-divine-codex",
-    "title": "THE DIVINE CODEX",
-    "subtitle": "The Divine Codex Cube and Quantum Crucifixion",
-    "author": "Acuity Institute",
-    "collection": "Research presentations",
-    "period": "Contemporary research presentation",
-    "language": "English",
-    "description": "Frames spiritual ascent through the Anthropos/Adam Kadmon archetype and the Pleroma, and relates 'quantum sovereignty' and returning gifts to a spiritual reading of personal adversity. A modern research presentation from the Acuity Institute collection.",
-    "editionNote": "Curator-supplied PDF slide deck, preserved in its original widescreen layout. This is a research presentation about its subject, not an original edition of the historical text. No EPUB edition is supplied.",
-    "rights": "Curator-supplied Acuity Institute presentation, provided for publication in this library. Any third-party source material retains its respective rights.",
-    "sourceUrl": "https://www.dropbox.com/scl/fo/cp8dmmflbno135p8xg6ev/ADVSTUHSiIxQxgDUgp8Lsfk?rlkey=xxzk3aehgp9st4ppgrb5v5hp6&dl=0&preview=027+-+The+Divine+Codex+Cube+and+Quantum+Crucifixion+-+THE+DIVINE+CODEX.pdf",
-    "tags": [
-      "presentation",
-      "slide deck",
-      "NotebookLM",
-      "027",
-      "The Divine Codex Cube and Quantum Crucifixion",
-      "Anthropos",
-      "Adam Kadmon",
-      "Pleroma"
-    ],
-    "accent": "gold",
-    "pages": 14,
-    "order": 1027,
-    "originalFilename": "027 - The Divine Codex Cube and Quantum Crucifixion - THE DIVINE CODEX.pdf",
-    "translator": null,
-    "categoryKey": "Presentations/NotebookLM",
-    "categoryPath": [
-      "Presentations",
-      "NotebookLM decks"
-    ],
-    "categoryLabel": "Presentations / NotebookLM decks",
-    "assets": [
-      {
-        "format": "pdf",
-        "url": "/library/books/Presentations/NotebookLM/presentation-027-the-divine-codex.pdf",
-        "bytes": 19088415,
-        "sha256": "a0be22fa6ddfe120cd0a9854e1fe1ddc09f5f4dc762cec4e58772141c92a9832"
-      }
-    ],
-    "pdf": "/library/books/Presentations/NotebookLM/presentation-027-the-divine-codex.pdf",
-    "pdfBytes": 19088415,
-    "capabilities": {
-      "pdf": true,
-      "ebook": false,
-      "present": true
-    },
-    "kind": "presentation"
-  },
-  {
     "id": "presentation-043-pathway-of-initiation",
     "title": "Pathway of Initiation",
     "subtitle": "The All-Seeing Eye Ancient Wisdom for Modern Problems",

@@ -56,7 +56,7 @@ test('Every imported deck has a distinct PDF-only presentation record with its r
   const imports = JSON.parse(fs.readFileSync('content/library-imports.json','utf8')).files
     .filter(entry => entry.path.startsWith('public/library/books/Presentations/NotebookLM/'));
   const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
-  assert.equal(imports.length,98);
+  assert.equal(imports.length,97);
   const importedBooks = books.filter(book => book.categoryKey === 'Presentations/NotebookLM');
   assert.equal(importedBooks.length,imports.length);
   for (const entry of imports) {
