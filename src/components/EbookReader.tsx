@@ -1,8 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import ePub, {type Book, type Contents, type Location, type NavItem, type Rendition} from 'epubjs';
 import { ArrowDownToLine, ChevronLeft, ChevronRight, Maximize, Minimize, X } from 'lucide-react';
 import { canReadEbook, type LibraryBook } from '../data/library';
 import { useReaderDialog } from './useReaderDialog';
+import { bindEbookLinks } from './ebookLinks';
+import { ebookAppearanceKey, ebookPageTones, ebookReadingTheme, parseEbookPageTone, type EbookPageTone } from './ebookAppearance';
 import { settleEbookNavigation } from './ebookNavigation';
 import { ebookPreferenceKey, parseEbookPreferences } from './ebookPreferences';
 
@@ -20,6 +22,8 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
   const version=book.assets.find(asset=>asset.format==='epub')?.sha256.slice(0,12)||'original';
   const storageKey=ebookPreferenceKey(book.id,version);
   const [saved]=useState(()=>stored(storageKey));
+  const [pageTone,setPageTone]=useState<EbookPageTone>(()=>{try{return parseEbookPageTone(localStorage.getItem(ebookAppearanceKey));}catch{return 'white';}});
+  const pageToneRef=useRef(pageTone);pageToneRef.current=pageTone;
   const [fontSize,setFontSize]=useState(saved?.fontSize||20);
   const fontRef=useRef(fontSize);fontRef.current=fontSize;
   const [remember,setRemember]=useState(!!saved);
@@ -57,6 +61,7 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
     let cancelled=false;let rendition:Rendition|undefined;let publication:Book|undefined;
     let resize:ResizeObserver|undefined;let resizeFrame:number|undefined;
     const controller=new AbortController();
+    const contentCleanups:Array<()=>void>=[];
     busyRef.current=true;setBusy(true);setError('');
     const keyDown=(event:KeyboardEvent)=>{
       const target=event.target as HTMLElement|null;
@@ -80,16 +85,7 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
         rendition=publication.renderTo(element,{width:element.clientWidth,height:element.clientHeight,flow:'paginated',spread:'none',allowScriptedContent:false});
         engine.current=rendition;
         if(book.direction)rendition.direction(book.direction);
-        rendition.themes.default({
-          'html, body':{'background':'#ffffff !important','color':'#111111 !important'},
-          'body':{'font-family':'"Times New Roman", Times, "Liberation Serif", serif !important','line-height':'1.65 !important','padding':'0 28px !important'},
-          'p, li, div, blockquote, span, td':{'color':'#111111 !important','font-family':'"Times New Roman", Times, "Liberation Serif", serif !important','background':'transparent !important'},
-          'p, li, blockquote':{'font-size':'1em !important'},
-          'pre, code':{'font-family':'"Times New Roman", Times, serif !important','font-size':'1em !important','white-space':'pre-wrap !important','color':'#111111 !important','background':'transparent !important'},
-          'h1, h2, h3, h4, h5, h6':{'font-family':'"Times New Roman", Times, serif !important','color':'#111111 !important'},
-          'img, svg':{'max-width':'100% !important','object-fit':'contain'},
-          'a':{'color':'#274e75 !important'}
-        });
+        rendition.themes.default(ebookReadingTheme(pageToneRef.current));
         rendition.themes.override('font-size',`${fontRef.current}px`,true);
         rendition.hooks.content.register((contents:Contents)=>{
           // Publications run in EPUB.js's non-scripted sandbox. Keep the document
@@ -102,6 +98,16 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
           doc.documentElement.lang=doc.documentElement.lang||'en';
           if(!doc.title)doc.title=book.title;
           doc.addEventListener('keydown',keyDown);
+          contentCleanups.push(()=>doc.removeEventListener('keydown',keyDown));
+          const section=publication!.spine.get(contents.sectionIndex);
+          const sectionHrefs:string[]=[];
+          publication!.spine.each((item:{href:string})=>sectionHrefs.push(item.href));
+          contentCleanups.push(bindEbookLinks(doc,{
+            currentHref:section.href,sectionHrefs,packageDirectory:publication!.path.resolve('./'),
+            navigate:href=>{void navigate({href});},
+            external:href=>{window.open(href,'_blank','noopener,noreferrer');},
+            invalid:()=>setError('This link does not point to a readable section in this EPUB. You can continue with Contents.')
+          }));
         });
         const toc=flatten(publication.navigation.toc);setChapters(toc);
         rendition.on('relocated',(location:Location)=>{
@@ -147,10 +153,19 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
     return()=>{
       cancelled=true;controller.abort();resize?.disconnect();if(resizeFrame!==undefined)cancelAnimationFrame(resizeFrame);
       engine.current=undefined;epubBook.current=undefined;
+      contentCleanups.forEach(cleanup=>cleanup());
       publication?.destroy();
       element.replaceChildren();
     };
-  },[book, retry, onClose, persist]);
+  },[book, retry, onClose, persist, navigate]);
+  useEffect(()=>{
+    // Colour changes do not redisplay or repaginate the current passage.
+    engine.current?.themes.default(ebookReadingTheme(pageTone));
+  },[pageTone]);
+  const changePageTone=(tone:EbookPageTone)=>{
+    setPageTone(tone);
+    try{localStorage.setItem(ebookAppearanceKey,JSON.stringify({pageTone:tone}));}catch{/* Appearance works without storage. */}
+  };
   useEffect(()=>{
     const rendition=engine.current;if(!rendition)return;
     const anchor=locationRef.current;
@@ -173,9 +188,9 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
     if(event.key==='ArrowRight'||event.key==='PageDown'){event.preventDefault();turnRef.current(book.direction==='rtl'?'prev':'next');}
     else if(event.key==='ArrowLeft'||event.key==='PageUp'){event.preventDefault();turnRef.current(book.direction==='rtl'?'next':'prev');}
   };
-  return <dialog ref={dialog} className="library-reader ebook-reader" aria-labelledby="ebook-title" onCancel={cancel} onKeyDown={keyboard}><div className="reader-application">
+  return <dialog ref={dialog} className="library-reader ebook-reader" style={{'--ebook-page':ebookPageTones[pageTone].background} as CSSProperties} aria-labelledby="ebook-title" onCancel={cancel} onKeyDown={keyboard}><div className="reader-application">
     <header className="reader-heading"><div><span className="library-eyebrow">ACUITY / E-BOOK</span><h2 id="ebook-title">{book.title}</h2></div><div className="reader-actions"><a href={book.epub} download aria-label="Download EPUB"><ArrowDownToLine size={19}/></a><button onClick={()=>void toggleFullscreen()} aria-label={fullscreen?'Exit fullscreen':'Enter fullscreen'}>{fullscreen?<Minimize size={20}/>:<Maximize size={20}/>}</button><button autoFocus aria-label="Close ebook reader" onClick={onClose}><X size={23}/></button></div></header>
-    <div className="ebook-toolbar"><label className="ebook-chapters"><span className="sr-only">Contents</span><select aria-label="Contents" value={activeChapter} disabled={busy||!chapters.length} onChange={event=>void navigate({href:event.target.value})}><option value="" disabled>Contents</option>{chapters.map((chapter,index)=><option key={`${chapter.href}-${index}`} value={chapter.href}>{'— '.repeat(chapter.depth)}{chapter.label}</option>)}</select></label><div className="ebook-font"><button aria-label="Decrease font size" disabled={busy||fontSize<=16} onClick={()=>adjustFont(fontSize-2)}>A−</button><label><span className="sr-only">Text size</span><input aria-label="Text size" disabled={busy} type="range" min={16} max={32} step={2} value={fontSize} onChange={event=>adjustFont(Number(event.target.value))}/></label><button aria-label="Increase font size" disabled={busy||fontSize>=32} onClick={()=>adjustFont(fontSize+2)}>A+</button><span>{fontSize}px</span></div><label className="ebook-remember"><input type="checkbox" checked={remember} onChange={event=>rememberChange(event.target.checked)}/> Remember my place on this device</label></div>
+    <div className="ebook-toolbar"><label className="ebook-chapters"><span className="sr-only">Contents</span><select aria-label="Contents" value={activeChapter} disabled={busy||!chapters.length} onChange={event=>void navigate({href:event.target.value})}><option value="" disabled>Contents</option>{chapters.map((chapter,index)=><option key={`${chapter.href}-${index}`} value={chapter.href}>{'— '.repeat(chapter.depth)}{chapter.label}</option>)}</select></label><div className="ebook-font"><button aria-label="Decrease font size" disabled={busy||fontSize<=16} onClick={()=>adjustFont(fontSize-2)}>A−</button><label><span className="sr-only">Text size</span><input aria-label="Text size" disabled={busy} type="range" min={16} max={32} step={2} value={fontSize} onChange={event=>adjustFont(Number(event.target.value))}/></label><button aria-label="Increase font size" disabled={busy||fontSize>=32} onClick={()=>adjustFont(fontSize+2)}>A+</button><span>{fontSize}px</span></div><label className="ebook-page-colour">Page colour <select aria-label="Page colour" value={pageTone} onChange={event=>changePageTone(event.target.value as EbookPageTone)}>{Object.entries(ebookPageTones).map(([value,tone])=><option key={value} value={value}>{tone.label}</option>)}</select></label><label className="ebook-remember"><input type="checkbox" checked={remember} onChange={event=>rememberChange(event.target.checked)}/> Remember my place on this device</label></div>
     <div className="reader-status" role="status">{fullscreenError|| (busy?'Preparing your page…':position)}</div>
     {error&&<div className="ebook-error" role="alert"><p>{error}</p><button onClick={()=>setRetry(value=>value+1)}>Retry EPUB</button><button onClick={onReadPdf}>Read PDF instead</button><a href={book.epub} download>Download EPUB</a></div>}
     <div className="ebook-paper" aria-busy={busy}><button className="ebook-edge edge-left" aria-label="Previous ebook page" disabled={busy||atStart} onClick={()=>void navigate('prev')}><ChevronLeft/></button><div ref={stage} className="ebook-stage"/><button className="ebook-edge edge-right" aria-label="Next ebook page" disabled={busy||atEnd} onClick={()=>void navigate('next')}><ChevronRight/></button></div>
