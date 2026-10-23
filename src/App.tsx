@@ -3,14 +3,16 @@ const LibraryPage = lazy(() => import('./components/LibraryPage'));
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import ManifestoSection from './components/ManifestoSection';
+import LibrarySection from './components/LibrarySection';
 import PillarsGrid from './components/PillarsGrid';
+import AgentSection from './components/AgentSection';
+import AppsSection from './components/AppsSection';
 import TrustConstellation from './components/TrustConstellation';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GrainOverlay from './components/GrainOverlay';
 import MediaModal from './components/MediaModal';
 import ShortsModal from './components/ShortsModal';
-import LumenNousModal from './components/LumenNousModal';
 
 export default function App() {
   if (window.location.pathname.replace(/\/+$/, '') === '/library') {
@@ -32,13 +34,15 @@ function HomePage() {
       />
       <HeroSection />
       <ManifestoSection />
+      <LibrarySection />
       <PillarsGrid />
+      <AgentSection />
+      <AppsSection />
       <TrustConstellation />
       <Contact />
       <Footer />
       <MediaModal open={mediaOpen} onClose={() => setMediaOpen(false)} />
       <ShortsModal open={shortsOpen} onClose={() => setShortsOpen(false)} />
-      <LumenNousModal />
     </div>
   );
 }
