@@ -9,6 +9,7 @@ import AgentSection from './components/AgentSection';
 import AppsSection from './components/AppsSection';
 import { GoldDivider } from './components/SectionChrome';
 import TrustConstellation from './components/TrustConstellation';
+import FaqSection from './components/FaqSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GrainOverlay from './components/GrainOverlay';
@@ -33,6 +34,7 @@ function HomePage() {
         onWebinarsClick={() => setMediaOpen(true)}
         onShortsClick={() => setShortsOpen(true)}
       />
+      <main id="main">
       <HeroSection />
       <ManifestoSection />
       <GoldDivider />
@@ -45,7 +47,9 @@ function HomePage() {
       <AppsSection />
       <GoldDivider />
       <TrustConstellation />
+      <FaqSection />
       <Contact />
+      </main>
       <Footer />
       <MediaModal open={mediaOpen} onClose={() => setMediaOpen(false)} />
       <ShortsModal open={shortsOpen} onClose={() => setShortsOpen(false)} />

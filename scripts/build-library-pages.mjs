@@ -4,6 +4,13 @@ const escape = text => String(text).replace(/[&<>"']/g, char => ({'&':'&amp;','<
 const title = 'Open Library | Ancient Wisdom & Philosophy | Acuity Institute';
 const description = 'Read and download PDF and EPUB editions of ancient wisdom, philosophy and esoteric traditions. Explore source editions in the Acuity open library.';
 let html = fs.readFileSync('dist/index.html', 'utf8');
+// The homepage graph includes FAQ and Acuity.Agent entities that do not belong on the library page.
+const homeGraph = JSON.parse(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(html)[1].replace(/<\\\//g, '</'));
+const baseGraph = {'@context':'https://schema.org','@graph':homeGraph['@graph'].filter(node => node['@id'] === 'https://acuity.institute/#organization' || node['@id'] === 'https://acuity.institute/#website')};
+html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">${JSON.stringify(baseGraph).replace(/</g,'\\u003c')}</script>`)
+  .replace(/https:\/\/acuity\.institute\/og-agent\.jpg/g, 'https://acuity.institute/og.png')
+  .replace(/(<meta property="og:image:type" content=")[^"]*/, '$1image/png')
+  .replace(/(<meta (?:property="og:image:alt"|name="twitter:image:alt") content=")[^"]*/g, '$1Acuity Institute: Pathways to wisdom.');
 html = html.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
   .replace(/(<meta name="description" content=")[^"]*/, `$1${description}`)
   .replace(/(<link rel="canonical" href=")[^"]*/, '$1https://acuity.institute/library/')

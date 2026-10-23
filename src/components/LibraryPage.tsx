@@ -10,7 +10,7 @@ function selectedFromUrl() {
   return books.find(book => book.id === new URLSearchParams(window.location.search).get('book'));
 }
 export default function LibraryPage() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(() => new URLSearchParams(window.location.search).get('q') ?? '');
   const [collection, setCollection] = useState('All collections');
   const [format, setFormat] = useState('all');
   const [sort, setSort] = useState('curated');
