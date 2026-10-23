@@ -72,7 +72,8 @@ test('PDF GET ranges, suffix ranges, HEAD and unsatisfiable ranges',async()=>{
   for(const range of ['bytes=999999999-','bytes=-0','bytes=10-1','bytes=','bytes=0-1,5-9'])assert.equal((await fetch(url,{headers:{Range:range}})).status,416);
 });
 test('Missing files are 404, invalid URL encoding is 400, POST is 405',async()=>{
-  for(const url of ['/library/books/missing.pdf','/privacy/','/missing-page','/assets/no.js'])assert.equal((await fetch(origin+url)).status,404);
+  for(const url of ['/library/books/missing.pdf','/missing-page','/assets/no.js'])assert.equal((await fetch(origin+url)).status,404);
+  const privacy=await fetch(origin+'/privacy/');assert.equal(privacy.status,200);assert.match(await privacy.text(),/noindex/);
   assert.equal((await fetch(origin+'/library/',{method:'POST'})).status,405);
   for(const url of ['/bad%ZZ','/library/%00','/shorts/%2e%2e%2fsecret']){
     const status=await new Promise((resolve,reject)=>{http.get(origin+url,res=>{res.resume();resolve(res.statusCode);}).on('error',reject);});

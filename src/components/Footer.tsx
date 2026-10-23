@@ -4,6 +4,7 @@ const FOOTER_LINKS = [
   { label: 'Library', href: '/library/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Privacy', href: '/privacy/' },
 ];
 
 export default function Footer() {
