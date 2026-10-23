@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { SectionLabel } from './SectionChrome';
 
 const APPS = [
   {
@@ -34,16 +35,11 @@ export default function AppsSection() {
   const { ref, isVisible } = useScrollReveal(0.1);
 
   return (
-    <section id="apps" className="relative py-32 md:py-40 px-6">
-      <div ref={ref} className="max-w-6xl mx-auto">
+    <section id="apps" className="relative py-28 md:py-36 px-6 overflow-hidden">
+      <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, #09090f 0%, #0b0d18 55%, #09090f 100%)' }} />
+      <div ref={ref} className="relative max-w-6xl mx-auto">
         <div className="mb-16 md:mb-20">
-          <span
-            className={`block font-mono text-[10px] uppercase tracking-[0.3em] text-gold/60 transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}
-          >
-            Acuity Apps
-          </span>
+          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}><SectionLabel index="04">Acuity Apps</SectionLabel></div>
           <h2
             className={`text-4xl md:text-5xl font-light tracking-tight text-starlight mt-3 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'

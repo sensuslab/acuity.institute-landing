@@ -7,6 +7,7 @@ import LibrarySection from './components/LibrarySection';
 import PillarsGrid from './components/PillarsGrid';
 import AgentSection from './components/AgentSection';
 import AppsSection from './components/AppsSection';
+import { GoldDivider } from './components/SectionChrome';
 import TrustConstellation from './components/TrustConstellation';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -34,10 +35,15 @@ function HomePage() {
       />
       <HeroSection />
       <ManifestoSection />
+      <GoldDivider />
       <LibrarySection />
-      <PillarsGrid />
+      <GoldDivider />
       <AgentSection />
+      <GoldDivider />
+      <PillarsGrid />
+      <GoldDivider />
       <AppsSection />
+      <GoldDivider />
       <TrustConstellation />
       <Contact />
       <Footer />

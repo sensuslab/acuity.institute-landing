@@ -1,5 +1,6 @@
 import { ArrowUpRight, BookOpen, Compass, Download, Library } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { SectionLabel } from './SectionChrome';
 import categories from '../data/libraryCategories.json';
 
 type Category = { key: string; label: string; depth: number; count: number };
@@ -33,13 +34,13 @@ export default function LibrarySection() {
   });
 
   return (
-    <section id="library" className="relative py-32 md:py-40 px-6">
-      <div ref={ref} className="max-w-6xl mx-auto">
+    <section id="library" className="relative py-28 md:py-36 px-6 overflow-hidden">
+      {/* Warm reading-room atmosphere */}
+      <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 45% at 85% 20%, rgba(212,168,67,0.07) 0%, transparent 70%), linear-gradient(180deg, #0c0b12 0%, #09090f 100%)' }} />
+      <div ref={ref} className="relative max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-end mb-16 md:mb-20">
           <div className="md:col-span-7">
-            <span style={reveal(0).style} className={`block font-mono text-[10px] uppercase tracking-[0.3em] text-gold/60 ${reveal(0).className}`}>
-              The Acuity Library
-            </span>
+            <div style={reveal(0).style} className={reveal(0).className}><SectionLabel index="01">The Acuity Library</SectionLabel></div>
             <h2
               className={`mt-3 font-display italic font-light text-[44px] md:text-[64px] leading-[1.02] text-starlight ${reveal(150).className}`}
               style={reveal(150).style}
@@ -63,7 +64,7 @@ export default function LibrarySection() {
           {PRINCIPLES.map(({ icon: Icon, title, text }, i) => (
             <div
               key={title}
-              className={`glass-card rounded-2xl p-8 ${reveal(400 + i * 120).className}`}
+              className={`glow-panel rounded-2xl p-8 ${reveal(400 + i * 120).className}`}
               style={reveal(400 + i * 120).style}
             >
               <div className="w-11 h-11 rounded-xl bg-gold/[0.08] flex items-center justify-center mb-6">
