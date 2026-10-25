@@ -28,7 +28,7 @@ export async function hydrateLibraryImports({root, manifestPath = path.join(root
   if (manifest.version !== 1 || !Array.isArray(manifest.files)) throw new Error('Unsupported library import manifest');
   const seen = new Set();
   const jobs = manifest.files.map(entry => {
-    if (!/^public\/library\/books\/.+\.(pdf|epub)$/.test(entry.path || '') || entry.path.includes('\\') ||
+    if (!/^public\/library\/(?:books|overviews)\/.+\.(pdf|epub|pptx)$/.test(entry.path || '') || entry.path.includes('\\') ||
       entry.path.split('/').some(part => !part || part === '.' || part === '..') || seen.has(entry.path.toLowerCase())) {
       throw new Error(`Invalid or duplicate imported file path: ${entry.path}`);
     }

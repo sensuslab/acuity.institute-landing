@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { compileLibrary } from './library-catalogue.mjs';
 import { hydrateLibraryImports } from './fetch-library-imports.mjs';
+import { attachLibraryOverviews } from './library-overviews.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 await hydrateLibraryImports({root});
 const read = (file,fallback) => fs.existsSync(file) ? JSON.parse(fs.readFileSync(file,'utf8')) : fallback;
@@ -11,6 +12,8 @@ const manifestPath = path.join(root,'public/library/provenance.json');
 const redirectsPath = path.join(root,'public/library/redirects.json');
 const previous = read(catalogue,[]);
 const result = await compileLibrary({booksDir:path.join(root,'public/library/books'), categoryLabels:read(path.join(root,'public/library/categories.json'),{}),previousManifest:read(manifestPath,[])});
+result.books = await attachLibraryOverviews({books:result.books, publicDir:path.join(root,'public'),
+  manifest:read(path.join(root,'content/library-overviews.json'),{version:1,overviews:[]})});
 const redirects = read(redirectsPath,{});
 for (const old of previous) {
   const current = result.books.find(book=>book.id === old.id);

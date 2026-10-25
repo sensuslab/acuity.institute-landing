@@ -7,7 +7,10 @@ import { observeReaderViewport } from './readerViewport';
 import { useReaderDialog } from './useReaderDialog';
 GlobalWorkerOptions.workerSrc = workerUrl;
 
-export default function PdfReader({ book, onClose, initialPresentation = false }: { book: LibraryBook; onClose: () => void; initialPresentation?: boolean }) {
+type PdfDocument = Pick<LibraryBook, 'title' | 'pdf' | 'author' | 'epub' | 'text' | 'sourceUrl'>;
+export default function PdfReader({ book, onClose, initialPresentation = false, documentLabel = 'Original PDF edition', onReadSource }: {
+  book: PdfDocument; onClose: () => void; initialPresentation?: boolean; documentLabel?:string; onReadSource?:()=>void;
+}) {
   const {dialog,fullscreen,fullscreenError,toggleFullscreen,cancel} = useReaderDialog(onClose);
   const surface = useRef<HTMLDivElement>(null);
   const scrollViewport = useRef<HTMLDivElement>(null);
@@ -98,6 +101,6 @@ export default function PdfReader({ book, onClose, initialPresentation = false }
     <div ref={scrollViewport} className="reader-scroll"><div ref={surface} className={`reader-surface ${textMode?'reader-canvas-hidden':''}`}/>{!presentation&&<div className={textMode?'reader-text':'sr-only'} aria-label={`Text of page ${page}`} aria-busy={busy}>{busy?'':text || (textMode?'This page has no selectable text. Use Page view to see the original.':'')}</div>}
       {presentation&&<><button className="presentation-edge edge-left" aria-label="Previous slide" disabled={!pdf||page===1} onClick={()=>go(page-1)}><ChevronLeft/></button><button className="presentation-edge edge-right" aria-label="Next slide" disabled={!pdf||page===pdf.numPages} onClick={()=>go(page+1)}><ChevronRight/></button></>}
     </div>
-    <footer className="reader-footer"><span>{book.author} · {presentation?'Use arrow keys or the screen edges':'Original PDF edition'}</span>{book.epub&&<a href={book.epub} download>Download EPUB</a>}{book.text&&<a href={book.text}>Full plain text</a>}</footer>
+    <footer className="reader-footer"><span>{book.author} · {presentation?'Use arrow keys or the screen edges':documentLabel}</span>{onReadSource&&<button className="library-secondary" onClick={onReadSource}>Read source text</button>}{book.epub&&<a href={book.epub} download>Download EPUB</a>}{book.text&&<a href={book.text}>Full plain text</a>}</footer>
   </div></dialog>;
 }

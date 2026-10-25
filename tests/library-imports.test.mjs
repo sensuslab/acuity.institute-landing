@@ -102,7 +102,7 @@ test('Rate limit retries respect Retry-After and pace subsequent requests', asyn
 
 test('Imported curator ebooks pin both a PDF and an EPUB and enable the e-reader', () => {
   const imports = JSON.parse(fs.readFileSync('content/library-imports.json','utf8')).files
-    .filter(entry => !entry.path.startsWith('public/library/books/Presentations/'));
+    .filter(entry => entry.path.startsWith('public/library/books/') && !entry.path.startsWith('public/library/books/Presentations/'));
   const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
   const stems = new Set(imports.map(entry => entry.path.replace(/\.(pdf|epub)$/,'')));
   assert.equal(imports.length, stems.size * 2);

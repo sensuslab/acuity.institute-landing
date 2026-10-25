@@ -1,0 +1,1696 @@
+{
+  "version": 1,
+  "matchingBasis": "Title, author and edition metadata; two sample decks visually checked. Not a full scholarly content review.",
+  "overviews": [
+    {
+      "id": "overview-a-quantum-coherence-corpus",
+      "title": "A Quantum Coherence Corpus — visual overview",
+      "sourceBookIds": [
+        "a-quantum-coherence-corpus"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/a-quantum-coherence-corpus/5da847f4b8ac.pdf",
+          "bytes": 23897471,
+          "sha256": "5da847f4b8ac3580d4fc9a2205e386e08212c731bf0871c6950fa4074f2943a7"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-adam-kadmon-and-the-anthropos",
+      "title": "Adam Kadmon and the Anthropos — visual overview",
+      "sourceBookIds": [
+        "adam-kadmon-and-the-anthropos"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/adam-kadmon-and-the-anthropos/7112de72f3be.pdf",
+          "bytes": 22214994,
+          "sha256": "7112de72f3bee648245cde4f7c5efc3ee87edc471030f1101ac94b3b6790e67c"
+        }
+      ],
+      "pages": 19,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-alchemy-of-personal-transformation",
+      "title": "Alchemy of Personal Transformation — visual overview",
+      "sourceBookIds": [
+        "alchemy-of-personal-transformation"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/alchemy-of-personal-transformation/c0abb07dbf94.pdf",
+          "bytes": 23868740,
+          "sha256": "c0abb07dbf9468f39dc41a7f71edbecf45ac808c9cae4af30fd7049ef9f7b7cd"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-an-outline-of-occult-science",
+      "title": "An Outline of Occult Science — visual overview",
+      "sourceBookIds": [
+        "an-outline-of-occult-science"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/an-outline-of-occult-science/0dc0061e92d7.pdf",
+          "bytes": 27585866,
+          "sha256": "0dc0061e92d7cf042c4407093d9bfc1b59a8a52c7630b3562b635003f3502530"
+        }
+      ],
+      "pages": 19,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-ancient-magic-magnetism-and-psychic-forces",
+      "title": "Ancient Magic, Magnetism and Psychic Forces — visual overview",
+      "sourceBookIds": [
+        "ancient-magic-magnetism-and-psychic-forces"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/ancient-magic-magnetism-and-psychic-forces/6cc524a6b6fe.pdf",
+          "bytes": 18068758,
+          "sha256": "6cc524a6b6febaad10ad92c21de5d1f3ed383753f1cc2cb7f0e3e7da06b30ad3"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-astrology-as-it-is-not-as-it-has-been-represented",
+      "title": "Astrology As It Is, Not As It Has Been Represented — visual overview",
+      "sourceBookIds": [
+        "astrology-as-it-is-not-as-it-has-been-represented"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/astrology-as-it-is-not-as-it-has-been-represented/fcd8a2d61c4b.pdf",
+          "bytes": 17345011,
+          "sha256": "fcd8a2d61c4b37c975a1485cb50b4b5cdbb6dfb99dfec4b2370d10f356b61b69"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-buddhist-mahayana-texts-incl-heart-sutra-sbe-49",
+      "title": "Buddhist Mahayana Texts, incl. Heart Sutra (SBE 49) — visual overview",
+      "sourceBookIds": [
+        "buddhist-mahayana-texts-incl-heart-sutra-sbe-49"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/buddhist-mahayana-texts-incl-heart-sutra-sbe-49/e3e550d3ef1d.pdf",
+          "bytes": 21781033,
+          "sha256": "e3e550d3ef1d77ce54ca8f8d1cc161b9460995d93d85fa7516ea11b2f96e84a3"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-christianity-as-mystical-fact",
+      "title": "Christianity as Mystical Fact — visual overview",
+      "sourceBookIds": [
+        "christianity-as-mystical-fact"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/christianity-as-mystical-fact/7ac1c0b129af.pdf",
+          "bytes": 24599229,
+          "sha256": "7ac1c0b129af7d32804ceeda3078461d00ed81d079c4454b901766add916e003"
+        }
+      ],
+      "pages": 19,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-commentaries-of-proclus-on-euclid-vol-1",
+      "title": "Commentaries of Proclus on Euclid, Vol. 1 — visual overview",
+      "sourceBookIds": [
+        "commentaries-of-proclus-on-euclid-vol-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/commentaries-of-proclus-on-euclid-vol-1/784a64338ccd.pdf",
+          "bytes": 23465955,
+          "sha256": "784a64338ccd528209ca12e2d51bf8796d925e98fc4752c1aa47b78d2d310035"
+        }
+      ],
+      "pages": 19,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-commentaries-of-proclus-on-euclid-vol-2",
+      "title": "Commentaries of Proclus on Euclid, Vol. 2 — visual overview",
+      "sourceBookIds": [
+        "commentaries-of-proclus-on-euclid-vol-2"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/commentaries-of-proclus-on-euclid-vol-2/c8d4436632aa.pdf",
+          "bytes": 17834120,
+          "sha256": "c8d4436632aa0265d40abf5aa755b12256fe7087a1548397076040c9159efc7a"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-das-johannesbuch-der-mand-er-german-lidzbarski-1915",
+      "title": "Das Johannesbuch der Mandäer (German, Lidzbarski 1915) — visual overview",
+      "sourceBookIds": [
+        "das-johannesbuch-der-mand-er-german-lidzbarski-1915"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/das-johannesbuch-der-mand-er-german-lidzbarski-1915/431e99d484bd.pdf",
+          "bytes": 17452932,
+          "sha256": "431e99d484bdee946c913f2f7e6e170fd7e9a2f9dd000d2239ba8e35e713037a"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-de-mysteriis-greek-english-dillon-and-clarke-2003",
+      "title": "De Mysteriis (Greek-English, Dillon and Clarke 2003) — visual overview",
+      "sourceBookIds": [
+        "de-mysteriis-greek-english-dillon-and-clarke-2003"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/de-mysteriis-greek-english-dillon-and-clarke-2003/eebcf297fa40.pdf",
+          "bytes": 17826750,
+          "sha256": "eebcf297fa4032b7410deff26b0623366c1387dae4454f248f482d25a2857c57"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-de-umbris-idearum-latin",
+      "title": "De Umbris Idearum (Latin) — visual overview",
+      "sourceBookIds": [
+        "de-umbris-idearum-latin"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/de-umbris-idearum-latin/7c95ab644fd7.pdf",
+          "bytes": 15362386,
+          "sha256": "7c95ab644fd7fe0d7a072bdf68e14928d4a635449eddf6b944992c307c2c91d5"
+        }
+      ],
+      "pages": 12,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-derekh-hokhmah-hebrew-amsterdam-imprint",
+      "title": "Derekh Hokhmah (Hebrew, Amsterdam imprint) — visual overview",
+      "sourceBookIds": [
+        "derekh-hokhmah-hebrew-amsterdam-imprint"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/derekh-hokhmah-hebrew-amsterdam-imprint/c1281207ddd8.pdf",
+          "bytes": 21627513,
+          "sha256": "c1281207ddd88c4eb917d5a709d4c2a8b86490fae53c2842bf78e534b1aae474"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-dirty-electricity",
+      "title": "Dirty Electricity — visual overview",
+      "sourceBookIds": [
+        "dirty-electricity"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/dirty-electricity/2de4fd605f90.pdf",
+          "bytes": 24198986,
+          "sha256": "2de4fd605f90887c0174a10a1a812f03a77af090d1b36a174b17e701dc3a998f"
+        }
+      ],
+      "pages": 19,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-earthology",
+      "title": "Earthology — visual overview",
+      "sourceBookIds": [
+        "earthology"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/earthology/a13d6c85a66b.pdf",
+          "bytes": 13474182,
+          "sha256": "a13d6c85a66beabfaec3e5ebbc6cc7c7b3ff97249e1576900a860025c22a2b07"
+        }
+      ],
+      "pages": 11,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-etz-chaim-the-tree-of-life",
+      "title": "Etz Chaim (The Tree of Life) — visual overview",
+      "sourceBookIds": [
+        "etz-chaim-the-tree-of-life"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/etz-chaim-the-tree-of-life/7095f18ec953.pdf",
+          "bytes": 19036933,
+          "sha256": "7095f18ec953e88977b88dd285f10d79466fc498a3bdc60a797442c746f0f5a7"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-five-stages-of-greek-religion-incl-sallustius",
+      "title": "Five Stages of Greek Religion (incl. Sallustius) — visual overview",
+      "sourceBookIds": [
+        "five-stages-of-greek-religion-incl-sallustius"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/five-stages-of-greek-religion-incl-sallustius/bbd8964cdeaf.pdf",
+          "bytes": 18141821,
+          "sha256": "bbd8964cdeafe51a5939e9508baddc2b6e2e27a4ddb22a7a4e302028574d3e74"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-forty-homilies-greek-1857",
+      "title": "Forty Homilies (Greek, 1857) — visual overview",
+      "sourceBookIds": [
+        "forty-homilies-greek-1857"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/forty-homilies-greek-1857/738ada6f3fb4.pdf",
+          "bytes": 12248867,
+          "sha256": "738ada6f3fb45ec22323f0d661763f17b707e9956981c8f3b0f6f5f8007d527e"
+        }
+      ],
+      "pages": 10,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-geneva-bible",
+      "title": "Geneva Bible — visual overview",
+      "sourceBookIds": [
+        "geneva-bible"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/geneva-bible/d012e754d863.pdf",
+          "bytes": 14749786,
+          "sha256": "d012e754d86398cd6e9719ba2e2fa9fb706bd478414d6d63dad4b86666ac30b7"
+        }
+      ],
+      "pages": 11,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-geneva-bible-1560-part-1-pages-1-600",
+      "title": "Geneva Bible (1560) - Part 1, Pages 1-600 — visual overview",
+      "sourceBookIds": [
+        "geneva-bible-1560-part-1-pages-1-600"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/geneva-bible-1560-part-1-pages-1-600/3ebeb149c8b2.pdf",
+          "bytes": 17198208,
+          "sha256": "3ebeb149c8b21941b18c67e3a9e029871bbbba7c4afee57fafe2b40d666ebcad"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-geneva-bible-1560-tables-pages-1201-1224",
+      "title": "Geneva Bible (1560) - Tables, Pages 1201-1224 — visual overview",
+      "sourceBookIds": [
+        "geneva-bible-1560-tables-pages-1201-1224"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/geneva-bible-1560-tables-pages-1201-1224/131e834e65ca.pdf",
+          "bytes": 16777601,
+          "sha256": "131e834e65ca03e35b0149a9e907f1afb1b06c03ce9efa0a078ae8aad1daf9ea"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-gleanings-from-the-writings-of-bahaullah",
+      "title": "Gleanings from the Writings of Baha'u'llah — visual overview",
+      "sourceBookIds": [
+        "gleanings-from-the-writings-of-bahaullah"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/gleanings-from-the-writings-of-bahaullah/660ce378dee9.pdf",
+          "bytes": 28324894,
+          "sha256": "660ce378dee90fe0580c2fbe313445d524da2ce7d994ca7df7ef674b088f56c9"
+        }
+      ],
+      "pages": 21,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-gods-elect-people",
+      "title": "Gods Elect People — visual overview",
+      "sourceBookIds": [
+        "gods-elect-people"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/gods-elect-people/2822a15cd873.pdf",
+          "bytes": 15064270,
+          "sha256": "2822a15cd873e85c3afb9c90d1c5c2584aad9d4d1e27965855e5b92b0690d27e"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-gregory-of-nyssa-dogmatic-treatises-etc-npnf-ii-5",
+      "title": "Gregory of Nyssa, Dogmatic Treatises etc. (NPNF II-5) — visual overview",
+      "sourceBookIds": [
+        "gregory-of-nyssa-dogmatic-treatises-etc-npnf-ii-5"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/gregory-of-nyssa-dogmatic-treatises-etc-npnf-ii-5/8af9985a0250.pdf",
+          "bytes": 21838786,
+          "sha256": "8af9985a0250e5efb1d7246cf39b9436038ff3a957ec7b2d2bab5c001b22c111"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-gulshan-i-raz-the-mystic-rose-garden",
+      "title": "Gulshan i Raz, the Mystic Rose Garden — visual overview",
+      "sourceBookIds": [
+        "gulshan-i-raz-the-mystic-rose-garden"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/gulshan-i-raz-the-mystic-rose-garden/cff514ab3924.pdf",
+          "bytes": 18894532,
+          "sha256": "cff514ab3924f57ad6d691685084277749ce5e71d0066c28510eaf30cb3d787c"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-heaven-and-its-wonders-and-hell",
+      "title": "Heaven and its Wonders and Hell — visual overview",
+      "sourceBookIds": [
+        "heaven-and-its-wonders-and-hell"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/heaven-and-its-wonders-and-hell/a7f4b56e3441.pdf",
+          "bytes": 19392774,
+          "sha256": "a7f4b56e3441718595b49e7f6eedbd537b1bddda0b27467678e627c9b11873da"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-how-to-win-or-sure-secrets-of-success",
+      "title": "How to Win, or Sure Secrets of Success — visual overview",
+      "sourceBookIds": [
+        "how-to-win-or-sure-secrets-of-success"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/how-to-win-or-sure-secrets-of-success/5845daf6ad48.pdf",
+          "bytes": 21058855,
+          "sha256": "5845daf6ad48a92187babf7903f287341fa4a43d67abc301f58f74515ea61dda"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-ikhwanu-s-safa-or-brothers-of-purity-english-dowson-1869",
+      "title": "Ikhwanu-s-Safa; or, Brothers of Purity (English, Dowson 1869) — visual overview",
+      "sourceBookIds": [
+        "ikhwanu-s-safa-or-brothers-of-purity-english-dowson-1869"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/ikhwanu-s-safa-or-brothers-of-purity-english-dowson-1869/f97e631bda56.pdf",
+          "bytes": 15619386,
+          "sha256": "f97e631bda56c608a62866543395f07be78f048004164964482c760f1284c1f3"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-opera-omnia-s-maximus-confessor-1-migne-p-g-90",
+      "title": "Opera Omnia S. Maximus Confessor 1 (Migne P.G. 90) — visual overview",
+      "sourceBookIds": [
+        "opera-omnia-s-maximus-confessor-1-migne-p-g-90"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/opera-omnia-s-maximus-confessor-1-migne-p-g-90/91a1b9c6b7a5.pdf",
+          "bytes": 20387050,
+          "sha256": "91a1b9c6b7a576b77c204ce83a0e25d706df4e2212badebbb17a8a897aa642f6"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-sefer-chayei-hanefesh-print-edition-text-hebrew",
+      "title": "Sefer Chayei HaNefesh, print edition text (Hebrew) — visual overview",
+      "sourceBookIds": [
+        "sefer-chayei-hanefesh-print-edition-text-hebrew"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/sefer-chayei-hanefesh-print-edition-text-hebrew/9921091409af.pdf",
+          "bytes": 23700765,
+          "sha256": "9921091409afcf242aa33ba45b40f75ac073484fe02e53e8b0b7da84e1fb65ca"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-sepher-ha-zohar-le-livre-de-la-splendeur-vol-3-french-pauly-trans-1908",
+      "title": "Sepher ha-Zohar, Le Livre de la Splendeur Vol. 3 (French, Pauly trans. 1908) — visual overview",
+      "sourceBookIds": [
+        "sepher-ha-zohar-le-livre-de-la-splendeur-vol-3-french-pauly-trans-1908"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/sepher-ha-zohar-le-livre-de-la-splendeur-vol-3-french-pauly-trans-1908/d3434447c849.pdf",
+          "bytes": 24782999,
+          "sha256": "d3434447c8496129aa730b03a4d15ee1ec03c91867be92e95273d1118cf7de55"
+        }
+      ],
+      "pages": 20,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-ta-heuriskomena-panta-greek-opera-omnia-incl-triads-migne-pg-150-151-1865",
+      "title": "Ta Heuriskomena Panta, Greek opera omnia incl. Triads (Migne PG 150-151, 1865) — visual overview",
+      "sourceBookIds": [
+        "ta-heuriskomena-panta-greek-opera-omnia-incl-triads-migne-pg-150-151-1865"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/ta-heuriskomena-panta-greek-opera-omnia-incl-triads-migne-pg-150-151-1865/82e95b1d43b0.pdf",
+          "bytes": 7256077,
+          "sha256": "82e95b1d43b0a5a7636224ea7736c59ed159394275c199342109cd5fc60320e5"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/ta-heuriskomena-panta-greek-opera-omnia-incl-triads-migne-pg-150-151-1865/9db29ff4539a.pptx",
+          "bytes": 12161845,
+          "sha256": "9db29ff4539ad1cc16f95d59ddfe9b8b31d826bd6972ed4d13c235c2cc3cbc4f"
+        }
+      ],
+      "pages": 6,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-tao-te-ching-legge",
+      "title": "Tao Te Ching — visual overview",
+      "sourceBookIds": [
+        "tao-te-ching-legge"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/tao-te-ching-legge/3db63db73b77.pptx",
+          "bytes": 16033360,
+          "sha256": "3db63db73b77be26400541afc1d9be8ac778c1cbd0156a723cbaf8b4b5997c5a"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/tao-te-ching-legge/5c1f30ab19bc.pdf",
+          "bytes": 14791657,
+          "sha256": "5c1f30ab19bcccc3e7ca355ce959a9cc0ee71e7cd20b7015e07caa2bc902f7b1"
+        }
+      ],
+      "pages": 12,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-telekinesis-power-secrets",
+      "title": "Telekinesis Power Secrets — visual overview",
+      "sourceBookIds": [
+        "telekinesis-power-secrets"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/telekinesis-power-secrets/59ec585bf4a5.pptx",
+          "bytes": 22914299,
+          "sha256": "59ec585bf4a5cc5f868831742ca7b6abce304aecdfc2c05c15e2752449158f67"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/telekinesis-power-secrets/715675cf08d5.pdf",
+          "bytes": 20979487,
+          "sha256": "715675cf08d5bb82835a2ef0e74e74681b8800f9cba43739226066a2f811c95b"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-tetrabiblos",
+      "title": "Tetrabiblos — visual overview",
+      "sourceBookIds": [
+        "tetrabiblos"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/tetrabiblos/75e2e2fe8428.pdf",
+          "bytes": 15618734,
+          "sha256": "75e2e2fe8428ba02fa1056751fd3739dcac09cab9a0dde22e32d061afefda3dd"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/tetrabiblos/8f82584ddde6.pptx",
+          "bytes": 16875660,
+          "sha256": "8f82584ddde628de270fd65b9e5e470cdab7c2b36c8c7047c08ecd0b1a2844de"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-48-laws-of-power",
+      "title": "The 48 Laws of Power — visual overview",
+      "sourceBookIds": [
+        "the-48-laws-of-power"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-48-laws-of-power/874c5c05cbde.pdf",
+          "bytes": 19551656,
+          "sha256": "874c5c05cbdea278372f0d57f71eda9548aab221195a8e81b3624c0c939eed05"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-48-laws-of-power/f49a474df130.pptx",
+          "bytes": 21125089,
+          "sha256": "f49a474df1303714feee36415687c53d5927f025915930c74210eb0720089d47"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-alchemy-of-happiness",
+      "title": "The Alchemy of Happiness — visual overview",
+      "sourceBookIds": [
+        "the-alchemy-of-happiness"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-alchemy-of-happiness/72533cb6e60e.pdf",
+          "bytes": 14283083,
+          "sha256": "72533cb6e60e0e44faf6b79ebf3ebf5b6e80ffaff591901f632a4da68215d438"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-alchemy-of-happiness/1e236fa95709.pptx",
+          "bytes": 15204930,
+          "sha256": "1e236fa9570920e2b63b7fc2ba2e989c3fc1de37452868ef0749e1033fc0119f"
+        }
+      ],
+      "pages": 19,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-all-seeing-eye",
+      "title": "The All-Seeing Eye — visual overview",
+      "sourceBookIds": [
+        "the-all-seeing-eye"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-all-seeing-eye/5e2c45905741.pptx",
+          "bytes": 25771463,
+          "sha256": "5e2c45905741a51b80eb006a83fd223a6744b223125d3a47dd53a1b0386e0015"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-all-seeing-eye/7752e72792d2.pdf",
+          "bytes": 23784693,
+          "sha256": "7752e72792d200872027db742dada7bef9fbaaf2fb8d191dd125a9494fc81665"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-apocalypse-of-abraham",
+      "title": "The Apocalypse of Abraham — visual overview",
+      "sourceBookIds": [
+        "the-apocalypse-of-abraham"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-apocalypse-of-abraham/5d1e17064a42.pdf",
+          "bytes": 19075568,
+          "sha256": "5d1e17064a42b6abb6aec611f3c7724e9dffd7929ca3575dcae21f01976ef464"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-apocalypse-of-abraham/c3bfc92f034a.pptx",
+          "bytes": 20876304,
+          "sha256": "c3bfc92f034a29310bf0cca55159aaffb34bd7b9919028855777526fdb304b6e"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-authentic-creator-creative-truth",
+      "title": "The Authentic Creator - Creative Truth — visual overview",
+      "sourceBookIds": [
+        "the-authentic-creator-creative-truth"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-authentic-creator-creative-truth/f9c30a351093.pdf",
+          "bytes": 17597118,
+          "sha256": "f9c30a351093aef66d945d36fbfcd6be1e59be1ce6badc3a1989ac8e31c1f806"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-authentic-creator-creative-truth/a5fe8580f176.pptx",
+          "bytes": 18770824,
+          "sha256": "a5fe8580f176ad94f807f69c10e0196c2fcce9ee8d4d0b762aa4608a010085bf"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-book-of-enoch",
+      "title": "The Book of Enoch — visual overview",
+      "sourceBookIds": [
+        "the-book-of-enoch"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-book-of-enoch/40d4d46ab917.pdf",
+          "bytes": 15085425,
+          "sha256": "40d4d46ab9179fc4a64951f24ab78a79e94a1c9c60b71c2c749f8d76488f9b9f"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-book-of-enoch/4110ec447ce7.pptx",
+          "bytes": 16124636,
+          "sha256": "4110ec447ce796969617ea21f39cd1a0bff5ca4d985b8954f10895eb7273185f"
+        }
+      ],
+      "pages": 12,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-book-of-knowledge-the-keys-of-enoch",
+      "title": "The Book of Knowledge - The Keys of Enoch — visual overview",
+      "sourceBookIds": [
+        "the-book-of-knowledge-the-keys-of-enoch"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-book-of-knowledge-the-keys-of-enoch/2261f16439c5.pdf",
+          "bytes": 17260249,
+          "sha256": "2261f16439c594966b88c76f5dca5bbc18a68631bed3abce6512378bbf796e07"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-book-of-knowledge-the-keys-of-enoch/fe54c56abd98.pptx",
+          "bytes": 17995402,
+          "sha256": "fe54c56abd98d4d1491a53f16398b684d02c4b0f4fb812f3492c72e27519bff2"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-book-of-the-secrets-of-enoch",
+      "title": "The Book of the Secrets of Enoch — visual overview",
+      "sourceBookIds": [
+        "the-book-of-the-secrets-of-enoch"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-book-of-the-secrets-of-enoch/31a9e8079c04.pptx",
+          "bytes": 20758403,
+          "sha256": "31a9e8079c049d1cdfbce3773065f96a903560a8f63b7eb0688ce98e734c1c0f"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-book-of-the-secrets-of-enoch/5af6a162fc4d.pdf",
+          "bytes": 18943975,
+          "sha256": "5af6a162fc4deb7e2a770d06e29b02eb4850081c918a4a901ebf50a565916f18"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-books-of-jeu-and-the-untitled-text-in-the-bruce-codex",
+      "title": "The Books of Jeu and the Untitled Text in the Bruce Codex — visual overview",
+      "sourceBookIds": [
+        "the-books-of-jeu-and-the-untitled-text-in-the-bruce-codex"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-books-of-jeu-and-the-untitled-text-in-the-bruce-codex/41a81f8be151.pptx",
+          "bytes": 21726535,
+          "sha256": "41a81f8be151cd9c8355cbc49c62558e5959dc39f822f495b9102f6491b656c7"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-books-of-jeu-and-the-untitled-text-in-the-bruce-codex/283483b31da7.pdf",
+          "bytes": 20159999,
+          "sha256": "283483b31da72cc0c5c9121ab61b8773c09196edf6551e32a9764cd997cf13b8"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-chaldean-oracles-vol-1",
+      "title": "The Chaldean Oracles, Vol. 1 — visual overview",
+      "sourceBookIds": [
+        "the-chaldean-oracles-vol-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-chaldean-oracles-vol-1/83f3fc7fb305.pptx",
+          "bytes": 20288396,
+          "sha256": "83f3fc7fb305de880cbcebd06b09c49bdc2d80119040b741c10520667c3403d8"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-chaldean-oracles-vol-1/ce9675f4094e.pdf",
+          "bytes": 18973243,
+          "sha256": "ce9675f4094e0a2d3e6935e7a71a2d05cdb4fa2ad0d3228797df43971511c088"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-chaldean-oracles-vol-2",
+      "title": "The Chaldean Oracles, Vol. 2 — visual overview",
+      "sourceBookIds": [
+        "the-chaldean-oracles-vol-2"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-chaldean-oracles-vol-2/22910ca4b511.pdf",
+          "bytes": 13521506,
+          "sha256": "22910ca4b51143073690483ce85daa6f5d72233b0c156a66d8ffb6557f14e6ef"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-chaldean-oracles-vol-2/82bc1d13939a.pptx",
+          "bytes": 14412431,
+          "sha256": "82bc1d13939a838e4583eb9869b37208d66dd6407e4ffde06597d02c81703c80"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-cloud-of-unknowing",
+      "title": "The Cloud of Unknowing — visual overview",
+      "sourceBookIds": [
+        "the-cloud-of-unknowing"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-cloud-of-unknowing/878f9023bdf8.pdf",
+          "bytes": 15091715,
+          "sha256": "878f9023bdf8979486b2a1d4f65ddcf04448c9b933d9e0334caa4da9c24f9a4d"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-cloud-of-unknowing/c61bdb142ebe.pptx",
+          "bytes": 16035800,
+          "sha256": "c61bdb142ebea1750ad668f562a2f3d3a77c4fa7dae65c599f3ddd7f9b889690"
+        }
+      ],
+      "pages": 12,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-conference-of-the-birds",
+      "title": "The Conference of the Birds — visual overview",
+      "sourceBookIds": [
+        "the-conference-of-the-birds"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-conference-of-the-birds/3591a0a71269.pdf",
+          "bytes": 19462676,
+          "sha256": "3591a0a71269d348ba5edece33f8050f823cee2c82131931055d50fe06d95922"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-conference-of-the-birds/873c7bf2e596.pptx",
+          "bytes": 21089463,
+          "sha256": "873c7bf2e5966a9d4aa18b4c0c1f065f96b34b26d6422cde9bed4883a2289026"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-cosmic-game",
+      "title": "The Cosmic Game — visual overview",
+      "sourceBookIds": [
+        "the-cosmic-game"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-cosmic-game/582f94367f51.pptx",
+          "bytes": 28139151,
+          "sha256": "582f94367f5118ef2779d08b931181a9ceb1f703c3f4c127dd44bcc845983214"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-cosmic-game/9a7a2b294a7e.pdf",
+          "bytes": 25989039,
+          "sha256": "9a7a2b294a7ee8a20b976f64d7a648e0952f0e4e451729db4522bb40fa03b368"
+        }
+      ],
+      "pages": 21,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-dark-night-of-the-soul",
+      "title": "The Dark Night of the Soul — visual overview",
+      "sourceBookIds": [
+        "the-dark-night-of-the-soul"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-dark-night-of-the-soul/94e0f9a15e78.pdf",
+          "bytes": 14253285,
+          "sha256": "94e0f9a15e782c5fa58b73388247247ff95441d6537b65c5a8aa952bab3847c1"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-dark-night-of-the-soul/d690b80b3df5.pptx",
+          "bytes": 15149257,
+          "sha256": "d690b80b3df5429c5e39be66ea2f89e7c1335be8dc3a0dc018eae2020ee3f4b3"
+        }
+      ],
+      "pages": 12,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-diamond-sutra",
+      "title": "The Diamond Sutra — visual overview",
+      "sourceBookIds": [
+        "the-diamond-sutra"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-diamond-sutra/3960db098d40.pdf",
+          "bytes": 17430468,
+          "sha256": "3960db098d40dc552ca55e40bb1469c02e2de76a4760943942bfc8a93ab04cf1"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-diamond-sutra/c6aa7efcb775.pptx",
+          "bytes": 18962507,
+          "sha256": "c6aa7efcb775619649b462d300c838fa5ef2c16a3aeeb50fc41dc0fa3621aaea"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-enneads-vol-1",
+      "title": "The Enneads, Vol. 1 — visual overview",
+      "sourceBookIds": [
+        "the-enneads-vol-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-enneads-vol-1/b83441a64b70.pptx",
+          "bytes": 16284350,
+          "sha256": "b83441a64b70b09fabbf90e08cffa699950e88bab1d42622a6c5eb7971a073fe"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-enneads-vol-1/48ab7f243099.pdf",
+          "bytes": 15230729,
+          "sha256": "48ab7f2430992c2fbb5016093efcf227fe63767b21c715cdd20db42036066708"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-firmament-vaulted-dome-of-the-earth",
+      "title": "The Firmament - Vaulted Dome of the Earth — visual overview",
+      "sourceBookIds": [
+        "the-firmament-vaulted-dome-of-the-earth"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-firmament-vaulted-dome-of-the-earth/996cf44c078e.pdf",
+          "bytes": 18137625,
+          "sha256": "996cf44c078e6bc926451f2290958ac9518a1f1a4b16879e43a2416bb5e75cfc"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-firmament-vaulted-dome-of-the-earth/3a7e5a3ff0a7.pptx",
+          "bytes": 19599953,
+          "sha256": "3a7e5a3ff0a7cdeeffa19053007b9512340645cefe21d7582b5b6d06f6ee23e4"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-first-form-anthropos-and-adam-kadmon",
+      "title": "The First Form - Anthropos and Adam Kadmon — visual overview",
+      "sourceBookIds": [
+        "the-first-form-anthropos-and-adam-kadmon"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-first-form-anthropos-and-adam-kadmon/e75b4d418acf.pdf",
+          "bytes": 27155688,
+          "sha256": "e75b4d418acfa33fa310af255355959e5a3f924ea4d6725f23ce1f11d216ec43"
+        }
+      ],
+      "pages": 20,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-gnostic-john-the-baptizer",
+      "title": "The Gnostic John the Baptizer — visual overview",
+      "sourceBookIds": [
+        "the-gnostic-john-the-baptizer"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-gnostic-john-the-baptizer/61aff4a195f3.pdf",
+          "bytes": 20387033,
+          "sha256": "61aff4a195f3bc385d8a63d932e8b0ff82784699f545b45bbc9da5ff7553542d"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-key-to-the-universe",
+      "title": "The Key to the Universe — visual overview",
+      "sourceBookIds": [
+        "the-key-to-the-universe"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-key-to-the-universe/de6defe921c5.pdf",
+          "bytes": 21589457,
+          "sha256": "de6defe921c5651370d628ff4aebe1c120aa63b5c8001bf013835cc5e69b32cc"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-key-to-the-universe-forgotten-books-edition",
+      "title": "The Key to the Universe (Forgotten Books Edition) — visual overview",
+      "sourceBookIds": [
+        "the-key-to-the-universe-forgotten-books-edition"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-key-to-the-universe-forgotten-books-edition/dcadfe4098c8.pdf",
+          "bytes": 20191178,
+          "sha256": "dcadfe4098c88f287a30569bf9a4c566e4b82ff358d7dd78303d5b709dfd91cc"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-key-to-theosophy",
+      "title": "The Key to Theosophy — visual overview",
+      "sourceBookIds": [
+        "the-key-to-theosophy"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-key-to-theosophy/d6786c90b4c9.pdf",
+          "bytes": 18058411,
+          "sha256": "d6786c90b4c971164489007882c8fef04ff13a8f3affb3507409f1d0a6f98f91"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-kitab-i-iqan",
+      "title": "The Kitab-i-Iqan — visual overview",
+      "sourceBookIds": [
+        "the-kitab-i-iqan"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-kitab-i-iqan/8f0d8337f5ea.pdf",
+          "bytes": 26038550,
+          "sha256": "8f0d8337f5ea49c5874ce56bd9d81c7d6ae1a904a01544ef2e38de2e3b534b93"
+        }
+      ],
+      "pages": 21,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-legends-of-the-jews-vol-1",
+      "title": "The Legends of the Jews, Vol. 1 — visual overview",
+      "sourceBookIds": [
+        "the-legends-of-the-jews-vol-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-legends-of-the-jews-vol-1/1bfb45d7157e.pdf",
+          "bytes": 24086220,
+          "sha256": "1bfb45d7157e972bed2b22c6bb02be972b9bad07132cab1048c10219c4570110"
+        }
+      ],
+      "pages": 21,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-life-of-pythagoras-with-hierocles-on-the-golden-verses",
+      "title": "The Life of Pythagoras, with Hierocles on the Golden Verses — visual overview",
+      "sourceBookIds": [
+        "the-life-of-pythagoras-with-hierocles-on-the-golden-verses"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-life-of-pythagoras-with-hierocles-on-the-golden-verses/d8d226e67867.pdf",
+          "bytes": 21346732,
+          "sha256": "d8d226e678677708e0f2da4311134741cb5f3af579499880095bef6ed514dfc5"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-living-measure",
+      "title": "The Living Measure — visual overview",
+      "sourceBookIds": [
+        "the-living-measure"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-living-measure/d79135b271ed.pdf",
+          "bytes": 10896619,
+          "sha256": "d79135b271ed55def2cc5ed786a4c315707d6dabe7f7e7659a94e580b9e3b246"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-manichaean-scriptures-article-ajsl-1920",
+      "title": "The Manichaean Scriptures (article, AJSL 1920) — visual overview",
+      "sourceBookIds": [
+        "the-manichaean-scriptures-article-ajsl-1920"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-manichaean-scriptures-article-ajsl-1920/34783c3b13f5.pdf",
+          "bytes": 21336198,
+          "sha256": "34783c3b13f5b923bf2a97dd52fbdadac97ebbd6cff41bf976c7dd61798cb3c1"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-mesnevi-book-1",
+      "title": "The Mesnevi, Book 1 — visual overview",
+      "sourceBookIds": [
+        "the-mesnevi-book-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-mesnevi-book-1/3b8d12b6ef7e.pdf",
+          "bytes": 15318996,
+          "sha256": "3b8d12b6ef7e2dddeba8f4b2f8e9b9335b95d9a7ab1c22b289cdaeffa278a5ad"
+        }
+      ],
+      "pages": 12,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-mirror-of-simple-souls",
+      "title": "The Mirror of Simple Souls — visual overview",
+      "sourceBookIds": [
+        "the-mirror-of-simple-souls"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-mirror-of-simple-souls/dad4324ba5fb.pdf",
+          "bytes": 14543913,
+          "sha256": "dad4324ba5fb3b88cdfaf36ff20b9335ef1081c3d3ca010e703fe6f13b0349b7"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-nag-hammadi-library",
+      "title": "The Nag Hammadi Library — visual overview",
+      "sourceBookIds": [
+        "the-nag-hammadi-library"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-nag-hammadi-library/a7b305f9ffcf.pdf",
+          "bytes": 19590726,
+          "sha256": "a7b305f9ffcf140afab9fe4e81b6bbe926938d7897990eb2b793684972ef52f9"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-niche-for-lights",
+      "title": "The Niche for Lights — visual overview",
+      "sourceBookIds": [
+        "the-niche-for-lights"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-niche-for-lights/e9fcfb513a07.pdf",
+          "bytes": 16804168,
+          "sha256": "e9fcfb513a075d69b6075473aa1b3ecec578d005b38a97e881af67e3b2a65516"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-odes-and-psalms-of-solomon",
+      "title": "The Odes and Psalms of Solomon — visual overview",
+      "sourceBookIds": [
+        "the-odes-and-psalms-of-solomon"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-odes-and-psalms-of-solomon/0b5aa952d26a.pdf",
+          "bytes": 15784637,
+          "sha256": "0b5aa952d26a96617fc7c457f494bb2afb36dad1f9b033ac0c598932f11525f4"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-palm-tree-of-deborah-tomer-devorah",
+      "title": "The Palm Tree of Deborah (Tomer Devorah) — visual overview",
+      "sourceBookIds": [
+        "the-palm-tree-of-deborah-tomer-devorah"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-palm-tree-of-deborah-tomer-devorah/6a5f41b17f55.pdf",
+          "bytes": 28022796,
+          "sha256": "6a5f41b17f55cae4d9c7290bd22ec4379ace94461e08547de526cb17bdb998b0"
+        }
+      ],
+      "pages": 21,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-primal-diet",
+      "title": "The Primal Diet — visual overview",
+      "sourceBookIds": [
+        "the-primal-diet"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-primal-diet/3f75e043990b.pdf",
+          "bytes": 21540337,
+          "sha256": "3f75e043990bdb87c421f306344de459209282dc12d6a8d967c8ac4843aad21c"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-ra-contact-volume-1",
+      "title": "The Ra Contact - Volume 1 — visual overview",
+      "sourceBookIds": [
+        "the-ra-contact-volume-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-ra-contact-volume-1/49d2db475521.pdf",
+          "bytes": 21380457,
+          "sha256": "49d2db4755212e1eff4114a2db095fe6a02369cc5fe9bf3cc9e26dd0b65187f2"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-ra-contact-volume-2",
+      "title": "The Ra Contact - Volume 2 — visual overview",
+      "sourceBookIds": [
+        "the-ra-contact-volume-2"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-ra-contact-volume-2/6a2365432a5a.pdf",
+          "bytes": 24945681,
+          "sha256": "6a2365432a5a09212971cf5f6d108fa2a70ebd5d5f0dc85b1ef81c1b96a68d43"
+        }
+      ],
+      "pages": 19,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-sacred-books-of-the-east-the-quran-part-ii",
+      "title": "The Sacred Books of the East - The Qur'an Part II — visual overview",
+      "sourceBookIds": [
+        "the-sacred-books-of-the-east-the-quran-part-ii"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-sacred-books-of-the-east-the-quran-part-ii/f7ae60bf2507.pdf",
+          "bytes": 20822518,
+          "sha256": "f7ae60bf250790e336fd7668db5076467d3e5053e95fd35be1ecdfa4eecc5898"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-secret-doctrine-vol-1",
+      "title": "The Secret Doctrine, Vol. 1 — visual overview",
+      "sourceBookIds": [
+        "the-secret-doctrine-vol-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-secret-doctrine-vol-1/dfb2cd300dd3.pdf",
+          "bytes": 17707027,
+          "sha256": "dfb2cd300dd383b953b073d1024c6e8e1067509fd66454f93077d47640886fc6"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-secret-doctrine-vol-2",
+      "title": "The Secret Doctrine, Vol. 2 — visual overview",
+      "sourceBookIds": [
+        "the-secret-doctrine-vol-2"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-secret-doctrine-vol-2/e4fc3980f699.pdf",
+          "bytes": 24354655,
+          "sha256": "e4fc3980f699d613036a3e18b2861036a174f2e2be4c5b6b53d562df03e86b72"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-secret-doctrine-vol-3",
+      "title": "The Secret Doctrine, Vol. 3 — visual overview",
+      "sourceBookIds": [
+        "the-secret-doctrine-vol-3"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-secret-doctrine-vol-3/087b2371c1f3.pdf",
+          "bytes": 17411823,
+          "sha256": "087b2371c1f30ca3f6598632504875a04769fba30d8d5bb892e055435c73f986"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-secret-doctrine-vol-4",
+      "title": "The Secret Doctrine, Vol. 4 — visual overview",
+      "sourceBookIds": [
+        "the-secret-doctrine-vol-4"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-secret-doctrine-vol-4/67a92f6a87ec.pdf",
+          "bytes": 17774736,
+          "sha256": "67a92f6a87ec32449fa66d5dbac3506793ade53259654a0109aba264e1c9568e"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-secret-of-recognition-pratyabhijnahrdayam",
+      "title": "The Secret of Recognition (Pratyabhijnahrdayam) — visual overview",
+      "sourceBookIds": [
+        "the-secret-of-recognition-pratyabhijnahrdayam"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-secret-of-recognition-pratyabhijnahrdayam/6f9df1fd609c.pdf",
+          "bytes": 13287035,
+          "sha256": "6f9df1fd609c2dbf0a787e78c391661333160136e1b54a97970faf0864eb3b5c"
+        }
+      ],
+      "pages": 10,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-secret-rose-garden",
+      "title": "The Secret Rose Garden — visual overview",
+      "sourceBookIds": [
+        "the-secret-rose-garden"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-secret-rose-garden/4b5857130033.pdf",
+          "bytes": 26575277,
+          "sha256": "4b58571300330a4f40f935c52a3a8ab00b72ae501cb37c0809811f375f674217"
+        }
+      ],
+      "pages": 21,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-seven-valleys-and-the-four-valleys",
+      "title": "The Seven Valleys and the Four Valleys — visual overview",
+      "sourceBookIds": [
+        "the-seven-valleys-and-the-four-valleys"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-seven-valleys-and-the-four-valleys/f63dff4684dc.pdf",
+          "bytes": 18882062,
+          "sha256": "f63dff4684dc0a75b806ca2cb2c0e9038ca784a715c3930163b8b81d8abf0723"
+        }
+      ],
+      "pages": 16,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-teaching-of-vimalakirti-toh-176-thurman-trans",
+      "title": "The Teaching of Vimalakirti (Toh 176, Thurman trans.) — visual overview",
+      "sourceBookIds": [
+        "the-teaching-of-vimalakirti-toh-176-thurman-trans"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-teaching-of-vimalakirti-toh-176-thurman-trans/f6fc4df22a0a.pdf",
+          "bytes": 16755005,
+          "sha256": "f6fc4df22a0a81af198963f63dd412323fa999ab9ffd244ef33b30762e870050"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    }
+  ]
+}

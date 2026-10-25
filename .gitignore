@@ -28,6 +28,8 @@ dist-ssr
 public/library/books/Presentations/NotebookLM/*.pdf
 public/library/books/Presentations/NotebookLM/.*
 public/library/books/**/*.part
+public/library/books/**/.*
+public/library/overviews/
 
 
 # Curator ebook collection binaries (PDF + EPUB) are hydrated from content/library-imports.json.

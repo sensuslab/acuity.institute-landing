@@ -56,3 +56,14 @@
 
 .ebook-page-colour {display:flex;align-items:center;gap:8px;white-space:nowrap}
 .ebook-page-colour select {min-height:40px;width:auto}
+.library-overview-badge{display:inline-flex;align-items:center;margin:0 0 12px;padding:6px 10px;border:1px solid #bda06955;border-radius:20px;background:#d6b77a0d;color:#ddc797;font-size:11px;cursor:pointer;min-height:32px}
+.library-overviews{margin:28px 0;padding-top:22px;border-top:1px solid #bda06933}
+.library-overviews>h3{display:flex;align-items:center;gap:9px;color:#e6cf9d;font-size:18px}
+.library-overviews>p{color:#b9b5c0;font-size:14px;line-height:1.6}
+.library-overview-card{display:flex;align-items:flex-start;gap:18px;margin-top:18px;padding:18px;border:1px solid #bda06933;border-radius:14px;background:linear-gradient(135deg,#bda0690d,#131421)}
+.overview-cover{flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100px;min-height:112px;border:1px solid #bda06944;border-radius:9px;color:#ddc797;background:radial-gradient(ellipse at center,#bda0691c,transparent)}
+.overview-cover span{font-size:9px;letter-spacing:.12em}
+.overview-content{min-width:0;flex:1}.overview-content h4{font-size:17px;margin:0 0 7px;color:#ede6d9;font-weight:500}.overview-content>p{font-size:12px;line-height:1.6;color:#b9b5c0}
+.overview-content .library-downloads{margin:12px 0}.overview-content .overview-text-note{font-size:11px;color:#a5a1ad;margin-bottom:0}
+.library-overview-badge:focus-visible,.library-overviews a:focus-visible,.library-overviews button:focus-visible{outline:2px solid #e6cf9d;outline-offset:3px}
+@media(max-width:560px){.library-overview-card{padding:14px;gap:12px;flex-direction:column}.overview-cover{width:100%;min-height:70px;flex-direction:row}.overview-content .library-downloads>*{flex:1;justify-content:center}.overview-content .library-downloads{gap:8px}}

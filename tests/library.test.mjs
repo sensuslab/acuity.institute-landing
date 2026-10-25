@@ -99,6 +99,25 @@ test('Metadata search combines words, collection and format filters',async()=>{
   assert.equal(filterBooks('tao', 'Esoteric traditions','all').length,0);
   assert.equal(filterBooks('not-a-real-book', 'All collections','all').length,0);
   assert.equal(filterBooks('', 'All collections','all').length,books.length);
+  assert.ok(filterBooks('nonduality compassion', 'All collections','all').some(book=>book.id==='the-teaching-of-vimalakirti-toh-176-thurman-trans'));
+});
+
+test('Companion links appear in crawlable HTML and serve the correct PDF/PPTX bytes',async()=>{
+ const html=await (await fetch(origin+'/library/')).text();
+ const source=books.find(book=>book.id==='tao-te-ching-legge');
+ const overview=source.overviews[0];
+ assert.ok(html.includes(`overview=${overview.id}`));
+ for(const format of ['pdf','pptx']) {
+  const url=overview[format];assert.ok(url);
+  const response=await fetch(origin+url,{headers:{Range:'bytes=0-31'}});
+  assert.equal(response.status,206);
+  assert.equal(response.headers.get('content-type'),format==='pdf'?'application/pdf':'application/vnd.openxmlformats-officedocument.presentationml.presentation');
+  assert.deepEqual(Buffer.from(await response.arrayBuffer()),fs.readFileSync('public'+url).subarray(0,32));
+ }
+ const graphs=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match=>JSON.parse(match[1]));
+ const collection=graphs.find(graph=>graph['@type']==='CollectionPage');
+ const item=collection.mainEntity.itemListElement.find(row=>row.item.name==='Tao Te Ching').item;
+ assert.equal(item.description,source.description);assert.equal(item.hasPart[0].name,overview.title);
 });
 
 test('Old download links redirect to the same categorised edition',async()=>{
