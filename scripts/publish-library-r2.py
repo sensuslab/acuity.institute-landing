@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Publish a complete, validated release; update the latest pointer last."""
-import argparse,hashlib,json,pathlib,urllib.request,datetime
+import argparse,hashlib,json,pathlib,urllib.request,datetime,subprocess
 p=argparse.ArgumentParser();p.add_argument('--release',required=True);p.add_argument('--inventory',default='../migration-private/library-r2-inventory.json');p.add_argument('--ledger',default='../migration-private/verification.jsonl');p.add_argument('--prepare-only',action='store_true');args=p.parse_args()
 root=pathlib.Path('.');inventory=json.loads(pathlib.Path(args.inventory).read_text());verified={}
 for line in pathlib.Path(args.ledger).read_text().splitlines():
@@ -25,7 +25,12 @@ if used!=set(known):raise SystemExit('Catalogue does not cover the complete veri
 release={'version':1,'release':args.release,'sourceCommit':inventory['sourceCommit'],'createdAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'books':books,'assets':full_assets}
 data=(json.dumps(release,ensure_ascii=False,separators=(',',':'))+'\n').encode();key=f'library/catalogues/{args.release}.json';digest=hashlib.sha256(data).hexdigest()
 # Catalogues include the curator's complete provenance and remain authenticated.
-policy={'version':1,'release':args.release,'publicKeys':[a['key'] for a in registry['assets'] if a['visibility']=='public']}
+public_data=subprocess.run(['node','scripts/library-public-catalogue.mjs'],input=data,stdout=subprocess.PIPE,stderr=subprocess.PIPE,check=True).stdout
+public_key=f'library/catalogues/public-{args.release}.json'
+public_body=json.loads(public_data)
+public_pointer={'version':1,'release':args.release,'catalogueUrl':inventory['baseUrl']+'/'+public_key,'sha256':hashlib.sha256(public_data).hexdigest(),'bytes':len(public_data),'assetCount':len(public_body['assets']),'recordCount':len(public_body['books'])}
+public_pointer_data=(json.dumps(public_pointer,indent=2)+'\n').encode()
+policy={'version':1,'release':args.release,'publicKeys':[a['key'] for a in registry['assets'] if a['visibility']=='public']+[public_key,'library/catalogues/public-latest.json']}
 policy_data=(json.dumps(policy,separators=(',',':'))+'\n').encode()
 pointer={'version':1,'release':args.release,'catalogueUrl':inventory['baseUrl']+'/'+key,'sha256':digest,'bytes':len(data),'assetCount':len(known),'recordCount':len(books)}
 pointer_data=(json.dumps(pointer,indent=2)+'\n').encode()
@@ -36,10 +41,12 @@ def put(object_key,body):
  if int(result['bytes'])!=len(body):raise SystemExit('Publication size mismatch')
  print('Published',object_key,len(body))
 put(key,data)
+put(public_key,public_data)
+put('library/catalogues/public-latest.json',public_pointer_data)
 put(f'library/control/policy-{args.release}.json',policy_data)
 put('library/control/published-policy.json',policy_data)
 put('library/catalogues/latest.json',pointer_data)
-report={'version':1,'release':args.release,'verifiedFiles':len(known),'verifiedBytes':sum(a['bytes'] for a in registry['assets']),'publicFiles':len(policy['publicKeys']),'authenticatedFiles':sum(a['visibility']=='private' for a in registry['assets']),'catalogue':pointer,'verification':'Independent GET of every R2 object; byte count and SHA-256 compared with reviewed inventory','dropboxOriginals':'retained','sourceCommit':inventory['sourceCommit']}
+report={'version':1,'release':args.release,'verifiedFiles':len(known),'verifiedBytes':sum(a['bytes'] for a in registry['assets']),'publicFiles':sum(a['visibility']=='public' for a in registry['assets']),'authenticatedFiles':sum(a['visibility']=='private' for a in registry['assets']),'catalogue':pointer,'publicCatalogue':public_pointer,'verification':'Independent GET of every R2 object; byte count and SHA-256 compared with reviewed inventory','dropboxOriginals':'retained','sourceCommit':inventory['sourceCommit']}
 (root/'content/library-r2-migration-report.json').write_text(json.dumps(report,indent=2)+'\n')
 private=pathlib.Path('../migration-private');(private/'published-release.json').write_bytes(data);(private/'published-policy.json').write_bytes(policy_data);(private/'latest.json').write_bytes(pointer_data)
 print(json.dumps(report,indent=2))

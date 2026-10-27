@@ -17,9 +17,9 @@ Original source PDFs, EPUBs, TXT, standalone presentations and companion PDF/PPT
 
 The R2 bucket has no public domain and its r2.dev endpoint remains disabled. The gateway only releases explicitly listed public keys. An unpublished object is private even when its hash is known. GET, HEAD and range requests all apply authentication first.
 
-The initial policy keeps assets private where existing parent rights metadata says `private collection`, `to be confirmed` or `not been confirmed`. An overview inherits the parent policy. Other approved library assets are public through the gateway after the release is complete. This is a conservative initial publication policy, not a legal determination. Rights wording and original provenance are retained unchanged.
+All 617 unique approved corpus files are public following the user's explicit confirmation on 27 October 2026, including the 391 files initially flagged by generic rights metadata. The flags were migration heuristics, not completed rights determinations. Rights wording and original provenance are retained unchanged; access is controlled by the reviewed registry, not inferred from free-text rights notes. Distinct formats, editions and content variants are retained. No identical SHA-256 file duplicates were found.
 
-Private assets are for authenticated service use. Do not merge/deploy this PR as a public-reader cutover until the private-reader authentication or publication policy has been resolved. No access token belongs in browser code, a Vite environment variable, URLs, Git or this document.
+The complete provenance catalogue remains authenticated; a separate sanitized public catalogue contains reader metadata and public asset identities without Dropbox access URLs. No access token belongs in browser code, a Vite environment variable, URLs, Git or this document. The earlier publication-policy decision is resolved; website deployment remains a separate application rollout.
 
 Set `READ_TOKEN` as a Worker secret. Trusted backend consumers send `Authorization: Bearer <read-only-secret>` over HTTPS. `INGEST_TOKEN` is a different secret bound only to the temporary ingestor. The read-only gateway never accepts uploads. Use Cloudflare account access to rotate secrets; distribute service credentials only through the consumer's secret manager.
 
@@ -27,7 +27,8 @@ CORS permits the declared library origins in Wrangler configuration. Add each ac
 
 ## Consumer contract
 
-- `GET https://assets.acuity.institute/library/catalogues/latest.json` returns the approved release pointer.
+- `GET https://assets.acuity.institute/library/catalogues/public-latest.json` anonymously returns the public release pointer.
+- `GET https://assets.acuity.institute/library/catalogues/latest.json` remains authenticated and points to the complete internal provenance release.
 - Fetch its immutable catalogue URL and verify the published SHA-256.
 - Keep the release ID when indexing, and resolve assets by full SHA-256/key, not title or filename.
 - Asset URLs support GET, HEAD, byte ranges, ETag revalidation and safe download filenames.
@@ -54,10 +55,14 @@ Keep the previous immutable catalogue and its policy snapshot. Restore the prior
 
 Do not automatically delete superseded assets. Check references across retained catalogue releases before a separately reviewed cleanup. Monitor R2 account storage and Worker/R2 request usage in Cloudflare: the 10 GB-month Standard allowance is shared across the account and is not a hard capacity cap. The initial corpus is about 7.81 GB; derivatives and retained replacements consume the remaining allowance.
 
-## Initial release verification
+## Initial migration and current publication
 
-The `2026-10-27-r2-v1` release contains 617 independently verified files (7,810,492,169 bytes), 285 catalogue records, 97 linked overviews and 47 PPTX companions. The gateway exposes 226 assets publicly and requires authenticated service access for 391. The complete provenance catalogue is authenticated. Browser UI verification could not run because the Chromium download failed; live HTTP range/CORS/access checks and repository tests are recorded in the migration report.
+The `2026-10-27-r2-v1` release contains 617 independently verified files (7,810,492,169 bytes), 285 catalogue records, 97 linked overviews and 47 PPTX companions. The initial v1 policy exposed 226 assets and required authentication for 391. After explicit confirmation, v2 exposes all 617 files; there are no authenticated-only corpus assets. The complete provenance catalogue is authenticated. Browser UI verification could not run because the Chromium download failed; live HTTP range/CORS/access checks and repository tests are recorded in the migration report.
 
 ## Generated files and provenance
 
 The application catalogue, category index, provenance index and redirects are regenerated during build/test from the existing repository sidecars plus the verified R2 identity registry. The migration PR leaves the existing generated snapshots unchanged in Git; normal builds resolve their asset URLs to R2. The registry contains no Dropbox URLs or copied access-bearing provenance. Full transfer provenance is retained in the authenticated R2 release.
+
+## Confirmed public release
+
+Current release: `2026-10-27-r2-v2`. Public catalogue: [public-latest.json](https://assets.acuity.institute/library/catalogues/public-latest.json). It covers 188 source texts, 97 standalone presentations, 97 linked overviews and 47 PPTX companions. The two same-title Celestial Codex presentations cover different subjects and are retained. Source-service access parameters, internal provenance and upload controls remain private. New public catalogues are produced by `scripts/library-public-catalogue.mjs`; tests cover access-URL removal and private-resource exclusion for future releases.

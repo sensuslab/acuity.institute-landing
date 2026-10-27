@@ -1,12 +1,12 @@
-# Proposed publication of the 391 flagged library files
+# Confirmed publication of the 391 previously flagged library files
 
-Status: awaiting explicit confirmation of scope following automatic approval review. No R2 public-access changes have been applied by this request.
+Status: explicitly confirmed by the user: “Yes all files publish”. Applied in release `2026-10-27-r2-v2` on 27 October 2026. All 391 previously flagged files are now public through the read-only gateway; the 226 already-public files remain public.
 
-## Proposed scope
+## Confirmed scope
 
-Make the following 143 source titles public in their 143 PDF and 143 EPUB representations, together with 70 linked overview PDFs and 35 linked overview PPTX files: 391 files in total. The 226 files already public are unchanged.
+Published the following 143 source titles in their 143 PDF and 143 EPUB representations, together with 70 linked overview PDFs and 35 linked overview PPTX files: 391 files in total. The 226 files already public are unchanged.
 
-This proposal follows the user's instruction to make non-duplicate articles publicly available. Approval review interpreted “articles” as narrower than this collection of ebooks and overview decks, so explicit confirmation of the complete scope is required.
+This proposal follows the user's instruction to make non-duplicate articles publicly available. The user then explicitly confirmed the complete scope, including ebooks and overview decks.
 
 ## Duplicate check
 
@@ -167,8 +167,8 @@ Each title below has both a source PDF and an EPUB. The final column identifies 
 | Were You Born in July | Great Aim Society | None |
 | Zoroaster | Unknown | None |
 
-The [verified identity registry](../content/library-r2-registry.json) identifies the exact file keys under `visibility: private`. The current [migration report](../content/library-r2-migration-report.json) records the existing 226-public / 391-authenticated split.
+The [verified identity registry](../content/library-r2-registry.json) now marks these file keys public. The [migration report](../content/library-r2-migration-report.json) records all 617 files as public.
 
 ## Controls retained
 
-Publication would use the existing read-only asset gateway. Bucket-wide public access, the internal provenance catalogue, source-service access parameters and upload operations would remain private.
+Publication uses the existing read-only asset gateway. Bucket-wide public access, the internal provenance catalogue, source-service access parameters and upload operations remain private.

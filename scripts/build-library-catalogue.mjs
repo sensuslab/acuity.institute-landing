@@ -38,5 +38,5 @@ console.log(`Indexed ${result.books.length} curated records across ${result.cate
 
 if (assetRegistry) {
   const registry = read(registryPath,{});
-  fs.writeFileSync(path.join(root,'public/library/release.json'),JSON.stringify({version:1,release:registry.release,sourceCommit:registry.sourceCommit,assetCount:assetRegistry.assets.length,catalogueUrl:`https://assets.acuity.institute/library/catalogues/${registry.release}.json`},null,2)+'\n');
+  fs.writeFileSync(path.join(root,'public/library/release.json'),JSON.stringify({version:1,release:registry.release,sourceCommit:registry.sourceCommit,assetCount:assetRegistry.assets.length,catalogueUrl:`https://assets.acuity.institute/library/catalogues/public-${registry.release}.json`},null,2)+'\n');
 }
