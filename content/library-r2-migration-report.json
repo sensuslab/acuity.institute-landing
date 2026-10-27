@@ -168,12 +168,90 @@
     {
       "check": "public-catalogue builder matches the live release",
       "result": "passed"
+    },
+    {
+      "check": "anonymous byte range and CORS",
+      "format": "pdf",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous byte range and CORS",
+      "format": "epub",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous byte range and CORS",
+      "format": "pptx",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous byte range and CORS",
+      "format": "text",
+      "result": "passed"
+    },
+    {
+      "check": "internal route protected",
+      "route": "/library/catalogues/latest.json",
+      "status": 401,
+      "result": "passed"
+    },
+    {
+      "check": "internal route protected",
+      "route": "/library/catalogues/2026-10-27-r2-v2.json",
+      "status": 401,
+      "result": "passed"
+    },
+    {
+      "check": "internal route protected",
+      "route": "/library/control/ingest-inventory.json",
+      "status": 404,
+      "result": "passed"
     }
   ],
   "publicationScopeReview": "docs/LIBRARY-PUBLICATION-REVIEW.md",
   "anonymousAccess": {
-    "headRequestsPassed": 617,
+    "anonymousHeadPassed": 617,
     "assetsChecked": 617,
-    "authenticated": false
+    "checks": [
+      {
+        "check": "anonymous byte range and CORS",
+        "format": "pdf",
+        "result": "passed"
+      },
+      {
+        "check": "anonymous byte range and CORS",
+        "format": "epub",
+        "result": "passed"
+      },
+      {
+        "check": "anonymous byte range and CORS",
+        "format": "pptx",
+        "result": "passed"
+      },
+      {
+        "check": "anonymous byte range and CORS",
+        "format": "text",
+        "result": "passed"
+      },
+      {
+        "check": "internal route protected",
+        "route": "/library/catalogues/latest.json",
+        "status": 401,
+        "result": "passed"
+      },
+      {
+        "check": "internal route protected",
+        "route": "/library/catalogues/2026-10-27-r2-v2.json",
+        "status": 401,
+        "result": "passed"
+      },
+      {
+        "check": "internal route protected",
+        "route": "/library/control/ingest-inventory.json",
+        "status": 404,
+        "result": "passed"
+      }
+    ],
+    "failures": []
   }
 }
