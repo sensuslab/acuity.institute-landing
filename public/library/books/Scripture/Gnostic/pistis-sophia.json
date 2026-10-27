@@ -3,7 +3,7 @@
   "title": "Pistis Sophia",
   "author": "Unknown",
   "language": "English",
-  "description": "An early Christian esoteric text centred on teachings attributed to the risen Jesus and the story of Sophia's descent and restoration. Its dialogues explore repentance, the soul's journey and a complex spiritual cosmos.",
+  "description": "Pistis Sophia, the major Gnostic text preserved in the fourth-century Coptic Askew Codex in the British Museum, presented in a classic English translation (G. R. S. Mead's 1896/1921 version is the best-known public-domain rendering). Set eleven years after the resurrection, it shows Jesus on the Mount of Olives revealing the hidden mysteries to his disciples, with Mary Magdalene as the most prominent questioner alongside Peter, John, Philip and others. Its centrepiece is the story of Pistis Sophia ('Faith-Wisdom'), an aeon who falls into chaos while yearning for the Light and sings thirteen repentances before being rescued by Jesus, each interpreted by the disciples through the Psalms and Odes of Solomon. Later books describe the aeons, archons and treasury of light, the fate of souls, reincarnation and punishments, and the saving mysteries. It is a primary source for late Sethian/Barbeloite Gnosticism and the figure of the divine Sophia.",
   "editionNote": "Curator-supplied PDF and EPUB from the organised ebook collection.",
   "rights": "Project Gutenberg (eBook #76266) lists this edition as public domain in the USA. Rights can vary by country.",
   "tags": [
@@ -12,5 +12,6 @@
   ],
   "accent": "gold",
   "order": 234,
-  "sourceUrl": "https://www.gutenberg.org/ebooks/76266"
+  "sourceUrl": "https://www.gutenberg.org/ebooks/76266",
+  "shortDescription": "Pistis Sophia, the major Gnostic text preserved in the fourth-century Coptic Askew Codex in the British Museum, presented in a classic English translation (G. R. S. Mead's 1896/1921 version is the best-known public-domain…"
 }

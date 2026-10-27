@@ -100,19 +100,23 @@ test('Rate limit retries respect Retry-After and pace subsequent requests', asyn
   assert.ok(waits[1] > 0 && waits[1] <= 100);
 });
 
-test('Imported curator ebooks pin both a PDF and an EPUB and enable the e-reader', () => {
+test('Imported source formats match actual ebook capabilities, including PDF-only scans', () => {
   const imports = JSON.parse(fs.readFileSync('content/library-imports.json','utf8')).files
     .filter(entry => entry.path.startsWith('public/library/books/') && !entry.path.startsWith('public/library/books/Presentations/'));
   const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
-  const stems = new Set(imports.map(entry => entry.path.replace(/\.(pdf|epub)$/,'')));
-  assert.equal(imports.length, stems.size * 2);
+  const stems = new Set(imports.map(entry => entry.path.replace(/\.(pdf|epub)$/, '')));
+  let pdfOnly=0;
   for (const stem of stems) {
     const url = '/' + stem.slice('public/'.length).split('/').map(encodeURIComponent).join('/');
-    const book = books.find(book => book.pdf === url + '.pdf');
+    const book = books.find(book => book.pdf === url + '.pdf' || book.epub === url + '.epub');
     assert.ok(book, stem);
-    assert.equal(book.epub, url + '.epub');
-    assert.deepEqual(book.capabilities, {pdf:true,ebook:true,present:true});
+    const hasPdf=imports.some(entry=>entry.path===stem+'.pdf');
+    const hasEpub=imports.some(entry=>entry.path===stem+'.epub');
+    assert.equal(!!book.pdf,hasPdf);assert.equal(!!book.epub,hasEpub);
+    assert.equal(book.capabilities.ebook,hasPdf&&hasEpub);
+    if(hasPdf&&!hasEpub)pdfOnly++;
   }
+  assert.equal(pdfOnly,2);
 });
 
 test('Imported EPUB paths are accepted alongside PDFs', async t => {

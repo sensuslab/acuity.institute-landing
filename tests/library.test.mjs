@@ -99,7 +99,7 @@ test('Metadata search combines words, collection and format filters',async()=>{
   assert.equal(filterBooks('tao', 'Esoteric traditions','all').length,0);
   assert.equal(filterBooks('not-a-real-book', 'All collections','all').length,0);
   assert.equal(filterBooks('', 'All collections','all').length,books.length);
-  assert.ok(filterBooks('nonduality compassion', 'All collections','all').some(book=>book.id==='the-teaching-of-vimalakirti-toh-176-thurman-trans'));
+  assert.ok(filterBooks('thunderous silence', 'All collections','all').some(book=>book.id==='the-teaching-of-vimalakirti-toh-176-thurman-trans'));
 });
 
 test('Companion links appear in crawlable HTML and serve the correct PDF/PPTX bytes',async()=>{

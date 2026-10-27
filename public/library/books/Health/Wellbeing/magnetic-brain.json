@@ -3,7 +3,7 @@
   "title": "Magnetic Brain",
   "author": "Unknown",
   "language": "English",
-  "description": "A text exploring the relationship between magnetism and the brain. Its title introduces questions about magnetic influence, neural activity and the ways these subjects are interpreted within the work.",
+  "description": "Magnetic Brain, a short compiled document consisting mainly of references and links to scientific articles on magnetic nanoparticles and the remote control of biological systems. Cited sources include papers on superparamagnetic nanoparticle DNA vaccines, magnetogenetics ('Is Magnetogenetics the New Optogenetics?'), magnetic strategies for controlling the nervous system, and nanoparticle-embedded soft robotics, along with related PubMed, NCBI and IEEE Spectrum material. Its implicit theme is the possibility of influencing brain and body through magnetic or nanotechnological means, a subject associated with speculation about vaccines and neural control. It has no named author and presents source lists rather than argued analysis; it is best treated as a research bibliography on magnetogenetics and nanomedicine.",
   "editionNote": "Curator-supplied PDF and EPUB from the organised ebook collection. One format was converted from the other (PDF from EPUB).",
   "rights": "From the curator's private collection. Publication rights for this edition are to be confirmed before public release.",
   "tags": [
@@ -12,5 +12,6 @@
   ],
   "accent": "gold",
   "order": 240,
-  "sourceUrl": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0"
+  "sourceUrl": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+  "shortDescription": "Magnetic Brain, a short compiled document consisting mainly of references and links to scientific articles on magnetic nanoparticles and the remote control of biological systems. Cited sources include papers on…"
 }

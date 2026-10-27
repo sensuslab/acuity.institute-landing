@@ -1174,6 +1174,12 @@
           "url": "/library/overviews/the-first-form-anthropos-and-adam-kadmon/e75b4d418acf.pdf",
           "bytes": 27155688,
           "sha256": "e75b4d418acfa33fa310af255355959e5a3f924ea4d6725f23ce1f11d216ec43"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-first-form-anthropos-and-adam-kadmon/97fb6078878f.pptx",
+          "bytes": 29427776,
+          "sha256": "97fb6078878f1b545ec266effc57168fd9cb8a58bb9a5025b7cd3c2019db537b"
         }
       ],
       "pages": 20,
@@ -1193,9 +1199,115 @@
           "url": "/library/overviews/the-gnostic-john-the-baptizer/61aff4a195f3.pdf",
           "bytes": 20387033,
           "sha256": "61aff4a195f3bc385d8a63d932e8b0ff82784699f545b45bbc9da5ff7553542d"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-gnostic-john-the-baptizer/fea69934e3cc.pptx",
+          "bytes": 21955973,
+          "sha256": "fea69934e3cc07cc112369d790cf082af70751ce20866b15b02b07df6a7bfa15"
         }
       ],
       "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-gospel-of-mary",
+      "title": "The Gospel of Mary — visual overview",
+      "sourceBookIds": [
+        "the-gospel-of-mary"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-gospel-of-mary/4ef356591d2d.pdf",
+          "bytes": 24950934,
+          "sha256": "4ef356591d2d0a16858533ea5893a039e59ef964216abd0d00d9198ace0d6b3b"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-gospel-of-mary/fd3d89766190.pptx",
+          "bytes": 26840769,
+          "sha256": "fd3d89766190a77e1eafffc3f8d822fd070d18b51696f8ad5bd5f8793abda844"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-hidden-evil",
+      "title": "The Hidden Evil — visual overview",
+      "sourceBookIds": [
+        "the-hidden-evil"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-hidden-evil/80f75a58ddc7.pptx",
+          "bytes": 18123144,
+          "sha256": "80f75a58ddc7c2aa4dead96e040299514abb9f039af00590118da98ba24e77ef"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-hidden-evil/49bdb7c2ae7f.pdf",
+          "bytes": 16851946,
+          "sha256": "49bdb7c2ae7f8fcd1753eb5055d27351b0322f2b1813fa6182067ef05f42264f"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-hidden-words",
+      "title": "The Hidden Words — visual overview",
+      "sourceBookIds": [
+        "the-hidden-words"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-hidden-words/bfe7217b0a54.pdf",
+          "bytes": 19846423,
+          "sha256": "bfe7217b0a54a78799b136b1c7fd8d6505ca77b462ebc2a794ec1436b65a9960"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-hidden-words/1e0b4c49fa35.pptx",
+          "bytes": 21171412,
+          "sha256": "1e0b4c49fa35bfa84464f262f9bb7d65daaf8cb6e83bc1ede07c401529901c7b"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-kabbalah-unveiled",
+      "title": "The Kabbalah Unveiled — visual overview",
+      "sourceBookIds": [
+        "the-kabbalah-unveiled"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-kabbalah-unveiled/083678b64e21.pptx",
+          "bytes": 24328245,
+          "sha256": "083678b64e21bc4c19b567282ed3a289b2e5552ed2b57e34d5df70b522cd0cee"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-kabbalah-unveiled/28d9ac009afc.pdf",
+          "bytes": 22845572,
+          "sha256": "28d9ac009afcd2c3c083c40d1f215bd14668d34b89e93267ac3c43a02295064c"
+        }
+      ],
+      "pages": 20,
       "imageOnly": true
     },
     {
@@ -1212,6 +1324,12 @@
           "url": "/library/overviews/the-key-to-the-universe/de6defe921c5.pdf",
           "bytes": 21589457,
           "sha256": "de6defe921c5651370d628ff4aebe1c120aa63b5c8001bf013835cc5e69b32cc"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-key-to-the-universe/178bca921b04.pptx",
+          "bytes": 23436748,
+          "sha256": "178bca921b04cb45cfe6d9e014df9d033f59e73deb3a2720be15e8bfe723552b"
         }
       ],
       "pages": 18,
@@ -1231,6 +1349,12 @@
           "url": "/library/overviews/the-key-to-the-universe-forgotten-books-edition/dcadfe4098c8.pdf",
           "bytes": 20191178,
           "sha256": "dcadfe4098c88f287a30569bf9a4c566e4b82ff358d7dd78303d5b709dfd91cc"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-key-to-the-universe-forgotten-books-edition/b5cccd2f27aa.pptx",
+          "bytes": 21886952,
+          "sha256": "b5cccd2f27aad84e1e22f69c72d7e6a03e753145515966e4cef17fa9b93ed5e7"
         }
       ],
       "pages": 18,
@@ -1250,6 +1374,12 @@
           "url": "/library/overviews/the-key-to-theosophy/d6786c90b4c9.pdf",
           "bytes": 18058411,
           "sha256": "d6786c90b4c971164489007882c8fef04ff13a8f3affb3507409f1d0a6f98f91"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-key-to-theosophy/e6c2c2c467d0.pptx",
+          "bytes": 19163105,
+          "sha256": "e6c2c2c467d011bfb7ec0a31933b234474c24d79c31d4d75c276ffcfdef2e7d8"
         }
       ],
       "pages": 15,
@@ -1269,6 +1399,12 @@
           "url": "/library/overviews/the-kitab-i-iqan/8f0d8337f5ea.pdf",
           "bytes": 26038550,
           "sha256": "8f0d8337f5ea49c5874ce56bd9d81c7d6ae1a904a01544ef2e38de2e3b534b93"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-kitab-i-iqan/e2d30f13eec9.pptx",
+          "bytes": 28030555,
+          "sha256": "e2d30f13eec9d09d02d8b658abf4f881c97a4a225acd43921e7893f716d51a35"
         }
       ],
       "pages": 21,
@@ -1288,6 +1424,12 @@
           "url": "/library/overviews/the-legends-of-the-jews-vol-1/1bfb45d7157e.pdf",
           "bytes": 24086220,
           "sha256": "1bfb45d7157e972bed2b22c6bb02be972b9bad07132cab1048c10219c4570110"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-legends-of-the-jews-vol-1/fbdeba86a795.pptx",
+          "bytes": 25943258,
+          "sha256": "fbdeba86a79546980cd3f6594f55dfb4ae37bfcbf2271e0780ba2f0b3bed6714"
         }
       ],
       "pages": 21,
@@ -1307,6 +1449,12 @@
           "url": "/library/overviews/the-life-of-pythagoras-with-hierocles-on-the-golden-verses/d8d226e67867.pdf",
           "bytes": 21346732,
           "sha256": "d8d226e678677708e0f2da4311134741cb5f3af579499880095bef6ed514dfc5"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-life-of-pythagoras-with-hierocles-on-the-golden-verses/f634c66df5ba.pptx",
+          "bytes": 22983614,
+          "sha256": "f634c66df5ba5b208ef3eb7fb3a9b3de7b58556eed5f0acaef906bfcf456340a"
         }
       ],
       "pages": 14,
@@ -1326,6 +1474,12 @@
           "url": "/library/overviews/the-living-measure/d79135b271ed.pdf",
           "bytes": 10896619,
           "sha256": "d79135b271ed55def2cc5ed786a4c315707d6dabe7f7e7659a94e580b9e3b246"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-living-measure/2d66a44745d8.pptx",
+          "bytes": 11736659,
+          "sha256": "2d66a44745d8564fe8601ba7643a2dc9fd5f0fe3ec70622e671d5525ab6499bf"
         }
       ],
       "pages": 13,
@@ -1345,9 +1499,40 @@
           "url": "/library/overviews/the-manichaean-scriptures-article-ajsl-1920/34783c3b13f5.pdf",
           "bytes": 21336198,
           "sha256": "34783c3b13f5b923bf2a97dd52fbdadac97ebbd6cff41bf976c7dd61798cb3c1"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-manichaean-scriptures-article-ajsl-1920/15d69ca073ab.pptx",
+          "bytes": 13333399,
+          "sha256": "15d69ca073ab4993e10d5c55d809ad11435e2de9bed07a2be872733eb2bef92d"
         }
       ],
       "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-mathnawi-of-jalaluddin-rumi-vol-1",
+      "title": "The Mathnawi of Jalaluddin Rumi, Vol. 1 — visual overview",
+      "sourceBookIds": [
+        "the-mathnawi-of-jalaluddin-rumi-vol-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-mathnawi-of-jalaluddin-rumi-vol-1/67379d1c2a20.pdf",
+          "bytes": 22655306,
+          "sha256": "67379d1c2a20f8bf664883331575c82dd5ad6bab91c40d96e2549cd07e2b9feb"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-mathnawi-of-jalaluddin-rumi-vol-1/e2c49996a676.pptx",
+          "bytes": 24168016,
+          "sha256": "e2c49996a676e08d39464a83b04a39cc378b83db1db4b9f7906f760e2355f619"
+        }
+      ],
+      "pages": 18,
       "imageOnly": true
     },
     {
@@ -1364,6 +1549,12 @@
           "url": "/library/overviews/the-mesnevi-book-1/3b8d12b6ef7e.pdf",
           "bytes": 15318996,
           "sha256": "3b8d12b6ef7e2dddeba8f4b2f8e9b9335b95d9a7ab1c22b289cdaeffa278a5ad"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-mesnevi-book-1/babff1d413b8.pptx",
+          "bytes": 16444092,
+          "sha256": "babff1d413b8618453990365268af0773ba006357110a2d3a0ccd12b29006c81"
         }
       ],
       "pages": 12,
@@ -1655,6 +1846,25 @@
       "imageOnly": true
     },
     {
+      "id": "overview-the-secret-teachings-of-all-ages",
+      "title": "The Secret Teachings of All Ages — visual overview",
+      "sourceBookIds": [
+        "the-secret-teachings-of-all-ages"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-secret-teachings-of-all-ages/a281a9228e7a.pdf",
+          "bytes": 22778326,
+          "sha256": "a281a9228e7a1014044c2bc8e460af66087410bbbe8ba7820d57ebe1c6a746e5"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
       "id": "overview-the-seven-valleys-and-the-four-valleys",
       "title": "The Seven Valleys and the Four Valleys — visual overview",
       "sourceBookIds": [
@@ -1674,6 +1884,56 @@
       "imageOnly": true
     },
     {
+      "id": "overview-the-sixteen-principal-stars",
+      "title": "The Sixteen Principal Stars — visual overview",
+      "sourceBookIds": [
+        "the-sixteen-principal-stars"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-sixteen-principal-stars/4b30c49473a4.pdf",
+          "bytes": 15659730,
+          "sha256": "4b30c49473a4134f8168d0798cd41ddafbda07ae6db852947ea365e109224a8e"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-sixteen-principal-stars/e94e43922c50.pptx",
+          "bytes": 16830947,
+          "sha256": "e94e43922c504b78027c96e12cbe1b0ce391b92969990699a21fc04936b6bd7a"
+        }
+      ],
+      "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-song-celestial-or-bhagavad-gita",
+      "title": "The Song Celestial, or Bhagavad Gita — visual overview",
+      "sourceBookIds": [
+        "the-song-celestial-or-bhagavad-gita"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-song-celestial-or-bhagavad-gita/afab7ef45fad.pptx",
+          "bytes": 17499860,
+          "sha256": "afab7ef45fade13235f2d5a7fcb1c7a12ba3e92009da31429e7a58f7f64a4a4a"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-song-celestial-or-bhagavad-gita/357e616e8913.pdf",
+          "bytes": 16467701,
+          "sha256": "357e616e8913a760e0e4e1416d889fc691485a55a85b8311940c949dbaeb668f"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
       "id": "overview-the-teaching-of-vimalakirti-toh-176-thurman-trans",
       "title": "The Teaching of Vimalakirti (Toh 176, Thurman trans.) — visual overview",
       "sourceBookIds": [
@@ -1690,6 +1950,181 @@
         }
       ],
       "pages": 15,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-ten-hymns-of-synesius",
+      "title": "The Ten Hymns of Synesius — visual overview",
+      "sourceBookIds": [
+        "the-ten-hymns-of-synesius"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-ten-hymns-of-synesius/ddb26382005f.pdf",
+          "bytes": 17552255,
+          "sha256": "ddb26382005f349188fa3ca6bd2a58adb7e69ea4269edd16e1133e17590598ee"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-ten-hymns-of-synesius/b55e35f32fa0.pptx",
+          "bytes": 19102473,
+          "sha256": "b55e35f32fa058d2e0e44b05039bd73df36b6402139fa1788b3a3fcb2a52cedd"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-way-of-initiation-or-how-to-attain-knowledge-of-the-higher-worlds",
+      "title": "The Way of Initiation, or How to Attain Knowledge of the Higher Worlds — visual overview",
+      "sourceBookIds": [
+        "the-way-of-initiation-or-how-to-attain-knowledge-of-the-higher-worlds"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-way-of-initiation-or-how-to-attain-knowledge-of-the-higher-worlds/7ab902c0272d.pptx",
+          "bytes": 27582175,
+          "sha256": "7ab902c0272d846166f4b622a9c2e35b38824258446cdb22461f2e6ee0d478a9"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-way-of-initiation-or-how-to-attain-knowledge-of-the-higher-worlds/39c8e445bc2c.pdf",
+          "bytes": 25273188,
+          "sha256": "39c8e445bc2caa4fa69f59b447d0d8f861589441a3cb15114b5400d5837498d3"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-wisdom-of-solomon",
+      "title": "The Wisdom of Solomon — visual overview",
+      "sourceBookIds": [
+        "the-wisdom-of-solomon"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-wisdom-of-solomon/47367697b364.pdf",
+          "bytes": 16647647,
+          "sha256": "47367697b3645cd7171e2822f90e487eec01b2f8f1a91db8b49d4d80f0233c7c"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-wisdom-of-solomon/ac5a2a545c37.pptx",
+          "bytes": 18103446,
+          "sha256": "ac5a2a545c374d92206f37710d4b69a145781e5d996d0a76ad502403576c30c0"
+        }
+      ],
+      "pages": 14,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-wisdome-of-solomon-geneva-apocrypha",
+      "title": "The Wisdome of Solomon (Geneva Apocrypha) — visual overview",
+      "sourceBookIds": [
+        "the-wisdome-of-solomon-geneva-apocrypha"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-wisdome-of-solomon-geneva-apocrypha/45cd04594613.pdf",
+          "bytes": 10876713,
+          "sha256": "45cd04594613042de58802a897244c6b12ec1636c9f71d34e83920108ea4f34f"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-wisdome-of-solomon-geneva-apocrypha/cacc3e7249c7.pptx",
+          "bytes": 11438520,
+          "sha256": "cacc3e7249c76515dedee45a0ff260f12b978325b8aa57894dabe458b05ee7ea"
+        }
+      ],
+      "pages": 13,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-works-of-philo-judaeus-vol-1",
+      "title": "The Works of Philo Judaeus, Vol. 1 — visual overview",
+      "sourceBookIds": [
+        "the-works-of-philo-judaeus-vol-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-works-of-philo-judaeus-vol-1/e9dec85a57a4.pdf",
+          "bytes": 20972665,
+          "sha256": "e9dec85a57a496738d2b8e931a4bf0b4624c8105aec86745c09258960b03fab6"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-works-of-philo-judaeus-vol-1/f5547f1d8e86.pptx",
+          "bytes": 22437787,
+          "sha256": "f5547f1d8e86c016e2dd25a2693c23fe087f67acda98e97a3c5d51a4bfff7d46"
+        }
+      ],
+      "pages": 17,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-writings-of-clement-of-alexandria-vol-1",
+      "title": "The Writings of Clement of Alexandria, Vol. 1 — visual overview",
+      "sourceBookIds": [
+        "the-writings-of-clement-of-alexandria-vol-1"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-writings-of-clement-of-alexandria-vol-1/4e80ab41b011.pptx",
+          "bytes": 23814639,
+          "sha256": "4e80ab41b01128d820b7f86613dc90fd1f58e3f125c85a952e15db4d1418527b"
+        },
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-writings-of-clement-of-alexandria-vol-1/c541f62e9a3b.pdf",
+          "bytes": 21953679,
+          "sha256": "c541f62e9a3bfc1497d1cf4ba9247d908de088e83be993f856784bbb63725ea3"
+        }
+      ],
+      "pages": 18,
+      "imageOnly": true
+    },
+    {
+      "id": "overview-the-writings-of-clement-of-alexandria-vol-2",
+      "title": "The Writings of Clement of Alexandria, Vol. 2 — visual overview",
+      "sourceBookIds": [
+        "the-writings-of-clement-of-alexandria-vol-2"
+      ],
+      "resourceRole": "visual-overview",
+      "language": "English",
+      "assets": [
+        {
+          "format": "pdf",
+          "url": "/library/overviews/the-writings-of-clement-of-alexandria-vol-2/64de386dfb68.pdf",
+          "bytes": 20259788,
+          "sha256": "64de386dfb68d9777267df9b035631e887b8edbbe32b3337a848251c4994f2f3"
+        },
+        {
+          "format": "pptx",
+          "url": "/library/overviews/the-writings-of-clement-of-alexandria-vol-2/541c562494f4.pptx",
+          "bytes": 21763620,
+          "sha256": "541c562494f40130f0a0d69fb55a1081fd93174b8b70981e1dc4037bcf43406f"
+        }
+      ],
+      "pages": 17,
       "imageOnly": true
     }
   ]

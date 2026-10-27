@@ -30,6 +30,8 @@ public/library/books/Presentations/NotebookLM/.*
 public/library/books/**/*.part
 public/library/books/**/.*
 public/library/overviews/
+public/library/books/Esoteric/Hermeticism/the-secret-teachings-of-all-ages.pdf
+public/library/books/Esoteric/Hermeticism/the-secret-teachings-of-all-ages.epub
 
 
 # Curator ebook collection binaries (PDF + EPUB) are hydrated from content/library-imports.json.

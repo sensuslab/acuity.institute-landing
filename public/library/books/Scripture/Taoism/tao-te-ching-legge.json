@@ -7,7 +7,7 @@
   "collection": "Eastern wisdom",
   "period": "Ancient China",
   "language": "English",
-  "description": "Eighty-one short chapters on the Way, simplicity and the art of living. An invitation to read slowly and return often.",
+  "description": "The Tao Te Ching (Daodejing), the foundational classic of philosophical Taoism attributed to Laozi, the semi-legendary 'Old Master' said to have been a contemporary of Confucius, though the text probably took shape between the fifth and third centuries BCE. In eighty-one brief chapters of terse, paradoxical verse, it describes the Tao, the nameless Way that precedes heaven and earth, and its power or virtue (Te) as expressed in the sage. Recurring teachings include wu wei (effortless, non-coercive action), the strength of softness and water, emptiness as the source of usefulness, return to the uncarved block of simplicity, the relativity of opposites, the dangers of desire, cleverness and war, and government that rules by not interfering. One of the most translated books in the world, it underlies Taoist religion, Chinese medicine, internal alchemy and martial arts, influenced Chan and Zen Buddhism, and is read worldwide as a manual of contemplative and ethical wisdom.",
   "editionNote": "James Legge's historical English translation (Project Gutenberg #216), supplied from the curator's organised collection, replacing the earlier reading edition. Authorship and dating of the ancient work remain subjects of scholarship.",
   "tags": [
     "Taoism",
@@ -19,5 +19,6 @@
   "sourceId": 216,
   "rights": "Project Gutenberg lists this edition as public domain in the USA. Its notices and licence are retained; rights can vary by country.",
   "accent": "sage",
-  "order": 10
+  "order": 10,
+  "shortDescription": "The Tao Te Ching (Daodejing), the foundational classic of philosophical Taoism attributed to Laozi, the semi-legendary 'Old Master' said to have been a contemporary of Confucius, though the text probably took shape between the…"
 }

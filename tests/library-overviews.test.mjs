@@ -56,15 +56,15 @@ test('PPTX overview downloads pass through the pinned import cache',async t => {
 test('Every linked overview has a real source and preserves the library collection',() => {
   const books=JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
   const manifest=JSON.parse(fs.readFileSync('content/library-overviews.json','utf8'));
-  assert.equal(manifest.overviews.length,82);
+  assert.equal(manifest.overviews.length,97);
   assert.equal(books.filter(book=>book.kind==='presentation').length,97);
-  assert.equal(books.filter(book=>book.kind==='book').length,185);
+  assert.equal(books.filter(book=>book.kind==='book').length,188);
   for(const item of manifest.overviews) for(const id of item.sourceBookIds) {
     const source=books.find(book=>book.id===id);
     assert.equal(source.kind,'book');assert.ok(source.pdf && source.epub);
     assert.ok(source.overviews.some(overview=>overview.id===item.id));
   }
-  assert.equal(manifest.overviews.filter(item=>item.assets.some(asset=>asset.format==='pptx')).length,22);
+  assert.equal(manifest.overviews.filter(item=>item.assets.some(asset=>asset.format==='pptx')).length,47);
 });
 
 test('Overview actions expose only available formats and do not create ebook controls',async()=>{
@@ -80,4 +80,16 @@ test('Overview actions expose only available formats and do not create ebook con
   assert.doesNotMatch(html,/EPUB|Read E-Book/);
   assert.doesNotMatch(render({...overview,pptx:undefined}),/Overview PPTX/);
   assert.equal(renderToStaticMarkup(React.createElement(Component,{overviews:[],onOpen:()=>{}})),'');
+});
+
+test('Refresh includes formerly unmatched text, additional PPTX and PDF-only originals',()=>{
+  const books=JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
+  const secret=books.find(book=>book.id==='the-secret-teachings-of-all-ages');
+  assert.ok(secret.pdf && secret.epub);assert.equal(secret.overviews.length,1);
+  assert.ok(books.find(book=>book.id==='the-living-measure').overviews[0].pptx);
+  for(const id of ['pene-yitsak-hebrew-1886-izmir-imprint','dialoghi-damore-italian-1565-imprint']){
+    const book=books.find(item=>item.id===id);
+    assert.ok(book.pdf);assert.equal(book.epub,undefined);assert.equal(book.capabilities.ebook,false);
+  }
+  assert.ok(!books.some(book=>book.id==='presentation-027-the-divine-codex'));
 });

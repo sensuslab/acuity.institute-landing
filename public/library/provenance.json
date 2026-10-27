@@ -635,6 +635,22 @@
     "path": "/library/books/Esoteric/Hermeticism/the-kybalion.txt"
   },
   {
+    "bookId": "the-secret-teachings-of-all-ages",
+    "format": "pdf",
+    "bytes": 11716621,
+    "sha256": "89fffa9ed5c7c2b6f628d70fdd367329ad7ecb36a2b44aae43bfd244b63c3800",
+    "source": "https://archive.org/details/TheSecretTeachingsOfAllAgesManlyHall",
+    "path": "/library/books/Esoteric/Hermeticism/the-secret-teachings-of-all-ages.pdf"
+  },
+  {
+    "bookId": "the-secret-teachings-of-all-ages",
+    "format": "epub",
+    "bytes": 42242928,
+    "sha256": "fa13497a4c9b5221562c795459c9d0f63aaf72bed3a739899e57c9e446ecfd9d",
+    "source": "https://archive.org/details/TheSecretTeachingsOfAllAgesManlyHall",
+    "path": "/library/books/Esoteric/Hermeticism/the-secret-teachings-of-all-ages.epub"
+  },
+  {
     "bookId": "3-enoch-or-the-hebrew-book-of-enoch",
     "format": "pdf",
     "bytes": 46800299,
@@ -665,6 +681,14 @@
     "sha256": "c8f9f51dd02187e921e9c26db320cae31eb3563aad93157ce7783abef1af32d8",
     "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
     "path": "/library/books/Esoteric/Kabbalah/derekh-hokhmah-hebrew-amsterdam-imprint.epub"
+  },
+  {
+    "bookId": "dialoghi-damore-italian-1565-imprint",
+    "format": "pdf",
+    "bytes": 33722055,
+    "sha256": "aa2b251f7c77161bfd6610adcee52879c63c061c801a2ad5adeab1dc8e4eb7ad",
+    "source": "https://archive.org/download/bub_gb_FaDwqha7yWUC/bub_gb_FaDwqha7yWUC.pdf",
+    "path": "/library/books/Esoteric/Kabbalah/dialoghi-damore-italian-1565-imprint.pdf"
   },
   {
     "bookId": "etz-chaim-the-tree-of-life",
@@ -713,6 +737,14 @@
     "sha256": "e31f637df3c5022be9efafc13ef5969b232bc34154047209b876c467214a6e95",
     "source": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
     "path": "/library/books/Esoteric/Kabbalah/pardes-rimonim-orchard-of-pomegranates.epub"
+  },
+  {
+    "bookId": "pene-yitsak-hebrew-1886-izmir-imprint",
+    "format": "pdf",
+    "bytes": 34884124,
+    "sha256": "68c2ea3758ffef126e4801bcac8f1fd9326d7c798936d0d1a45982084de5a67d",
+    "source": "https://archive.org/download/peneyitsak03abul/peneyitsak03abul.pdf",
+    "path": "/library/books/Esoteric/Kabbalah/pene-yitsak-hebrew-1886-izmir-imprint.pdf"
   },
   {
     "bookId": "sefer-chayei-hanefesh-letters-manuscript-text-hebrew",

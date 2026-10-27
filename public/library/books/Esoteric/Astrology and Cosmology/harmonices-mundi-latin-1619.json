@@ -3,7 +3,7 @@
   "title": "Harmonices Mundi (Latin, 1619)",
   "author": "Johannes Kepler",
   "language": "Latin",
-  "description": "Johannes Kepler explores harmony through geometry, music and the structure of the heavens. This Latin edition offers direct access to a work connecting mathematical proportion with the search for order in planetary motion.",
+  "description": "Harmonices Mundi Libri V (The Harmony of the World), Johannes Kepler's Latin masterwork published at Linz in 1619. Kepler regarded it as his greatest achievement, and in it he seeks the divine harmonic order underlying geometry, music, astrology and the cosmos. Book I treats regular polygons and their constructibility; Book II the congruence of polygons and polyhedra, including the first systematic treatment of tilings and the discovery of two new star polyhedra; Book III the mathematical basis of musical consonance; Book IV the harmonic configurations of the heavens in astrology and the nature of the soul; and Book V the 'music of the spheres', where he relates the planets' extreme angular velocities to musical intervals and announces his third law of planetary motion (the squares of periods are proportional to the cubes of mean distances). It is the culmination of the Pythagorean-Platonic quest for cosmic harmony and a founding document of modern astronomy.",
   "editionNote": "Curator-supplied PDF and EPUB from the organised ebook collection. Source text obtained from the Internet Archive (https://archive.org/details/ioanniskepplerih00kepl).",
   "rights": "From the curator's private collection. Publication rights for this edition are to be confirmed before public release.",
   "tags": [
@@ -12,5 +12,6 @@
   ],
   "accent": "gold",
   "order": 267,
-  "sourceUrl": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0"
+  "sourceUrl": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+  "shortDescription": "Harmonices Mundi Libri V (The Harmony of the World), Johannes Kepler's Latin masterwork published at Linz in 1619. Kepler regarded it as his greatest achievement, and in it he seeks the divine harmonic order underlying…"
 }

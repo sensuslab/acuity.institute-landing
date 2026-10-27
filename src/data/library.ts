@@ -8,6 +8,7 @@ export type LibraryOverview = {
 export type LibraryBook = {
   id: string; title: string; subtitle: string; author: string; translator: string | null;
   collection: string; period: string; language: string; description: string;
+  shortDescription?: string;
   editionNote: string; tags: string[]; sourceUrl: string; sourceId?: number; rights: string;
   pdf?: string; epub?: string; text?: string; pptx?: string; accent: string; pages?: number; pdfBytes?: number;
   categoryKey: string; categoryPath: string[]; categoryLabel: string; kind: string;
@@ -17,7 +18,10 @@ export type LibraryBook = {
   overviews?: LibraryOverview[];
 };
 export type LibraryCategory = {key:string;label:string;path:string[];depth:number;count:number};
-export const books: LibraryBook[] = catalogue;
+export const books: LibraryBook[] = catalogue.map(book => ({
+  ...book,
+  direction: book.direction === 'rtl' ? 'rtl' : 'ltr',
+}));
 export const categories: LibraryCategory[] = categoryIndex;
 export const collections = [...new Set(books.map(book => book.collection))];
 // Both assets are required by the curated library's ebook policy, even for direct launches.
