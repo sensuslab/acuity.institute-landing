@@ -24,10 +24,10 @@ after(()=>{server?.kill();fs.rmSync(shorts,{recursive:true,force:true});});
 test('Catalogue assets retain verified R2 identities and usable format pairs',()=>{
   const registry=JSON.parse(fs.readFileSync('content/library-r2-registry.json','utf8'));
   const byHash=new Map(registry.assets.map(asset=>[asset.sha256,asset]));
-  assert.equal(byHash.size,617);assert.equal(new Set(books.map(b=>b.id)).size,books.length);
+  assert.equal(byHash.size,registry.assets.length);assert.equal(registry.assets.filter(a=>a.format==='markdown').length,323);assert.equal(new Set(books.map(b=>b.id)).size,books.length);
   for(const book of books){
     assert.ok(book.pdf || book.epub);assert.match(book.sourceUrl,/^https:\/\//);
-    assert.equal(book.capabilities.ebook,!!(book.pdf&&book.epub));
+    assert.equal(book.capabilities.ebook,!!(book.epub&&(book.pdf||book.markdown)));
     for(const item of [book,...book.overviews])for(const asset of item.assets){
       const verified=byHash.get(asset.sha256);assert.ok(verified);assert.equal(verified.status,'verified');
       assert.equal(asset.url,verified.url);assert.equal(asset.bytes,verified.bytes);

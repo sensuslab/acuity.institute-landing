@@ -51,12 +51,12 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
         if(typeof target==='object')await rendition.display(target.href);
         else if(target==='next')await rendition.next();else await rendition.prev();
       });
-    }catch{setError('That page could not be opened. Try another chapter or use the PDF edition.');}
+    }catch{setError('That page could not be opened. Try another chapter or download the reading edition.');}
     finally{busyRef.current=false;setBusy(false);}
   },[]);
   turnRef.current=direction=>{void navigate(direction);};
   useEffect(()=>{
-    if(!canReadEbook(book)||!book.epub){setError('This record has no paired PDF and EPUB edition.');setBusy(false);return;}
+    if(!canReadEbook(book)||!book.epub){setError('This record has no paired source and EPUB reading edition.');setBusy(false);return;}
     const element=stage.current;if(!element)return;
     let cancelled=false;let rendition:Rendition|undefined;let publication:Book|undefined;
     let resize:ResizeObserver|undefined;let resizeFrame:number|undefined;
@@ -146,7 +146,7 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
         });resize.observe(element);
         busyRef.current=false;setBusy(false);
       }catch(reason){
-        if(!cancelled&&!(reason instanceof Error&&reason.name==='AbortError')){setError('This EPUB could not be opened. You can retry, download it or read the PDF edition.');busyRef.current=false;setBusy(false);}
+        if(!cancelled&&!(reason instanceof Error&&reason.name==='AbortError')){setError('This EPUB could not be opened. You can retry or download the reading edition.');busyRef.current=false;setBusy(false);}
       }
     };
     void open();
@@ -192,8 +192,9 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
     <header className="reader-heading"><div><span className="library-eyebrow">ACUITY / E-BOOK</span><h2 id="ebook-title">{book.title}</h2></div><div className="reader-actions"><a href={book.epub} download aria-label="Download EPUB"><ArrowDownToLine size={19}/></a><button onClick={()=>void toggleFullscreen()} aria-label={fullscreen?'Exit fullscreen':'Enter fullscreen'}>{fullscreen?<Minimize size={20}/>:<Maximize size={20}/>}</button><button autoFocus aria-label="Close ebook reader" onClick={onClose}><X size={23}/></button></div></header>
     <div className="ebook-toolbar"><label className="ebook-chapters"><span className="sr-only">Contents</span><select aria-label="Contents" value={activeChapter} disabled={busy||!chapters.length} onChange={event=>void navigate({href:event.target.value})}><option value="" disabled>Contents</option>{chapters.map((chapter,index)=><option key={`${chapter.href}-${index}`} value={chapter.href}>{'— '.repeat(chapter.depth)}{chapter.label}</option>)}</select></label><div className="ebook-font"><button aria-label="Decrease font size" disabled={busy||fontSize<=16} onClick={()=>adjustFont(fontSize-2)}>A−</button><label><span className="sr-only">Text size</span><input aria-label="Text size" disabled={busy} type="range" min={16} max={32} step={2} value={fontSize} onChange={event=>adjustFont(Number(event.target.value))}/></label><button aria-label="Increase font size" disabled={busy||fontSize>=32} onClick={()=>adjustFont(fontSize+2)}>A+</button><span>{fontSize}px</span></div><label className="ebook-page-colour">Page colour <select aria-label="Page colour" value={pageTone} onChange={event=>changePageTone(event.target.value as EbookPageTone)}>{Object.entries(ebookPageTones).map(([value,tone])=><option key={value} value={value}>{tone.label}</option>)}</select></label><label className="ebook-remember"><input type="checkbox" checked={remember} onChange={event=>rememberChange(event.target.checked)}/> Remember my place on this device</label></div>
     <div className="reader-status" role="status">{fullscreenError|| (busy?'Preparing your page…':position)}</div>
-    {error&&<div className="ebook-error" role="alert"><p>{error}</p><button onClick={()=>setRetry(value=>value+1)}>Retry EPUB</button><button onClick={onReadPdf}>Read PDF instead</button><a href={book.epub} download>Download EPUB</a></div>}
+    {error&&<div className="ebook-error" role="alert"><p>{error}</p><button onClick={()=>setRetry(value=>value+1)}>Retry EPUB</button>{book.pdf && <button onClick={onReadPdf}>Read PDF instead</button>}<a href={book.epub} download>Download EPUB</a></div>}
     <div className="ebook-paper" aria-busy={busy}><button className="ebook-edge edge-left" aria-label="Previous ebook page" disabled={busy||atStart} onClick={()=>void navigate('prev')}><ChevronLeft/></button><div ref={stage} className="ebook-stage"/><button className="ebook-edge edge-right" aria-label="Next ebook page" disabled={busy||atEnd} onClick={()=>void navigate('next')}><ChevronRight/></button></div>
     <footer className="reader-footer ebook-footer"><button disabled={busy||atStart} onClick={()=>void navigate('prev')}><ChevronLeft size={16}/> Previous</button><span>{book.author} · {remember?'Position saved on this device':'Session reading'}</span><button disabled={busy||atEnd} onClick={()=>void navigate('next')}>Next <ChevronRight size={16}/></button></footer>
   </div></dialog>;
 }
+

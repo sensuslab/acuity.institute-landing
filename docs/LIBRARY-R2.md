@@ -1,3 +1,7 @@
+# Sacred Texts update — release 2026-10-27-r2-v3
+
+The current public release contains 1,262 corpus assets and 607 library records, including 323 Sacred Texts. The context archive is published separately. Canonical Markdown and generated EPUB editions retain per-source rights and separate trademark metadata. See [LIBRARY-SACRED-TEXTS.md](LIBRARY-SACRED-TEXTS.md). The sections below document the earlier 617-file migration.
+
 # Shared library storage
 
 The `acuity` R2 bucket is the canonical binary store. Dropbox remains intake and backup. Editorial metadata lives in the source JSON sidecars and overview manifest in this repository. Published consumers use one versioned R2 catalogue.

@@ -1,0 +1,1 @@
+Interpretation reproduced from Ancient Wisdom Atlas by İlayda Büyükdoğan (2026), pinned revision `07b52ea814bd96b0d6322ec684eeb555fe9dd10f`. Original notes are CC0 1.0 unless otherwise noted. These are interpretations, separate from the canonical source texts.

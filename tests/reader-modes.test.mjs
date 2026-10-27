@@ -16,7 +16,7 @@ test('Ebook launcher is absent for PDF-only or EPUB-only records, even with stal
  assert.match(render(books[0]),/Read E-Book/);
  const imageOnly={...books[0],epub:undefined,capabilities:{pdf:true,present:true,ebook:true}};
  assert.doesNotMatch(render(imageOnly),/Read E-Book/);assert.match(render(imageOnly),/Read PDF/);assert.match(render(imageOnly),/Present/);
- assert.doesNotMatch(render({...books[0],pdf:undefined}),/Read E-Book/);
+ assert.doesNotMatch(render({...books[0],pdf:undefined,markdown:undefined}),/Read E-Book/);
 });
 test('Category parents include descendants but not similarly named neighbours',async()=>{
  const {inCategory}=await module('src/data/library.ts');
@@ -32,3 +32,4 @@ test('Optional ebook preferences validate stored data and version positions by E
  assert.equal(parseEbookPreferences('{"fontSize":20,"cfi":"javascript:bad"}').cfi,undefined);
  assert.notEqual(ebookPreferenceKey('book','old'),ebookPreferenceKey('book','new'));
 });
+

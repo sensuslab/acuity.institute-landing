@@ -97,3 +97,8 @@ __pycache__/
 
 # Full migration inventories contain access-bearing provenance and stay private.
 content/library-r2-inventory.json
+
+# Canonical source text restoration is optional; R2 remains the source.
+/texts/public-domain/
+/texts/open-license/
+/texts/permissioned/

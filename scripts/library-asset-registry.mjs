@@ -2,8 +2,8 @@ export function createAssetRegistry(registry) {
   if (registry?.version !== 1 || !Array.isArray(registry.assets)) throw new Error('Unsupported R2 asset registry');
   const byLegacy = new Map();
   for (const asset of registry.assets) {
-    const ext = asset.format === 'text' ? 'txt' : asset.format;
-    if (!['pdf','epub','pptx','text'].includes(asset.format) || !/^[a-f0-9]{64}$/.test(asset.sha256 || '') ||
+    const ext = asset.format === 'text' ? 'txt' : asset.format === 'markdown' ? 'md' : asset.format;
+    if (!['pdf','epub','pptx','text','markdown'].includes(asset.format) || !/^[a-f0-9]{64}$/.test(asset.sha256 || '') ||
       !Number.isSafeInteger(asset.bytes) || asset.bytes < 1 || asset.status !== 'verified' || !asset.verifiedAt ||
       !['public','private'].includes(asset.visibility) ||
       asset.key !== `library/assets/${asset.sha256}.${ext}` ||
