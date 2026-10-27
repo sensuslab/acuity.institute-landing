@@ -114,7 +114,7 @@ test('Imported source formats match actual ebook capabilities, including PDF-onl
     const hasPdf=imports.some(entry=>entry.path===stem+'.pdf');
     const hasEpub=imports.some(entry=>entry.path===stem+'.epub');
     assert.equal(!!book.pdf,hasPdf);assert.equal(!!book.epub,hasEpub);
-    assert.equal(book.capabilities.ebook,hasPdf&&hasEpub);
+    assert.equal(book.capabilities.ebook,(hasPdf||!!book.markdown)&&hasEpub);
     if(hasPdf&&!hasEpub)pdfOnly++;
   }
   assert.equal(pdfOnly,2);

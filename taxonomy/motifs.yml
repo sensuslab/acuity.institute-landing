@@ -1,0 +1,333 @@
+motif_families:
+  divine_parent_child:
+    label: Divine Parent And Holy Child
+    description: A sacred, royal, or supernatural parent protects, nurses, presents, hides, or legitimizes a child with divine destiny.
+    related:
+      - sacred_birth
+      - miraculous_child
+      - mother_goddess
+      - royal_legitimacy
+
+  hero_descent:
+    label: Descent Into The Underworld
+    description: A figure enters the realm of death, darkness, dream, cave, sea, or hidden knowledge and returns transformed or fails to return.
+    related:
+      - death_rebirth
+      - initiation
+      - stolen_beloved
+
+  dying_and_returning:
+    label: Death And Return
+    description: A god, hero, vegetation figure, or soul dies, disappears, descends, sleeps, or is dismembered before restoration or renewal.
+    related:
+      - seasonal_cycle
+      - sacrifice
+      - resurrection
+
+  flood_and_renewal:
+    label: Flood And Renewal
+    description: A cosmic or regional flood destroys an old world and creates conditions for a new human order.
+    related:
+      - divine_judgment
+      - ark_vessel
+      - survivor_pair
+
+  sacred_tree_axis:
+    label: Sacred Tree Or Axis Mundi
+    description: A tree, mountain, pillar, ladder, or pole connects underworld, earth, and heaven.
+    related:
+      - cosmic_mountain
+      - world_center
+      - ascent
+
+  trickster_boundary:
+    label: Trickster At The Boundary
+    description: A liminal figure breaks rules, crosses thresholds, steals, jokes, transforms, or reveals hidden order through disorder.
+    related:
+      - culture_hero
+      - sacred_theft
+      - shapeshifter
+
+  sacred_birth:
+    label: Sacred Birth
+    description: An unusual, auspicious, divine, royal, or prophetically marked birth announces a figure's destiny.
+    related:
+      - miraculous_child
+      - divine_parent_child
+      - royal_legitimacy
+
+  miraculous_child:
+    label: Miraculous Child
+    description: A child is protected, hidden, threatened, marked by signs, or destined for transformative religious or royal significance.
+    related:
+      - sacred_birth
+      - divine_parent_child
+
+  mother_goddess:
+    label: Mother Goddess
+    description: A divine feminine figure is associated with fertility, protection, nourishment, sovereignty, birth, or cosmic maternity.
+    related:
+      - divine_parent_child
+      - sacred_birth
+
+  royal_legitimacy:
+    label: Royal Legitimacy
+    description: Mythic or ritual imagery authorizes kingship, succession, rule, or sacred political order.
+    related:
+      - divine_parent_child
+      - sacred_birth
+
+  death_rebirth:
+    label: Death And Rebirth
+    description: A figure, world, soul, or order passes through death, dissolution, or concealment before renewal.
+    related:
+      - dying_and_returning
+      - hero_descent
+
+  initiation:
+    label: Initiation
+    description: A threshold ordeal transforms a figure's status, knowledge, or identity.
+    related:
+      - hero_descent
+      - departure
+      - return
+
+  stolen_beloved:
+    label: Stolen Or Lost Beloved
+    description: A descent, quest, or ordeal begins with the loss, abduction, death, or concealment of a loved figure.
+    related:
+      - hero_descent
+      - death_rebirth
+
+  seasonal_cycle:
+    label: Seasonal Cycle
+    description: Mythic time connects absence and return with agricultural, celestial, or ritual recurrence.
+    related:
+      - dying_and_returning
+      - flood_and_renewal
+
+  sacrifice:
+    label: Sacrifice
+    description: A valued life, object, food, vow, body, or attachment is offered, surrendered, transformed, or set apart.
+    related:
+      - covenant
+      - sacred_exchange
+      - fire
+
+  resurrection:
+    label: Resurrection
+    description: A dead figure is restored, raised, vindicated, or transformed into a new mode of life.
+    related:
+      - dying_and_returning
+      - death_rebirth
+
+  divine_judgment:
+    label: Divine Judgment
+    description: A god, gods, cosmic law, or sacred order responds to disorder through punishment, purification, or renewal.
+    related:
+      - flood_and_renewal
+      - covenant
+
+  ark_vessel:
+    label: Ark Or Preserving Vessel
+    description: A boat, chest, container, mountain refuge, womb-like space, or protected enclosure preserves life through catastrophe.
+    related:
+      - flood_and_renewal
+      - miraculous_child
+
+  survivor_pair:
+    label: Survivor Pair
+    description: A pair or remnant survives destruction and becomes seed for renewal, ancestry, or social reconstitution.
+    related:
+      - flood_and_renewal
+      - sacred_twins
+
+  cosmic_mountain:
+    label: Cosmic Mountain
+    description: A mountain serves as sacred center, meeting place, axis, revelation site, or connection between realms.
+    related:
+      - sacred_tree_axis
+      - world_center
+      - ascent
+
+  world_center:
+    label: World Center
+    description: A place, tree, mountain, temple, city, altar, or body is imagined as the organizing center of the cosmos.
+    related:
+      - sacred_tree_axis
+      - cosmic_mountain
+
+  ascent:
+    label: Ascent
+    description: A figure rises toward heaven, mountain, tower, tree, light, status, or knowledge.
+    related:
+      - sacred_tree_axis
+      - initiation
+
+  culture_hero:
+    label: Culture Hero
+    description: A figure brings tools, fire, law, food, language, ritual, or social order to humans.
+    related:
+      - trickster_boundary
+      - sacred_theft
+
+  sacred_theft:
+    label: Sacred Theft
+    description: A figure steals a divine, forbidden, or hidden power for humans or another group.
+    related:
+      - trickster_boundary
+      - culture_hero
+
+  shapeshifter:
+    label: Shapeshifter
+    description: A figure changes body, species, gender, status, or visible form to cross limits or reveal instability.
+    related:
+      - trickster_boundary
+
+  serpent:
+    label: Serpent
+    description: A snake, dragon, naga, or serpent-like being carries meanings of danger, renewal, wisdom, chaos, healing, or hidden power.
+    related:
+      - wisdom
+      - chaos
+
+  wisdom:
+    label: Wisdom
+    description: Sacred, forbidden, practical, ancestral, prophetic, or transformative knowledge.
+    related:
+      - serpent
+      - initiation
+
+  chaos:
+    label: Chaos
+    description: A force, being, sea, serpent, darkness, disorder, or pre-cosmic condition threatening or preceding order.
+    related:
+      - serpent
+      - divine_judgment
+
+  departure:
+    label: Departure
+    description: A figure leaves home, court, village, ordinary identity, or known order and enters a charged field of transformation.
+    related:
+      - initiation
+      - return
+
+  return:
+    label: Return
+    description: A figure comes back from ordeal, exile, death, wilderness, or otherworld with changed status or knowledge.
+    related:
+      - departure
+      - initiation
+
+  sacred_twins:
+    label: Sacred Twins
+    description: A paired birth or doubled identity expresses complementarity, rivalry, rescue, healing, foundation, or cosmic duality.
+    related:
+      - duality
+      - sibling_pair
+
+  duality:
+    label: Duality
+    description: A symbolic pair expresses opposition, complementarity, doubling, split identity, or balanced forces.
+    related:
+      - sacred_twins
+      - sibling_pair
+
+  sibling_pair:
+    label: Sibling Pair
+    description: Siblings act together or against one another to establish order, reveal difference, or transform the world.
+    related:
+      - sacred_twins
+      - duality
+
+  covenant:
+    label: Covenant
+    description: A sacred agreement, vow, law, promise, or binding relationship organizes divine-human or social order.
+    related:
+      - sacrifice
+      - sacred_exchange
+
+  sacred_exchange:
+    label: Sacred Exchange
+    description: Giving, offering, feeding, vow-making, or renunciation creates or repairs relationship with sacred powers or community.
+    related:
+      - sacrifice
+      - covenant
+
+  cosmic_egg:
+    label: Cosmic Egg
+    description: A world, deity, ancestor, or ordered cosmos emerges from an egg, shell, womb-like enclosure, or divided rounded form.
+    related:
+      - chaos
+      - world_center
+      - sacred_birth
+
+  forbidden_knowledge:
+    label: Forbidden Knowledge
+    description: A hidden, divine, dangerous, or prohibited power is sought, stolen, eaten, opened, overheard, or revealed.
+    related:
+      - wisdom
+      - sacred_theft
+      - serpent
+      - divine_judgment
+
+  labyrinth_initiation:
+    label: Labyrinth Initiation
+    description: A maze, winding path, enclosed trial, cave-complex, or confusing ritual space tests orientation and transforms status.
+    related:
+      - initiation
+      - hero_descent
+      - world_center
+
+  sacred_marriage:
+    label: Sacred Marriage
+    description: A union between divine, cosmic, royal, earthly, or human partners establishes fertility, sovereignty, legitimacy, or world order.
+    related:
+      - sacred_exchange
+      - royal_legitimacy
+      - seasonal_cycle
+
+  world_destroying_fire:
+    label: World-Destroying Fire
+    description: Fire consumes, purifies, judges, or renews the world, often as an elemental counterpart to flood catastrophe.
+    related:
+      - divine_judgment
+      - death_rebirth
+      - chaos
+
+  afterlife_journey_map:
+    label: Afterlife Journey Map
+    description: A text, ritual, or vision maps the soul's postmortem route through judgment, peril, instruction, transformation, or liberation.
+    related:
+      - hero_descent
+      - death_rebirth
+      - wisdom
+      - divine_judgment
+
+  mystical_quest:
+    label: Mystical Quest
+    description: A seeker leaves ordinary certainty, status, or selfhood to pursue direct knowledge of divine reality through discipline, love, guide, trial, or unveiling.
+    related:
+      - wisdom
+      - initiation
+      - departure
+      - return
+      - divine_beloved
+
+  divine_beloved:
+    label: Divine Beloved
+    description: The sacred appears as beloved, lover, friend, beauty, or inexhaustible object of longing, transforming desire into devotion or knowledge.
+    related:
+      - mystical_quest
+      - sacred_marriage
+      - wisdom
+      - annihilation_union
+
+  annihilation_union:
+    label: Annihilation And Union
+    description: Ego, separateness, or ordinary identity dissolves in a larger sacred reality, often followed by subsistence, return, service, or transformed speech.
+    related:
+      - death_rebirth
+      - mystical_quest
+      - divine_beloved
+      - initiation

@@ -1,4 +1,4 @@
-const ASSET = /^library\/assets\/[a-f0-9]{64}\.(pdf|epub|pptx|txt)$/;
+const ASSET = /^library\/assets\/[a-f0-9]{64}\.(pdf|epub|pptx|txt|md)$/;
 const encoder = new TextEncoder();
 /** @param {Request} request @param {string | undefined} secret */
 export async function authenticated(request, secret) {
@@ -39,7 +39,7 @@ export async function serve(request, env) {
   if (url.pathname === '/health') return reply('ok',200);
   let key;
   try {key = decodeURIComponent(url.pathname.slice(1));} catch {return reply('Bad path',400);}
-  if (!ASSET.test(key) && !/^library\/catalogues\/[a-z0-9.-]+\.json$/.test(key)) return reply('Not found',404);
+  if (!ASSET.test(key) && !/^library\/corpora\/ancient-wisdom-atlas\/[a-f0-9]{40}\/context-[a-f0-9]{64}\.zip$/.test(key) && !/^library\/catalogues\/[a-z0-9.-]+\.json$/.test(key)) return reply('Not found',404);
   const trusted = await authenticated(request, env.READ_TOKEN);
   // The published policy is written last, after every object has passed read-back verification.
   const policyObject = await env.LIBRARY.get('library/control/published-policy.json');

@@ -1,0 +1,434 @@
+{
+  "version": 1,
+  "upstream": "https://github.com/ilaydabdogan/ancient-wisdom-atlas",
+  "commit": "07b52ea814bd96b0d6322ec684eeb555fe9dd10f",
+  "included": 323,
+  "excluded": [
+    {
+      "path": "texts/experiential/contemplative/bardo-thodol.md",
+      "title": "Bardo Thodol — The Three Bardos",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/contemplative/interior-castle.md",
+      "title": "Interior Castle — The Seven Mansions",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/contemplative/underhill-mystical-way.md",
+      "title": "Underhill — The Five Stages of the Mystical Way",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/contemplative/yoga-sutras.md",
+      "title": "Patanjali Yoga Sutras — Eight Limbs and Samadhi Stages",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/nde/greyson-scale.md",
+      "title": "Greyson NDE Scale — Sixteen Standardized Features",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/nde/iands-phenomenology.md",
+      "title": "IANDS Phenomenological Consensus Description",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/nde/moody-phenomenology.md",
+      "title": "Core NDE Phenomenology — Moody's Fifteen Elements",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/nde/van-lommel-elements.md",
+      "title": "NDE Element Categories — Van Lommel's Prospective Study",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/psychedelic/asc-dimensions.md",
+      "title": "Altered States of Consciousness — 5D-ASC Dimensions",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/psychedelic/grof-bpm.md",
+      "title": "Grof Basic Perinatal Matrices — BPM I to IV",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/psychedelic/meq30-dimensions.md",
+      "title": "Mystical Experience Questionnaire — MEQ30 Dimensions",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/experiential/psychedelic/strassman-dmt.md",
+      "title": "Strassman DMT Experience Categories",
+      "reason": "Interpretive framework summary, not a complete source text",
+      "textStatus": "complete"
+    },
+    {
+      "path": "texts/public-domain/buddhist/project-gutenberg/buddhist-birth-stories-volume-1-rhys-davids.md",
+      "title": "Buddhist birth stories; or, Jataka tales, Volume 1",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/buddhist/project-gutenberg/giant-crab-old-india-tales-rouse.md",
+      "title": "The Giant Crab, and Other Tales from Old India",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/buddhist/project-gutenberg/jataka-tales-babbitt.md",
+      "title": "Jataka tales",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/buddhist/project-gutenberg/more-jataka-tales-babbitt.md",
+      "title": "More Jataka Tales",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/comparative/project-gutenberg/golden-bough-volume-1-frazer.md",
+      "title": "The Golden Bough: A Study in Comparative Religion (Vol. 1 of 2)",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/comparative/project-gutenberg/golden-bough-volume-2-frazer.md",
+      "title": "The Golden Bough: A Study in Comparative Religion (Vol. 2 of 2)",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/confucian/project-gutenberg/sayings-of-confucius-giles.md",
+      "title": "The Sayings of Confucius",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/melanesian/project-gutenberg/the-melanesians-codrington.md",
+      "title": "The Melanesians: Studies in Their Anthropology and Folk-Lore",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/roman/project-gutenberg/metamorphoses-books-1-7-riley.md",
+      "title": "The Metamorphoses of Ovid, Books I-VII",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/roman/project-gutenberg/metamorphoses-books-8-15-riley.md",
+      "title": "The Metamorphoses of Ovid, Books VIII-XV",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/sufi/project-gutenberg/mesnevi-book-1-redhouse.md",
+      "title": "The Mesnevi",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/sufi/project-gutenberg/persian-mystics-jami-davis.md",
+      "title": "The Persian Mystics: Jámí",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/sufi/project-gutenberg/persian-mystics-rumi-davis.md",
+      "title": "The Persian Mystics: Jalálu'd-dín Rúmí",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/sufi/project-gutenberg/poems-from-divan-of-hafiz-bell.md",
+      "title": "Poems from the Divan of Hafiz",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    },
+    {
+      "path": "texts/public-domain/sufi/project-gutenberg/sufistic-quatrains-omar-khayyam.md",
+      "title": "The Sufistic Quatrains of Omar Khayyam",
+      "reason": "Upstream marks this as a selection or incomplete transcription",
+      "textStatus": "selected"
+    }
+  ],
+  "uniqueBodyHashes": 323,
+  "markdownBytes": 221800533,
+  "epubBytes": 80793004,
+  "contextFiles": [
+    {
+      "path": "templates/batch-extraction-review-prompt.md",
+      "sha256": "d53946efa2847b0c6e2b589ecae2f572ceab4535ac35a0833a46adcadd3e3558",
+      "bytes": 1544,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/batch-extraction-review-prompt.md"
+    },
+    {
+      "path": "templates/batch-motif-extraction-prompt.md",
+      "sha256": "997456a477d16cd4f7aa658724a149ec31db59e5e890ad8a4b5f190d1bbaf1f1",
+      "bytes": 894,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/batch-motif-extraction-prompt.md"
+    },
+    {
+      "path": "templates/batch-normalization-suggestion-prompt.md",
+      "sha256": "90d4f5f0ce45e9b2bec28018401ca4f7b2e8591f03cb6a8a71e2c586febe040f",
+      "bytes": 1423,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/batch-normalization-suggestion-prompt.md"
+    },
+    {
+      "path": "templates/comparison.md",
+      "sha256": "89aaec40e21edfe63deb0acc2fd6d1f31cfe6919706a8061916c13765fb0b357",
+      "bytes": 917,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/comparison.md"
+    },
+    {
+      "path": "templates/extraction-prompt.md",
+      "sha256": "05bf06523ec73ab792c2e56689b6a1e081cc4ce9a7cf7a8954a19bc427670b1e",
+      "bytes": 857,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/extraction-prompt.md"
+    },
+    {
+      "path": "templates/extraction-record.yml",
+      "sha256": "d9aa7a36f36a436bab2227fff2b3973b7bf5baea64cec1da3e36a0a8bb786d65",
+      "bytes": 1495,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/extraction-record.yml"
+    },
+    {
+      "path": "templates/full-text.md",
+      "sha256": "ece5636e2981b23cdfb18a209d529d8491a9f02c3f10e35a23ce05a827d17f32",
+      "bytes": 621,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/full-text.md"
+    },
+    {
+      "path": "templates/ingestion-manifest.yml",
+      "sha256": "9aef8ed6dcd589ff8512a0f791d6703b5f31c7d72ecdf25b6d2229e8468d1530",
+      "bytes": 1010,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/ingestion-manifest.yml"
+    },
+    {
+      "path": "templates/motif.md",
+      "sha256": "b5cbad9b0590c8c98a145659ee5ffbe46eba0dc6013ae355f3d9b6183f6fa813",
+      "bytes": 510,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/motif.md"
+    },
+    {
+      "path": "templates/pattern-record.yml",
+      "sha256": "145ea9834ed51a346bb9def23593f3a282bfffc694d072704e16fc087c6f0d28",
+      "bytes": 2041,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/pattern-record.yml"
+    },
+    {
+      "path": "templates/work.md",
+      "sha256": "4fa908b0fa8ee70b7f720e0a5daa15b9600800ede1a18c3a5f462e0e2ee9852b",
+      "bytes": 729,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/templates/work.md"
+    },
+    {
+      "path": "patterns/afterlife-journey-map.md",
+      "sha256": "18e09ce2b029594041ebab72d487868809696213ba17b14e2ff2bf5926ac212f",
+      "bytes": 2752,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/afterlife-journey-map.md"
+    },
+    {
+      "path": "patterns/cosmic-egg.md",
+      "sha256": "95382acf6c1ba4c6fef84a08941494f6c882105b2f56708482c4e90ef854f9b5",
+      "bytes": 2456,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/cosmic-egg.md"
+    },
+    {
+      "path": "patterns/death-and-return.md",
+      "sha256": "6e64dc12e8c8811c8bbbf4644b6dc62d70e6e5c1b41314dc3316cd96c5108725",
+      "bytes": 2751,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/death-and-return.md"
+    },
+    {
+      "path": "patterns/descent-into-underworld.md",
+      "sha256": "29a643d28077300b1077cdc7bbae8a0535baf478adc993c35a4ae35a2543aa2a",
+      "bytes": 2945,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/descent-into-underworld.md"
+    },
+    {
+      "path": "patterns/divine-mother-holy-child.md",
+      "sha256": "fb9ea0de0441a1f84379ba0a52139fa3e8e7f48b75135d29661d156bcd434bec",
+      "bytes": 3036,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/divine-mother-holy-child.md"
+    },
+    {
+      "path": "patterns/flood-and-renewal.md",
+      "sha256": "5c254b6b7f01edcd50125131ddd82e83b04700b0a78c660307355016449fcaa6",
+      "bytes": 2746,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/flood-and-renewal.md"
+    },
+    {
+      "path": "patterns/forbidden-knowledge-and-fire.md",
+      "sha256": "7db8825feff63158b27bd170e1155c9a76b9e07335cb827646b5a5c83b470626",
+      "bytes": 2502,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/forbidden-knowledge-and-fire.md"
+    },
+    {
+      "path": "patterns/hero-journey.md",
+      "sha256": "021a5e1219ccf55a96c3562ff5f654bfaf413bb473a037319a5729c71cac1f43",
+      "bytes": 2721,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/hero-journey.md"
+    },
+    {
+      "path": "patterns/labyrinth-initiation.md",
+      "sha256": "fa4ef80fbc67aee04ce37a3dcadddf19337db1fda395a199f697f7af82974ec0",
+      "bytes": 2381,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/labyrinth-initiation.md"
+    },
+    {
+      "path": "patterns/miraculous-birth.md",
+      "sha256": "29bc2fe9eea9afdb4af697127762c79b514b93128cb7aab61f47a85c2c245d1b",
+      "bytes": 2706,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/miraculous-birth.md"
+    },
+    {
+      "path": "patterns/mystical-quest.md",
+      "sha256": "bfb7eff90038abda2fd66ab93615fb8f1d4167646e8012f7e000c96a5f02628f",
+      "bytes": 4927,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/mystical-quest.md"
+    },
+    {
+      "path": "patterns/sacred-marriage.md",
+      "sha256": "edbb0bf1f999e48e4806c9c22e03cd3d258bde9940ba843efc78ed0fee86596d",
+      "bytes": 2519,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/sacred-marriage.md"
+    },
+    {
+      "path": "patterns/sacred-tree-axis-mundi.md",
+      "sha256": "af36fbae799680c72bd844a30266abb4d9f83135e968ba66c9b5a2021efc37cd",
+      "bytes": 2627,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/sacred-tree-axis-mundi.md"
+    },
+    {
+      "path": "patterns/sacred-twins.md",
+      "sha256": "dfbc6f79672ff90d91564b092a5a1dba826ba1b7e4a73da43fb4dc7f0bf175dc",
+      "bytes": 2457,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/sacred-twins.md"
+    },
+    {
+      "path": "patterns/sacrifice-and-covenant.md",
+      "sha256": "77448280b377e802e2855736e3943bfb1a3e81d349faf15917b32133e5dfc5b5",
+      "bytes": 2934,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/sacrifice-and-covenant.md"
+    },
+    {
+      "path": "patterns/serpent-wisdom-chaos.md",
+      "sha256": "6d135ec9c2f085cacfb3b50b8137db15beb633c01225ab3d8e42ff30dc630222",
+      "bytes": 2865,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/serpent-wisdom-chaos.md"
+    },
+    {
+      "path": "patterns/trickster-at-boundary.md",
+      "sha256": "cd3406b122a846626702cf5b372d4d16217b9f158896e904eed8a0e235f53b67",
+      "bytes": 2734,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/trickster-at-boundary.md"
+    },
+    {
+      "path": "patterns/world-destroying-fire.md",
+      "sha256": "5e17615d10f77a1338949669f4b9a94a217b2b4071574614e3c7e60159957241",
+      "bytes": 2520,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/patterns/world-destroying-fire.md"
+    },
+    {
+      "path": "taxonomy/experiential-motif-families.yml",
+      "sha256": "5c2bc6bfde66f8f34c5853be228eb243174ce48b2924e02cb8fd3db8b43c0b59",
+      "bytes": 31835,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/taxonomy/experiential-motif-families.yml"
+    },
+    {
+      "path": "taxonomy/motif-normalization-expanded.yml",
+      "sha256": "038f480fe09e71520d0a966730b8cb8d7447e39cd78b1772a502b82565cbbd82",
+      "bytes": 8046428,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/taxonomy/motif-normalization-expanded.yml"
+    },
+    {
+      "path": "taxonomy/motif-normalization.yml",
+      "sha256": "94f24cb5aef96e56d8131982a2003a2e1013592e4c83eefd98ee310b1d38114f",
+      "bytes": 32229302,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/taxonomy/motif-normalization.yml"
+    },
+    {
+      "path": "taxonomy/motifs.yml",
+      "sha256": "fe4458a7868c1ea5cabf978e1811fa4f8cbbeaf202f6bddcf93c2b15c9ba9ecb",
+      "bytes": 10495,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/taxonomy/motifs.yml"
+    },
+    {
+      "path": "taxonomy/proposed-new-groups-review.yml",
+      "sha256": "c3f080749edf536c93cf924167c3e90a9dd25097335135ed11e9983e4cbbc6fd",
+      "bytes": 18424,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/taxonomy/proposed-new-groups-review.yml"
+    },
+    {
+      "path": "taxonomy/symbols.yml",
+      "sha256": "e9629fc43a91727c505d74333cde5cd82b14c805fedf88c7683074d0368ea68f",
+      "bytes": 1277,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/taxonomy/symbols.yml"
+    },
+    {
+      "path": "taxonomy/traditions.yml",
+      "sha256": "06e1a71231317f4c69dfdd9c3e402696f4351b5140cfe11cb8e7c5cca06dd7ae",
+      "bytes": 4589,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/taxonomy/traditions.yml"
+    },
+    {
+      "path": "data/sources/auto-ingestion-queue.yml",
+      "sha256": "3520f1e3f9a92889540b2eed7c8b1e9d94c398566d73ec991ccd8159beaba0b7",
+      "bytes": 806727,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/data/sources/auto-ingestion-queue.yml"
+    },
+    {
+      "path": "data/sources/corpus-wave-b-candidates.yml",
+      "sha256": "b24cc43a89d6bc2b38fd41adbec38eeea011a6358f0a40f372dfe2d07ac0d101",
+      "bytes": 8670,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/data/sources/corpus-wave-b-candidates.yml"
+    },
+    {
+      "path": "data/sources/corpus-wave-c-candidates.yml",
+      "sha256": "57d84649b1e28d4ab2e0fc86dd2128cdcf1a283de85cc893a86920d9327ac31e",
+      "bytes": 4605,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/data/sources/corpus-wave-c-candidates.yml"
+    },
+    {
+      "path": "data/sources/seed_sources.yml",
+      "sha256": "ff2ce981495fff8d2eee75c71b6718a4b77be7bdb134168b7c2f2929019e635b",
+      "bytes": 3706,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/data/sources/seed_sources.yml"
+    },
+    {
+      "path": "data/sources/wave-a-source-candidates.yml",
+      "sha256": "a58fbb4f92fff97eb83ca542cac194825acc9d308862ce3213d2603e9a098baf",
+      "bytes": 10681,
+      "upstreamUrl": "https://github.com/ilaydabdogan/ancient-wisdom-atlas/blob/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/data/sources/wave-a-source-candidates.yml"
+    }
+  ],
+  "newAssets": 645,
+  "context": "https://assets.acuity.institute/library/corpora/ancient-wisdom-atlas/07b52ea814bd96b0d6322ec684eeb555fe9dd10f/context-8ed79fad865539e57da455eb5d2675fb9a2a35defd107a65af4e64201af462c7.zip",
+  "readingEditionsGenerated": 322,
+  "existingEditionsReused": 1,
+  "catalogueRecords": 607,
+  "publicAssets": 1262,
+  "verification": {
+    "assetsAndContext": 646,
+    "R2SizeAndFullObjectChecksumPassed": 646,
+    "uploadPayloadSha256Passed": 646,
+    "earlierIndependentHttpSha256Passed": 114
+  },
+  "tests": 49
+}

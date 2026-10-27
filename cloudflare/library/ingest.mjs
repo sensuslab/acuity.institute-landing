@@ -8,7 +8,7 @@ export default {async fetch(request,env) {
       if (request.method !== 'PUT' || !/^(library\/catalogues\/[a-z0-9.-]+\.json|library\/control\/(published-policy|policy-[a-z0-9.-]+)\.json)$/.test(key)) return new Response('Invalid publication target',{status:400});
       const hash = request.headers.get('X-Content-SHA256');
       if (!/^[a-f0-9]{64}$/.test(hash || '') || Number(request.headers.get('Content-Length')) > 5000000) return new Response('Invalid publication identity',{status:400});
-      const mutable = key.endsWith('/latest.json') || key.endsWith('/published-policy.json');
+      const mutable = key.endsWith('/latest.json') || key.endsWith('/public-latest.json') || key.endsWith('/published-policy.json');
       if (!mutable) {
         const existing = await env.LIBRARY.head(key);
         if (existing) {

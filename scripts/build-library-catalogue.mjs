@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {compileSacredTexts,indexLibraryCategories,mergeSacredTexts} from './library-sacred-texts.mjs';
 import { createAssetRegistry } from './library-asset-registry.mjs';
 import { compileLibrary } from './library-catalogue.mjs';
 import { hydrateLibraryImports } from './fetch-library-imports.mjs';
@@ -16,9 +17,14 @@ const catalogue = path.join(root,'src/data/libraryCatalogue.json');
 const manifestPath = path.join(root,'public/library/provenance.json');
 const redirectsPath = path.join(root,'public/library/redirects.json');
 const previous = read(catalogue,[]);
-const result = await compileLibrary({assetRegistry, booksDir:path.join(root,'public/library/books'), categoryLabels:read(path.join(root,'public/library/categories.json'),{}),previousManifest:read(manifestPath,[])});
+const editorialRegistry = assetRegistry ? {...assetRegistry,assets:assetRegistry.assets.filter(a=>!a.recordIds.some(id=>id.startsWith('atlas-')))} : undefined;
+const result = await compileLibrary({assetRegistry:editorialRegistry, booksDir:path.join(root,'public/library/books'), categoryLabels:read(path.join(root,'public/library/categories.json'),{}),previousManifest:read(manifestPath,[])});
 result.books = await attachLibraryOverviews({assetRegistry, books:result.books, publicDir:path.join(root,'public'),
   manifest:read(path.join(root,'content/library-overviews.json'),{version:1,overviews:[]})});
+if(assetRegistry && fs.existsSync(path.join(root,'data/sources/ancient-wisdom-atlas.json'))) {
+  mergeSacredTexts(result.books,compileSacredTexts(read(path.join(root,'data/sources/ancient-wisdom-atlas.json')),assetRegistry));
+  result.categories=indexLibraryCategories(result.books);
+}
 const redirects = read(redirectsPath,{});
 if (assetRegistry) for (const asset of assetRegistry.assets) redirects[asset.legacyUrl] = asset.url;
 for (const old of previous) {
