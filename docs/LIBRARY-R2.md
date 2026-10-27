@@ -23,7 +23,7 @@ Private assets are for authenticated service use. Do not merge/deploy this PR as
 
 Set `READ_TOKEN` as a Worker secret. Trusted backend consumers send `Authorization: Bearer <read-only-secret>` over HTTPS. `INGEST_TOKEN` is a different secret bound only to the temporary ingestor. The read-only gateway never accepts uploads. Use Cloudflare account access to rotate secrets; distribute service credentials only through the consumer's secret manager.
 
-CORS permits the declared library origins in Wrangler configuration. Add each actual staging origin explicitly; an Origin header never grants access. Direct server clients do not require CORS permission.
+CORS permits the declared library origins in Wrangler configuration. Add each actual staging origin explicitly; an Origin header never grants access. Direct server clients do not require CORS permission. Send a descriptive `User-Agent` from backend clients, as the transfer runner does: live requests using the default Python urllib agent received an upstream 403, while the application agent passed. Review a hostname-specific Cloudflare rule if a future client cannot set this header; do not weaken security settings for the whole zone.
 
 ## Consumer contract
 
