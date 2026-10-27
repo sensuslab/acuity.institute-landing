@@ -1,0 +1,3 @@
+# Use different cryptographically random tokens for each role. Never commit real values.
+READ_TOKEN=replace-with-read-only-service-secret
+INGEST_TOKEN=replace-with-separate-curator-secret

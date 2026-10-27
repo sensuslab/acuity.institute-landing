@@ -8,15 +8,15 @@ The library now has three viewing modes in one portal:
 
 ## No separate database is required
 
-This is a curated, repository-managed collection. `public/library/books/` and the per-record metadata files are the authoritative content. A build-time scanner generates the JSON index used by the UI. It records actual formats, file sizes/checksums, viewer capabilities and nested categories. This provides the availability information that a database table would otherwise hold, without a database service or account system.
+This is a curated collection with canonical files in Cloudflare R2. Per-record JSON sidecars in `public/library/books/` remain the editorial source; `content/library-r2-registry.json` supplies independently verified asset identities. Builds combine these with the overview manifest to generate formats, checksums, capabilities and categories without downloading the corpus. See [LIBRARY-R2.md](LIBRARY-R2.md) for access, releases and rollback.
 
-Every production build runs the scanner **before** compiling React. Deleting an EPUB removes the ebook launcher at the next build; an outdated metadata flag cannot enable it. New files must be committed and deployed to appear. The scanner does not watch an unrelated Railway volume or files uploaded after a build.
+Every production build compiles metadata **before** compiling React. Capabilities are derived from verified registry formats; an outdated metadata flag cannot enable an ebook. Add or remove an asset through the reviewed ingestion/registry release process. New sidecars and registry changes must be committed and deployed to appear. The compiler does not watch unrelated volumes or consume unpublished uploads.
 
-If curator uploads, multi-user editing or frequent live changes become necessary, the same record/capability fields can move into a database and object storage later.
+A database is optional for future live curation; object storage is already separate from the application.
 
 ## Folder and filename convention
 
-Use one common basename per record, in one category folder:
+Use one common basename per record, in one category folder, during intake or local file validation. Published binaries use immutable SHA-256 keys in R2; the JSON sidecar retains this editorial category path:
 
 ```text
 public/library/books/Scripture/Buddhism/dhammapada.pdf
@@ -112,7 +112,7 @@ npm test
 npm start
 ```
 
-Railway keeps `npm run build` / `npm start`, `PORT`, and the existing `SHORTS_DIR` video volume. Book assets are included in the build; the default server port is 8080. The development command scans once before Vite starts; run catalogue sync again after adding/removing files during development.
+Railway keeps `npm run build` / `npm start`, `PORT`, and the existing `SHORTS_DIR` video volume. Book assets resolve through the R2 gateway; builds include metadata and the application rather than the full corpus. The default server port is 8080. The development command scans once before Vite starts; run catalogue sync again after adding/removing files during development.
 
 ## Reader behaviour and privacy
 
@@ -126,3 +126,4 @@ Railway keeps `npm run build` / `npm start`, `PORT`, and the existing `SHORTS_DI
 ## Future source-grounded inquiry
 
 Retain stable IDs, original files, source provenance and reviewed text editions. Add separate extraction/section anchors for retrieval later. This release provides viewing and curated availability; it does not offer LLM answers or automatically OCR uploaded sources.
+

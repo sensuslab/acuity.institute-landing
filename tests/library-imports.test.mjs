@@ -61,7 +61,8 @@ test('Every imported deck has a distinct PDF-only presentation record with its r
   assert.equal(importedBooks.length,imports.length);
   for (const entry of imports) {
     const url = '/' + entry.path.slice('public/'.length).split('/').map(encodeURIComponent).join('/');
-    const book = importedBooks.find(book => book.pdf === url);
+    const book = importedBooks.find(book => book.assets.some(asset=>asset.sha256 === entry.sha256));
+    assert.ok(url.startsWith('/library/books/'));
     assert.ok(book,entry.originalFilename);
     assert.equal(book.originalFilename,entry.originalFilename);
     assert.deepEqual(book.capabilities,{pdf:true,ebook:false,present:true});
@@ -107,8 +108,8 @@ test('Imported source formats match actual ebook capabilities, including PDF-onl
   const stems = new Set(imports.map(entry => entry.path.replace(/\.(pdf|epub)$/, '')));
   let pdfOnly=0;
   for (const stem of stems) {
-    const url = '/' + stem.slice('public/'.length).split('/').map(encodeURIComponent).join('/');
-    const book = books.find(book => book.pdf === url + '.pdf' || book.epub === url + '.epub');
+    const identities = imports.filter(entry=>entry.path===stem+'.pdf'||entry.path===stem+'.epub').map(entry=>entry.sha256);
+    const book = books.find(book => book.assets.some(asset=>identities.includes(asset.sha256)));
     assert.ok(book, stem);
     const hasPdf=imports.some(entry=>entry.path===stem+'.pdf');
     const hasEpub=imports.some(entry=>entry.path===stem+'.epub');
@@ -126,3 +127,4 @@ test('Imported EPUB paths are accepted alongside PDFs', async t => {
   assert.deepEqual(await hydrateLibraryImports({...options, fetchImpl:async () => new Response(bytes)}), {downloaded:1,cached:0});
   assert.deepEqual(fs.readFileSync(path.join(root, entry.path)), bytes);
 });
+

@@ -4,7 +4,6 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
-import { createHash } from 'node:crypto';
 import http from 'node:http';
 const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json','utf8'));
 const port = 18000 + Math.floor(Math.random()*10000);
@@ -22,20 +21,16 @@ before(async () => {
   });
 });
 after(()=>{server?.kill();fs.rmSync(shorts,{recursive:true,force:true});});
-test('Catalogue files match their provenance hashes and usable formats',()=>{
-  const manifest = JSON.parse(fs.readFileSync('public/library/provenance.json','utf8'));
-  assert.equal(new Set(books.map(b=>b.id)).size,books.length);
+test('Catalogue assets retain verified R2 identities and usable format pairs',()=>{
+  const registry=JSON.parse(fs.readFileSync('content/library-r2-registry.json','utf8'));
+  const byHash=new Map(registry.assets.map(asset=>[asset.sha256,asset]));
+  assert.equal(byHash.size,617);assert.equal(new Set(books.map(b=>b.id)).size,books.length);
   for(const book of books){
     assert.ok(book.pdf || book.epub);assert.match(book.sourceUrl,/^https:\/\//);
-    for(const fmt of ['pdf','epub','text']){
-      if (!book[fmt]) continue;
-      const bytes=fs.readFileSync('public'+decodeURIComponent(book[fmt]));
-      const record=manifest.find(r=>r.bookId===book.id && r.format===fmt);
-      assert.equal(createHash('sha256').update(bytes).digest('hex'),record.sha256);
-      assert.equal(bytes.length,record.bytes);
-      if(fmt==='pdf')assert.equal(bytes.subarray(0,5).toString(),'%PDF-');
-      if(fmt==='epub')assert.equal(bytes.subarray(0,2).toString(),'PK');
-      if(fmt==='text' && book.sourceId)assert.match(bytes.toString(),/END OF THE PROJECT GUTENBERG/);
+    assert.equal(book.capabilities.ebook,!!(book.pdf&&book.epub));
+    for(const item of [book,...book.overviews])for(const asset of item.assets){
+      const verified=byHash.get(asset.sha256);assert.ok(verified);assert.equal(verified.status,'verified');
+      assert.equal(asset.url,verified.url);assert.equal(asset.bytes,verified.bytes);
     }
   }
 });
@@ -50,26 +45,13 @@ test('Library has crawlable book content, its own canonical and valid JSON-LD',a
   assert.equal(redirect.status,308);assert.equal(redirect.headers.get('location'),'/library/?book=meditations');
   assert.equal((await fetch(origin+'/about/')).status,200);
 });
-test('PDF and EPUB downloads return correct bytes and content types',async()=>{
-  for(const b of books){
-    for(const fmt of ['pdf','epub']){
-      if (!b[fmt]) continue;
-      const res=await fetch(origin+b[fmt]);assert.equal(res.status,200);
-      assert.equal(res.headers.get('content-type'),fmt==='pdf'?'application/pdf':'application/epub+zip');
-      assert.deepEqual(Buffer.from(await res.arrayBuffer()),fs.readFileSync('public'+decodeURIComponent(b[fmt])));
-    }
+test('Legacy source and overview download URLs redirect to canonical R2 identities',async()=>{
+  const registry=JSON.parse(fs.readFileSync('content/library-r2-registry.json','utf8'));
+  for(const format of ['pdf','epub','pptx','text']){
+    const asset=registry.assets.find(item=>item.format===format);
+    const res=await fetch(origin+asset.legacyUrl,{redirect:'manual'});
+    assert.equal(res.status,308);assert.equal(res.headers.get('location'),asset.url);
   }
-});
-test('PDF GET ranges, suffix ranges, HEAD and unsatisfiable ranges',async()=>{
-  const url=origin+books[0].pdf;const bytes=fs.readFileSync('public'+decodeURIComponent(books[0].pdf));
-  for(const [range,start,end] of [['bytes=0-31',0,31],['bytes=-32',bytes.length-32,bytes.length-1],['bytes=32-',32,bytes.length-1]]){
-    const res=await fetch(url,{headers:{Range:range}});assert.equal(res.status,206);
-    assert.equal(res.headers.get('content-range'),`bytes ${start}-${end}/${bytes.length}`);
-    assert.deepEqual(Buffer.from(await res.arrayBuffer()),bytes.subarray(start,end+1));
-  }
-  const head=await fetch(url,{method:'HEAD',headers:{Range:'bytes=0-31'}});
-  assert.equal(head.status,200);assert.equal(Number(head.headers.get('content-length')),bytes.length);assert.equal((await head.arrayBuffer()).byteLength,0);
-  for(const range of ['bytes=999999999-','bytes=-0','bytes=10-1','bytes=','bytes=0-1,5-9'])assert.equal((await fetch(url,{headers:{Range:range}})).status,416);
 });
 test('Missing files are 404, invalid URL encoding is 400, POST is 405',async()=>{
   for(const url of ['/library/books/missing.pdf','/missing-page','/assets/no.js'])assert.equal((await fetch(origin+url)).status,404);
@@ -102,17 +84,14 @@ test('Metadata search combines words, collection and format filters',async()=>{
   assert.ok(filterBooks('thunderous silence', 'All collections','all').some(book=>book.id==='the-teaching-of-vimalakirti-toh-176-thurman-trans'));
 });
 
-test('Companion links appear in crawlable HTML and serve the correct PDF/PPTX bytes',async()=>{
+test('Companion links appear in crawlable HTML with canonical R2 PDF/PPTX URLs',async()=>{
  const html=await (await fetch(origin+'/library/')).text();
  const source=books.find(book=>book.id==='tao-te-ching-legge');
  const overview=source.overviews[0];
  assert.ok(html.includes(`overview=${overview.id}`));
  for(const format of ['pdf','pptx']) {
-  const url=overview[format];assert.ok(url);
-  const response=await fetch(origin+url,{headers:{Range:'bytes=0-31'}});
-  assert.equal(response.status,206);
-  assert.equal(response.headers.get('content-type'),format==='pdf'?'application/pdf':'application/vnd.openxmlformats-officedocument.presentationml.presentation');
-  assert.deepEqual(Buffer.from(await response.arrayBuffer()),fs.readFileSync('public'+url).subarray(0,32));
+  const asset=overview.assets.find(item=>item.format===format);assert.ok(asset);
+  assert.equal(overview[format],asset.url);assert.match(asset.url,/^https:\/\/assets\.acuity\.institute\/library\/assets\/[a-f0-9]{64}\./);
  }
  const graphs=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match=>JSON.parse(match[1]));
  const collection=graphs.find(graph=>graph['@type']==='CollectionPage');
@@ -124,3 +103,4 @@ test('Old download links redirect to the same categorised edition',async()=>{
  const res=await fetch(origin+'/library/books/meditations.pdf',{redirect:'manual'});
  assert.equal(res.status,308);assert.equal(res.headers.get('location'),books.find(b=>b.id==='meditations').pdf);
 });
+

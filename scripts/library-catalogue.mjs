@@ -8,7 +8,7 @@ const urlFor = relative => '/library/books/' + relative.split(path.sep).map(enco
 export const fileForUrl = (publicDir, url) => path.join(publicDir, decodeURIComponent(url));
 const label = name => name.replace(/[-_]/g, ' ');
 
-export async function compileLibrary({ booksDir, categoryLabels = {}, previousManifest = [] }) {
+export async function compileLibrary({ booksDir, categoryLabels = {}, previousManifest = [], assetRegistry }) {
   const groups = new Map();
   function walk(directory) {
     for (const entry of fs.readdirSync(directory, {withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name))) {
@@ -18,6 +18,7 @@ export async function compileLibrary({ booksDir, categoryLabels = {}, previousMa
       if (entry.isDirectory()) {walk(full);continue;}
       const ext = path.extname(entry.name).toLowerCase();
       if (!(ext in extensions) && ext !== '.json') continue;
+      if (assetRegistry && ext !== '.json') continue;
       const relative = path.relative(booksDir, full);
       const stem = relative.slice(0,-ext.length);
       const key = stem.toLocaleLowerCase();
@@ -28,6 +29,18 @@ export async function compileLibrary({ booksDir, categoryLabels = {}, previousMa
     }
   }
   walk(booksDir);
+  if (assetRegistry) for (const asset of assetRegistry.assets) {
+    const decoded = decodeURIComponent(asset.legacyUrl);
+    if (!decoded.startsWith('/library/books/')) continue;
+    const relative = decoded.slice('/library/books/'.length);
+    const ext = path.extname(relative);
+    const stem = relative.slice(0,-ext.length);
+    const key = stem.toLocaleLowerCase();
+    const group = groups.get(key) || {stem,files:{}};
+    if (group.files[asset.format]) throw new Error(`Duplicate registry asset: ${relative}`);
+    group.files[asset.format] = {relative,remote:asset};
+    groups.set(key,group);
+  }
   const books = []; const manifest = []; const ids = new Set();
   for (const {stem,files} of groups.values()) {
     if (!files.pdf && !files.epub && !files.pptx) {
@@ -56,26 +69,30 @@ export async function compileLibrary({ booksDir, categoryLabels = {}, previousMa
       categoryKey,categoryPath,categoryLabel:categoryPath.join(' / ') || 'Uncategorised', assets:[]};
     for (const format of ['pdf','epub','text','pptx']) {
       if (!files[format]) continue;
-      const bytes = fs.readFileSync(files[format].full);
-      if (format === 'pdf' && bytes.subarray(0,5).toString() !== '%PDF-') throw new Error(`${stem}: invalid PDF header`);
-      if (format === 'epub' || format === 'pptx') {
-        const archive = await JSZip.loadAsync(bytes, {checkCRC32:true});
-        if (format === 'epub') {
-          if (!archive.file('mimetype') || (await archive.file('mimetype').async('string')).trim() !== 'application/epub+zip' || !archive.file('META-INF/container.xml')) {
-            throw new Error(`${stem}: not a valid EPUB container`);
+      const remote = files[format].remote;
+      const bytes = remote ? null : fs.readFileSync(files[format].full);
+      if (!remote) {
+        if (format === 'pdf' && bytes.subarray(0,5).toString() !== '%PDF-') throw new Error(`${stem}: invalid PDF header`);
+        if (format === 'epub' || format === 'pptx') {
+          const archive = await JSZip.loadAsync(bytes, {checkCRC32:true});
+          if (format === 'epub') {
+            if (!archive.file('mimetype') || (await archive.file('mimetype').async('string')).trim() !== 'application/epub+zip' || !archive.file('META-INF/container.xml')) {
+              throw new Error(`${stem}: not a valid EPUB container`);
+            }
+          } else if (!archive.file('[Content_Types].xml') || !archive.file('ppt/presentation.xml')) {
+            throw new Error(`${stem}: not a valid PowerPoint archive`);
           }
-        } else if (!archive.file('[Content_Types].xml') || !archive.file('ppt/presentation.xml')) {
-          throw new Error(`${stem}: not a valid PowerPoint archive`);
         }
       }
-      const url = urlFor(files[format].relative);
-      const sha256 = createHash('sha256').update(bytes).digest('hex');
+      const url = remote ? remote.url : urlFor(files[format].relative);
+      const size = remote ? remote.bytes : bytes.length;
+      const sha256 = remote ? remote.sha256 : createHash('sha256').update(bytes).digest('hex');
       book[format] = url;
-      if (format === 'pdf') book.pdfBytes = bytes.length;
-      book.assets.push({format,url,bytes:bytes.length,sha256});
+      if (format === 'pdf') book.pdfBytes = size;
+      book.assets.push({format,url,bytes:size,sha256});
       const previous = previousManifest.find(r => r.bookId === book.id && r.format === format && r.sha256 === sha256);
       const {path:_oldPath, verifiedAt:_verified, ...original} = previous || {};
-      manifest.push({...original,bookId:book.id,format,path:url,bytes:bytes.length,sha256,source:book.sourceUrl});
+      manifest.push({...original,bookId:book.id,format,path:url,bytes:size,sha256,source:book.sourceUrl});
     }
     book.capabilities = {pdf:!!book.pdf, ebook:!!(book.pdf && book.epub), present:!!book.pdf};
     book.kind = categorySegments[0]?.toLowerCase() === 'presentations' || !!book.pptx ? 'presentation' : 'book';
@@ -97,3 +114,4 @@ export async function compileLibrary({ booksDir, categoryLabels = {}, previousMa
   const categories = [...categoryMap.values()].sort((a,b)=>a.key.localeCompare(b.key));
   return {books, categories, manifest};
 }
+

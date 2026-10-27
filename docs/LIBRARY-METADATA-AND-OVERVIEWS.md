@@ -88,3 +88,8 @@ Run `npm ci`, `npm run build`, `npm test`, `npm run typecheck` and `npm run lint
 `npm run catalogue:sync` regenerates the catalogue and derived indexes. Update
 sidecars and manifests instead of editing generated catalogues by hand. Failed
 or changed downloads stop the build; cached bytes are checked again.
+
+
+## R2 migration
+
+Canonical files now use R2 identities from `content/library-r2-registry.json`. The registry replaces mandatory Dropbox hydration in normal builds; sidecars and overview relationships remain editable here. New bytes are validated during ingestion and independently downloaded from R2 for size/SHA-256 verification. See [LIBRARY-R2.md](LIBRARY-R2.md) for the current release and access workflow. The local hydration instructions above remain an optional recovery/audit path when no R2 registry is selected.

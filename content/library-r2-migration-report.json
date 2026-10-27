@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "release": "2026-10-27-r2-v1",
+  "verifiedFiles": 617,
+  "verifiedBytes": 7810492169,
+  "publicFiles": 226,
+  "authenticatedFiles": 391,
+  "catalogue": {
+    "version": 1,
+    "release": "2026-10-27-r2-v1",
+    "catalogueUrl": "https://assets.acuity.institute/library/catalogues/2026-10-27-r2-v1.json",
+    "sha256": "9f59a3c7e129808302dc19b313706d7b2052e2c7c69f673d99fb61a31302feb7",
+    "bytes": 1766628,
+    "assetCount": 617,
+    "recordCount": 285
+  },
+  "verification": "Independent GET of every R2 object; byte count and SHA-256 compared with reviewed inventory",
+  "dropboxOriginals": "retained",
+  "sourceCommit": "3cf45acbe6a7c8cfb24bf8c142a58beb34ebc68b",
+  "checks": [
+    {
+      "check": "catalogue rollback",
+      "release": "2026-10-27-r2-pilot",
+      "catalogueSha256": "5b8d3f372f4bf945e21c5f990897db361a246aec4a478028eee6795451b01cd2",
+      "result": "passed"
+    },
+    {
+      "check": "final release restored",
+      "release": "2026-10-27-r2-v1",
+      "catalogueSha256": "9f59a3c7e129808302dc19b313706d7b2052e2c7c69f673d99fb61a31302feb7",
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "public",
+      "format": "pdf",
+      "authenticated": false,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "public",
+      "format": "pdf",
+      "authenticated": true,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "public",
+      "format": "epub",
+      "authenticated": false,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "public",
+      "format": "epub",
+      "authenticated": true,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "public",
+      "format": "pptx",
+      "authenticated": false,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "public",
+      "format": "pptx",
+      "authenticated": true,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "private",
+      "format": "pdf",
+      "authenticated": false,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "private",
+      "format": "pdf",
+      "authenticated": true,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "private",
+      "format": "epub",
+      "authenticated": false,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "private",
+      "format": "epub",
+      "authenticated": true,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "private",
+      "format": "pptx",
+      "authenticated": false,
+      "result": "passed"
+    },
+    {
+      "check": "gateway access/range/CORS",
+      "visibility": "private",
+      "format": "pptx",
+      "authenticated": true,
+      "result": "passed"
+    }
+  ],
+  "buildWithoutLocalBinaries": "passed",
+  "browserUI": "Not verified: Chromium download failed",
+  "applicationDeployment": "Not deployed; follow-up PR requires private-reader access decision",
+  "tests": 42,
+  "typecheck": "passed",
+  "lint": "passed",
+  "workerTypecheck": "passed",
+  "temporaryIngestionWorker": "removed",
+  "temporaryIngestionHostname": "removed",
+  "bucketPublicAccess": "disabled; controlled gateway only"
+}

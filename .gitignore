@@ -83,3 +83,17 @@ public/library/books/Scripture/Early Church Fathers/*.epub
 public/library/books/Scripture/Early Church Fathers/*.pdf
 public/library/books/Scripture/Hinduism/*.epub
 public/library/books/Scripture/Hinduism/*.pdf
+
+
+# Local Worker credentials and generated runtime types
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+cloudflare/library/worker-configuration.d.ts
+.wrangler/
+
+__pycache__/
+*.pyc
+
+# Full migration inventories contain access-bearing provenance and stay private.
+content/library-r2-inventory.json

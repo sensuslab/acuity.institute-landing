@@ -1,0 +1,10 @@
+{
+  "name": "acuity-library-ingest",
+  "main": "ingest.mjs",
+  "compatibility_date": "2026-10-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "secrets": {"required":["INGEST_TOKEN"]},
+  "r2_buckets": [{"binding":"LIBRARY","bucket_name":"acuity"}],
+  "observability": {"enabled":true,"head_sampling_rate":0.1}
+}

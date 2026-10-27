@@ -1,0 +1,12 @@
+{
+  "name": "acuity-library-assets",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "secrets": {"required":["READ_TOKEN"]},
+  "r2_buckets": [{"binding":"LIBRARY","bucket_name":"acuity"}],
+  "vars": {"ALLOWED_ORIGINS":"https://acuity.institute,https://www.acuity.institute,http://localhost:5173"},
+  "observability": {"enabled":true,"head_sampling_rate":0.1},
+  "routes": [{"pattern":"assets.acuity.institute","custom_domain":true}]
+}
