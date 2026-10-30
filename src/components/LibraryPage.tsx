@@ -26,7 +26,10 @@ export default function LibraryPage() {
   useEffect(()=>{const controller=new AbortController();void fetchPublicLibrary(controller.signal).then(setCatalogue).catch(()=>{/* The verified build-time catalogue remains available offline. */});return()=>controller.abort();},[]);
   const [query, setQuery] = useState(() => new URLSearchParams(window.location.search).get('q') ?? '');
   const [collection, setCollection] = useState('All collections');
-  const [format, setFormat] = useState('all');
+  const [format, setFormat] = useState(() => {
+    const selected = new URLSearchParams(window.location.search).get('format');
+    return selected && ['pdf', 'epub', 'pptx', 'ebook'].includes(selected) ? selected : 'all';
+  });
   const [sort, setSort] = useState('curated');
   const [selected, setSelected] = useState<LibraryBook | undefined>(()=>selectedFromUrl());
   useEffect(()=>{setSelected(selectedFromUrl(books));},[books]);
@@ -113,4 +116,5 @@ function BookDetails({ book, onClose, onRead, onOverview }: {book: LibraryBook; 
     <div className="library-edition"><h3>About this edition</h3><p>{book.editionNote}</p><p>{book.rights}</p>{book.sourceUrl && <a href={book.sourceUrl} target="_blank" rel="noreferrer">{book.sourceId ? 'View source at Project Gutenberg' : 'View edition source'} <ArrowUpRight size={14} /></a>}{book.markdown && <a href={book.markdown} download>Download Markdown source <ArrowUpRight size={14}/></a>}{book.trademark && <><h3>Trademark metadata</h3><p>{book.trademark.marks.join(', ') || book.trademark.status}. {book.trademark.use_rules}</p></>}{book.text && <a href={book.text} target="_blank" rel="noreferrer">Read accessible plain text <ArrowUpRight size={14} /></a>}</div>
   </dialog>;
 }
+
 

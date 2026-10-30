@@ -1,36 +1,9 @@
-import { Vault } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ToolClosing, ToolHero, ToolPage } from '../components/tools/ToolPrimitives';
 
 export default function WisdomVaultPage() {
-  return (
-    <div className="min-h-screen bg-void text-starlight pt-28 pb-20 opacity-75">
-      <div className="max-w-4xl mx-auto px-6">
-        <Link to="/tools" className="font-mono text-[11px] uppercase tracking-[0.2em] text-gold/70 hover:text-gold mb-8 inline-block">← The Tools</Link>
-
-        <div className="flex items-center gap-4 mb-8">
-          <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
-            <Vault className="w-8 h-8 text-starlight/40" />
-          </div>
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-starlight/40">Under development</p>
-            <h1 className="font-display text-4xl md:text-5xl text-starlight/60">WisdomVault</h1>
-          </div>
-        </div>
-
-        <p className="text-lg text-starlight/50 mb-10 max-w-2xl leading-relaxed">
-          An MCP tool for integrating your own services and applications with the Acuity knowledge library. Read-only access for external tools, with admin capabilities for ingestion.
-        </p>
-
-        <div className="glass-card rounded-2xl p-8 border-dashed opacity-80">
-          <h2 className="font-display text-2xl mb-4 text-starlight/50">Coming soon</h2>
-          <p className="text-starlight/50 mb-4">
-            WisdomVault (Acuity.MCP) will provide streamable HTTP and REST access to the knowledge library — scripture, commentary, ebooks and articles. Tools for search, compare, parallels, passage retrieval and ask, with provenance.
-          </p>
-          <p className="text-sm text-starlight/40">
-            See mcp.acuity.institute for tool access. Greyed out in navigation while under development.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+  return <ToolPage id="wisdomvault" description="WisdomVault is under development: connect the Acuity knowledge library to your own services and applications through MCP.">
+    <ToolHero kind="wisdomvault" index="05" title={<>Wisdom, wherever<br /><em>you work.</em></>} description="A connection to the Acuity knowledge library for your own services and applications. WisdomVault is under development and will form part of Acuity.One." />
+    <section id="capabilities" className="tool-wrap tool-section wisdom-draft"><p className="tool-eyebrow">On the horizon / Under development</p><h2>Bring the source<br /><em>into your own context.</em></h2><p>WisdomVault is being developed as an MCP connection for discovering passages, finding exact phrases, comparing traditions and reading knowledge with its source references. It extends the Library into compatible tools and applications you choose.</p><p>Its collection is designed to hold scripture, commentary, mystical literature, essays and selected articles, with author, edition and passage context preserved.</p><p>WisdomVault is separate from <Link to="/tools/codex">myVault inside Acuity.Codex</Link>, which keeps your private study notes and outputs.</p></section><div id="journey"><ToolClosing current="wisdomvault" /></div>
+  </ToolPage>;
 }

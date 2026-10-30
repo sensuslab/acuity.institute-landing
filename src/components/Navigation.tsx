@@ -1,128 +1,45 @@
-import { useState, useEffect } from 'react';
-import { Hexagon, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { ChevronDown, Hexagon, Menu, X } from 'lucide-react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { tools } from './tools/toolDirectory';
+import './navigation.css';
 
-const NAV_LINKS = [
-  { label: 'Library', href: '/library/' },
-  { label: 'Philosophy', href: '#manifesto' },
-  { label: 'Webinars', href: '#', action: 'webinars' as const },
-  { label: 'Shorts', href: '#', action: 'shorts' as const },
-];
-
-const TOOLS = [
-  { label: 'Agent', to: '/tools/agent' },
-  { label: 'Codex', to: '/tools/codex' },
-  { label: 'Library', to: '/tools/library' },
-  { label: 'Search', to: '/tools/search' },
-  { label: 'WisdomVault', to: '/tools/wisdomvault', disabled: true },
-];
-
-export default function Navigation({
-  onWebinarsClick,
-  onShortsClick,
-}: {
-  onWebinarsClick: () => void;
-  onShortsClick: () => void;
-}) {
-  const [scrolled, setScrolled] = useState(false);
-  const [visible, setVisible] = useState(false);
+export default function Navigation({ onWebinarsClick, onShortsClick }: { onWebinarsClick: () => void; onShortsClick: () => void }) {
   const [toolsOpen, setToolsOpen] = useState(false);
-
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const nav = useRef<HTMLElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const mobileTrigger = useRef<HTMLButtonElement>(null);
+  const location = useLocation();
+  useEffect(() => { setToolsOpen(false); setMobileOpen(false); }, [location.pathname, location.hash]);
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 500);
-
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+    if (!toolsOpen && !mobileOpen) return;
+    const dismiss = (event: PointerEvent) => {
+      if (!nav.current?.contains(event.target as Node)) { setToolsOpen(false); setMobileOpen(false); }
     };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('scroll', handleScroll);
+    const escape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      if (mobileOpen) { setMobileOpen(false); mobileTrigger.current?.focus(); }
+      else { setToolsOpen(false); trigger.current?.focus(); }
     };
-  }, []);
-
-  return (
-    <nav
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-40 transition-all duration-700 ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-      }`}
-    >
-      <div
-        className={`flex items-center gap-2 md:gap-8 px-3 md:px-8 py-2.5 md:py-3 rounded-full border transition-all duration-500 ${
-          scrolled
-            ? 'bg-void/80 border-white/10 backdrop-blur-xl'
-            : 'bg-void/40 border-white/[0.05] backdrop-blur-md'
-        }`}
-      >
-        <Link to="/" className="flex items-center gap-2 group">
-          <Hexagon className="w-4 h-4 text-gold transition-transform duration-300 group-hover:rotate-90" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-starlight">
-            Acuity
-          </span>
-        </Link>
-
-        <div className="h-3 w-px bg-white/10" />
-
-        <div className="flex items-center gap-3 md:gap-6 relative">
-          <div className="relative">
-            <button
-              onClick={() => setToolsOpen(!toolsOpen)}
-              className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.08em] md:tracking-[0.15em] text-starlight/60 gold-underline pb-0.5 transition-colors duration-300 hover:text-starlight flex items-center gap-1"
-            >
-              The Tools
-              <ChevronDown className={`w-3 h-3 transition-transform ${toolsOpen ? 'rotate-180' : ''}`} />
-            </button>
-            {toolsOpen && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-void/95 border border-white/10 rounded-xl py-2 shadow-xl backdrop-blur-xl z-50">
-                {TOOLS.map((tool) => (
-                  tool.disabled ? (
-                    <div
-                      key={tool.label}
-                      className="px-4 py-2 text-[11px] uppercase tracking-wider text-starlight/30 cursor-not-allowed"
-                    >
-                      {tool.label}
-                    </div>
-                  ) : (
-                    <Link
-                      key={tool.label}
-                      to={tool.to}
-                      onClick={() => setToolsOpen(false)}
-                      className="block px-4 py-2 text-[11px] uppercase tracking-wider text-starlight/70 hover:text-gold hover:bg-white/5 transition-colors"
-                    >
-                      {tool.label}
-                    </Link>
-                  )
-                ))}
-              </div>
-            )}
-          </div>
-
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={
-                'action' in link && link.action === 'webinars'
-                  ? (e: React.MouseEvent) => {
-                      e.preventDefault();
-                      onWebinarsClick();
-                    }
-                  : 'action' in link && link.action === 'shorts'
-                    ? (e: React.MouseEvent) => {
-                        e.preventDefault();
-                        onShortsClick();
-                      }
-                    : undefined
-              }
-              className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.08em] md:tracking-[0.15em] text-starlight/60 gold-underline pb-0.5 transition-colors duration-300 hover:text-starlight"
-            >
-              {link.label}
-            </a>
-          ))}
+    document.addEventListener('pointerdown', dismiss);
+    document.addEventListener('keydown', escape);
+    return () => { document.removeEventListener('pointerdown', dismiss); document.removeEventListener('keydown', escape); };
+  }, [toolsOpen, mobileOpen]);
+  const close = () => { setMobileOpen(false); setToolsOpen(false); };
+  const media = (action: () => void) => { close(); action(); };
+  return <nav ref={nav} className="acuity-nav" aria-label="Main navigation">
+    <div className="acuity-nav-bar">
+      <Link to="/" className="acuity-nav-brand" onClick={close}><Hexagon size={19} strokeWidth={1.3} aria-hidden="true" /><span>ACUITY<span>.INSTITUTE</span></span></Link>
+      <div className="acuity-nav-desktop">
+        <div className="acuity-nav-tools">
+          <button ref={trigger} className={location.pathname.startsWith('/tools') ? 'nav-current' : ''} aria-expanded={toolsOpen} aria-controls="tools-navigation" onClick={() => setToolsOpen(!toolsOpen)}>The Tools <ChevronDown size={12} className={toolsOpen ? 'is-open' : ''} aria-hidden="true" /></button>
+          {toolsOpen ? <div className="acuity-tools-dropdown" id="tools-navigation"><Link to="/tools" className="acuity-tools-overview" onClick={close}>The Tools <span>Explore the ecosystem ↗</span></Link>{tools.map(tool => tool.id === 'wisdomvault' ? <div key={tool.id} className="acuity-tool-disabled" aria-disabled="true"><tool.icon size={18} strokeWidth={1.2} aria-hidden="true" /><span>WisdomVault<small>Under development</small></span><span>SOON</span></div> : <NavLink key={tool.id} to={'/tools/' + tool.id} onClick={close}><tool.icon size={18} strokeWidth={1.2} aria-hidden="true" /><span>{tool.id === 'library' ? 'Library' : tool.id === 'agent' ? 'Agent' : tool.id === 'codex' ? 'Codex' : 'Search'}<small>{tool.role}</small></span><span className={tool.live ? 'nav-live' : ''}>{tool.live ? 'LIVE' : 'SOON'}</span></NavLink>)}</div> : null}
         </div>
+        <Link to="/library">Library</Link><Link to="/#manifesto">Philosophy</Link><button onClick={() => media(onWebinarsClick)}>Webinars</button><button onClick={() => media(onShortsClick)}>Shorts</button>
       </div>
-    </nav>
-  );
+      <button ref={mobileTrigger} className="acuity-mobile-trigger" aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => setMobileOpen(!mobileOpen)}>{mobileOpen ? <X size={20} /> : <Menu size={20} />}</button>
+    </div>
+    {mobileOpen ? <div className="acuity-mobile-panel" id="mobile-navigation"><Link to="/tools" className="acuity-mobile-heading" onClick={close}>The Tools <span>Explore all ↗</span></Link>{tools.map(tool => tool.id === 'wisdomvault' ? <div key={tool.id} aria-disabled="true" className="acuity-tool-disabled"><tool.icon size={18} strokeWidth={1.2} aria-hidden="true" /><span>WisdomVault<small>Under development</small></span></div> : <NavLink key={tool.id} to={'/tools/' + tool.id} onClick={close}><tool.icon size={18} strokeWidth={1.2} aria-hidden="true" /><span>{tool.name}</span><small className={tool.live ? 'nav-live' : ''}>{tool.live ? 'Live now' : 'Coming soon'}</small></NavLink>)}<div className="acuity-mobile-secondary"><Link to="/library" onClick={close}>Enter the Library</Link><Link to="/#manifesto" onClick={close}>Philosophy</Link><button onClick={() => media(onWebinarsClick)}>Webinars</button><button onClick={() => media(onShortsClick)}>Shorts</button></div></div> : null}
+  </nav>;
 }

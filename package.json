@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/build-library-catalogue.mjs && vite",
-    "build": "node scripts/build-library-catalogue.mjs && vite build && node scripts/build-library-pages.mjs",
+    "build": "node scripts/build-library-catalogue.mjs && vite build && node scripts/build-library-pages.mjs && node scripts/build-tools-pages.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
@@ -48,3 +48,4 @@
     "@xmldom/xmldom": "^0.8.11"
   }
 }
+

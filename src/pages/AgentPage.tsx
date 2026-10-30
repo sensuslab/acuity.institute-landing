@@ -1,57 +1,51 @@
-import { Eye } from 'lucide-react';
+import { BookOpen, Compass, FileSearch, GitCompare, Library, MessageCircle, Quote, Route, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { InquiryPreview } from '../components/tools/ToolDemos';
+import { FeatureGrid, Journey, OutcomeStrip, SectionHeading, SourcePrinciple, ToolClosing, ToolFaq, ToolHero, ToolPage } from '../components/tools/ToolPrimitives';
 
 export default function AgentPage() {
-  return (
-    <div className="min-h-screen bg-void text-starlight pt-28 pb-20">
-      <div className="max-w-4xl mx-auto px-6">
-        <Link to="/tools" className="font-mono text-[11px] uppercase tracking-[0.2em] text-gold/70 hover:text-gold mb-8 inline-block">← The Tools</Link>
-
-        <div className="flex items-center gap-4 mb-8">
-          <div className="w-16 h-16 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center">
-            <Eye className="w-8 h-8 text-gold" />
-          </div>
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-gold">Source-grounded inquiry</p>
-            <h1 className="font-display text-4xl md:text-5xl text-gradient-gold">Acuity.Agent</h1>
-          </div>
-        </div>
-
-        <p className="text-lg text-starlight/70 mb-10 max-w-2xl leading-relaxed">
-          The inquiry tool that searches the curated corpus and answers from what it actually finds — with citations, provenance and editions kept distinct. When the sources do not hold the answer, it says so.
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-10">
-          <div className="glass-card rounded-2xl p-6">
-            <h2 className="font-display text-xl text-gold mb-3">Explore</h2>
-            <ul className="space-y-2 text-sm text-starlight/60">
-              <li>• Grep, find and cat across the sacred-text library</li>
-              <li>• Ancient Wisdom Atlas and public-domain sources</li>
-              <li>• Structured passage retrieval with neighbours</li>
-              <li>• Chat with search steps shown in real time</li>
-            </ul>
-          </div>
-          <div className="glass-card rounded-2xl p-6">
-            <h2 className="font-display text-xl text-gold mb-3">Synthesise & Interpret</h2>
-            <ul className="space-y-2 text-sm text-starlight/60">
-              <li>• Final synthesis after broad corpus research</li>
-              <li>• Compare themes across traditions</li>
-              <li>• Personalised pathways to wisdom</li>
-              <li>• Admin mode for usage, sources and logs</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="glass-card rounded-2xl p-8">
-          <h2 className="font-display text-2xl mb-4">How it works</h2>
-          <p className="text-starlight/70 mb-4">
-            The agent is instructed to answer only from files it finds in the sandbox. The sacred-text archive is vendored and mounted. Other sources can be added and synced by administrators. Answers include citations so evidence can be inspected.
-          </p>
-          <p className="text-starlight/70">
-            Available at <a href="https://agent.acuity.institute" className="text-gold hover:underline" target="_blank" rel="noopener">agent.acuity.institute</a>. Part of Acuity.One — coming soon.
-          </p>
-        </div>
+  return <ToolPage id="agent" description="Acuity.Agent — source-led inquiry into sacred texts and esoteric wisdom. Explore passages, compare traditions and develop your own understanding. Coming soon in Acuity.One.">
+    <ToolHero kind="agent" index="01" title={<>Let curiosity<br />become <em>clarity.</em></>} description="A question is a doorway. Acuity.Agent follows it through the Library: finding passages, illuminating context and bringing different voices into a conversation you can make your own." />
+    <OutcomeStrip items={['Ask in your own words', 'Follow the source', 'Deepen your understanding']} />
+    <section id="capabilities" className="tool-section tool-wrap">
+      <SectionHeading number="01" eyebrow="Creating pathways to wisdom" title={<>A conversation.<br /><em>A library in the room.</em></>}><p>Ask about a teaching, a difficult passage or an idea that keeps returning. The Agent searches the available texts and brings what it finds into a focused, readable response, with references you can follow.</p><p>Begin with a simple question. Ask for the context, compare another tradition, or return to the original wording. Each exchange can open a deeper line of study.</p></SectionHeading>
+      <InquiryPreview />
+      <FeatureGrid items={[
+        { icon: MessageCircle, title: 'Inquire naturally', text: 'Use ordinary language to explore a concept, find a passage, unpack unfamiliar terminology or ask a more precise follow-up.' },
+        { icon: Quote, title: 'Keep the evidence close', text: 'Follow citations back to the text. Original wording, the Agent’s explanation and your own interpretation remain distinguishable.' },
+        { icon: GitCompare, title: 'Read across traditions', text: 'Compare themes across relevant collections. Notice shared concerns while keeping the history and distinctive voice of each tradition in view.' },
+      ]} />
+    </section>
+    <section className="tool-band"><div className="tool-wrap tool-section">
+      <SectionHeading number="02" eyebrow="The material behind the conversation" title={<>Many traditions.<br /><em>Specific sources.</em></>}><p>The Agent begins with Acuity’s available sacred-text archive. Its collection includes Internet Sacred Text Archive materials, named Bible editions and 281 public-domain source texts drawn from Ancient Wisdom Atlas.</p><p>These holdings support inquiry into scripture, world mythology, folklore and the inner life. The public Library has its own, wider catalogue: browse it directly to see which editions and reading formats are available.</p></SectionHeading>
+      <div className="tool-source-columns">
+        <article><Library size={24} strokeWidth={1.2} /><h3>Scripture &amp; sacred literature</h3><p>Explore the available sacred-text collections, including the American Standard Version (1901) and Berean Standard Bible. Follow the edition cited in an answer.</p></article>
+        <article><Compass size={24} strokeWidth={1.2} /><h3>Myth, folklore &amp; wisdom</h3><p>The Ancient Wisdom Atlas selection extends the field of inquiry across world traditions, with the original source, translator, edition and rights information retained.</p></article>
+        <article><FileSearch size={24} strokeWidth={1.2} /><h3>Passages in their setting</h3><p>Find a phrase or retrieve a passage with neighbouring text. Investigate the section around an idea before deciding what it means to you.</p></article>
       </div>
-    </div>
-  );
+      <SourcePrinciple /><Link className="tool-text-link" to="/tools/library">Meet the Library <span aria-hidden="true">↗</span></Link>
+    </div></section>
+    <section className="tool-section tool-wrap">
+      <div className="agent-art-panel"><picture><source media="(max-width: 700px)" srcSet="/agent/agent-hero-960.webp" /><img src="/agent/agent-hero-1600.webp" alt="Conceptual Acuity.Agent artwork showing a golden portal on a desktop and phone in a star-filled setting" loading="lazy" width="1600" height="893" /></picture><span>Conceptual product artwork / The inquiry, within reach</span></div>
+      <FeatureGrid items={[
+        { icon: Route, title: 'Follow a thread', text: 'Stay with a question across a conversation. Explore a related teaching or ask for a clearer explanation without losing the direction of your inquiry.' },
+        { icon: BookOpen, title: 'Bring material into the conversation', text: 'Attach relevant files to a chat and ask questions about them. Your conversation can bring personal study material alongside the available knowledge sources.' },
+        { icon: Sparkles, title: 'Keep the insight', text: 'Return to saved conversations or share a read-only conversation. Revisit the question, the explanation and the references as your understanding develops.' },
+      ]} />
+    </section>
+    <section id="journey" className="tool-section tool-wrap">
+      <SectionHeading number="03" eyebrow="From inquiry to integration" title={<>Understanding is<br /><em>something you practise.</em></>}><p>Use the Agent to open a line of inquiry. Read for yourself, develop your own response, and choose how an insight might become part of your life.</p></SectionHeading>
+      <Journey steps={[
+        { title: 'Begin with the text', text: 'Find an edition in the open Library. Read the passage in its own context and make room for the questions it raises.', to: '/tools/library', link: 'Explore the Library' },
+        { title: 'Give the question a home', text: 'For a longer study, use a Codex Context Sphere to gather selected sources, personal notes and your developing interpretations.', to: '/tools/codex', link: 'Discover Acuity.Codex' },
+        { title: 'Develop your practice', text: 'Carry what you learn into reflection, prayer or contemplation. Discover LumenNous among the Institute’s companion applications.', to: '/#apps', link: 'Explore companion applications' },
+      ]} />
+    </section>
+    <ToolFaq items={[
+      { question: 'What happens when the answer is not in the sources?', answer: 'The Agent is instructed to say when it cannot find support in the available material. It should identify gaps rather than invent a passage, quotation or reference.' },
+      { question: 'Does a comparison mean the traditions say the same thing?', answer: 'No. A comparison can illuminate related themes while preserving different meanings, historical settings and interpretations. You can ask the Agent to examine those differences explicitly.' },
+      { question: 'How does Agent differ from Codex?', answer: 'Agent is a conversational way into the available knowledge. Codex is a personal research environment for selecting and organising sources, developing notes, asking questions within a chosen scope and producing study material.' },
+      { question: 'When can I use it?', answer: 'Acuity.Agent is coming soon as part of Acuity.One. The Library is live now, so you can begin exploring and reading the source material today.' },
+    ]} /><ToolClosing current="agent" />
+  </ToolPage>;
 }

@@ -1,72 +1,20 @@
-import { Eye, BookOpen, Library, Search, Vault } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, BookOpen, Compass, Layers, Sparkles, Vault } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { tools } from '../components/tools/toolDirectory';
+import { FeatureGrid, SourcePrinciple, Status, ToolArtwork, ToolClosing, ToolPage } from '../components/tools/ToolPrimitives';
 
 export default function ToolsIndex() {
-  return (
-    <div className="min-h-screen bg-void text-starlight pt-28 pb-20">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-gold mb-5">Beyond the Horizon of Knowledge</p>
-          <h1 className="font-display text-5xl md:text-7xl text-gradient-gold mb-6">The Tools</h1>
-          <p className="text-lg md:text-xl text-starlight/70 max-w-2xl mx-auto leading-relaxed">
-            Instruments for exploring, consuming, synthesising, personalising and interpreting uncensored knowledge and esoteric wisdom. Pathways to personal development, practice, inspiration, unity and harmony.
-          </p>
-          <p className="mt-5 text-sm text-gold/80 font-mono uppercase tracking-wider">Acuity.One — coming soon · Library is live now</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Link to="/tools/agent" className="glass-card rounded-2xl p-6 hover:border-gold/40 transition-all duration-300 group">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/25 flex items-center justify-center group-hover:bg-gold/15 transition-colors">
-                <Eye className="w-6 h-6 text-gold" />
-              </div>
-              <h2 className="font-display text-xl">Acuity.Agent</h2>
-            </div>
-            <p className="text-sm text-starlight/60">Source-grounded inquiry. Search the curated corpus with citations and provenance.</p>
-          </Link>
-
-          <Link to="/tools/codex" className="glass-card rounded-2xl p-6 hover:border-gold/40 transition-all duration-300 group">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/25 flex items-center justify-center group-hover:bg-gold/15 transition-colors">
-                <BookOpen className="w-6 h-6 text-gold" />
-              </div>
-              <h2 className="font-display text-xl">Acuity.Codex</h2>
-            </div>
-            <p className="text-sm text-starlight/60">Instruments of Clarity: Archive, Context Spheres, The Lens, myVault, Studio.</p>
-          </Link>
-
-          <Link to="/tools/library" className="glass-card rounded-2xl p-6 hover:border-gold/40 transition-all duration-300 group">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/25 flex items-center justify-center group-hover:bg-gold/15 transition-colors">
-                <Library className="w-6 h-6 text-gold" />
-              </div>
-              <h2 className="font-display text-xl">The Library</h2>
-            </div>
-            <p className="text-sm text-starlight/60">Curated corpus of sacred texts, ebooks and articles. Live now — virtual e-reader, open access, presentation mode.</p>
-          </Link>
-
-          <Link to="/tools/search" className="glass-card rounded-2xl p-6 hover:border-gold/40 transition-all duration-300 group">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/25 flex items-center justify-center group-hover:bg-gold/15 transition-colors">
-                <Search className="w-6 h-6 text-gold" />
-              </div>
-              <h2 className="font-display text-xl">Acuity.Search</h2>
-            </div>
-            <p className="text-sm text-starlight/60">Federated research across web, literature and collections. Verbatim evidence and optional synthesis.</p>
-          </Link>
-
-          <div className="glass-card rounded-2xl p-6 opacity-50 border-dashed cursor-not-allowed">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                <Vault className="w-6 h-6 text-starlight/40" />
-              </div>
-              <h2 className="font-display text-xl text-starlight/40">WisdomVault</h2>
-            </div>
-            <p className="text-sm text-starlight/40">MCP tool for integrating your own services and applications. Under development.</p>
-            <span className="text-xs font-mono uppercase tracking-wider text-starlight/30 mt-3 inline-block">Coming soon</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <ToolPage description="The Acuity tools: Agent, Codex, Library and Search. Explore uncensored knowledge and esoteric wisdom through sources, personal inquiry and practice. Acuity.One is coming soon.">
+    <header className="tools-index-hero tool-wrap"><div><p className="tool-eyebrow">Acuity.Institute / The Tools</p><Status /><h1>Many ways in.<br /><em>One deeper<br />understanding.</em></h1><p className="tool-lead">Instruments for the enquiring mind. Explore uncensored knowledge and esoteric wisdom, return to the sources, and develop a perspective and practice of your own.</p><a className="tool-button" href="#instruments">Find your instrument <ArrowDown size={16} /></a><p className="tool-small">The Library is open now. The connected services are coming soon.</p></div><ToolArtwork kind="codex" /></header>
+    <section id="instruments" className="tool-wrap tool-section"><div className="tools-directory">{tools.filter(tool => tool.id !== 'wisdomvault').map((tool,i) => <Link className="tools-directory-item" key={tool.id} to={'/tools/' + tool.id}><div className="directory-card-top"><span className="tool-number">0{i + 1} / {tool.role}</span><span className={tool.live ? 'directory-live' : ''}>{tool.live ? 'Live now' : 'Coming soon'}</span></div><div className={'directory-emblem emblem-' + tool.id}><tool.icon size={56} strokeWidth={.8} /><i /><i /></div><h2>{tool.name}</h2><p>{tool.description}</p><span className="tool-text-link">Explore {tool.id === 'library' ? 'the Library' : tool.name}<ArrowUpRight size={16} /></span></Link>)}</div>
+      <aside className="wisdom-placeholder"><Vault size={28} strokeWidth={1} aria-hidden="true" /><div><h2>WisdomVault <span>Under development</span></h2><p>The Acuity knowledge library, connected to your own services and applications through MCP. Discover passages, compare traditions and bring cited knowledge into the places you work.</p></div><span className="tool-number">On the horizon</span></aside>
+    </section>
+    <section className="tool-band"><div className="tool-wrap tool-section"><p className="tool-eyebrow">A pursuit, with many forms</p><h2 className="tools-index-statement">Explore. Consume. Synthesise.<br /><em>Personalise. Interpret.</em></h2><FeatureGrid items={[
+      { icon: Compass, title: 'Broaden your perspective', text: 'Explore sacred, mystical and esoteric knowledge across traditions. Follow neglected voices and unfamiliar ideas, with room to form your own view.' },
+      { icon: BookOpen, title: 'Stay connected to the text', text: 'Return to an edition, inspect a passage and distinguish the source from the explanation. Understanding grows through reading as well as conversation.' },
+      { icon: Layers, title: 'Bring understanding into life', text: 'Make study material, develop a personal inquiry and build a reflective practice. The purpose is knowledge that inspires, unites and harmonises.' },
+    ]} /><SourcePrinciple /></div></section>
+    <section className="tool-wrap tools-begin"><Sparkles size={30} strokeWidth={1} /><h2>Your next question<br /><em>can begin here.</em></h2><Link className="tool-button" to="/library">Enter the open Library <ArrowUpRight size={17} /></Link></section>
+    <ToolClosing />
+  </ToolPage>;
 }

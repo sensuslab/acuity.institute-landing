@@ -1,5 +1,5 @@
-import { lazy, Suspense, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 const LibraryPage = lazy(() => import('./components/LibraryPage'));
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
@@ -58,16 +58,36 @@ function HomePage() {
 }
 
 function ToolsShell({ children }: { children: React.ReactNode }) {
+  const [mediaOpen, setMediaOpen] = useState(false);
+  const [shortsOpen, setShortsOpen] = useState(false);
   return (
     <div className="min-h-screen bg-void text-starlight">
-      <Navigation onWebinarsClick={() => {}} onShortsClick={() => {}} />
+      <GrainOverlay />
+      <Navigation onWebinarsClick={() => setMediaOpen(true)} onShortsClick={() => setShortsOpen(true)} />
       {children}
+      <Footer />
+      <MediaModal open={mediaOpen} onClose={() => setMediaOpen(false)} />
+      <ShortsModal open={shortsOpen} onClose={() => setShortsOpen(false)} />
     </div>
   );
 }
 
+function RoutePosition() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+      else window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [pathname, hash]);
+  return null;
+}
+
 export default function App() {
   return (
+    <>
+    <RoutePosition />
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/library" element={
@@ -82,5 +102,7 @@ export default function App() {
       <Route path="/tools/search" element={<ToolsShell><SearchPage /></ToolsShell>} />
       <Route path="/tools/wisdomvault" element={<ToolsShell><WisdomVaultPage /></ToolsShell>} />
     </Routes>
+    </>
   );
 }
+
