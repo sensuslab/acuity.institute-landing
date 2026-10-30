@@ -1,0 +1,22 @@
+# Acuity Institute
+
+> The Acuity Institute is an independent project founded by Ethan James Farrell (UK), dedicated to truth and the expansion of accurate knowledge. It offers an open library of wisdom texts and is developing Acuity.Agent, an AI research assistant for sacred texts.
+
+Key facts:
+- The Acuity Library holds 282 texts and presentations (Esoteric 99, Presentations 97, Scripture 41, Philosophy 27, Original Works 7, Miscellaneous 7, Health 4).
+- Every library text is free to read in the browser and to download as PDF; many also have EPUB editions. No account is required.
+- Acuity.Agent is pre-release and available by waitlist only. It searches a knowledge library of more than 20,000 sacred texts and answers with traceable source references.
+- Instruments of Clarity is under development and not yet available. It is planned as one interface with five facets: The Archive, The Lens, myVault, Context Spheres and Studio.
+- Contact: hello@acuity.institute
+
+## Available now
+- [Home](https://acuity.institute/): overview of the Library, Acuity.Agent, Instruments of Clarity, Acuity Apps, FAQ and contact.
+- [Library](https://acuity.institute/library/): catalogue of source editions with in-browser PDF and EPUB reading and downloads. Search covers titles, subtitles, authors, translators, collections, categories and tags (metadata), not full text. Search URL: https://acuity.institute/library/?q={query}
+- [About](https://acuity.institute/about/): the Institute and its founder.
+- [LumenNous](https://lumennous.acuity.institute/): an open contemplative library of daily prayers, affirmations, guided practices and sacred listening.
+
+## Pre-release
+- [Acuity.Agent](https://agent.acuity.institute/): AI knowledge assistant for sacred texts, philosophy and spiritual traditions. Research method: search the library, read passages in context, synthesise with citations, and state the limits of the evidence.
+
+## In development
+- Instruments of Clarity (The Archive, The Lens, myVault, Context Spheres, Studio). None of these features is available yet.

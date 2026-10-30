@@ -1,9 +1,10 @@
 import { Hexagon } from 'lucide-react';
 
 const FOOTER_LINKS = [
-  { label: 'Privacy', href: '#' },
-  { label: 'Terms', href: '#' },
+  { label: 'Library', href: '/library/' },
+  { label: 'About', href: '/about/' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Privacy', href: '/privacy/' },
 ];
 
 export default function Footer() {
@@ -54,3 +55,4 @@ export default function Footer() {
     </footer>
   );
 }
+

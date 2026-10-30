@@ -1,0 +1,17 @@
+{
+  "id": "geneva-bible",
+  "title": "Geneva Bible",
+  "author": "Unknown",
+  "language": "English",
+  "description": "An early modern edition of the Geneva Bible, the English Protestant translation first published complete in Geneva in 1560 by Marian exiles including William Whittingham, Anthony Gilby and others, 'translated according to the Ebrue and Greke, and conferred with the best translations in divers langages'. It was the first English Bible with numbered verses throughout and in roman type, and was famous for its extensive marginal notes, maps, woodcuts, chapter summaries and Calvinist-leaning annotations. It was the Bible of Shakespeare, Milton, John Bunyan, Oliver Cromwell and the Pilgrims who sailed on the Mayflower, and it influenced the wording of the King James Version. This file holds a scanned text of the Old and New Testaments, with early modern spelling and some OCR noise. It is a primary source for English Reformation religion and the language of English scripture.",
+  "editionNote": "Curator-supplied PDF and EPUB from the organised ebook collection. One format was converted from the other (PDF from EPUB). The PDF is a scan; the EPUB is derived from OCR text and its quality is limited—consult the PDF for the faithful page.",
+  "rights": "Scan of the 1560 Geneva Bible text; the underlying work is public domain. The rights status of this particular scan/OCR has not been confirmed.",
+  "tags": [
+    "Scripture",
+    "Christian"
+  ],
+  "accent": "gold",
+  "order": 252,
+  "sourceUrl": "https://www.dropbox.com/scl/fo/hsf3w64wh7q7yjlempdzz/AE6pwrLLFr7e8DKsWZKKuxE?rlkey=feb4trdksu4o4jhj04ksa7jdu&dl=0",
+  "shortDescription": "An early modern edition of the Geneva Bible, the English Protestant translation first published complete in Geneva in 1560 by Marian exiles including William Whittingham, Anthony Gilby and others, 'translated according to the…"
+}

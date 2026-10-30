@@ -1,17 +1,29 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
+const LibraryPage = lazy(() => import('./components/LibraryPage'));
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import ManifestoSection from './components/ManifestoSection';
+import LibrarySection from './components/LibrarySection';
 import PillarsGrid from './components/PillarsGrid';
+import AgentSection from './components/AgentSection';
+import AppsSection from './components/AppsSection';
+import { GoldDivider } from './components/SectionChrome';
 import TrustConstellation from './components/TrustConstellation';
+import FaqSection from './components/FaqSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GrainOverlay from './components/GrainOverlay';
 import MediaModal from './components/MediaModal';
 import ShortsModal from './components/ShortsModal';
-import LumenNousModal from './components/LumenNousModal';
 
 export default function App() {
+  if (window.location.pathname.replace(/\/+$/, '') === '/library') {
+    return <Suspense fallback={<main className="p-12 text-starlight">Opening the Acuity Library…</main>}><LibraryPage /></Suspense>;
+  }
+  return <HomePage />;
+}
+
+function HomePage() {
   const [mediaOpen, setMediaOpen] = useState(false);
   const [shortsOpen, setShortsOpen] = useState(false);
 
@@ -22,15 +34,26 @@ export default function App() {
         onWebinarsClick={() => setMediaOpen(true)}
         onShortsClick={() => setShortsOpen(true)}
       />
+      <main id="main">
       <HeroSection />
       <ManifestoSection />
+      <GoldDivider />
+      <LibrarySection />
+      <GoldDivider />
+      <AgentSection />
+      <GoldDivider />
       <PillarsGrid />
+      <GoldDivider />
+      <AppsSection />
+      <GoldDivider />
       <TrustConstellation />
+      <FaqSection />
       <Contact />
+      </main>
       <Footer />
       <MediaModal open={mediaOpen} onClose={() => setMediaOpen(false)} />
       <ShortsModal open={shortsOpen} onClose={() => setShortsOpen(false)} />
-      <LumenNousModal />
     </div>
   );
 }
+

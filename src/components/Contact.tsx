@@ -1,43 +1,14 @@
 import { FormEvent, useState } from 'react';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import {
+  EMAIL_RE,
+  PAGE_URL,
+  clearSubmissionId,
+  getOrCreateSubmissionId,
+  postSubmission,
+} from '../lib/n8n';
 
-const WEBHOOK_URL =
-  (import.meta.env.VITE_N8N_CONTACT_WEBHOOK_URL as string | undefined) ||
-  'https://n8n-production-f93d.up.railway.app/webhook/acuity-contact';
-
-const PAGE_URL = 'https://acuity.institute';
 const SUBMISSION_KEY = 'acuity-contact-submission-id';
-
-function newSubmissionId(): string {
-  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
-    return crypto.randomUUID();
-  }
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-    const r = (Math.random() * 16) | 0;
-    const v = c === 'x' ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
-}
-
-function getOrCreateSubmissionId(): string {
-  try {
-    const existing = sessionStorage.getItem(SUBMISSION_KEY);
-    if (existing) return existing;
-    const id = newSubmissionId();
-    sessionStorage.setItem(SUBMISSION_KEY, id);
-    return id;
-  } catch {
-    return newSubmissionId();
-  }
-}
-
-function clearSubmissionId() {
-  try {
-    sessionStorage.removeItem(SUBMISSION_KEY);
-  } catch {
-    /* ignore */
-  }
-}
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
@@ -56,8 +27,7 @@ export default function Contact() {
       setError('Please fill in name, email, and a short message.');
       return;
     }
-    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRe.test(email) || email.length > 254) {
+    if (!EMAIL_RE.test(email) || email.length > 254) {
       setError('Please enter a valid email address.');
       return;
     }
@@ -71,7 +41,7 @@ export default function Contact() {
 
     const payload = {
       schema_version: '1.0',
-      submission_id: getOrCreateSubmissionId(),
+      submission_id: getOrCreateSubmissionId(SUBMISSION_KEY),
       submission_type: 'enquiry',
       name,
       email,
@@ -81,36 +51,14 @@ export default function Contact() {
       page_url: PAGE_URL,
     };
 
-    try {
-      const res = await fetch(WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      const body = (await res.json().catch(() => null)) as
-        | { ok?: boolean; status?: string; errors?: string[]; message?: string }
-        | null;
-
-      if (res.status === 201 || res.status === 200) {
-        clearSubmissionId();
-        setDone(true);
-        form.reset();
-        return;
-      }
-
-      if (res.status === 400) {
-        setError(body?.errors?.join(' ') || 'Please check the form and try again.');
-        return;
-      }
-
-      setError(
-        body?.message ||
-          'Something went wrong. Please retry, or email hello@acuity.institute.',
-      );
-    } catch {
-      setError('Something went wrong. Please retry, or email hello@acuity.institute.');
-    } finally {
-      setSending(false);
+    const result = await postSubmission(payload);
+    setSending(false);
+    if (result.ok) {
+      clearSubmissionId(SUBMISSION_KEY);
+      setDone(true);
+      form.reset();
+    } else {
+      setError(result.error);
     }
   };
 

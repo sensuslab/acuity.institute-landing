@@ -4,16 +4,23 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node scripts/build-library-catalogue.mjs && vite",
+    "build": "node scripts/build-library-catalogue.mjs && vite build && node scripts/build-library-pages.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "test": "node scripts/build-library-catalogue.mjs && node --test tests/*.test.mjs",
+    "catalogue:sync": "node scripts/build-library-catalogue.mjs",
+    "library:fetch": "node scripts/fetch-library-imports.mjs",
+    "library:convert": "node scripts/convert-presentations.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
+    "epubjs": "^0.3.93",
+    "jszip": "^3.10.2",
     "lucide-react": "^0.344.0",
+    "pdfjs-dist": "^6.4.299",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -32,5 +39,11 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "^0.8.11"
   }
 }

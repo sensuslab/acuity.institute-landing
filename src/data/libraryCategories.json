@@ -1,0 +1,335 @@
+[
+  {
+    "key": "Esoteric",
+    "label": "Esoteric",
+    "path": [
+      "Esoteric"
+    ],
+    "depth": 0,
+    "count": 102
+  },
+  {
+    "key": "Esoteric/Astrology and Cosmology",
+    "label": "Astrology and Cosmology",
+    "path": [
+      "Esoteric",
+      "Astrology and Cosmology"
+    ],
+    "depth": 1,
+    "count": 17
+  },
+  {
+    "key": "Esoteric/Christian Mysticism",
+    "label": "Christian Mysticism",
+    "path": [
+      "Esoteric",
+      "Christian Mysticism"
+    ],
+    "depth": 1,
+    "count": 21
+  },
+  {
+    "key": "Esoteric/Hermeticism",
+    "label": "Hermeticism",
+    "path": [
+      "Esoteric",
+      "Hermeticism"
+    ],
+    "depth": 1,
+    "count": 2
+  },
+  {
+    "key": "Esoteric/Kabbalah",
+    "label": "Kabbalah",
+    "path": [
+      "Esoteric",
+      "Kabbalah"
+    ],
+    "depth": 1,
+    "count": 17
+  },
+  {
+    "key": "Esoteric/Occult",
+    "label": "Occult",
+    "path": [
+      "Esoteric",
+      "Occult"
+    ],
+    "depth": 1,
+    "count": 19
+  },
+  {
+    "key": "Esoteric/Sufism",
+    "label": "Sufism",
+    "path": [
+      "Esoteric",
+      "Sufism"
+    ],
+    "depth": 1,
+    "count": 13
+  },
+  {
+    "key": "Esoteric/Taoist Practice",
+    "label": "Taoist Practice",
+    "path": [
+      "Esoteric",
+      "Taoist Practice"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Esoteric/Theosophy",
+    "label": "Theosophy",
+    "path": [
+      "Esoteric",
+      "Theosophy"
+    ],
+    "depth": 1,
+    "count": 12
+  },
+  {
+    "key": "Health",
+    "label": "Health",
+    "path": [
+      "Health"
+    ],
+    "depth": 0,
+    "count": 4
+  },
+  {
+    "key": "Health/Wellbeing",
+    "label": "Wellbeing",
+    "path": [
+      "Health",
+      "Wellbeing"
+    ],
+    "depth": 1,
+    "count": 4
+  },
+  {
+    "key": "Miscellaneous",
+    "label": "Miscellaneous",
+    "path": [
+      "Miscellaneous"
+    ],
+    "depth": 0,
+    "count": 7
+  },
+  {
+    "key": "Miscellaneous/General",
+    "label": "General",
+    "path": [
+      "Miscellaneous",
+      "General"
+    ],
+    "depth": 1,
+    "count": 7
+  },
+  {
+    "key": "Original Works",
+    "label": "Original Works",
+    "path": [
+      "Original Works"
+    ],
+    "depth": 0,
+    "count": 7
+  },
+  {
+    "key": "Original Works/Ethan James Farrell",
+    "label": "Ethan James Farrell",
+    "path": [
+      "Original Works",
+      "Ethan James Farrell"
+    ],
+    "depth": 1,
+    "count": 7
+  },
+  {
+    "key": "Philosophy",
+    "label": "Philosophy",
+    "path": [
+      "Philosophy"
+    ],
+    "depth": 0,
+    "count": 27
+  },
+  {
+    "key": "Philosophy/Kashmir Shaivism",
+    "label": "Kashmir Shaivism",
+    "path": [
+      "Philosophy",
+      "Kashmir Shaivism"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Philosophy/Neoplatonism",
+    "label": "Neoplatonism",
+    "path": [
+      "Philosophy",
+      "Neoplatonism"
+    ],
+    "depth": 1,
+    "count": 21
+  },
+  {
+    "key": "Philosophy/Stoicism",
+    "label": "Stoicism",
+    "path": [
+      "Philosophy",
+      "Stoicism"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Philosophy/Vedanta",
+    "label": "Vedanta",
+    "path": [
+      "Philosophy",
+      "Vedanta"
+    ],
+    "depth": 1,
+    "count": 4
+  },
+  {
+    "key": "Presentations",
+    "label": "Presentations",
+    "path": [
+      "Presentations"
+    ],
+    "depth": 0,
+    "count": 97
+  },
+  {
+    "key": "Presentations/NotebookLM",
+    "label": "NotebookLM decks",
+    "path": [
+      "Presentations",
+      "NotebookLM decks"
+    ],
+    "depth": 1,
+    "count": 97
+  },
+  {
+    "key": "Scripture",
+    "label": "Scripture",
+    "path": [
+      "Scripture"
+    ],
+    "depth": 0,
+    "count": 41
+  },
+  {
+    "key": "Scripture/Apocrypha and Pseudepigrapha",
+    "label": "Apocrypha and Pseudepigrapha",
+    "path": [
+      "Scripture",
+      "Apocrypha and Pseudepigrapha"
+    ],
+    "depth": 1,
+    "count": 4
+  },
+  {
+    "key": "Scripture/Bahai",
+    "label": "Bahai",
+    "path": [
+      "Scripture",
+      "Bahai"
+    ],
+    "depth": 1,
+    "count": 4
+  },
+  {
+    "key": "Scripture/Buddhism",
+    "label": "Buddhism",
+    "path": [
+      "Scripture",
+      "Buddhism"
+    ],
+    "depth": 1,
+    "count": 3
+  },
+  {
+    "key": "Scripture/Christian",
+    "label": "Christian",
+    "path": [
+      "Scripture",
+      "Christian"
+    ],
+    "depth": 1,
+    "count": 8
+  },
+  {
+    "key": "Scripture/Early Church Fathers",
+    "label": "Early Church Fathers",
+    "path": [
+      "Scripture",
+      "Early Church Fathers"
+    ],
+    "depth": 1,
+    "count": 3
+  },
+  {
+    "key": "Scripture/Gnostic",
+    "label": "Gnostic",
+    "path": [
+      "Scripture",
+      "Gnostic"
+    ],
+    "depth": 1,
+    "count": 11
+  },
+  {
+    "key": "Scripture/Hinduism",
+    "label": "Hinduism",
+    "path": [
+      "Scripture",
+      "Hinduism"
+    ],
+    "depth": 1,
+    "count": 2
+  },
+  {
+    "key": "Scripture/Islam",
+    "label": "Islam",
+    "path": [
+      "Scripture",
+      "Islam"
+    ],
+    "depth": 1,
+    "count": 1
+  },
+  {
+    "key": "Scripture/Judaism",
+    "label": "Judaism",
+    "path": [
+      "Scripture",
+      "Judaism"
+    ],
+    "depth": 1,
+    "count": 2
+  },
+  {
+    "key": "Scripture/Taoism",
+    "label": "Taoism",
+    "path": [
+      "Scripture",
+      "Taoism"
+    ],
+    "depth": 1,
+    "count": 2
+  },
+  {
+    "key": "Scripture/Zoroastrianism",
+    "label": "Zoroastrianism",
+    "path": [
+      "Scripture",
+      "Zoroastrianism"
+    ],
+    "depth": 1,
+    "count": 1
+  }
+]

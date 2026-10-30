@@ -23,3 +23,82 @@ dist-ssr
 .env
 
 *.tsbuildinfo
+
+# Reviewed Dropbox deck binaries are hydrated from content/library-imports.json.
+public/library/books/Presentations/NotebookLM/*.pdf
+public/library/books/Presentations/NotebookLM/.*
+public/library/books/**/*.part
+public/library/books/**/.*
+public/library/overviews/
+public/library/books/Esoteric/Hermeticism/the-secret-teachings-of-all-ages.pdf
+public/library/books/Esoteric/Hermeticism/the-secret-teachings-of-all-ages.epub
+
+
+# Curator ebook collection binaries (PDF + EPUB) are hydrated from content/library-imports.json.
+public/library/books/Esoteric/Christian Mysticism/*.epub
+public/library/books/Esoteric/Christian Mysticism/*.pdf
+public/library/books/Esoteric/Occult/*.epub
+public/library/books/Esoteric/Occult/*.pdf
+public/library/books/Esoteric/Taoist Practice/*.epub
+public/library/books/Esoteric/Taoist Practice/*.pdf
+public/library/books/Health/Wellbeing/*.epub
+public/library/books/Health/Wellbeing/*.pdf
+public/library/books/Miscellaneous/General/*.epub
+public/library/books/Miscellaneous/General/*.pdf
+public/library/books/Original Works/Ethan James Farrell/*.epub
+public/library/books/Original Works/Ethan James Farrell/*.pdf
+public/library/books/Philosophy/Neoplatonism/*.epub
+public/library/books/Philosophy/Neoplatonism/*.pdf
+public/library/books/Philosophy/Vedanta/*.epub
+public/library/books/Philosophy/Vedanta/*.pdf
+public/library/books/Scripture/Bahai/*.epub
+public/library/books/Scripture/Bahai/*.pdf
+public/library/books/Scripture/Buddhism/*.epub
+public/library/books/Scripture/Buddhism/*.pdf
+public/library/books/Scripture/Christian/*.epub
+public/library/books/Scripture/Christian/*.pdf
+public/library/books/Scripture/Gnostic/*.epub
+public/library/books/Scripture/Gnostic/*.pdf
+public/library/books/Scripture/Islam/*.epub
+public/library/books/Scripture/Islam/*.pdf
+public/library/books/Scripture/Judaism/*.epub
+public/library/books/Scripture/Judaism/*.pdf
+public/library/books/Scripture/Taoism/*.epub
+public/library/books/Scripture/Taoism/*.pdf
+public/library/books/Scripture/Zoroastrianism/*.epub
+public/library/books/Scripture/Zoroastrianism/*.pdf
+public/library/books/Esoteric/Astrology and Cosmology/*.epub
+public/library/books/Esoteric/Astrology and Cosmology/*.pdf
+public/library/books/Esoteric/Kabbalah/*.epub
+public/library/books/Esoteric/Kabbalah/*.pdf
+public/library/books/Esoteric/Sufism/*.epub
+public/library/books/Esoteric/Sufism/*.pdf
+public/library/books/Esoteric/Theosophy/*.epub
+public/library/books/Esoteric/Theosophy/*.pdf
+public/library/books/Philosophy/Kashmir Shaivism/*.epub
+public/library/books/Philosophy/Kashmir Shaivism/*.pdf
+public/library/books/Scripture/Apocrypha and Pseudepigrapha/*.epub
+public/library/books/Scripture/Apocrypha and Pseudepigrapha/*.pdf
+public/library/books/Scripture/Early Church Fathers/*.epub
+public/library/books/Scripture/Early Church Fathers/*.pdf
+public/library/books/Scripture/Hinduism/*.epub
+public/library/books/Scripture/Hinduism/*.pdf
+
+
+# Local Worker credentials and generated runtime types
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+cloudflare/library/worker-configuration.d.ts
+.wrangler/
+
+__pycache__/
+*.pyc
+
+# Full migration inventories contain access-bearing provenance and stay private.
+content/library-r2-inventory.json
+
+# Canonical source text restoration is optional; R2 remains the source.
+/texts/public-domain/
+/texts/open-license/
+/texts/permissioned/

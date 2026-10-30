@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "release": "2026-10-27-r2-v2",
+  "verifiedFiles": 617,
+  "verifiedBytes": 7810492169,
+  "publicFiles": 617,
+  "authenticatedFiles": 0,
+  "catalogue": {
+    "version": 1,
+    "release": "2026-10-27-r2-v2",
+    "catalogueUrl": "https://assets.acuity.institute/library/catalogues/2026-10-27-r2-v2.json",
+    "sha256": "c00fc901daca4e65ed3b6e9773016e368e7025c8d97858c6b82bfdcb8859b00a",
+    "bytes": 1766504,
+    "assetCount": 617,
+    "recordCount": 285
+  },
+  "verification": "Independent GET of every R2 object; byte count and SHA-256 compared with reviewed inventory",
+  "dropboxOriginals": "retained",
+  "sourceCommit": "3cf45acbe6a7c8cfb24bf8c142a58beb34ebc68b",
+  "buildWithoutLocalBinaries": "passed",
+  "browserUI": "Not verified: Chromium download failed",
+  "applicationDeployment": "R2 files public; website application changes remain in PR #5.",
+  "tests": 45,
+  "typecheck": "passed",
+  "lint": "passed",
+  "workerTypecheck": "passed",
+  "temporaryIngestionWorker": "removed",
+  "temporaryIngestionHostname": "removed",
+  "bucketPublicAccess": "disabled; controlled gateway only",
+  "previousRelease": {
+    "release": "2026-10-27-r2-v1",
+    "catalogue": {
+      "version": 1,
+      "release": "2026-10-27-r2-v1",
+      "catalogueUrl": "https://assets.acuity.institute/library/catalogues/2026-10-27-r2-v1.json",
+      "sha256": "9f59a3c7e129808302dc19b313706d7b2052e2c7c69f673d99fb61a31302feb7",
+      "bytes": 1766628,
+      "assetCount": 617,
+      "recordCount": 285
+    },
+    "checks": [
+      {
+        "check": "catalogue rollback",
+        "release": "2026-10-27-r2-pilot",
+        "catalogueSha256": "5b8d3f372f4bf945e21c5f990897db361a246aec4a478028eee6795451b01cd2",
+        "result": "passed"
+      },
+      {
+        "check": "final release restored",
+        "release": "2026-10-27-r2-v1",
+        "catalogueSha256": "9f59a3c7e129808302dc19b313706d7b2052e2c7c69f673d99fb61a31302feb7",
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "public",
+        "format": "pdf",
+        "authenticated": false,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "public",
+        "format": "pdf",
+        "authenticated": true,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "public",
+        "format": "epub",
+        "authenticated": false,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "public",
+        "format": "epub",
+        "authenticated": true,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "public",
+        "format": "pptx",
+        "authenticated": false,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "public",
+        "format": "pptx",
+        "authenticated": true,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "private",
+        "format": "pdf",
+        "authenticated": false,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "private",
+        "format": "pdf",
+        "authenticated": true,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "private",
+        "format": "epub",
+        "authenticated": false,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "private",
+        "format": "epub",
+        "authenticated": true,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "private",
+        "format": "pptx",
+        "authenticated": false,
+        "result": "passed"
+      },
+      {
+        "check": "gateway access/range/CORS",
+        "visibility": "private",
+        "format": "pptx",
+        "authenticated": true,
+        "result": "passed"
+      }
+    ]
+  },
+  "newlyPublicFiles": 391,
+  "publicCatalogue": {
+    "version": 1,
+    "release": "2026-10-27-r2-v2",
+    "catalogueUrl": "https://assets.acuity.institute/library/catalogues/public-2026-10-27-r2-v2.json",
+    "sha256": "80d4266083bd037ca0e0c6d3d373fc91b260317fb0bbaf0544c818a1a5a7b49b",
+    "bytes": 1025218,
+    "assetCount": 617,
+    "recordCount": 285
+  },
+  "publicationAuthorization": {
+    "confirmedAt": "2026-10-27T13:47:54.019Z",
+    "scope": "All 391 previously flagged files, including source PDF/EPUB pairs and linked overview PDF/PPTX files",
+    "userConfirmation": "Yes all files publish"
+  },
+  "exactDuplicateFiles": 0,
+  "checks": [
+    {
+      "check": "published policy membership for every verified corpus asset",
+      "assets": 617,
+      "result": "passed"
+    },
+    {
+      "check": "public catalogue anonymous GET and SHA-256",
+      "records": 285,
+      "assets": 617,
+      "result": "passed"
+    },
+    {
+      "check": "public-catalogue builder matches the live release",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous byte range and CORS",
+      "format": "pdf",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous byte range and CORS",
+      "format": "epub",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous byte range and CORS",
+      "format": "pptx",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous byte range and CORS",
+      "format": "text",
+      "result": "passed"
+    },
+    {
+      "check": "internal route protected",
+      "route": "/library/catalogues/latest.json",
+      "status": 401,
+      "result": "passed"
+    },
+    {
+      "check": "internal route protected",
+      "route": "/library/catalogues/2026-10-27-r2-v2.json",
+      "status": 401,
+      "result": "passed"
+    },
+    {
+      "check": "internal route protected",
+      "route": "/library/control/ingest-inventory.json",
+      "status": 404,
+      "result": "passed"
+    }
+  ],
+  "publicationScopeReview": "docs/LIBRARY-PUBLICATION-REVIEW.md",
+  "anonymousAccess": {
+    "anonymousHeadPassed": 617,
+    "assetsChecked": 617,
+    "checks": [
+      {
+        "check": "anonymous byte range and CORS",
+        "format": "pdf",
+        "result": "passed"
+      },
+      {
+        "check": "anonymous byte range and CORS",
+        "format": "epub",
+        "result": "passed"
+      },
+      {
+        "check": "anonymous byte range and CORS",
+        "format": "pptx",
+        "result": "passed"
+      },
+      {
+        "check": "anonymous byte range and CORS",
+        "format": "text",
+        "result": "passed"
+      },
+      {
+        "check": "internal route protected",
+        "route": "/library/catalogues/latest.json",
+        "status": 401,
+        "result": "passed"
+      },
+      {
+        "check": "internal route protected",
+        "route": "/library/catalogues/2026-10-27-r2-v2.json",
+        "status": 401,
+        "result": "passed"
+      },
+      {
+        "check": "internal route protected",
+        "route": "/library/control/ingest-inventory.json",
+        "status": 404,
+        "result": "passed"
+      }
+    ],
+    "failures": []
+  }
+}

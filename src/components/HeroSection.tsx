@@ -111,10 +111,10 @@ export default function HeroSection() {
           style={{ transitionDelay: '1100ms' }}
         >
           <a
-            href="#manifesto"
+            href="/library/"
             className="inline-flex items-center px-8 py-3.5 rounded-full border border-gold/50 text-gold font-mono text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:bg-gold/10 hover:border-gold hover:scale-105 hover:shadow-[0_0_30px_rgba(212,168,67,0.15)]"
           >
-            Read Philosophy
+            Enter the Library
           </a>
         </div>
       </div>
@@ -287,3 +287,4 @@ function Portal() {
     </div>
   );
 }
+
