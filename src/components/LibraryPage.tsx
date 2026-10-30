@@ -72,7 +72,7 @@ export default function LibraryPage() {
       <a className="library-brand" href="/"><Hexagon size={22} strokeWidth={1.2} /><span>ACUITY <small>INSTITUTE</small></span></a>
       <nav aria-label="Library navigation"><a href="/#manifesto">Our philosophy</a><a href="/#contact">Get in touch</a><a className="library-home" href="/"><ArrowLeft size={15} /> Back to Acuity</a></nav>
     </header>
-    <main>
+    <main id="main" tabIndex={-1}>
       <section className="library-intro">
         <div className="library-orbit" aria-hidden="true"><span>✧</span></div>
         <div className="library-eyebrow">THE ARCHIVE <span /> OPEN READING COLLECTION</div>

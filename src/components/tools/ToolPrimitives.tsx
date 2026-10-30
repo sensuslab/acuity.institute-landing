@@ -1,41 +1,12 @@
-import { useEffect, useId, type ReactNode } from 'react';
+import { useId, type ReactNode } from 'react';
 import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Orbit, Sparkles, type LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './tools.css';
 
 import { tools, type ToolId } from './toolDirectory';
 
-export function ToolPage({ id, description, children }: { id?: ToolId; description: string; children: ReactNode }) {
-  const name = tools.find(tool => tool.id === id)?.name || 'The Tools';
-  useEffect(() => {
-    const oldTitle = document.title;
-    const meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    const oldDescription = meta?.content;
-    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    const oldCanonical = canonical?.href;
-    const social = [
-      ['meta[property="og:title"]', name + ' — Acuity.Institute'],
-      ['meta[property="og:description"]', description],
-      ['meta[property="og:url"]', 'https://acuity.institute/tools' + (id ? '/' + id : '') + '/'],
-      ['meta[name="twitter:title"]', name + ' — Acuity.Institute'],
-      ['meta[name="twitter:description"]', description],
-    ].map(([selector, value]) => {
-      const node = document.querySelector<HTMLMetaElement>(selector);
-      const previous = node?.content;
-      if (node) node.content = value;
-      return { node, previous };
-    });
-    document.title = name + ' — Acuity.Institute';
-    if (meta) meta.content = description;
-    if (canonical) canonical.href = 'https://acuity.institute/tools' + (id ? '/' + id : '') + '/';
-    return () => {
-      document.title = oldTitle;
-      if (meta && oldDescription !== undefined) meta.content = oldDescription;
-      if (canonical && oldCanonical) canonical.href = oldCanonical;
-      social.forEach(({ node, previous }) => { if (node && previous !== undefined) node.content = previous; });
-    };
-  }, [name, id, description]);
-  return <main id="main" className="tool-page">{children}</main>;
+export function ToolPage({ children }: { children: ReactNode }) {
+  return <main id="main" className="tool-page" tabIndex={-1}>{children}</main>;
 }
 
 export function Status({ live = false }: { live?: boolean }) {

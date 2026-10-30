@@ -16,7 +16,7 @@ const template = await fs.readFile(path.join(dist, 'index.html'), 'utf8');
 const escape = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 
 for (const page of pages) {
-  const title = escape(page.title + ' — Acuity.Institute');
+  const title = escape(page.title);
   const description = escape(page.description);
   const canonical = 'https://acuity.institute' + page.path;
   let html = template
@@ -27,7 +27,7 @@ for (const page of pages) {
   for (const [key, value] of Object.entries({ 'og:title': title, 'og:description': description, 'og:url': canonical, 'twitter:title': title, 'twitter:description': description })) {
     html = html.replace(new RegExp('(<meta (?:property|name)="' + key + '" content=")[^"]*(")'), '$1' + value + '$2');
   }
-  const structured = { '@context': 'https://schema.org', '@type': 'WebPage', name: page.title, description: page.description, url: canonical, isPartOf: { '@type': 'WebSite', name: 'Acuity.Institute', url: 'https://acuity.institute/' } };
+  const structured = { '@context': 'https://schema.org', '@type': 'WebPage', name: page.name, description: page.description, url: canonical, isPartOf: { '@type': 'WebSite', name: 'Acuity.Institute', url: 'https://acuity.institute/' } };
   html = html.replace('</head>', '<script type="application/ld+json">' + JSON.stringify(structured).replaceAll('<', '\\u003c') + '</script>\n</head>');
   html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => '<div id="root">' + renderPage(page) + '</div>');
   const directory = path.join(dist, page.path);

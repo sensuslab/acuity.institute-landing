@@ -22,6 +22,7 @@ import CodexPage from './pages/CodexPage';
 import LibraryToolsPage from './pages/LibraryPage';
 import SearchPage from './pages/SearchPage';
 import WisdomVaultPage from './pages/WisdomVaultPage';
+import RouteMetadata from './components/RouteMetadata';
 
 function HomePage() {
   const [mediaOpen, setMediaOpen] = useState(false);
@@ -34,7 +35,7 @@ function HomePage() {
         onWebinarsClick={() => setMediaOpen(true)}
         onShortsClick={() => setShortsOpen(true)}
       />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <HeroSection />
         <ManifestoSection />
         <GoldDivider />
@@ -87,6 +88,7 @@ function RoutePosition() {
 export default function App() {
   return (
     <>
+    <RouteMetadata />
     <RoutePosition />
     <Routes>
       <Route path="/" element={<HomePage />} />

@@ -11,7 +11,7 @@ const instruments: Instrument[] = [
 ];
 
 export default function CodexPage() {
-  return <ToolPage id="codex" description="Acuity.Codex — personal knowledge bases, Context Spheres, source-led inquiry and a Studio for study material and audio. Instruments of Clarity, coming soon in Acuity.One.">
+  return <ToolPage>
     <ToolHero kind="codex" index="02" title={<>Turn the key.<br /><em>Unlock wisdom.</em></>} description="Your sources. Your questions. Your developing understanding. Acuity.Codex turns a collection of knowledge into a personal space for exploration, interpretation and creation." />
     <OutcomeStrip items={['Build your Context Spheres', 'Ask through The Lens', 'Create in the Studio']} />
     <section id="capabilities" className="tool-section tool-wrap">

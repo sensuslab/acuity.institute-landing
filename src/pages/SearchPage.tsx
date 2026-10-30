@@ -10,7 +10,7 @@ const modes: Instrument[] = [
 ];
 
 export default function SearchPage() {
-  return <ToolPage id="search" description="Acuity.Search — uncensored discovery across the web, literature and curated collections. Inspect evidence, synthesise findings and continue in Codex. Coming soon in Acuity.One.">
+  return <ToolPage>
     <ToolHero kind="search" index="04" title={<>Look further.<br /><em>Discover more.</em></>} description="An uncensored field of inquiry for ideas beyond the usual view. Search the web, literature and chosen collections, examine the evidence, and follow what calls for closer understanding." />
     <OutcomeStrip items={['Three ways to discover', 'Evidence you can inspect', 'A path into deeper study']} />
     <section id="capabilities" className="tool-section tool-wrap">

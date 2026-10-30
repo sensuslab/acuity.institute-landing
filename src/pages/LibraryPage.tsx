@@ -16,7 +16,7 @@ const collections = [
 ];
 
 export default function LibraryPage() {
-  return <ToolPage id="library" description="The Acuity Library is live: open access to sacred texts, esoteric literature, philosophy and presentations, with a virtual EPUB reader, original PDFs and presentation mode.">
+  return <ToolPage>
     <ToolHero kind="library" index="03" title={<>Return to<br /><em>the source.</em></>} description="An open reading room for the enquiring mind. Explore sacred texts, esoteric literature and philosophy; read slowly, follow the lineage, and form your own understanding." />
     <OutcomeStrip items={['Open access · no account', 'Your way of reading', 'Sources & editions in view']} />
     <section id="capabilities" className="tool-section tool-wrap">

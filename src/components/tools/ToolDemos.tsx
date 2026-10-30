@@ -8,10 +8,8 @@ export function InstrumentExplorer({ items, label }: { items: Instrument[]; labe
   const [active, setActive] = useState(0);
   const id = useId().replace(/:/g, '');
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
-  const selected = items[active];
-  const Icon = selected.icon;
   return <div className="instrument-explorer">
-    <div role="tablist" aria-label={label} className="instrument-tabs" onKeyDown={event => {
+    <div role="tablist" aria-label={label} aria-orientation="vertical" className="instrument-tabs" onKeyDown={event => {
       let next = active;
       if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (active + 1) % items.length;
       else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (active + items.length - 1) % items.length;
@@ -22,9 +20,12 @@ export function InstrumentExplorer({ items, label }: { items: Instrument[]; labe
     }}>
       {items.map((item, index) => <button key={item.id} ref={node => { buttons.current[index] = node; }} role="tab" aria-selected={active === index} aria-controls={id + '-panel-' + item.id} id={id + '-tab-' + item.id} tabIndex={active === index ? 0 : -1} onClick={() => setActive(index)}><span className="tool-number">0{index + 1}</span><item.icon size={19} strokeWidth={1.4} aria-hidden="true" /><span>{item.label}</span><ArrowUpRight size={16} aria-hidden="true" /></button>)}
     </div>
-    <div key={selected.id} className="instrument-panel" role="tabpanel" tabIndex={0} id={id + '-panel-' + selected.id} aria-labelledby={id + '-tab-' + selected.id}>
-      <div className="instrument-panel-top"><span className="tool-eyebrow">Explore the capability</span><Icon size={44} strokeWidth={.8} aria-hidden="true" /></div><h3>{selected.title}</h3><p>{selected.text}</p><ul>{selected.points.map(point => <li key={point}><Check size={15} aria-hidden="true" />{point}</li>)}</ul>
-    </div>
+    {items.map((item, index) => {
+      const Icon = item.icon;
+      return <div key={item.id} className="instrument-panel" role="tabpanel" hidden={index !== active} tabIndex={0} id={id + '-panel-' + item.id} aria-labelledby={id + '-tab-' + item.id}>
+        <div className="instrument-panel-top"><span className="tool-eyebrow">Explore the capability</span><Icon size={44} strokeWidth={.8} aria-hidden="true" /></div><h3>{item.title}</h3><p>{item.text}</p><ul>{item.points.map(point => <li key={point}><Check size={15} aria-hidden="true" />{point}</li>)}</ul>
+      </div>;
+    })}
   </div>;
 }
 

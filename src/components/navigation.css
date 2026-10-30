@@ -1,4 +1,7 @@
 .acuity-nav { position:fixed; z-index:40; top:max(20px,env(safe-area-inset-top)); left:50%; transform:translateX(-50%); width:min(1000px,calc(100% - 40px)); color:#d8d1dc; font-family:Inter,system-ui,sans-serif; }
+.acuity-nav [hidden] { display:none!important; }
+.acuity-skip-link { position:absolute; z-index:2; top:8px; left:8px; padding:14px 20px; background:#ecd099; color:#16121a; border-radius:3px; font-size:12px; transform:translateY(-200%); }
+.acuity-skip-link:focus-visible { transform:translateY(0); }
 .acuity-nav-bar { display:flex; align-items:center; justify-content:space-between; padding:7px 24px; min-height:62px; border:1px solid #d4a94a33; background:#0c0b13ed; border-radius:7px; backdrop-filter:blur(24px); box-shadow:0 12px 45px #0003; }
 .acuity-nav-brand { display:flex; align-items:center; gap:11px; font:10px "JetBrains Mono",monospace; letter-spacing:.1em; min-height:44px; }
 .acuity-nav-brand svg { color:#dcbd7e; }

@@ -1,0 +1,50 @@
+{
+  "/": {
+    "path": "/",
+    "name": "Acuity.Institute",
+    "title": "Acuity Institute | Pathways to Wisdom",
+    "description": "Explore sacred, philosophical and esoteric knowledge in the open Acuity Library. Discover tools for personal inquiry, synthesis, reflection and practice."
+  },
+  "/library/": {
+    "path": "/library/",
+    "name": "The Acuity Library",
+    "title": "Open Library | Ancient Wisdom & Philosophy | Acuity Institute",
+    "description": "Read and download available editions of sacred texts, philosophy and esoteric literature. Explore the Acuity open library, virtual e-reader and presentations."
+  },
+  "/tools/": {
+    "path": "/tools/",
+    "name": "The Tools",
+    "title": "The Tools — Acuity.Institute",
+    "description": "Explore the Acuity tools for uncensored knowledge, esoteric wisdom and personal development. The Library is live; Acuity.One is coming soon."
+  },
+  "/tools/agent/": {
+    "path": "/tools/agent/",
+    "name": "Acuity.Agent",
+    "title": "Acuity.Agent — Acuity.Institute",
+    "description": "Source-led inquiry into sacred texts and esoteric wisdom. Find passages, compare traditions and follow the evidence. Coming soon in Acuity.One."
+  },
+  "/tools/codex/": {
+    "path": "/tools/codex/",
+    "name": "Acuity.Codex",
+    "title": "Acuity.Codex — Acuity.Institute",
+    "description": "Context Spheres, The Archive, The Lens, myVault and Studio: a personal space to explore, synthesise and create. Coming soon in Acuity.One."
+  },
+  "/tools/library/": {
+    "path": "/tools/library/",
+    "name": "The Library",
+    "title": "The Library — Acuity.Institute",
+    "description": "Open access to sacred texts, esoteric literature, philosophy and presentations. Read with the virtual EPUB reader, original PDFs and presentation mode. Live now."
+  },
+  "/tools/search/": {
+    "path": "/tools/search/",
+    "name": "Acuity.Search",
+    "title": "Acuity.Search — Acuity.Institute",
+    "description": "Uncensored discovery across the web, literature and curated collections, with inspectable evidence and a path into Codex. Coming soon in Acuity.One."
+  },
+  "/tools/wisdomvault/": {
+    "path": "/tools/wisdomvault/",
+    "name": "WisdomVault",
+    "title": "WisdomVault — Acuity.Institute",
+    "description": "Under development: connect the Acuity knowledge library to your own services and applications through MCP. Part of the forthcoming Acuity.One."
+  }
+}

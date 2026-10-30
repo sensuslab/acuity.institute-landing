@@ -4,7 +4,7 @@ import { InquiryPreview } from '../components/tools/ToolDemos';
 import { FeatureGrid, Journey, OutcomeStrip, SectionHeading, SourcePrinciple, ToolClosing, ToolFaq, ToolHero, ToolPage } from '../components/tools/ToolPrimitives';
 
 export default function AgentPage() {
-  return <ToolPage id="agent" description="Acuity.Agent — source-led inquiry into sacred texts and esoteric wisdom. Explore passages, compare traditions and develop your own understanding. Coming soon in Acuity.One.">
+  return <ToolPage>
     <ToolHero kind="agent" index="01" title={<>Let curiosity<br />become <em>clarity.</em></>} description="A question is a doorway. Acuity.Agent follows it through the Library: finding passages, illuminating context and bringing different voices into a conversation you can make your own." />
     <OutcomeStrip items={['Ask in your own words', 'Follow the source', 'Deepen your understanding']} />
     <section id="capabilities" className="tool-section tool-wrap">

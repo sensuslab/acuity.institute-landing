@@ -94,7 +94,7 @@ Run from a clean checkout:
     npm test
 
 Build precedes the server-route tests because they exercise dist.
-The full suite contains 52 checks, including direct tool-page requests, rendered
+The full suite contains 55 checks, including direct tool-page requests, rendered
 content, canonical redirects, query preservation, HEAD requests, sitemap URLs,
 and 404/405 handling. Existing Library tests are retained.
 
@@ -103,3 +103,19 @@ widths, plus a desktop viewport. It checks horizontal fit and representative
 controls, mobile navigation, availability states and Webinars.
 This is viewport testing in Chromium; real iPhone/iPad Safari testing remains
 a separate device check.
+
+## Continued production review
+
+- A direct visit to a rendered tool page followed by client navigation to Home
+  could restore that tool's original metadata. Destination metadata now comes
+  from one shared route registry for browser navigation and rendered tool pages.
+  Home, Library and history navigation update titles, descriptions, social tags,
+  canonical URLs and stale structured data. Initial rich Library metadata is
+  preserved.
+- A React/DOM regression test starts from actual built Codex HTML and exercises
+  Home, Library, Search and browser back. The DOM test dependency is development
+  only and is not bundled in the site.
+- All instrument panels and navigation disclosure targets remain in the DOM
+  with inactive content hidden. Tab/control labels always resolve to existing
+  destinations; hidden controls stay outside keyboard navigation.
+- A focus-visible skip link leads directly to the focusable main content.

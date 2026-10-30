@@ -121,6 +121,7 @@
 .instrument-tabs button[aria-selected=true] { background:#c5a15e0d; border-color:#c4a15d66; color:#efdab0; }
 .instrument-tabs .tool-number { font-size:8px; }
 .instrument-panel { padding:40px 50px 45px; min-height:360px; animation:tool-enter .4s both; }
+.instrument-panel[hidden] { display:none; }
 .instrument-panel-top { display:flex; justify-content:space-between; align-items:center; color:#bd9c63; margin-bottom:20px; }
 .instrument-panel h3 { font-family:"Cormorant Garamond",Georgia,serif; font-size:40px; letter-spacing:-.025em; line-height:1.08; margin-bottom:19px; }
 .instrument-panel p { font-size:14px; line-height:1.85; color:var(--tool-muted); max-width:62ch; }
