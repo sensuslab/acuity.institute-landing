@@ -1,11 +1,20 @@
 import { useState, useEffect } from 'react';
-import { Hexagon } from 'lucide-react';
+import { Hexagon, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const NAV_LINKS = [
   { label: 'Library', href: '/library/' },
   { label: 'Philosophy', href: '#manifesto' },
   { label: 'Webinars', href: '#', action: 'webinars' as const },
   { label: 'Shorts', href: '#', action: 'shorts' as const },
+];
+
+const TOOLS = [
+  { label: 'Agent', to: '/tools/agent' },
+  { label: 'Codex', to: '/tools/codex' },
+  { label: 'Library', to: '/tools/library' },
+  { label: 'Search', to: '/tools/search' },
+  { label: 'WisdomVault', to: '/tools/wisdomvault', disabled: true },
 ];
 
 export default function Navigation({
@@ -17,6 +26,7 @@ export default function Navigation({
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 500);
@@ -46,16 +56,49 @@ export default function Navigation({
             : 'bg-void/40 border-white/[0.05] backdrop-blur-md'
         }`}
       >
-        <a href="#hero" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
           <Hexagon className="w-4 h-4 text-gold transition-transform duration-300 group-hover:rotate-90" />
           <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-starlight">
             Acuity
           </span>
-        </a>
+        </Link>
 
         <div className="h-3 w-px bg-white/10" />
 
-        <div className="flex items-center gap-3 md:gap-6">
+        <div className="flex items-center gap-3 md:gap-6 relative">
+          <div className="relative">
+            <button
+              onClick={() => setToolsOpen(!toolsOpen)}
+              className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.08em] md:tracking-[0.15em] text-starlight/60 gold-underline pb-0.5 transition-colors duration-300 hover:text-starlight flex items-center gap-1"
+            >
+              The Tools
+              <ChevronDown className={`w-3 h-3 transition-transform ${toolsOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {toolsOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-void/95 border border-white/10 rounded-xl py-2 shadow-xl backdrop-blur-xl z-50">
+                {TOOLS.map((tool) => (
+                  tool.disabled ? (
+                    <div
+                      key={tool.label}
+                      className="px-4 py-2 text-[11px] uppercase tracking-wider text-starlight/30 cursor-not-allowed"
+                    >
+                      {tool.label}
+                    </div>
+                  ) : (
+                    <Link
+                      key={tool.label}
+                      to={tool.to}
+                      onClick={() => setToolsOpen(false)}
+                      className="block px-4 py-2 text-[11px] uppercase tracking-wider text-starlight/70 hover:text-gold hover:bg-white/5 transition-colors"
+                    >
+                      {tool.label}
+                    </Link>
+                  )
+                ))}
+              </div>
+            )}
+          </div>
+
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
@@ -83,4 +126,3 @@ export default function Navigation({
     </nav>
   );
 }
-
