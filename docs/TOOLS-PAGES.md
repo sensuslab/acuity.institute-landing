@@ -94,7 +94,7 @@ Run from a clean checkout:
     npm test
 
 Build precedes the server-route tests because they exercise dist.
-The full suite contains 55 checks, including direct tool-page requests, rendered
+The full suite contains 56 checks, including direct tool-page requests, rendered
 content, canonical redirects, query preservation, HEAD requests, sitemap URLs,
 and 404/405 handling. Existing Library tests are retained.
 
@@ -119,3 +119,30 @@ a separate device check.
   with inactive content hidden. Tab/control labels always resolve to existing
   destinations; hidden controls stay outside keyboard navigation.
 - A focus-visible skip link leads directly to the focusable main content.
+
+## Interactive ecosystem and standalone figures
+
+- `/tools/` now contains a code-drawn celestial atlas following the supplied
+  ecosystem diagram: Discover & Learn, Research & Create, Reflect & Practise,
+  and the connected knowledge/capability foundation. The reference image is not
+  bundled or used as a background.
+- The same vector artwork drives Agent, Library and Search figures and the
+  map's emblems. The map extends this family with a cryptex, play frame,
+  pendulum and celestial wheel. Its midnight sky, stars and orbital geometry
+  are SVG/CSS; there is no animation or graph-library dependency.
+- Hover and keyboard focus show local tooltips and highlight related paths.
+  Escape dismisses the tooltip. Every node also has an explicit details button;
+  on narrow screens it brings the selected details into view. Explore links
+  open the tool guide or companion address. WisdomVault remains unlinked.
+- Webinars opens the existing homepage modal through `/?media=webinars`.
+  The same entry mechanism supports `/?media=shorts`.
+- Paths describe the Acuity vision and learning journey, rather than asserting
+  that all pictured integrations are currently live. Availability remains clear.
+- A React interaction regression checks desktop hover, service destinations,
+  unlinked WisdomVault and narrow-screen selection. Pointer movement while
+  scrolling cannot replace the instrument selected on a phone-sized layout.
+- `node scripts/export-tool-figures.mjs` exports exact standalone, black-backed
+  SVGs to `public/tools/figures/`. Each has a 2560 × 2320 intrinsic size and can
+  scale without loss. Separate PNGs at that size accompany the chat handoff.
+- See `LIBRARY-SUBDOMAIN.md` for the proposed Library address setup. No DNS,
+  infrastructure, deployment or production routing changed.

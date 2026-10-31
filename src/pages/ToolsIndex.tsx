@@ -1,11 +1,13 @@
 import { ArrowDown, ArrowUpRight, BookOpen, Compass, Layers, Sparkles, Vault } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { tools } from '../components/tools/toolDirectory';
-import { FeatureGrid, SourcePrinciple, Status, ToolArtwork, ToolClosing, ToolPage } from '../components/tools/ToolPrimitives';
+import { FeatureGrid, SourcePrinciple, Status, ToolClosing, ToolPage } from '../components/tools/ToolPrimitives';
+import EcosystemMap from '../components/tools/EcosystemMap';
 
 export default function ToolsIndex() {
   return <ToolPage>
-    <header className="tools-index-hero tool-wrap"><div><p className="tool-eyebrow">Acuity.Institute / The Tools</p><Status /><h1>Many ways in.<br /><em>One deeper<br />understanding.</em></h1><p className="tool-lead">Instruments for the enquiring mind. Explore uncensored knowledge and esoteric wisdom, return to the sources, and develop a perspective and practice of your own.</p><a className="tool-button" href="#instruments">Find your instrument <ArrowDown size={16} /></a><p className="tool-small">The Library is open now. The connected services are coming soon.</p></div><ToolArtwork kind="codex" /></header>
+    <header className="tools-index-hero tools-index-intro tool-wrap"><p className="tool-eyebrow">Acuity.Institute / The Tools</p><Status /><h1>Many ways in.<br /><em>One deeper understanding.</em></h1><p className="tool-lead">Instruments for the enquiring mind. Explore uncensored knowledge and esoteric wisdom, return to the sources, and develop a perspective and practice of your own.</p><a className="tool-button" href="#ecosystem">Explore the constellation <ArrowDown size={16} /></a><p className="tool-small">The Library is open now. The connected services are coming soon.</p></header>
+    <EcosystemMap />
     <section id="instruments" className="tool-wrap tool-section"><div className="tools-directory">{tools.filter(tool => tool.id !== 'wisdomvault').map((tool,i) => <Link className="tools-directory-item" key={tool.id} to={'/tools/' + tool.id}><div className="directory-card-top"><span className="tool-number">0{i + 1} / {tool.role}</span><span className={tool.live ? 'directory-live' : ''}>{tool.live ? 'Live now' : 'Coming soon'}</span></div><div className={'directory-emblem emblem-' + tool.id}><tool.icon size={56} strokeWidth={.8} /><i /><i /></div><h2>{tool.name}</h2><p>{tool.description}</p><span className="tool-text-link">Explore {tool.id === 'library' ? 'the Library' : tool.name}<ArrowUpRight size={16} /></span></Link>)}</div>
       <aside className="wisdom-placeholder"><Vault size={28} strokeWidth={1} aria-hidden="true" /><div><h2>WisdomVault <span>Under development</span></h2><p>The Acuity knowledge library, connected to your own services and applications through MCP. Discover passages, compare traditions and bring cited knowledge into the places you work.</p></div><span className="tool-number">On the horizon</span></aside>
     </section>

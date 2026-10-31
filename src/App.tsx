@@ -25,8 +25,15 @@ import WisdomVaultPage from './pages/WisdomVaultPage';
 import RouteMetadata from './components/RouteMetadata';
 
 function HomePage() {
-  const [mediaOpen, setMediaOpen] = useState(false);
-  const [shortsOpen, setShortsOpen] = useState(false);
+  const { search } = useLocation();
+  const requestedMedia = new URLSearchParams(search).get('media');
+  const [mediaOpen, setMediaOpen] = useState(requestedMedia === 'webinars');
+  const [shortsOpen, setShortsOpen] = useState(requestedMedia === 'shorts');
+
+  useEffect(() => {
+    if (requestedMedia === 'webinars') setMediaOpen(true);
+    if (requestedMedia === 'shorts') setShortsOpen(true);
+  }, [requestedMedia]);
 
   return (
     <div className="min-h-screen bg-void text-starlight">
