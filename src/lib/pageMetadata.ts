@@ -1,11 +1,13 @@
 import metadata from '../data/pageMetadata.json';
+import brandIcons from '../data/brandIcons.json';
 
 export type PageMetadata = { path: string; name: string; title: string; description: string };
 const origin = 'https://acuity.institute';
 const pages: Record<string, PageMetadata> = metadata;
 
-export function metadataForPath(pathname: string): PageMetadata | undefined {
+export function metadataForPath(pathname: string, hostname = ''): PageMetadata | undefined {
   const path = pathname.split(/[?#]/, 1)[0].replace(/\/+$/, '') + '/';
+  if (path === '/' && hostname.toLowerCase() === 'library.acuity.institute') return pages['/library/'];
   return pages[path];
 }
 
@@ -20,6 +22,14 @@ function containsPage(value: unknown, canonical: string): boolean {
 export function applyPageMetadata(document: Document, page: PageMetadata) {
   const canonical = origin + page.path;
   document.title = page.title;
+  const product = page.path.startsWith('/library') ? 'library' : page.path.split('/')[2];
+  const brand = product && product in brandIcons ? product as keyof typeof brandIcons : 'home';
+  document.querySelectorAll('link[rel="icon"],link[rel="apple-touch-icon"],link[rel="manifest"]').forEach(link => link.remove());
+  for (const attributes of brandIcons[brand]) {
+    const link = document.createElement('link');
+    for (const [name, value] of Object.entries(attributes)) link.setAttribute(name, value);
+    document.head.append(link);
+  }
   const fields = [
     ['meta[name="description"]', page.description],
     ['meta[property="og:title"]', page.title],

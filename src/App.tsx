@@ -92,18 +92,19 @@ function RoutePosition() {
   return null;
 }
 
+function LibraryEntry() {
+  return <Suspense fallback={<main id="main" className="p-12 text-starlight">Opening the Acuity Library…</main>}><LibraryPage /></Suspense>;
+}
+
 export default function App() {
+  const libraryHost = window.location.hostname.toLowerCase() === 'library.acuity.institute';
   return (
     <>
     <RouteMetadata />
     <RoutePosition />
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/library" element={
-        <Suspense fallback={<main className="p-12 text-starlight">Opening the Acuity Library…</main>}>
-          <LibraryPage />
-        </Suspense>
-      } />
+      <Route path="/" element={libraryHost ? <LibraryEntry /> : <HomePage />} />
+      <Route path="/library" element={<LibraryEntry />} />
       <Route path="/tools" element={<ToolsShell><ToolsIndex /></ToolsShell>} />
       <Route path="/tools/agent" element={<ToolsShell><AgentPage /></ToolsShell>} />
       <Route path="/tools/codex" element={<ToolsShell><CodexPage /></ToolsShell>} />

@@ -29,6 +29,8 @@ test('Direct tool arrival followed by Home, Library and browser back uses destin
       assert.equal(document.querySelector('meta[property="og:url"]').content, canonical);
       assert.equal(document.querySelector('meta[property="og:title"]').content, title);
       assert.equal(document.querySelector('meta[name="twitter:title"]').content, title);
+      const product = canonical.includes('/library') ? 'library' : canonical.match(/\/tools\/(agent|codex|search)\//)?.[1];
+      assert.equal(document.querySelector('link[rel="icon"]').getAttribute('href'), product ? '/tools/icons/' + product + '/favicon.ico' : '/favicon.ico');
       const graphs = [...document.querySelectorAll('script[type="application/ld+json"]')].map(node => JSON.parse(node.textContent));
       assert.equal(graphs.length, 1);
       assert.equal(graphs[0].url, canonical);
@@ -62,6 +64,8 @@ test('Initial Library metadata retains its rich catalogue and query strings are 
   assert.equal(document.querySelector('link[rel=canonical]').getAttribute('href'), 'https://acuity.institute/library/');
   assert.equal(metadataForPath('/tools/codex').path, '/tools/codex/');
   assert.equal(metadataForPath('/tools/not-a-tool/'), undefined);
+  assert.equal(metadataForPath('/?q=tao', 'library.acuity.institute').path, '/library/');
+  assert.equal(metadataForPath('/', 'acuity.institute').path, '/');
 });
 
 test('Every tool tab, disclosure and skip link points to an existing destination', () => {

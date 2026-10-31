@@ -1,3 +1,5 @@
+import ProductGallery from '../components/tools/ProductGallery';
+import { codexScreens } from '../components/tools/productScreens';
 import { Archive, AudioLines, BookOpen, Download, Eye, Layers, LockKeyhole, Network, Orbit, Search } from 'lucide-react';
 import { InstrumentExplorer, SpherePreview, type Instrument } from '../components/tools/ToolDemos';
 import { FeatureGrid, Journey, OutcomeStrip, SectionHeading, SourcePrinciple, ToolClosing, ToolFaq, ToolHero, ToolPage } from '../components/tools/ToolPrimitives';
@@ -14,6 +16,10 @@ export default function CodexPage() {
   return <ToolPage>
     <ToolHero kind="codex" index="02" title={<>Turn the key.<br /><em>Unlock wisdom.</em></>} description="Your sources. Your questions. Your developing understanding. Acuity.Codex turns a collection of knowledge into a personal space for exploration, interpretation and creation." />
     <OutcomeStrip items={['Build your Context Spheres', 'Ask through The Lens', 'Create in the Studio']} />
+    <section id="product-views" className="tool-section tool-wrap product-views">
+      <SectionHeading number="01 / A closer look" eyebrow="The instrument in use" title={<>Step inside<br /><em>your field of study.</em></>}><p>Explore the workspace: a sphere’s sources, a question through The Lens, private notes and material created in Studio. Open a view to see the details.</p></SectionHeading>
+      <ProductGallery product="codex" screens={codexScreens} />
+    </section>
     <section id="capabilities" className="tool-section tool-wrap">
       <SectionHeading number="01" eyebrow="Instruments of Clarity" title={<>Knowledge becomes<br /><em>your field of discovery.</em></>}><p>Think of Codex as a cryptex: the knowledge is there, and a considered question begins to unlock it. Select what matters to you, bring sources into relation and follow the threads that emerge.</p><p>Scripture, mystical literature, philosophy and your own study material can become distinct knowledge bases. Each has a purpose and a boundary, so personal interpretation remains connected to the material that informed it.</p></SectionHeading>
       <div className="codex-film-story">{[

@@ -94,7 +94,7 @@ Run from a clean checkout:
     npm test
 
 Build precedes the server-route tests because they exercise dist.
-The full suite contains 56 checks, including direct tool-page requests, rendered
+The full suite contains 58 checks, including direct tool-page requests, rendered
 content, canonical redirects, query preservation, HEAD requests, sitemap URLs,
 and 404/405 handling. Existing Library tests are retained.
 
@@ -146,3 +146,25 @@ a separate device check.
   scale without loss. Separate PNGs at that size accompany the chat handoff.
 - See `LIBRARY-SUBDOMAIN.md` for the proposed Library address setup. No DNS,
   infrastructure, deployment or production routing changed.
+
+## Supplied brand pack and product views
+
+- The supplied Agent, Codex, Library and Search marks appear in the Tools menu,
+  page product labels, directory, related links and interactive ecosystem.
+  Interface action icons remain Lucide. The standalone editorial figures retain
+  their original illustration styling.
+- Product routes use the supplied favicon, Apple touch and installable-icon
+  assets. Route changes restore the correct brand, including the Institute on
+  Home. Product manifests use absolute asset paths and valid local entry URLs.
+- Codex includes all eight supplied widescreen screenshots. Search includes ten
+  unique views; two exact duplicates are represented once. Full views remain
+  1920 × 1080; separate 480px thumbnails and lazy loading reduce transfer.
+  Optimized screenshot assets total approximately 1.9 MB.
+- The galleries support thumbnail selection, previous/next, a native modal,
+  keyboard arrow navigation, Escape dismissal and return focus. On phones, an
+  enlarged image can be panned without widening the page; close stays pinned.
+- Integration checks cover actual icon/manifest/screenshot requests, brand
+  changes during navigation and the dedicated Library hostname.
+- Read-only Cloudflare/Railway inspection and a live catalogue checksum/PDF
+  range check inform `LIBRARY-SUBDOMAIN.md`. Host routing and CORS changes are
+  prepared in source only. No deployment or DNS mutation was performed.

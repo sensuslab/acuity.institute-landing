@@ -1,0 +1,25 @@
+import type { ProductScreen } from './ProductGallery';
+
+export const codexScreens: ProductScreen[] = [
+  { file: '10-lens-cited-answer', title: 'The Lens, with evidence in view', text: 'Explore an inquiry beside the sources selected for a Context Sphere. Keep the answer and its references within reach.', alt: 'Acuity.Codex showing the Kingdom Within sphere and a source-grounded Lens answer in the right-hand panel' },
+  { file: '08-sources-list-view', title: 'A clear view of your sources', text: 'Switch from the spatial view to a readable source list. Review the works that give this sphere its context.', alt: 'Codex source list showing source titles and descriptions alongside the Lens conversation' },
+  { file: '09-lens-thinking', title: 'Follow an inquiry as it develops', text: 'Ask within a chosen sphere and follow the conversation without losing sight of its knowledge context.', alt: 'Codex sphere workspace with an inquiry in progress in The Lens' },
+  { file: '11-full-screen-chat', title: 'Make room for a deeper conversation', text: 'Expand The Lens when an answer deserves your full attention, then return to the wider workspace.', alt: 'Codex full-screen Lens conversation displaying an answer with distinct sections and a question field' },
+  { file: '12-studio', title: 'Give your study a useful form', text: 'Create source-led study material, summaries and spoken explorations through Studio.', alt: 'Codex Studio panel with creation formats, output instructions and a generate control beside the sphere' },
+  { file: '13-private-notes', title: 'Keep a thought of your own', text: 'Record private reflections alongside the sources and questions that prompted them.', alt: 'Codex private notes panel open beside the spatial knowledge workspace' },
+  { file: '14-search-in-codex', title: 'Let discovery continue inside Codex', text: 'Research with Acuity.Search from the workspace and bring selected discoveries into your study.', alt: 'Acuity.Search embedded inside Codex with research modes and results controls' },
+  { file: '15-knowledge-base-settings', title: 'Give each sphere a purpose', text: 'Name and describe a knowledge base so its focus remains clear as your collection and understanding grow.', alt: 'Knowledge base settings dialog for the Kingdom Within sphere, with its name and description' },
+];
+
+export const searchScreens: ProductScreen[] = [
+  { file: '07-key-sources', title: 'See the sources behind a discovery', text: 'Explore key works and source cards alongside a research answer, then follow the evidence that matters to you.', alt: 'Acuity.Search showing key source cards above a research answer about the Gospel of Thomas' },
+  { file: '02-home', title: 'Begin with a question', text: 'Choose a direction for your inquiry from a calm, focused search workspace.', alt: 'Acuity.Search homepage with a central question field and research mode controls' },
+  { file: '03-sacred-texts-mode', title: 'Bring sacred texts into focus', text: 'Direct a question towards sacred-text research and keep the scope of the inquiry deliberate.', alt: 'Search question field with Sacred Texts selected and a question ready to explore' },
+  { file: '04-answer-streaming', title: 'Follow the research unfolding', text: 'Watch an inquiry develop, inspect early leads and stay close to the material being found.', alt: 'Acuity.Search displaying an active research process and emerging key source cards' },
+  { file: '05-answer-with-citations', title: 'Read an answer with a trail', text: 'Move through a structured synthesis while keeping its supporting references available for review.', alt: 'Acuity.Search research answer with headings, source references and sections on interpretation' },
+  { file: '08-evidence-ledger', title: 'Open the evidence ledger', text: 'Inspect the supporting material in a dedicated side panel as you consider the wider answer.', alt: 'Acuity.Search evidence ledger open beside the source cards and research answer' },
+  { file: '09-sacred-texts-answer', title: 'Return to a passage', text: 'Look for the wording behind an idea, preserving the distinction between a source passage and its interpretation.', alt: 'Acuity.Search Sacred Texts results with passage-oriented research controls' },
+  { file: '11-literature-editions', title: 'Hold editions in perspective', text: 'Explore literary and historical works with attention to the translation or edition behind a result.', alt: 'Acuity.Search literature research comparing translations of Poimandres' },
+  { file: '12-history', title: 'Pick up the thread', text: 'Return to previous research from the history panel and continue a question that still has more to offer.', alt: 'Acuity.Search workspace with previous research entries visible in the history sidebar' },
+  { file: '01-sign-in', title: 'A dedicated place for your research', text: 'The account entry gives returning readers a way back into their own research workspace. Acuity.Search is coming soon.', alt: 'Acuity.Search sign-in screen with the gold product mark on a midnight background' },
+];

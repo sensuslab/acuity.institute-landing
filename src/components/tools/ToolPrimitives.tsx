@@ -1,5 +1,6 @@
 import { type ReactNode } from 'react';
 import { ToolIllustration } from './ToolIllustration';
+import ToolBrandMark from './ToolBrandMark';
 import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Orbit, Sparkles, type LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './tools.css';
@@ -20,7 +21,7 @@ export function ToolHero({ kind, index, title, description }: { kind: ToolId; in
     <div className="tool-hero-copy">
       <Link to="/tools" className="tool-back"><span aria-hidden="true">←</span> The Tools <span className="tool-back-separator">/</span> {tool.role}</Link>
       <Status live={tool.live} />
-      <h1><span className="tool-product">{tool.name}</span><span className="tool-headline">{title}</span></h1>
+      <h1><span className="tool-product"><ToolBrandMark kind={kind} />{tool.name}</span><span className="tool-headline">{title}</span></h1>
       <p className="tool-lead">{description}</p>
       <div className="tool-actions">
         {tool.live ? <Link className="tool-button" to="/library">Enter the Library <ArrowUpRight size={16} /></Link> : <a className="tool-button" href="#capabilities">Explore the capabilities <ArrowDown size={16} /></a>}
@@ -59,7 +60,7 @@ export function ToolClosing({ current }: { current?: ToolId }) {
       <div><p className="tool-eyebrow">One connected field of exploration</p><h2>Acuity.<em>One</em></h2><p>Explore, consume, synthesise, personalise and interpret. The Acuity tools bring different ways of knowing into a shared pursuit: personal development, considered practice, and understanding that inspires, unites and harmonises.</p></div>
       <div className="tool-one-status"><Status /><p>The Library is open now.<br />The connected services are coming soon.</p>{active?.domain ? <a href={'https://' + active.domain} target="_blank" rel="noopener noreferrer">{active.domain}<ArrowUpRight size={13} /><span className="sr-only"> — service address, coming soon; opens in a new tab</span></a> : <Link className="tool-text-link" to="/library">Begin in the Library <ArrowUpRight size={15} /></Link>}</div>
     </section>
-    <nav className="tool-related tool-wrap" aria-label="Explore the other tools"><p className="tool-eyebrow">Continue exploring</p><div>{tools.filter(tool => tool.id !== current && tool.id !== 'wisdomvault').map(({ id, name, role, icon: Icon }) => <Link key={id} to={'/tools/' + id}><Icon size={20} strokeWidth={1.2} aria-hidden="true" /><span><small>{role}</small>{name}</span><ArrowUpRight size={17} /></Link>)}</div></nav>
+    <nav className="tool-related tool-wrap" aria-label="Explore the other tools"><p className="tool-eyebrow">Continue exploring</p><div>{tools.filter(tool => tool.id !== current && tool.id !== 'wisdomvault').map(({ id, name, role }) => <Link key={id} to={'/tools/' + id}><ToolBrandMark kind={id} /><span><small>{role}</small>{name}</span><ArrowUpRight size={17} /></Link>)}</div></nav>
   </>;
 }
 

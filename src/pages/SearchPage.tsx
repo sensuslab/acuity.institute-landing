@@ -1,3 +1,5 @@
+import ProductGallery from '../components/tools/ProductGallery';
+import { searchScreens } from '../components/tools/productScreens';
 import { BookOpen, Compass, Download, Globe2, ListFilter, Search, Share2, ShieldCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { EvidencePreview, InstrumentExplorer, type Instrument } from '../components/tools/ToolDemos';
@@ -13,6 +15,10 @@ export default function SearchPage() {
   return <ToolPage>
     <ToolHero kind="search" index="04" title={<>Look further.<br /><em>Discover more.</em></>} description="An uncensored field of inquiry for ideas beyond the usual view. Search the web, literature and chosen collections, examine the evidence, and follow what calls for closer understanding." />
     <OutcomeStrip items={['Three ways to discover', 'Evidence you can inspect', 'A path into deeper study']} />
+    <section id="product-views" className="tool-section tool-wrap product-views">
+      <SectionHeading number="01 / A closer look" eyebrow="Discovery in view" title={<>From a question<br /><em>to the evidence.</em></>}><p>See the search workspace in use. Move between source cards, cited answers and the evidence ledger, or explore the views for sacred texts and literature.</p></SectionHeading>
+      <ProductGallery product="search" screens={searchScreens} />
+    </section>
     <section id="capabilities" className="tool-section tool-wrap">
       <SectionHeading number="01" eyebrow="Discovery with direction" title={<>A broader search.<br /><em>A deliberate scope.</em></>}><p>Esoteric knowledge is scattered across archives, translations, specialist collections and the wider web. Acuity.Search brings multiple routes of discovery into one place, with a scope you can shape.</p><p>Start broadly, look for a particular work, or focus on a group of domains. Choose the approach that suits the question rather than treating every inquiry the same way.</p></SectionHeading>
       <InstrumentExplorer label="Explore search modes" items={modes} />

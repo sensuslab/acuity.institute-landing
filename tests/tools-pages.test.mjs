@@ -4,6 +4,8 @@ import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
+import { parseHTML } from 'linkedom';
+import { request } from 'node:http';
 
 const port = 29000 + Math.floor(Math.random() * 6000);
 const origin = 'http://127.0.0.1:' + port;
@@ -52,4 +54,47 @@ test('Every new sitemap tool URL resolves to an implemented route', async () => 
   const urls = [...sitemap.matchAll(/<loc>(https:\/\/acuity\.institute\/tools\/[^<]*)<\/loc>/g)].map(match => match[1]);
   assert.equal(urls.length, 6);
   for (const url of urls) assert.equal((await fetch(origin + new URL(url).pathname)).status, 200, url);
+});
+
+test('Product pages deliver the supplied icons, valid manifests and real screenshot assets', async () => {
+  for (const brand of ['agent', 'codex', 'library', 'search']) {
+    const html = await (await fetch(origin + '/tools/' + brand + '/')).text();
+    const { document } = parseHTML(html);
+    assert.equal(document.querySelector('link[rel="icon"]').getAttribute('href'), '/tools/icons/' + brand + '/favicon.ico');
+    const manifestResponse = await fetch(origin + document.querySelector('link[rel="manifest"]').getAttribute('href'));
+    assert.match(manifestResponse.headers.get('content-type'), /application\/manifest\+json/);
+    const manifest = await manifestResponse.json();
+    assert.equal(manifest.start_url, brand === 'library' ? '/library/' : '/tools/' + brand + '/');
+    for (const icon of manifest.icons) assert.equal((await fetch(origin + icon.src, { method: 'HEAD' })).status, 200);
+    const screens = [...document.querySelectorAll('.product-gallery img[src]')];
+    if (brand === 'codex' || brand === 'search') {
+      assert.equal(document.querySelectorAll('.product-gallery-thumbs button').length, brand === 'codex' ? 8 : 10);
+      for (const image of screens) {
+        const response = await fetch(origin + image.getAttribute('src'), { method: 'HEAD' });
+        assert.equal(response.status, 200);
+        assert.match(response.headers.get('content-type'), /image\/webp/);
+      }
+    }
+  }
+});
+
+test('Dedicated Library hostname serves the catalogue at its root without moving the Institute homepage', async () => {
+  // Use a raw request: the fetch implementation may normalise Host to its URL.
+  const byHost = (host, pathname = '/') => new Promise((resolve, reject) => {
+    const req = request(origin + pathname, { headers: { Host: host } }, res => {
+      let text = ''; res.setEncoding('utf8'); res.on('data', chunk => { text += chunk; });
+      res.on('end', () => resolve({ status: res.statusCode, text }));
+    }); req.on('error', reject); req.end();
+  });
+  const alias = await byHost('library.acuity.institute', '/?q=tao');
+  assert.equal(alias.status, 200);
+  const html = alias.text;
+  assert.ok(html.includes('<title>Open Library |'));
+  assert.ok(html.includes('https://acuity.institute/library/'));
+  assert.ok(html.includes('/tools/icons/library/favicon.ico'));
+  assert.ok(html.includes('The Acuity Open Library'));
+  const home = (await byHost('acuity.institute')).text;
+  assert.ok(home.includes('<title>Acuity Institute | Open Wisdom Library'));
+  assert.equal((await byHost('library.acuity.institute', '/health')).status, 200);
+  assert.equal((await byHost('library.acuity.institute', '/tools/icons/library/brand-mark.png')).status, 200);
 });

@@ -1,10 +1,12 @@
 import { useId } from 'react';
 import { ToolIllustration } from './ToolIllustration';
+import ToolBrandMark from './ToolBrandMark';
 import type { EcosystemId } from './ecosystemDirectory';
 
 export default function EcosystemGlyph({ kind }: { kind: EcosystemId }) {
   const id = 'ecosystem-' + useId().replace(/:/g, '');
-  if (kind === 'library' || kind === 'agent' || kind === 'search' || kind === 'codex' || kind === 'wisdomvault') return <ToolIllustration kind={kind} emblem />;
+  if (kind === 'wisdomvault') return <ToolIllustration kind={kind} emblem />;
+  if (kind === 'library' || kind === 'agent' || kind === 'search' || kind === 'codex') return <ToolBrandMark kind={kind} large />;
   return <svg viewBox="0 0 440 430" fill="none" role="img" aria-label={kind === 'media' ? 'A golden play symbol in a geometric frame' : kind === 'lumennous' ? 'A luminous pendulum suspended within celestial orbits' : 'A golden celestial wheel with a guiding star'}>
     <defs><linearGradient id={id} x1="0" x2=".8" y2="1"><stop stopColor="#fff4cb" /><stop offset=".5" stopColor="#d4a94a" /><stop offset="1" stopColor="#85632b" /></linearGradient><radialGradient id={id + '-light'}><stop stopColor="#e9c675" stopOpacity=".15" /><stop offset="1" stopColor="#d4a94a" stopOpacity="0" /></radialGradient></defs>
     <circle cx="220" cy="215" r="190" fill={'url(#' + id + '-light)'} />

@@ -11,7 +11,7 @@ const SHORTS_DIR = process.env.SHORTS_DIR || '/data/shorts';
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8',
-  '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png',
+  '.json': 'application/json', '.webmanifest': 'application/manifest+json', '.svg': 'image/svg+xml', '.png': 'image/png',
   '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp',
   '.ico': 'image/x-icon', '.woff': 'font/woff', '.woff2': 'font/woff2',
   '.mp4': 'video/mp4', '.webm': 'video/webm', '.pdf': 'application/pdf',
@@ -65,6 +65,12 @@ const server = http.createServer((req, res) => {
   }
   if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405, {Allow:'GET, HEAD, OPTIONS'}).end(); return; }
   if (pathname === '/health') { res.writeHead(200, {'Content-Type':'text/plain'}).end(req.method === 'HEAD' ? undefined : 'ok'); return; }
+  // The dedicated hostname is an entry to the same Library and immutable assets.
+  // Keep the existing Institute URL canonical; the browser retains the alias.
+  const hostname = String(req.headers.host || '').split(':')[0].toLowerCase();
+  if (pathname === '/' && hostname === 'library.acuity.institute') {
+    sendFile(req, res, path.join(DIST, 'library/index.html')); return;
+  }
   if (libraryRedirects.has(pathname)) {res.writeHead(308, {Location:libraryRedirects.get(pathname)}).end();return;}
   if (pathname.startsWith('/shorts/')) {
     const file = safeJoin(SHORTS_DIR, pathname.slice('/shorts/'.length));
@@ -87,3 +93,4 @@ const server = http.createServer((req, res) => {
   });
 });
 server.listen(PORT, '0.0.0.0', () => console.log(`acuity-landing listening on ${PORT}; shorts from ${SHORTS_DIR}`));
+

@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
+import { withBrandIcons } from './apply-brand-icons.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
@@ -32,7 +33,7 @@ for (const page of pages) {
   html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => '<div id="root">' + renderPage(page) + '</div>');
   const directory = path.join(dist, page.path);
   await fs.mkdir(directory, { recursive: true });
-  await fs.writeFile(path.join(directory, 'index.html'), html);
+  await fs.writeFile(path.join(directory, 'index.html'), withBrandIcons(html, page.path.split('/')[2]));
 }
 const sitemapPath = path.join(dist, 'sitemap.xml');
 let sitemap = await fs.readFile(sitemapPath, 'utf8');
