@@ -64,13 +64,12 @@ export function ToolClosing({ current }: { current?: ToolId }) {
   </>;
 }
 
-/** Original, code-native brand artwork. Decorative marks never represent product data. */
+/** Editorial brand artwork, including the supplied raster Codex figure. */
 export function ToolArtwork({ kind, index = '00' }: { kind: ToolId; index?: string }) {
-  if (kind === 'codex') return <figure className="tool-artwork art-codex art-cinematic"><div className="art-aura" aria-hidden="true" /><div className="art-reticle" aria-hidden="true" /><div className="art-float"><img src="/tools/codex-cryptex.webp" alt="A crystalline cryptex carrying luminous golden threads through a cosmic field, from the Acuity.Codex concept film" width="1200" height="675" /></div><figcaption><span>FIG. {index} / THE INSTRUMENT</span><span>Conceptual artwork <span aria-hidden="true">✧</span></span></figcaption></figure>;
   return <figure className={'tool-artwork art-' + kind}>
-    <div className="art-aura" aria-hidden="true" /><div className="art-reticle" aria-hidden="true" />
+    {kind !== 'codex' ? <><div className="art-aura" aria-hidden="true" /><div className="art-reticle" aria-hidden="true" /></> : null}
     <div className="art-float">
-      <ToolIllustration kind={kind} />
+      {kind === 'codex' ? <img src="/tools/codex-instrument.webp" alt="An illuminated golden cryptex within hexagonal celestial geometry, encircled by orbital paths and three glowing stars" width="1254" height="1120" /> : <ToolIllustration kind={kind} />}
     </div>
     <figcaption><span>FIG. {index} / {tools.find(tool => tool.id === kind)?.role}</span><span>Knowledge, illuminated <span aria-hidden="true">✧</span></span></figcaption>
   </figure>;

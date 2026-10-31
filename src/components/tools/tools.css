@@ -32,8 +32,7 @@
 .art-aura { position:absolute; inset:10%; background:radial-gradient(ellipse,#c4954822 0%,#9d6d2b06 45%,transparent 70%); filter:blur(22px); }
 .art-reticle { position:absolute; inset:17% 10% 23%; border:1px dashed #ba9a5022; border-radius:50%; transform:rotate(-25deg); animation:tool-orbit 100s linear infinite; }
 .art-float { animation:tool-float 9s ease-in-out infinite; }
-.art-cinematic .art-float { position:relative; min-height:470px; display:flex; align-items:center; }
-.art-cinematic img { width:145%; max-width:none; margin-left:-18%; aspect-ratio:16/9; object-fit:cover; mask-image:radial-gradient(ellipse 65% 70% at 50% 50%,#000 45%,transparent 90%); }
+.art-codex .art-float img { width:100%; height:auto; display:block; aspect-ratio:640/580; object-fit:contain; mix-blend-mode:lighten; mask-image:linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent),linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); mask-composite:intersect; }
 .codex-film-story { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; }
 .codex-film-story figure { border:1px solid #c4a15d33; overflow:hidden; background:#0e0d13; }
 .codex-film-story img { aspect-ratio:1.5; object-fit:cover; width:100%; display:block; }
@@ -305,8 +304,6 @@
   .tool-related > div { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:760px) {
-  .art-cinematic .art-float { min-height:330px; }
-  .art-cinematic img { width:125%; margin-left:-12.5%; }
   .codex-film-story { grid-template-columns:1fr; gap:16px; }
   .codex-film-story img { aspect-ratio:1.8; }
   .codex-film-story figcaption { padding:20px; }

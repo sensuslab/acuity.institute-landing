@@ -168,3 +168,14 @@ a separate device check.
 - Read-only Cloudflare/Railway inspection and a live catalogue checksum/PDF
   range check inform `LIBRARY-SUBDOMAIN.md`. Host routing and CORS changes are
   prepared in source only. No deployment or DNS mutation was performed.
+
+## Supplied Codex editorial figure
+
+- The Codex hero uses the supplied illuminated cryptex as an optimized raster
+  WebP, in the same shared figure container, proportions and floating animation
+  as Agent, Library and Search. The illustration is not converted to SVG.
+- The exported image omits only the baked-in caption area. The shared HTML
+  caption supplies `FIG. 02 / THE INSTRUMENT` and `Knowledge, illuminated`,
+  keeping the typography accessible and consistent at every viewport size.
+- The supplied image already contains its celestial geometry, stars and glow,
+  so the Codex figure does not layer additional orbital decoration over it.
