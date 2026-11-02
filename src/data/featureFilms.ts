@@ -1,37 +1,39 @@
+const BASE = 'https://assets.acuity.institute/library/videos/';
+
 export const featureFilms = {
   tools: {
-    src: '/videos/tools.mp4',
-    poster: '/videos/tools-poster.jpg',
+    src: BASE + 'tools.mp4',
+    poster: BASE + 'tools-poster.jpg',
     label: 'The Tools / Visual narrative',
     title: 'Many ways in. One deeper understanding.',
   },
   toolsBottom: {
-    src: '/videos/tools-bottom.mp4',
-    poster: '/videos/tools-bottom-poster.jpg',
+    src: BASE + 'tools-bottom.mp4',
+    poster: BASE + 'tools-bottom-poster.jpg',
     label: 'The Tools / A pursuit',
     title: 'Explore. Consume. Synthesise. Personalise. Interpret.',
   },
   philosophy: {
-    src: '/videos/philosophy.mp4',
-    poster: '/videos/philosophy-poster.jpg',
+    src: BASE + 'philosophy.mp4',
+    poster: BASE + 'philosophy-poster.jpg',
     label: 'Our philosophy / EJF Acuity overview',
     title: 'Enlightening pathways of understanding.',
   },
   agent: {
-    src: '/videos/agent.mp4',
-    poster: '/videos/agent-poster.jpg',
+    src: BASE + 'agent.mp4',
+    poster: BASE + 'agent-poster.jpg',
     label: 'Acuity.Agent / The inquiry',
     title: 'Creating pathways to wisdom.',
   },
   codex: {
-    src: '/videos/codex.mp4',
-    poster: '/videos/codex-poster.jpg',
+    src: BASE + 'codex.mp4',
+    poster: BASE + 'codex-poster.jpg',
     label: 'Acuity.Codex / The instrument',
     title: 'Instruments of clarity.',
   },
   search: {
-    src: '/videos/search.mp4',
-    poster: '/videos/search-poster.jpg',
+    src: BASE + 'search.mp4',
+    poster: BASE + 'search-poster.jpg',
     label: 'Acuity.Search / The discovery',
     title: 'Follow the thread of discovery.',
   },

@@ -6,7 +6,7 @@
   "workers_dev": false,
   "secrets": {"required":["READ_TOKEN"]},
   "r2_buckets": [{"binding":"LIBRARY","bucket_name":"acuity"}],
-  "vars": {"ALLOWED_ORIGINS":"https://acuity.institute,https://www.acuity.institute,https://library.acuity.institute,https://acuity-landing-20.up.railway.app,http://localhost:5173"},
+  "vars": {"ALLOWED_ORIGINS":"https://acuity.institute,https://www.acuity.institute,https://library.acuity.institute,https://acuity-landing-20.up.railway.app,https://acuity-landing-staging.up.railway.app,http://localhost:5173"},
   "observability": {"enabled":true,"head_sampling_rate":0.1},
   "routes": [{"pattern":"assets.acuity.institute","custom_domain":true}]
 }
