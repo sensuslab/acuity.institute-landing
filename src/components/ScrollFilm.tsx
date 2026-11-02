@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import { featureFilms, type FeatureFilmId } from '../data/featureFilms';
+import { filmOverlayActive, onFilmOverlayChange } from './filmOverlay';
 import './scroll-film.css';
 
 type Playback = 'idle' | 'loading' | 'playing' | 'paused' | 'error';
@@ -26,7 +27,7 @@ export default function ScrollFilm({ film, compact = false }: { film: FeatureFil
     let reduced = preference.matches;
     let userPaused = false;
 
-    const canPlay = () => visible && !document.hidden && !userPaused && !reduced;
+    const canPlay = () => visible && !document.hidden && !userPaused && !reduced && !filmOverlayActive();
 
     const pause = () => {
       if (disposed) return;
@@ -71,6 +72,7 @@ export default function ScrollFilm({ film, compact = false }: { film: FeatureFil
 
     document.addEventListener('visibilitychange', onVisibility);
     preference.addEventListener('change', onMotion);
+    const unsubscribeOverlay = onFilmOverlayChange(sync);
 
     // Initial sync after mount
     requestAnimationFrame(sync);
@@ -80,6 +82,7 @@ export default function ScrollFilm({ film, compact = false }: { film: FeatureFil
       observer.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);
       preference.removeEventListener('change', onMotion);
+      unsubscribeOverlay();
       el.pause();
     };
   }, [muted, film]);

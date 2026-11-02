@@ -23,7 +23,7 @@ import LibraryToolsPage from './pages/LibraryPage';
 import SearchPage from './pages/SearchPage';
 import WisdomVaultPage from './pages/WisdomVaultPage';
 import RouteMetadata from './components/RouteMetadata';
-import { setFilmOverlayActive } from './components/youtubePlayer';
+import { setFilmOverlayActive } from './components/filmOverlay';
 
 function HomePage() {
   const { search } = useLocation();
