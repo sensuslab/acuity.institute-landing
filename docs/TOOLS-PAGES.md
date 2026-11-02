@@ -94,7 +94,7 @@ Run from a clean checkout:
     npm test
 
 Build precedes the server-route tests because they exercise dist.
-The full suite contains 58 checks, including direct tool-page requests, rendered
+The full suite contains 60 checks, including direct tool-page requests, rendered
 content, canonical redirects, query preservation, HEAD requests, sitemap URLs,
 and 404/405 handling. Existing Library tests are retained.
 
@@ -179,3 +179,46 @@ a separate device check.
   keeping the typography accessible and consistent at every viewport size.
 - The supplied image already contains its celestial geometry, stars and glow,
   so the Codex figure does not layer additional orbital decoration over it.
+
+## Scroll films
+
+Five supplied YouTube films are integrated with the existing near-black and
+gold editorial system. The player viewport stays unobstructed; captions and a
+small accessible pause/resume control sit outside it. YouTube's own transport
+controls are disabled. The complete frame stays visible, including on phones.
+
+| Location | Video | Start |
+| --- | --- | --- |
+| Tools, after the hero and before the ecosystem | `u_U7imgff5g` | Beginning |
+| Philosophy, directly below “Enlightening pathways of understanding” | `Dv4jUE_RDSw` | 2:39 |
+| Agent, after the hero/outcomes and before capabilities | `AY367KDc6w8` | Beginning |
+| Codex, after the hero/outcomes and before product views | `i4uI8xyFUcE` | Beginning |
+| Search, after the hero/outcomes and before product views | `8Xu80-BAER8` | Beginning |
+
+- A shared IFrame API script loads as a film approaches. The player mutes and
+  sets volume to zero before a play request. Playback begins only when more
+  than half the viewport is visible, and pauses outside that area, in a hidden
+  browser tab, or while Webinars/Shorts is open. Only one film autoplays at once.
+- A deliberate pause persists across scrolling. Reduced-motion preferences
+  show a poster until Play is selected. Blocked autoplay offers a manual Play
+  action; loading errors retain a retry and the original YouTube link.
+- The iframe uses the privacy-enhanced YouTube host, inline playback and an
+  explicit autoplay permission and referrer policy. Ended films return to the
+  configured starting point. No new package or API key is required.
+- Tests exercise real component effects with a mocked player: visibility,
+  mute-before-play, manual pause, buffering, reduced motion, blocked autoplay,
+  modal suspension, single-player coordination, errors/retry, StrictMode and
+  navigation during API loading. Rendered-page checks cover the placements.
+- All five URLs returned valid YouTube oEmbed metadata on 2 November 2026.
+  The review browser loaded the real embedded player and issued a muted play
+  request, but its media stream stalled before a first frame. Continuous real
+  playback therefore remains unverified in that browser; device Safari testing
+  is also outstanding.
+- YouTube may show its own branding, title, related material or ads, and browser
+  autoplay policy can override scripted playback. Raw MP4/WebM files would
+  allow a fully brand-controlled native video presentation. The supplied links
+  remain the source for this draft; no deployment was performed.
+
+Implementation references: [IFrame API](https://developers.google.com/youtube/iframe_api_reference),
+[player parameters](https://developers.google.com/youtube/player_parameters),
+and [visibility/viewport requirements](https://developers.google.com/youtube/terms/required-minimum-functionality).

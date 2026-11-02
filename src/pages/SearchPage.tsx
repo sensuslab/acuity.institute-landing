@@ -1,4 +1,5 @@
 import ProductGallery from '../components/tools/ProductGallery';
+import ScrollFilm from '../components/ScrollFilm';
 import { searchScreens } from '../components/tools/productScreens';
 import { BookOpen, Compass, Download, Globe2, ListFilter, Search, Share2, ShieldCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,6 +16,7 @@ export default function SearchPage() {
   return <ToolPage>
     <ToolHero kind="search" index="04" title={<>Look further.<br /><em>Discover more.</em></>} description="An uncensored field of inquiry for ideas beyond the usual view. Search the web, literature and chosen collections, examine the evidence, and follow what calls for closer understanding." />
     <OutcomeStrip items={['Three ways to discover', 'Evidence you can inspect', 'A path into deeper study']} />
+    <ScrollFilm film="search" />
     <section id="product-views" className="tool-section tool-wrap product-views">
       <SectionHeading number="01 / A closer look" eyebrow="Discovery in view" title={<>From a question<br /><em>to the evidence.</em></>}><p>See the search workspace in use. Move between source cards, cited answers and the evidence ledger, or explore the views for sacred texts and literature.</p></SectionHeading>
       <ProductGallery product="search" screens={searchScreens} />

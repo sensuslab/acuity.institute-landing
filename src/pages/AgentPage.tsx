@@ -1,5 +1,6 @@
 import { BookOpen, Compass, FileSearch, GitCompare, Library, MessageCircle, Quote, Route, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ScrollFilm from '../components/ScrollFilm';
 import { InquiryPreview } from '../components/tools/ToolDemos';
 import { FeatureGrid, Journey, OutcomeStrip, SectionHeading, SourcePrinciple, ToolClosing, ToolFaq, ToolHero, ToolPage } from '../components/tools/ToolPrimitives';
 
@@ -7,6 +8,7 @@ export default function AgentPage() {
   return <ToolPage>
     <ToolHero kind="agent" index="01" title={<>Let curiosity<br />become <em>clarity.</em></>} description="A question is a doorway. Acuity.Agent follows it through the Library: finding passages, illuminating context and bringing different voices into a conversation you can make your own." />
     <OutcomeStrip items={['Ask in your own words', 'Follow the source', 'Deepen your understanding']} />
+    <ScrollFilm film="agent" />
     <section id="capabilities" className="tool-section tool-wrap">
       <SectionHeading number="01" eyebrow="Creating pathways to wisdom" title={<>A conversation.<br /><em>A library in the room.</em></>}><p>Ask about a teaching, a difficult passage or an idea that keeps returning. The Agent searches the available texts and brings what it finds into a focused, readable response, with references you can follow.</p><p>Begin with a simple question. Ask for the context, compare another tradition, or return to the original wording. Each exchange can open a deeper line of study.</p></SectionHeading>
       <InquiryPreview />

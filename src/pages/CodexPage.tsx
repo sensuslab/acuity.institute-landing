@@ -1,4 +1,5 @@
 import ProductGallery from '../components/tools/ProductGallery';
+import ScrollFilm from '../components/ScrollFilm';
 import { codexScreens } from '../components/tools/productScreens';
 import { Archive, AudioLines, BookOpen, Download, Eye, Layers, LockKeyhole, Network, Orbit, Search } from 'lucide-react';
 import { InstrumentExplorer, SpherePreview, type Instrument } from '../components/tools/ToolDemos';
@@ -16,6 +17,7 @@ export default function CodexPage() {
   return <ToolPage>
     <ToolHero kind="codex" index="02" title={<>Turn the key.<br /><em>Unlock wisdom.</em></>} description="Your sources. Your questions. Your developing understanding. Acuity.Codex turns a collection of knowledge into a personal space for exploration, interpretation and creation." />
     <OutcomeStrip items={['Build your Context Spheres', 'Ask through The Lens', 'Create in the Studio']} />
+    <ScrollFilm film="codex" />
     <section id="product-views" className="tool-section tool-wrap product-views">
       <SectionHeading number="01 / A closer look" eyebrow="The instrument in use" title={<>Step inside<br /><em>your field of study.</em></>}><p>Explore the workspace: a sphere’s sources, a question through The Lens, private notes and material created in Studio. Open a view to see the details.</p></SectionHeading>
       <ProductGallery product="codex" screens={codexScreens} />

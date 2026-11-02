@@ -23,12 +23,18 @@ import LibraryToolsPage from './pages/LibraryPage';
 import SearchPage from './pages/SearchPage';
 import WisdomVaultPage from './pages/WisdomVaultPage';
 import RouteMetadata from './components/RouteMetadata';
+import { setFilmOverlayActive } from './components/youtubePlayer';
 
 function HomePage() {
   const { search } = useLocation();
   const requestedMedia = new URLSearchParams(search).get('media');
   const [mediaOpen, setMediaOpen] = useState(requestedMedia === 'webinars');
   const [shortsOpen, setShortsOpen] = useState(requestedMedia === 'shorts');
+
+  useEffect(() => {
+    setFilmOverlayActive(mediaOpen || shortsOpen);
+    return () => setFilmOverlayActive(false);
+  }, [mediaOpen, shortsOpen]);
 
   useEffect(() => {
     if (requestedMedia === 'webinars') setMediaOpen(true);
@@ -68,6 +74,10 @@ function HomePage() {
 function ToolsShell({ children }: { children: React.ReactNode }) {
   const [mediaOpen, setMediaOpen] = useState(false);
   const [shortsOpen, setShortsOpen] = useState(false);
+  useEffect(() => {
+    setFilmOverlayActive(mediaOpen || shortsOpen);
+    return () => setFilmOverlayActive(false);
+  }, [mediaOpen, shortsOpen]);
   return (
     <div className="min-h-screen bg-void text-starlight">
       <GrainOverlay />
