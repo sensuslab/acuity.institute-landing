@@ -26,7 +26,10 @@ export default function LibraryPage() {
   useEffect(()=>{const controller=new AbortController();void fetchPublicLibrary(controller.signal).then(setCatalogue).catch(()=>{/* The verified build-time catalogue remains available offline. */});return()=>controller.abort();},[]);
   const [query, setQuery] = useState(() => new URLSearchParams(window.location.search).get('q') ?? '');
   const [collection, setCollection] = useState('All collections');
-  const [format, setFormat] = useState('all');
+  const [format, setFormat] = useState(() => {
+    const selected = new URLSearchParams(window.location.search).get('format');
+    return selected && ['pdf', 'epub', 'pptx', 'ebook'].includes(selected) ? selected : 'all';
+  });
   const [sort, setSort] = useState('curated');
   const [selected, setSelected] = useState<LibraryBook | undefined>(()=>selectedFromUrl());
   useEffect(()=>{setSelected(selectedFromUrl(books));},[books]);
@@ -66,10 +69,10 @@ export default function LibraryPage() {
   return <div className="library-shell">
     <a className="library-skip" href="#catalogue">Skip to catalogue</a>
     <header className="library-nav">
-      <a className="library-brand" href="/"><Hexagon size={22} strokeWidth={1.2} /><span>ACUITY <small>INSTITUTE</small></span></a>
-      <nav aria-label="Library navigation"><a href="/#manifesto">Our philosophy</a><a href="/#contact">Get in touch</a><a className="library-home" href="/"><ArrowLeft size={15} /> Back to Acuity</a></nav>
+      <a className="library-brand" href="https://acuity.institute/"><Hexagon size={22} strokeWidth={1.2} /><span>ACUITY <small>INSTITUTE</small></span></a>
+      <nav aria-label="Library navigation"><a href="https://acuity.institute/#manifesto">Our philosophy</a><a href="https://acuity.institute/#contact">Get in touch</a><a className="library-home" href="https://acuity.institute/"><ArrowLeft size={15} /> Back to Acuity</a></nav>
     </header>
-    <main>
+    <main id="main" tabIndex={-1}>
       <section className="library-intro">
         <div className="library-orbit" aria-hidden="true"><span>✧</span></div>
         <div className="library-eyebrow">THE ARCHIVE <span /> OPEN READING COLLECTION</div>
@@ -94,9 +97,9 @@ export default function LibraryPage() {
           <div className="library-card-body"><span className="library-eyebrow">{book.categoryLabel}</span><h3><button onClick={() => choose(book)}>{book.title}</button></h3><p className="library-byline">{book.translator ? `Translated by ${book.translator}` : book.author}</p><p>{book.shortDescription || book.description}</p>{!!book.overviews?.length && <button className="library-overview-badge" onClick={() => choose(book)}>Visual overview available</button>}<div className="library-card-meta"><span>{book.language}{book.pages ? ` · ${book.pages} ${book.kind === 'presentation' ? 'slides' : 'pages'}` : ''}</span><span>{[book.pdf && 'PDF', book.epub && 'EPUB', book.pptx && 'PPTX', book.markdown && 'Markdown'].filter(Boolean).join(' / ')}</span></div><button className="library-read-link" onClick={() => { choose(book); if(book.pdf) setReading({mode:'pdf'}); }}>{book.pdf ? 'Open PDF' : 'View edition'}<ArrowUpRight size={17} /></button>{canReadEbook(book) && <button className="library-read-link ebook-launch" onClick={() => { choose(book); setReading({mode:'ebook'}); }}>Read E-Book <BookOpen size={17}/></button>}</div>
         </article>)}</div> : <div className="library-empty"><BookOpen size={32} /><h3>No items found.</h3><p>Try another title, author or subject, or browse the whole collection.</p><button className="library-primary" onClick={reset}>Clear filters</button></div>}
       </section>
-      <section className="library-next"><span className="library-eyebrow">A FOUNDATION FOR DEEPER INQUIRY</span><h2>Begin with the source.</h2><p>This is the first chapter of the Acuity Library. Our next step is a workspace for asking questions across texts, comparing passages and tracing answers back to their sources.</p><span className="library-planned">AI-assisted inquiry · In development</span><a href="/#contact">Suggest a text or share an idea <ArrowUpRight size={16} /></a></section>
+      <section className="library-next"><span className="library-eyebrow">A FOUNDATION FOR DEEPER INQUIRY</span><h2>Begin with the source.</h2><p>This is the first chapter of the Acuity Library. Our next step is a workspace for asking questions across texts, comparing passages and tracing answers back to their sources.</p><span className="library-planned">AI-assisted inquiry · In development</span><a href="https://acuity.institute/#contact">Suggest a text or share an idea <ArrowUpRight size={16} /></a></section>
     </main>
-    <footer className="library-footer"><span>© 2026 Acuity Institute</span><p>Historical texts invite interpretation, not unquestioning acceptance.</p><a href="/about/">About Acuity</a></footer>
+    <footer className="library-footer"><span>© 2026 Acuity Institute</span><p>Historical texts invite interpretation, not unquestioning acceptance.</p><a href="https://acuity.institute/about/">About Acuity</a></footer>
     {selected && !reading && <BookDetails book={selected} onClose={closeDetails} onRead={mode => setReading({mode})} onOverview={openOverview} />}
     {selected && reading && <Suspense fallback={<div className="library-loading" role="status">Opening the reading room… <button onClick={closeReader}>Cancel</button></div>}>{reading.mode === 'ebook' && canReadEbook(selected) ? <EbookReader key={selected.id} book={selected} onClose={closeReader} onReadPdf={readPdf}/> : pdfDocument && <PdfReader key={activeOverview?.id || selected.id} book={pdfDocument} onClose={closeReader} initialPresentation={reading.mode === 'present'} documentLabel={activeOverview ? 'Visual overview · Companion slides' : undefined} onReadSource={activeOverview ? readSource : undefined}/>}</Suspense>}
   </div>;
@@ -113,4 +116,5 @@ function BookDetails({ book, onClose, onRead, onOverview }: {book: LibraryBook; 
     <div className="library-edition"><h3>About this edition</h3><p>{book.editionNote}</p><p>{book.rights}</p>{book.sourceUrl && <a href={book.sourceUrl} target="_blank" rel="noreferrer">{book.sourceId ? 'View source at Project Gutenberg' : 'View edition source'} <ArrowUpRight size={14} /></a>}{book.markdown && <a href={book.markdown} download>Download Markdown source <ArrowUpRight size={14}/></a>}{book.trademark && <><h3>Trademark metadata</h3><p>{book.trademark.marks.join(', ') || book.trademark.status}. {book.trademark.use_rules}</p></>}{book.text && <a href={book.text} target="_blank" rel="noreferrer">Read accessible plain text <ArrowUpRight size={14} /></a>}</div>
   </dialog>;
 }
+
 

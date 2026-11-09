@@ -1,4 +1,5 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 const LibraryPage = lazy(() => import('./components/LibraryPage'));
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
@@ -15,17 +16,30 @@ import Footer from './components/Footer';
 import GrainOverlay from './components/GrainOverlay';
 import MediaModal from './components/MediaModal';
 import ShortsModal from './components/ShortsModal';
-
-export default function App() {
-  if (window.location.pathname.replace(/\/+$/, '') === '/library') {
-    return <Suspense fallback={<main className="p-12 text-starlight">Opening the Acuity Library…</main>}><LibraryPage /></Suspense>;
-  }
-  return <HomePage />;
-}
+import ToolsIndex from './pages/ToolsIndex';
+import AgentPage from './pages/AgentPage';
+import CodexPage from './pages/CodexPage';
+import LibraryToolsPage from './pages/LibraryPage';
+import SearchPage from './pages/SearchPage';
+import WisdomVaultPage from './pages/WisdomVaultPage';
+import RouteMetadata from './components/RouteMetadata';
+import { setFilmOverlayActive } from './components/filmOverlay';
 
 function HomePage() {
-  const [mediaOpen, setMediaOpen] = useState(false);
-  const [shortsOpen, setShortsOpen] = useState(false);
+  const { search } = useLocation();
+  const requestedMedia = new URLSearchParams(search).get('media');
+  const [mediaOpen, setMediaOpen] = useState(requestedMedia === 'webinars');
+  const [shortsOpen, setShortsOpen] = useState(requestedMedia === 'shorts');
+
+  useEffect(() => {
+    setFilmOverlayActive(mediaOpen || shortsOpen);
+    return () => setFilmOverlayActive(false);
+  }, [mediaOpen, shortsOpen]);
+
+  useEffect(() => {
+    if (requestedMedia === 'webinars') setMediaOpen(true);
+    if (requestedMedia === 'shorts') setShortsOpen(true);
+  }, [requestedMedia]);
 
   return (
     <div className="min-h-screen bg-void text-starlight">
@@ -34,26 +48,81 @@ function HomePage() {
         onWebinarsClick={() => setMediaOpen(true)}
         onShortsClick={() => setShortsOpen(true)}
       />
-      <main id="main">
-      <HeroSection />
-      <ManifestoSection />
-      <GoldDivider />
-      <LibrarySection />
-      <GoldDivider />
-      <AgentSection />
-      <GoldDivider />
-      <PillarsGrid />
-      <GoldDivider />
-      <AppsSection />
-      <GoldDivider />
-      <TrustConstellation />
-      <FaqSection />
-      <Contact />
+      <main id="main" tabIndex={-1}>
+        <HeroSection />
+        <ManifestoSection />
+        <GoldDivider />
+        <LibrarySection />
+        <GoldDivider />
+        <AgentSection />
+        <GoldDivider />
+        <PillarsGrid />
+        <GoldDivider />
+        <AppsSection />
+        <GoldDivider />
+        <TrustConstellation />
+        <FaqSection />
+        <Contact />
       </main>
       <Footer />
       <MediaModal open={mediaOpen} onClose={() => setMediaOpen(false)} />
       <ShortsModal open={shortsOpen} onClose={() => setShortsOpen(false)} />
     </div>
+  );
+}
+
+function ToolsShell({ children }: { children: React.ReactNode }) {
+  const [mediaOpen, setMediaOpen] = useState(false);
+  const [shortsOpen, setShortsOpen] = useState(false);
+  useEffect(() => {
+    setFilmOverlayActive(mediaOpen || shortsOpen);
+    return () => setFilmOverlayActive(false);
+  }, [mediaOpen, shortsOpen]);
+  return (
+    <div className="min-h-screen bg-void text-starlight">
+      <GrainOverlay />
+      <Navigation onWebinarsClick={() => setMediaOpen(true)} onShortsClick={() => setShortsOpen(true)} />
+      {children}
+      <Footer />
+      <MediaModal open={mediaOpen} onClose={() => setMediaOpen(false)} />
+      <ShortsModal open={shortsOpen} onClose={() => setShortsOpen(false)} />
+    </div>
+  );
+}
+
+function RoutePosition() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+      else window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [pathname, hash]);
+  return null;
+}
+
+function LibraryEntry() {
+  return <Suspense fallback={<main id="main" className="p-12 text-starlight">Opening the Acuity Library…</main>}><LibraryPage /></Suspense>;
+}
+
+export default function App() {
+  const libraryHost = window.location.hostname.toLowerCase() === 'library.acuity.institute';
+  return (
+    <>
+    <RouteMetadata />
+    <RoutePosition />
+    <Routes>
+      <Route path="/" element={libraryHost ? <LibraryEntry /> : <HomePage />} />
+      <Route path="/library" element={<LibraryEntry />} />
+      <Route path="/tools" element={<ToolsShell><ToolsIndex /></ToolsShell>} />
+      <Route path="/tools/agent" element={<ToolsShell><AgentPage /></ToolsShell>} />
+      <Route path="/tools/codex" element={<ToolsShell><CodexPage /></ToolsShell>} />
+      <Route path="/tools/library" element={<ToolsShell><LibraryToolsPage /></ToolsShell>} />
+      <Route path="/tools/search" element={<ToolsShell><SearchPage /></ToolsShell>} />
+      <Route path="/tools/wisdomvault" element={<ToolsShell><WisdomVaultPage /></ToolsShell>} />
+    </Routes>
+    </>
   );
 }
 

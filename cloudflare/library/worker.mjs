@@ -1,4 +1,5 @@
 const ASSET = /^library\/assets\/[a-f0-9]{64}\.(pdf|epub|pptx|txt|md)$/;
+const VIDEO = /^library\/videos\/[a-z0-9._-]+\.(mp4|webm|jpg|jpeg|webp|png)$/;
 const encoder = new TextEncoder();
 /** @param {Request} request @param {string | undefined} secret */
 export async function authenticated(request, secret) {
@@ -39,12 +40,12 @@ export async function serve(request, env) {
   if (url.pathname === '/health') return reply('ok',200);
   let key;
   try {key = decodeURIComponent(url.pathname.slice(1));} catch {return reply('Bad path',400);}
-  if (!ASSET.test(key) && !/^library\/corpora\/ancient-wisdom-atlas\/[a-f0-9]{40}\/context-[a-f0-9]{64}\.zip$/.test(key) && !/^library\/catalogues\/[a-z0-9.-]+\.json$/.test(key)) return reply('Not found',404);
+  if (!ASSET.test(key) && !VIDEO.test(key) && !/^library\/corpora\/ancient-wisdom-atlas\/[a-f0-9]{40}\/context-[a-f0-9]{64}\.zip$/.test(key) && !/^library\/catalogues\/[a-z0-9.-]+\.json$/.test(key)) return reply('Not found',404);
   const trusted = await authenticated(request, env.READ_TOKEN);
   // The published policy is written last, after every object has passed read-back verification.
   const policyObject = await env.LIBRARY.get('library/control/published-policy.json');
   const policy = policyObject ? await policyObject.json() : {publicKeys:[]};
-  const publicObject = policy.publicKeys.includes(key);
+  const publicObject = policy.publicKeys.includes(key) || VIDEO.test(key);
   if (!publicObject && !trusted) {headers.set('Cache-Control','private, no-store');return reply('Authentication required',401);}
   const object = await env.LIBRARY.head(key);
   if (!object) return reply('Not found',404);
@@ -53,7 +54,7 @@ export async function serve(request, env) {
   headers.set('ETag',object.httpEtag);
   headers.set('Last-Modified',object.uploaded.toUTCString());
   headers.set('Accept-Ranges','bytes');
-  headers.set('Cache-Control',publicObject && ASSET.test(key) ? 'public, max-age=31536000, immutable' : publicObject ? 'public, max-age=60, must-revalidate' : 'private, no-store');
+  headers.set('Cache-Control',publicObject && (ASSET.test(key) || VIDEO.test(key)) ? 'public, max-age=31536000, immutable' : publicObject ? 'public, max-age=60, must-revalidate' : 'private, no-store');
   const inm = request.headers.get('If-None-Match');
   if (inm && (inm === '*' || inm.split(',').some(tag => tag.trim().replace(/^W\//,'') === object.httpEtag))) return reply(null,304);
   const modified = request.headers.get('If-Modified-Since');

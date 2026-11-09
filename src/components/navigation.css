@@ -1,0 +1,54 @@
+.acuity-nav { position:fixed; z-index:40; top:max(20px,env(safe-area-inset-top)); left:50%; transform:translateX(-50%); width:min(1000px,calc(100% - 40px)); color:#d8d1dc; font-family:Inter,system-ui,sans-serif; }
+.acuity-nav [hidden] { display:none!important; }
+.acuity-skip-link { position:absolute; z-index:2; top:8px; left:8px; padding:14px 20px; background:#ecd099; color:#16121a; border-radius:3px; font-size:12px; transform:translateY(-200%); }
+.acuity-skip-link:focus-visible { transform:translateY(0); }
+.acuity-nav-bar { display:flex; align-items:center; justify-content:space-between; padding:7px 24px; min-height:62px; border:1px solid #d4a94a33; background:#0c0b13ed; border-radius:7px; backdrop-filter:blur(24px); box-shadow:0 12px 45px #0003; }
+.acuity-nav-brand { display:flex; align-items:center; gap:11px; font:10px "JetBrains Mono",monospace; letter-spacing:.1em; min-height:44px; }
+.acuity-nav-brand svg { color:#dcbd7e; }
+.acuity-nav-brand > span > span { color:#a19aa9; }
+.acuity-nav-desktop { display:flex; align-items:center; gap:28px; }
+.acuity-nav-desktop > a,.acuity-nav-desktop > button,.acuity-nav-tools > button { display:flex; align-items:center; gap:8px; min-height:44px; color:#b7afbd; font:10px "JetBrains Mono",monospace; letter-spacing:.04em; transition:color .2s; }
+.acuity-nav-tools { position:relative; }
+.acuity-nav-tools > button.nav-current { color:#e8c682; }
+.acuity-nav-tools svg.is-open { transform:rotate(180deg); }
+.acuity-tools-dropdown { position:absolute; top:calc(100% + 15px); left:-25px; width:290px; padding:8px; background:#101017fa; border:1px solid #c7a05b55; border-radius:5px; box-shadow:0 18px 40px #0007; }
+.acuity-tools-dropdown > a,.acuity-tools-dropdown > div { display:flex; align-items:center; gap:14px; min-height:64px; padding:12px 15px; border-radius:3px; }
+.acuity-tools-dropdown > a > svg { color:#c9ad74; flex-shrink:0; }
+.acuity-tools-dropdown > a > span:first-of-type,.acuity-tool-disabled > span:first-of-type { flex:1; font-size:13px; }
+.acuity-tools-dropdown small,.acuity-tool-disabled small { display:block; font-size:9px; color:#a09aa8; margin-top:4px; }
+.acuity-tools-dropdown > a > span:last-child,.acuity-tools-dropdown > div > span:last-child { font:7px "JetBrains Mono",monospace; letter-spacing:.07em; color:#a59aaa; }
+.acuity-tools-dropdown .acuity-tools-overview { font:11px "JetBrains Mono",monospace; min-height:50px; justify-content:space-between; border-bottom:1px solid #c7a05b22; margin-bottom:7px; padding-bottom:17px; }
+.acuity-tools-dropdown .acuity-tools-overview > span { flex:none; font:8px "JetBrains Mono",monospace!important; color:#c8af7e!important; }
+.acuity-tools-dropdown a.active { background:#c7a05b0c; }
+.acuity-tools-dropdown > .acuity-tool-disabled { color:#8f8798; border-top:1px solid #c7a05b22; margin-top:7px; border-radius:0; cursor:not-allowed; }
+.acuity-tool-disabled small { color:#8f8798; }
+.nav-live { color:#b6cba9!important; }
+.acuity-mobile-trigger,.acuity-mobile-panel { display:none; }
+.acuity-nav :is(a,button):focus-visible { outline:2px solid #e8c682; outline-offset:4px; border-radius:3px; }
+.acuity-nav :is(a,button):active { transform:translateY(1px); }
+@media (hover:hover) {
+  .acuity-nav-desktop > :is(a,button):hover,.acuity-nav-tools > button:hover { color:#e8c682; }
+  .acuity-tools-dropdown > a:hover { background:#c7a05b10; }
+}
+@media (max-width:900px) {
+  .acuity-nav-desktop { gap:18px; }
+  .acuity-nav-brand > span > span { display:none; }
+}
+@media (max-width:650px) {
+  .acuity-nav { top:max(14px,env(safe-area-inset-top)); width:calc(100% - 28px); }
+  .acuity-nav-bar { padding:5px 16px; min-height:58px; }
+  .acuity-nav-brand > span > span { display:inline; }
+  .acuity-nav-desktop { display:none; }
+  .acuity-mobile-trigger { width:44px; min-height:44px; display:grid; place-items:center; color:#d5bb86; }
+  .acuity-mobile-panel { display:block; margin-top:8px; padding:15px; border:1px solid #c7a05b55; border-radius:5px; background:#101017fc; max-height:calc(100dvh - 105px - env(safe-area-inset-bottom)); overflow-y:auto; box-shadow:0 20px 50px #0008; }
+  .acuity-mobile-panel > a,.acuity-mobile-panel > div.acuity-tool-disabled { display:flex; align-items:center; gap:13px; padding:12px; min-height:52px; border-bottom:1px solid #c7a05b14; font-size:13px; }
+  .acuity-mobile-panel > a > svg { color:#d1b87f; }
+  .acuity-mobile-panel > a > span { flex:1; }
+  .acuity-mobile-panel > a > small { font-size:8px; color:#a89dae; }
+  .acuity-mobile-panel > a.active { color:#f1d6a0; background:#c7a05b09; }
+  .acuity-mobile-panel > .acuity-mobile-heading { font:9px "JetBrains Mono",monospace; letter-spacing:.1em; text-transform:uppercase; color:#e3c790; justify-content:space-between; }
+  .acuity-mobile-panel > .acuity-mobile-heading > span { flex:none; font-size:8px; color:#a79cae; }
+  .acuity-mobile-panel > .acuity-tool-disabled { color:#92879d; }
+  .acuity-mobile-secondary { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding-top:15px; }
+  .acuity-mobile-secondary a,.acuity-mobile-secondary button { display:flex; align-items:center; min-height:44px; padding:10px 12px; font-size:10px; color:#bdb2c6; text-align:left; border:1px solid #c7a05b1f; border-radius:3px; }
+}

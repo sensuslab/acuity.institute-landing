@@ -1,4 +1,5 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import ScrollFilm from './ScrollFilm';
 
 export default function ManifestoSection() {
   const { ref, isVisible } = useScrollReveal(0.2);
@@ -43,6 +44,8 @@ export default function ManifestoSection() {
           Enlightening pathways of{' '}
           <span className="italic text-gold">understanding</span>.
         </p>
+
+        <div className="manifesto-film"><ScrollFilm film="philosophy" compact /></div>
 
         <div
           className={`mt-10 w-8 h-px bg-gold/30 mx-auto transition-all duration-700 ${

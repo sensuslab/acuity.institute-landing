@@ -1,0 +1,7 @@
+.tool-brand-mark { display:block; flex-shrink:0; width:32px; height:32px; object-fit:contain; mix-blend-mode:screen; }
+.tool-product:has(.tool-brand-mark) { display:flex; align-items:center; gap:14px; }
+.tool-product .tool-brand-mark { width:43px; height:43px; }
+.tool-related .tool-brand-mark { width:32px; height:32px; }
+.directory-emblem .tool-brand-mark { width:150px; height:150px; }
+.eco-node-art .tool-brand-mark { width:100%; height:100%; }
+.acuity-nav .tool-brand-mark { width:27px; height:27px; }
