@@ -25,7 +25,7 @@ export default function ScrollFilm({ film, compact = false }: { film: FeatureFil
     let disposed = false;
     let visible = false;
     let reduced = preference.matches;
-    let userPaused = false;
+    const userPaused = false;
 
     const canPlay = () => visible && !document.hidden && !userPaused && !reduced && !filmOverlayActive();
 

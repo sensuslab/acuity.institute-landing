@@ -4,6 +4,34 @@ The current public release contains 1,262 corpus assets and 607 library records,
 
 # Shared library storage
 
+## EPUB reader XML compatibility (9 November 2026)
+
+The live Kitab-i-Iqan reader failure (`PCDATA invalid Char value 12` on
+Safari; `Invalid character U+000C` on Chromium) comes from form-feed characters
+inside the EPUB's XHTML. Other editions contain HTML named entities, bare
+ampersands or crossed emphasis tags. R2 returns the pinned original bytes:
+checksums and production CORS passed for the 14 sampled editions. This is a
+reading-edition markup compatibility problem, rather than a damaged transfer.
+
+`src/components/ebookXml.ts` prepares the downloaded archive **before** EPUB.js
+parses it. XML-forbidden characters become safe separators. XHTML that still
+fails strict XML parsing is recovered with the inert HTML parser and serialized
+back to valid XHTML, preserving EPUB namespaces, text and internal link targets.
+Already valid XHTML and archives remain untouched. Repairs exist only in reader
+memory; original downloads, canonical asset URLs and provenance hashes are retained.
+The existing non-scripted iframe sandbox and content filtering still apply.
+Any remaining XML parser error is rejected before rendering so the reader can
+show its retry/download/PDF options instead of embedding a partial error page.
+
+Validation used the real R2 bytes for 14 titles, including Kitab-i-Iqan,
+Gleanings, The Hidden Words, A Quantum Coherence Corpus, The Stone Watchers,
+Meditations, Tao Te Ching and The Kybalion. All EPUB.js spine sections loaded
+after repair; an independent strict XML check of 202 XML/XHTML documents went
+from 35 invalid documents to zero. Regression tests include the real EPUB.js
+archive/spine pipeline, Unicode, internal anchors, namespaces, entity handling,
+resource preservation and unchanged original bytes. No bucket or gateway
+configuration change is needed for this application patch.
+
 The `acuity` R2 bucket is the canonical binary store. Dropbox remains intake and backup. Editorial metadata lives in the source JSON sidecars and overview manifest in this repository. Published consumers use one versioned R2 catalogue.
 
 ## Components
