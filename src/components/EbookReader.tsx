@@ -7,6 +7,7 @@ import { bindEbookLinks } from './ebookLinks';
 import { ebookAppearanceKey, ebookPageTones, ebookReadingTheme, parseEbookPageTone, type EbookPageTone } from './ebookAppearance';
 import { settleEbookNavigation } from './ebookNavigation';
 import { ebookPreferenceKey, parseEbookPreferences } from './ebookPreferences';
+import { assertReadableEpubDocument, prepareEpubForReader } from './ebookXml';
 
 type Chapter={label:string;href:string;depth:number};
 function flatten(items:NavItem[],depth=0):Chapter[]{
@@ -79,9 +80,12 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
     const open=async()=>{
       try{
         const response=await fetch(book.epub!,{signal:controller.signal});if(!response.ok)throw new Error('EPUB unavailable');
-        const bytes=await response.arrayBuffer();if(cancelled)return;
+        const bytes=await prepareEpubForReader(await response.arrayBuffer());if(cancelled)return;
         publication=ePub(bytes,{replacements:'blobUrl'});epubBook.current=publication;
         await publication.ready;if(cancelled)return;
+        // Reject any remaining XML error before EPUB.js serializes it into the
+        // iframe, where it would otherwise look like a successfully loaded page.
+        publication.spine.hooks.content.register(assertReadableEpubDocument);
         rendition=publication.renderTo(element,{width:element.clientWidth,height:element.clientHeight,flow:'paginated',spread:'none',allowScriptedContent:false});
         engine.current=rendition;
         if(book.direction)rendition.direction(book.direction);
