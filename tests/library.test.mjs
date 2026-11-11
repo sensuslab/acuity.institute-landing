@@ -26,7 +26,7 @@ test('Catalogue assets retain verified R2 identities and usable format pairs',()
   const byHash=new Map(registry.assets.map(asset=>[asset.sha256,asset]));
   assert.equal(byHash.size,registry.assets.length);assert.equal(registry.assets.filter(a=>a.format==='markdown').length,323);assert.equal(new Set(books.map(b=>b.id)).size,books.length);
   for(const book of books){
-    assert.ok(book.pdf || book.epub);assert.match(book.sourceUrl,/^https:\/\//);
+    assert.ok(book.pdf || book.epub);assert.ok(book.sourceUrl === '' || /^https:\/\//.test(book.sourceUrl));assert.doesNotMatch(book.sourceUrl,/dropbox|rlkey/i);
     assert.equal(book.capabilities.ebook,!!(book.epub&&(book.pdf||book.markdown)));
     for(const item of [book,...book.overviews])for(const asset of item.assets){
       const verified=byHash.get(asset.sha256);assert.ok(verified);assert.equal(verified.status,'verified');
@@ -39,7 +39,7 @@ test('Library has crawlable book content, its own canonical and valid JSON-LD',a
   const html=await res.text();
   assert.match(html,/<title>Open Library/);
   assert.match(html,/rel="canonical" href="https:\/\/acuity.institute\/library\/"/);
-  for(const b of books){assert.ok(html.includes(b.title));if(b.pdf)assert.ok(html.includes(b.pdf));}
+  for(const b of books)assert.ok(html.includes(`<a href="/library/${b.id}/">`),b.id);
   for(const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(match[1]);
   const redirect=await fetch(origin+'/library?book=meditations',{redirect:'manual'});
   assert.equal(redirect.status,308);assert.equal(redirect.headers.get('location'),'/library/?book=meditations');
@@ -100,18 +100,21 @@ test('Metadata search combines words, collection and format filters',async()=>{
 });
 
 test('Companion links appear in crawlable HTML with canonical R2 PDF/PPTX URLs',async()=>{
- const html=await (await fetch(origin+'/library/')).text();
  const source=books.find(book=>book.id==='tao-te-ching-legge');
+ const html=await (await fetch(origin+'/library/'+source.id+'/')).text();
  const overview=source.overviews[0];
  assert.ok(html.includes(`overview=${overview.id}`));
  for(const format of ['pdf','pptx']) {
   const asset=overview.assets.find(item=>item.format===format);assert.ok(asset);
   assert.equal(overview[format],asset.url);assert.match(asset.url,/^https:\/\/assets\.acuity\.institute\/library\/assets\/[a-f0-9]{64}\./);
  }
- const graphs=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match=>JSON.parse(match[1]));
- const collection=graphs.find(graph=>graph['@type']==='CollectionPage');
- const item=collection.mainEntity.itemListElement.find(row=>row.item.name==='Tao Te Ching').item;
+ const graph=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(match=>JSON.parse(match[1])['@graph']||[]);
+ const item=graph.find(node=>node['@type']==='Book');
  assert.equal(item.description,source.description);assert.equal(item.hasPart[0].name,overview.title);
+ for(const asset of source.assets)assert.ok(item.encoding.some(e=>e.contentUrl===asset.url)||asset.format==='text');
+ const index=await (await fetch(origin+'/library/')).text();
+ const collection=[...index.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match=>JSON.parse(match[1])).find(g=>g['@type']==='CollectionPage');
+ assert.equal(collection.mainEntity.itemListElement.find(row=>row.name==='Tao Te Ching').url,'https://acuity.institute/library/tao-te-ching-legge/');
 });
 
 test('Old download links redirect to the same categorised edition',async()=>{

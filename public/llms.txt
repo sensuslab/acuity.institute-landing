@@ -3,8 +3,8 @@
 > The Acuity Institute is an independent project founded by Ethan James Farrell (UK), dedicated to truth and the expansion of accurate knowledge. It offers an open library of wisdom texts and is developing Acuity.Agent, an AI research assistant for sacred texts.
 
 Key facts:
-- The Acuity Library holds 282 texts and presentations (Esoteric 99, Presentations 97, Scripture 41, Philosophy 27, Original Works 7, Miscellaneous 7, Health 4).
-- Every library text is free to read in the browser and to download as PDF; many also have EPUB editions. No account is required.
+- The Acuity Library holds 607 records: 510 texts and 97 research presentations (Sacred Texts 323, Esoteric 102, Presentations 97, Scripture 40, Philosophy 27, Original Works 7, Miscellaneous 7, Health 4). Every record has its own page at https://acuity.institute/library/<id>/.
+- Every library text is free to read in the browser and to download as PDF, EPUB or both. No account is required.
 - Acuity.Agent is pre-release and available by waitlist only. It searches a knowledge library of more than 20,000 sacred texts and answers with traceable source references.
 - Instruments of Clarity is under development and not yet available. It is planned as one interface with five facets: The Archive, The Lens, myVault, Context Spheres and Studio.
 - Contact: hello@acuity.institute

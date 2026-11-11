@@ -6,6 +6,7 @@ import { createAssetRegistry } from './library-asset-registry.mjs';
 import { compileLibrary } from './library-catalogue.mjs';
 import { hydrateLibraryImports } from './fetch-library-imports.mjs';
 import { attachLibraryOverviews } from './library-overviews.mjs';
+import { isPublicSourceUrl } from './library-seo.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const registryPath = path.join(root,'content/library-r2-registry.json');
 const localAssets = process.env.LIBRARY_ASSET_MODE === 'local';
@@ -25,6 +26,10 @@ if(assetRegistry && fs.existsSync(path.join(root,'data/sources/ancient-wisdom-at
   mergeSacredTexts(result.books,compileSacredTexts(read(path.join(root,'data/sources/ancient-wisdom-atlas.json')),assetRegistry));
   result.categories=indexLibraryCategories(result.books);
 }
+// Intake links (e.g. Dropbox shared links with access keys) stay in the authenticated R2
+// provenance release; they must never reach the browser bundle, static pages or public JSON.
+for (const book of result.books) if (book.sourceUrl && !isPublicSourceUrl(book.sourceUrl)) book.sourceUrl = '';
+for (const record of result.manifest) for (const key of Object.keys(record)) if (typeof record[key] === 'string' && /^https?:\/\//.test(record[key]) && !isPublicSourceUrl(record[key])) record[key] = '';
 const redirects = read(redirectsPath,{});
 if (assetRegistry) for (const asset of assetRegistry.assets) redirects[asset.legacyUrl] = asset.url;
 for (const old of previous) {
