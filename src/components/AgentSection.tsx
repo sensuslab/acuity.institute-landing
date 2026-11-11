@@ -347,6 +347,12 @@ function WaitlistDialog({ open, onClose }: { open: boolean; onClose: () => void 
               <input type="checkbox" name="updates" className="mt-1 accent-[#d4a843]" />
               Also send me occasional Acuity Institute updates.
             </label>
+            <p className="text-[13px] leading-relaxed text-starlight/65">
+              We use your details to manage the waitlist and tell you when early access is available.{' '}
+              <a href="/privacy/" target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2">
+                Privacy Policy<span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </p>
             {error && <p role="alert" className="text-[13px] text-gold">{error}</p>}
             <button
               type="submit"

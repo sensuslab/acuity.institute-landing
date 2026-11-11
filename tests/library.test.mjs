@@ -55,11 +55,26 @@ test('Legacy source and overview download URLs redirect to canonical R2 identiti
 });
 test('Missing files are 404, invalid URL encoding is 400, POST is 405',async()=>{
   for(const url of ['/library/books/missing.pdf','/missing-page','/assets/no.js'])assert.equal((await fetch(origin+url)).status,404);
-  const privacy=await fetch(origin+'/privacy/');assert.equal(privacy.status,200);assert.match(await privacy.text(),/noindex/);
   assert.equal((await fetch(origin+'/library/',{method:'POST'})).status,405);
   for(const url of ['/bad%ZZ','/library/%00','/shorts/%2e%2e%2fsecret']){
     const status=await new Promise((resolve,reject)=>{http.get(origin+url,res=>{res.resume();resolve(res.statusCode);}).on('error',reject);});
     assert.equal(status,400);
+  }
+});
+test('The published website privacy policy covers forms and points to forthcoming product pages', async () => {
+  const privacy = await fetch(origin + '/privacy/');
+  assert.equal(privacy.status, 200);
+  const html = await privacy.text();
+  assert.match(html, /Effective from.*datetime="2026-11-11"/);
+  assert.match(html, /mailto:data@acuity\.institute/);
+  assert.match(html, /Contact form/);
+  assert.match(html, /Acuity\.Agent waitlist/);
+  assert.match(html, /occasional Acuity Institute updates/);
+  assert.doesNotMatch(html, /noindex|\[DATE OF PUBLICATION\]|\[LEGAL REVIEW/);
+  for (const product of ['agent', 'codex', 'search']) {
+    const href = '/tools/' + product + '/';
+    assert.ok(html.includes('href="' + href + '"'));
+    assert.equal((await fetch(origin + href)).status, 200);
   }
 });
 test('Existing health and video range serving still work',async()=>{
@@ -69,7 +84,7 @@ test('Existing health and video range serving still work',async()=>{
 });
 test('Sitemap only lists implemented canonical pages',async()=>{
   const res=await fetch(origin+'/sitemap.xml');assert.match(res.headers.get('content-type'),/xml/);
-  const xml=await res.text();assert.ok(xml.includes('https://acuity.institute/library/'));assert.ok(!xml.includes('/privacy/'));
+  const xml=await res.text();assert.ok(xml.includes('https://acuity.institute/library/'));assert.ok(xml.includes('<loc>https://acuity.institute/privacy/</loc>'));
   const robots=await fetch(origin+'/robots.txt');assert.match(robots.headers.get('content-type'),/text\/plain/);assert.match(await robots.text(),/Sitemap: https:\/\/acuity.institute\/sitemap.xml/);
 });
 test('Metadata search combines words, collection and format filters',async()=>{

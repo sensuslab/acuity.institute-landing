@@ -99,6 +99,13 @@ export default function Contact() {
                 <Field name="email" label="Email" type="email" required maxLength={254} />
                 <Field name="message" label="Message" textarea required maxLength={4000} />
 
+                <p className="text-[13px] leading-relaxed text-starlight/65">
+                  We use your details to reply to your enquiry.{' '}
+                  <a href="/privacy/" target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2">
+                    Privacy Policy<span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </p>
+
                 {error && (
                   <p id="contact-error" role="alert" className="text-[13px] text-gold">
                     {error}
