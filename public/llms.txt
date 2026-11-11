@@ -14,9 +14,14 @@ Key facts:
 - [Library](https://acuity.institute/library/): catalogue of source editions with in-browser PDF and EPUB reading and downloads. Search covers titles, subtitles, authors, translators, collections, categories and tags (metadata), not full text. Search URL: https://acuity.institute/library/?q={query}
 - [About](https://acuity.institute/about/): the Institute and its founder.
 - [LumenNous](https://lumennous.acuity.institute/): an open contemplative library of daily prayers, affirmations, guided practices and sacred listening.
+- [myAeon](https://myaeon.acuity.institute/): a reflective astrology app with personal AI-generated readings, natal and transit charts, an interactive 3D solar system and conversations with Zeus.
+- [Tools overview](https://acuity.institute/tools/): the Acuity tools and how they fit together, with pages for [Acuity.Agent](https://acuity.institute/tools/agent/), [Acuity.Codex](https://acuity.institute/tools/codex/), [the Library](https://acuity.institute/tools/library/), [Acuity.Search](https://acuity.institute/tools/search/) and [WisdomVault](https://acuity.institute/tools/wisdomvault/).
+- [Privacy policy](https://acuity.institute/privacy/)
 
 ## Pre-release
 - [Acuity.Agent](https://agent.acuity.institute/): AI knowledge assistant for sacred texts, philosophy and spiritual traditions. Research method: search the library, read passages in context, synthesise with citations, and state the limits of the evidence.
 
 ## In development
 - Instruments of Clarity (The Archive, The Lens, myVault, Context Spheres, Studio). None of these features is available yet.
+
+Sitemap: https://acuity.institute/sitemap.xml
