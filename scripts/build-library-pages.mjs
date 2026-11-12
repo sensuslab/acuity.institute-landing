@@ -3,6 +3,7 @@ import { withBrandIcons } from './apply-brand-icons.mjs';
 import { ORIGIN, TEMPLATE_DATE, bookPath, categoryHubs, isPublicSourceUrl, lastmodFor, llmsSection, pageTexts, renderBookPage, renderHubPage, renderIndexBody, validateSlugs } from './library-seo.mjs';
 const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json', 'utf8'));
 const categories = JSON.parse(fs.readFileSync('src/data/libraryCategories.json', 'utf8'));
+const readerGuide = JSON.parse(fs.readFileSync('src/data/readerGuide.json', 'utf8'));
 const registry = fs.existsSync('content/library-r2-registry.json') ? JSON.parse(fs.readFileSync('content/library-r2-registry.json', 'utf8')) : {assets: []};
 const verifiedAt = new Map(registry.assets.map(asset => [asset.sha256, asset.verifiedAt]));
 const escape = text => String(text).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -27,7 +28,7 @@ html = html.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
   .replace(/(<meta (?:property="og:title"|name="twitter:title") content=")[^"]*/g, `$1${title}`)
   .replace(/(<meta (?:property="og:description"|name="twitter:description") content=")[^"]*/g, `$1${description}`);
 // Crawlable index: plain links to every record page and collection hub. React replaces it on mount.
-html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root">${renderIndexBody(books, {hubs, description})}</div>`);
+html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root">${renderIndexBody(books, {hubs, description, readerGuide})}</div>`);
 const structured = {'@context':'https://schema.org','@type':'CollectionPage','@id':'https://acuity.institute/library/#collection',url:'https://acuity.institute/library/',name:'Acuity Open Library',description,
   isPartOf:{'@id':'https://acuity.institute/#website'},publisher:{'@id':'https://acuity.institute/#organization'},
   hasPart:hubs.filter(h=>h.depth===0).map(h=>({'@type':'CollectionPage',name:h.label,url:ORIGIN+h.path})),
@@ -54,7 +55,7 @@ if (fs.existsSync('dist/library/books')) for (const file of fs.readdirSync('dist
 const leaked = [...fs.readdirSync('dist/library', {recursive:true})].filter(f => /\.(html|json)$/.test(f)).some(f => /dropbox\.com|rlkey=/i.test(fs.readFileSync(`dist/library/${f}`, 'utf8')));
 if (leaked || books.some(b => b.sourceUrl && !isPublicSourceUrl(b.sourceUrl))) throw new Error('Access-bearing source URL reached generated Library pages');
 
-const urls = [{path:'/'}, {path:'/library/', lastmod: TEMPLATE_DATE}, {path:'/about/'}, {path:'/privacy/'}, ...sitemapEntries];
+const urls = [{path:'/'}, {path:'/library/', lastmod:'2026-11-12'}, {path:'/about/'}, {path:'/privacy/'}, ...sitemapEntries];
 fs.writeFileSync('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u=>`<url><loc>${ORIGIN}${escape(u.path)}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`);
 if (fs.existsSync('dist/llms.txt')) {
   const llms = fs.readFileSync('dist/llms.txt', 'utf8');

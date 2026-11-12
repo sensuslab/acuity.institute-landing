@@ -21,6 +21,19 @@ before(async () => {
 });
 after(() => { server?.kill(); fs.rmSync(shorts, { recursive: true, force: true }); });
 
+test('The initial homepage has the styled React hero and readable fallback content', async () => {
+  const response = await fetch(origin + '/');
+  assert.equal(response.status, 200);
+  const { document } = parseHTML(await response.text());
+  const hero = document.querySelector('main #hero');
+  assert.ok(hero?.classList.contains('min-h-screen'));
+  assert.equal(hero.querySelector('h1').textContent, 'Pathways to wisdom.');
+  assert.equal(hero.querySelector('a').getAttribute('href'), '/library/');
+  assert.equal(document.querySelectorAll('h1').length, 1);
+  assert.match(document.querySelector('.home-fallback').textContent, /Frequently asked questions/);
+  assert.ok(document.querySelector('link[rel="stylesheet"][href^="/assets/"]'));
+});
+
 test('Direct tool-page requests serve full branded content with their own metadata', async () => {
   for (const [slug, name, content] of [
     ['', 'The Tools', 'Many ways in.'], ['agent/', 'Acuity.Agent', 'Many traditions.'],

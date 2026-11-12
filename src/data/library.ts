@@ -1,5 +1,6 @@
 import catalogue from './libraryCatalogue.json';
 import categoryIndex from './libraryCategories.json';
+import readerGuideData from './readerGuide.json';
 export type LibraryOverview = {
   id:string; title:string; sourceBookIds:string[]; language:string; pages:number;
   imageOnly:boolean; pdf?:string; pptx?:string; pdfBytes?:number;
@@ -23,6 +24,30 @@ export const books: LibraryBook[] = catalogue.map(book => ({
   direction: book.direction === 'rtl' ? 'rtl' : 'ltr',
 }));
 export const categories: LibraryCategory[] = categoryIndex;
+export const readerGuide: LibraryBook = {
+  id: readerGuideData.id,
+  title: readerGuideData.title,
+  description: readerGuideData.description,
+  author: 'Acuity Institute',
+  subtitle: '',
+  translator: null,
+  collection: '',
+  period: '',
+  language: 'English',
+  editionNote: 'A practice edition for the Acuity Library reader.',
+  rights: '',
+  tags: [],
+  sourceUrl: '',
+  epub: `/library/${readerGuideData.id}.epub`,
+  markdown: `/library/${readerGuideData.id}.md`,
+  accent: 'sage',
+  categoryKey: '',
+  categoryPath: [],
+  categoryLabel: 'Reader guide',
+  kind: 'guide',
+  capabilities: { pdf: false, ebook: true, present: false },
+  assets: [],
+};
 export const collections = [...new Set(books.map(book => book.collection))];
 // Curated scans require PDF + EPUB; Atlas texts pair canonical Markdown + EPUB.
 export const canReadEbook = (book: Pick<LibraryBook, 'pdf' | 'epub' | 'markdown'>) => !!(book.epub && (book.pdf || book.markdown));

@@ -7,6 +7,7 @@ import { compileLibrary } from './library-catalogue.mjs';
 import { hydrateLibraryImports } from './fetch-library-imports.mjs';
 import { attachLibraryOverviews } from './library-overviews.mjs';
 import { isPublicSourceUrl } from './library-seo.mjs';
+import { buildReaderGuide } from './build-reader-guide.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const registryPath = path.join(root,'content/library-r2-registry.json');
 const localAssets = process.env.LIBRARY_ASSET_MODE === 'local';
@@ -45,6 +46,7 @@ for (const source of Object.keys(redirects)) {
 }
 for (const [file,data] of [[catalogue,result.books],[path.join(root,'src/data/libraryCategories.json'),result.categories],[manifestPath,result.manifest],[redirectsPath,redirects]]) fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');
 console.log(`Indexed ${result.books.length} curated records across ${result.categories.length} categories. Ebook launchers: ${result.books.filter(b=>b.capabilities.ebook).length}.`);
+await buildReaderGuide(root);
 
 
 if (assetRegistry) {

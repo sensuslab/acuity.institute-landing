@@ -102,3 +102,7 @@ content/library-r2-inventory.json
 /texts/public-domain/
 /texts/open-license/
 /texts/permissioned/
+
+# Generated from src/data/readerGuide.json.
+/public/library/how-to-use-the-reader.epub
+/public/library/how-to-use-the-reader.md

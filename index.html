@@ -151,7 +151,7 @@
      "name": "Does the e-book reader remember my place?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Only if you choose \"Remember my place on this device\". Your font size and position in the book are then saved in your own browser and are not sent to the Institute. Unticking the option removes the saved entry."
+      "text": "In the reader’s Settings, choose \"Remember my place on this device\" to save your text font, size and reading position in this browser. Unticking the option removes the saved entry."
      }
     }
    ]
@@ -166,10 +166,15 @@
   </head>
   <body class="bg-[#09090f]">
     <div id="root">
-      <!-- Static fallback for crawlers and no-JS clients; React replaces this on mount. -->
-      <main>
+      <!-- home-navigation -->
+      <main id="main" tabindex="-1" class="text-starlight">
+        <!-- home-hero:start -->
+        <section class="home-fallback">
         <h1>Pathways to wisdom.</h1>
         <p>The Acuity Institute is dedicated to truth and the expansion of accurate knowledge, enlightening pathways of understanding across all areas of life.</p>
+        </section>
+        <!-- home-hero:end -->
+        <section class="home-fallback">
         <h2>The Acuity Library: a library for the enquiring mind</h2>
         <p>The Library is an open reading room for the world's wisdom traditions: 607 texts and presentations across Sacred Texts, Esoteric, Presentations, Scripture, Philosophy, Original Works, Health and Miscellaneous collections. Every text is free to read in the browser and to download as PDF, EPUB or both. No account is needed. <a href="/library/">Enter the library</a>.</p>
         <h2>Acuity.Agent: Creating Pathways to Wisdom</h2>
@@ -192,10 +197,11 @@
         <h3>Are the Instruments of Clarity available yet?</h3>
         <p>No. The Instruments of Clarity are under development. They are planned as a single interface, with The Archive, The Lens, myVault, Context Spheres and Studio as its facets, building on the Library and Acuity.Agent.</p>
         <h3>Does the e-book reader remember my place?</h3>
-        <p>Only if you choose &quot;Remember my place on this device&quot;. Your font size and position in the book are then saved in your own browser and are not sent to the Institute. Unticking the option removes the saved entry.</p>
+        <p>In the reader’s Settings, choose &quot;Remember my place on this device&quot; to save your text font, size and reading position in this browser. Unticking the option removes the saved entry.</p>
         <h2>A quiet inquiry.</h2>
         <p>Tell us what you are seeking: a conversation, a collaboration, or a question the Institute should sit with. Email <a href="mailto:hello@acuity.institute">hello@acuity.institute</a>.</p>
-        <p><a href="/about/">About</a> · <a href="/privacy/">Privacy</a></p>
+        <p><a href="/tools/">The Tools</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy</a></p>
+        </section>
       </main>
     </div>
     <script type="module" src="/src/main.tsx"></script>

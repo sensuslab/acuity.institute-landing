@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const STARS = Array.from({ length: 80 }, (_, i) => {
   const seed = (i + 1) * 7919;
@@ -13,13 +13,7 @@ const STARS = Array.from({ length: 80 }, (_, i) => {
 });
 
 export default function HeroSection() {
-  const [loaded, setLoaded] = useState(false);
   const portalRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoaded(true), 200);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     let ticking = false;
@@ -71,45 +65,25 @@ export default function HeroSection() {
         }}
       />
 
-      <div
-        ref={portalRef}
-        className={`relative transition-all duration-[1.5s] ease-out ${
-          loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-        }`}
-      >
+      <div ref={portalRef} className="relative">
         <Portal />
       </div>
 
       <div className="relative z-10 text-center mt-10 md:mt-14 px-6">
-        <h1
-          className={`transition-all duration-1000 ease-out ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-          style={{ transitionDelay: '500ms' }}
-        >
+        <h1>
           <span className="block text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter leading-[0.9] text-starlight">
             Pathways to{' '}
             <span className="font-semibold text-gradient-gold">wisdom</span>.
           </span>
         </h1>
 
-        <p
-          className={`mt-6 md:mt-8 text-base md:text-lg font-light text-starlight/50 max-w-md mx-auto leading-relaxed transition-all duration-1000 ease-out ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-          style={{ transitionDelay: '800ms' }}
-        >
+        <p className="mt-6 md:mt-8 text-base md:text-lg font-light text-starlight/50 max-w-md mx-auto leading-relaxed">
           The Acuity Institute is dedicated to truth and the expansion of
           accurate knowledge, enlightening pathways of understanding across all
           areas of life
         </p>
 
-        <div
-          className={`mt-8 md:mt-10 transition-all duration-1000 ease-out ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-          style={{ transitionDelay: '1100ms' }}
-        >
+        <div className="mt-8 md:mt-10">
           <a
             href="/library/"
             className="inline-flex items-center px-8 py-3.5 rounded-full border border-gold/50 text-gold font-mono text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:bg-gold/10 hover:border-gold hover:scale-105 hover:shadow-[0_0_30px_rgba(212,168,67,0.15)]"
@@ -119,12 +93,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.3em] text-starlight/20 transition-all duration-1000 ${
-          loaded ? 'opacity-100' : 'opacity-0'
-        }`}
-        style={{ transitionDelay: '1400ms' }}
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.3em] text-starlight/20">
         Est. 2026 &mdash; Fig 1.0
       </div>
 
