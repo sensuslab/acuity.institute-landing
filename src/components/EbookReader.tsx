@@ -75,7 +75,7 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
   },[]);
   turnRef.current=direction=>{void navigate(direction);};
   useEffect(()=>{
-    if(!canReadEbook(book)||!book.epub){setError('This record has no paired source and EPUB reading edition.');setBusy(false);return;}
+    if(!canReadEbook(book)||!book.epub){setError('This record has no EPUB reading edition available in the reader.');setBusy(false);return;}
     const element=stage.current;if(!element)return;
     let cancelled=false;let rendition:Rendition|undefined;let publication:Book|undefined;
     let resize:ResizeObserver|undefined;let resizeFrame:number|undefined;

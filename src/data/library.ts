@@ -13,6 +13,7 @@ export type LibraryBook = {
   editionNote: string; tags: string[]; sourceUrl: string; sourceId?: number; rights: string;
   markdown?: string; rightsMetadata?:Record<string,unknown>; trademark?:{status:string;marks:string[];use_rules:string}; sourceMetadata?:Record<string,unknown>; pdf?: string; epub?: string; text?: string; pptx?: string; accent: string; pages?: number; pdfBytes?: number;
   categoryKey: string; categoryPath: string[]; categoryLabel: string; kind: string;
+  primaryFormat?: string;
   capabilities: {pdf:boolean; ebook:boolean; present:boolean};
   assets: {format:string;url:string;bytes:number;sha256:string}[];
   direction?: 'ltr' | 'rtl';
@@ -49,8 +50,9 @@ export const readerGuide: LibraryBook = {
   assets: [],
 };
 export const collections = [...new Set(books.map(book => book.collection))];
-// Curated scans require PDF + EPUB; Atlas texts pair canonical Markdown + EPUB.
-export const canReadEbook = (book: Pick<LibraryBook, 'pdf' | 'epub' | 'markdown'>) => !!(book.epub && (book.pdf || book.markdown));
+// Companion EPUBs require their paired source. An EPUB can also be the primary edition.
+export const canReadEbook = (book: Pick<LibraryBook, 'pdf' | 'epub' | 'markdown' | 'primaryFormat'>) =>
+  !!(book.epub && (book.pdf || book.markdown || book.primaryFormat === 'epub'));
 export function inCategory(book: Pick<LibraryBook,'categoryKey'>, category: string) {
   return category === 'all' || (category === '_uncategorised' ? !book.categoryKey : book.categoryKey === category || book.categoryKey.startsWith(category + '/'));
 }

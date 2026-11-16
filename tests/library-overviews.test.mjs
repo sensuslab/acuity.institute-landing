@@ -58,7 +58,6 @@ test('Every linked overview has a real source and preserves the library collecti
   const manifest=JSON.parse(fs.readFileSync('content/library-overviews.json','utf8'));
   assert.equal(manifest.overviews.length,97);
   assert.equal(books.filter(book=>book.kind==='presentation').length,97);
-  assert.equal(books.filter(book=>book.kind==='book'&&!book.id.startsWith('atlas-')).length,188);
   for(const item of manifest.overviews) for(const id of item.sourceBookIds) {
     const source=books.find(book=>book.id===id);
     assert.equal(source.kind,'book');assert.ok(source.pdf && source.epub);

@@ -117,11 +117,12 @@ test('The reader guide ships with chapter navigation and stays outside the index
 test('Published site copy and llms.txt match the real catalogue size', () => {
   const texts = books.filter(b => b.kind !== 'presentation').length;
   const presentations = books.length - texts;
-  for (const file of ['index.html', 'src/data/faq.json', 'public/llms.txt']) {
-    const copy = fs.readFileSync(file, 'utf8');
-    for (const [, n] of copy.matchAll(/(\d{3}) (?:texts and presentations|records)/g)) assert.equal(Number(n), books.length, file);
-    for (const [, n] of copy.matchAll(/(\d{3}) (?:sacred, philosophical|wisdom) texts/g)) assert.equal(Number(n), texts, file);
-  }
+  const home = fs.readFileSync('dist/index.html', 'utf8');
+  assert.ok(home.includes(`${books.length} texts and presentations (${texts} texts and ${presentations} research presentations)`));
+  assert.doesNotMatch(home, /\{\{LIBRARY_/);
+  const textCounts = [...home.matchAll(/(\d{3}) (?:sacred, philosophical|wisdom) texts/g)];
+  assert.ok(textCounts.length > 0);
+  for (const [, count] of textCounts) assert.equal(Number(count), texts);
   const llms = fs.readFileSync('dist/llms.txt', 'utf8');
   assert.ok(llms.includes(`${books.length} records: ${texts} texts and ${presentations} research presentations`));
   assert.ok(llms.includes('## Library'));

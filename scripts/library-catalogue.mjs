@@ -94,7 +94,7 @@ export async function compileLibrary({ booksDir, categoryLabels = {}, previousMa
       const {path:_oldPath, verifiedAt:_verified, ...original} = previous || {};
       manifest.push({...original,bookId:book.id,format,path:url,bytes:size,sha256,source:book.sourceUrl});
     }
-    book.capabilities = {pdf:!!book.pdf, ebook:!!(book.pdf && book.epub), present:!!book.pdf};
+    book.capabilities = {pdf:!!book.pdf, ebook:!!(book.epub && (book.pdf || book.primaryFormat === 'epub')), present:!!book.pdf};
     book.kind = categorySegments[0]?.toLowerCase() === 'presentations' || !!book.pptx ? 'presentation' : 'book';
     books.push(book);
   }

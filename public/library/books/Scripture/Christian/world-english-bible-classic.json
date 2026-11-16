@@ -1,0 +1,18 @@
+{
+  "id": "world-english-bible-classic",
+  "title": "World English Bible Classic",
+  "author": "Traditional · Biblical",
+  "language": "English",
+  "period": "2020 stable text edition",
+  "description": "The full World English Bible Classic, a modern American English translation including the Apocrypha and Deuterocanon.",
+  "editionNote": "World English Bible Classic (eng-web), American English, published by eBible.org.",
+  "rights": "Public domain. World English Bible is a trademark of eBible.org. This edition is unchanged.",
+  "tags": [
+    "Bible",
+    "World English Bible",
+    "Christian Scripture"
+  ],
+  "accent": "sage",
+  "sourceUrl": "https://ebible.org/bible/details.php?id=eng-web",
+  "primaryFormat": "epub"
+}

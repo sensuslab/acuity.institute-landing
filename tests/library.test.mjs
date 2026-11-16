@@ -27,7 +27,7 @@ test('Catalogue assets retain verified R2 identities and usable format pairs',()
   assert.equal(byHash.size,registry.assets.length);assert.equal(registry.assets.filter(a=>a.format==='markdown').length,323);assert.equal(new Set(books.map(b=>b.id)).size,books.length);
   for(const book of books){
     assert.ok(book.pdf || book.epub);assert.ok(book.sourceUrl === '' || /^https:\/\//.test(book.sourceUrl));assert.doesNotMatch(book.sourceUrl,/dropbox|rlkey/i);
-    assert.equal(book.capabilities.ebook,!!(book.epub&&(book.pdf||book.markdown)));
+    assert.equal(book.capabilities.ebook,!!(book.epub && (book.pdf || book.markdown || book.primaryFormat === 'epub')));
     for(const item of [book,...book.overviews])for(const asset of item.assets){
       const verified=byHash.get(asset.sha256);assert.ok(verified);assert.equal(verified.status,'verified');
       assert.equal(asset.url,verified.url);assert.equal(asset.bytes,verified.bytes);

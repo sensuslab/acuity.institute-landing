@@ -1,6 +1,10 @@
 import { Plus } from 'lucide-react';
 import faq from '../data/faq.json';
+import categories from '../data/libraryCategories.json';
 import { SectionLabel } from './SectionChrome';
+
+const total = categories.filter(category => category.depth === 0).reduce((sum, category) => sum + category.count, 0);
+const presentations = categories.find(category => category.key === 'Presentations')?.count ?? 0;
 
 export default function FaqSection() {
   return (
@@ -17,7 +21,10 @@ export default function FaqSection() {
                 <h3 className="font-normal">{q}</h3>
                 <Plus className="w-4 h-4 shrink-0 text-gold transition-transform duration-300 group-open:rotate-45" strokeWidth={1.5} />
               </summary>
-              <p className="mt-3 max-w-[64ch] text-[15px] leading-[1.75] text-starlight/55 font-light">{a}</p>
+              <p className="mt-3 max-w-[64ch] text-[15px] leading-[1.75] text-starlight/55 font-light">{a
+                .replace('{{LIBRARY_RECORDS}}', String(total))
+                .replace('{{LIBRARY_TEXTS}}', String(total - presentations))
+                .replace('{{LIBRARY_PRESENTATIONS}}', String(presentations))}</p>
             </details>
           ))}
         </div>

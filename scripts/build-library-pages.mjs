@@ -55,7 +55,8 @@ if (fs.existsSync('dist/library/books')) for (const file of fs.readdirSync('dist
 const leaked = [...fs.readdirSync('dist/library', {recursive:true})].filter(f => /\.(html|json)$/.test(f)).some(f => /dropbox\.com|rlkey=/i.test(fs.readFileSync(`dist/library/${f}`, 'utf8')));
 if (leaked || books.some(b => b.sourceUrl && !isPublicSourceUrl(b.sourceUrl))) throw new Error('Access-bearing source URL reached generated Library pages');
 
-const urls = [{path:'/'}, {path:'/library/', lastmod:'2026-11-12'}, {path:'/about/'}, {path:'/privacy/'}, ...sitemapEntries];
+const libraryLastmod = [TEMPLATE_DATE, ...sitemapEntries.map(entry => entry.lastmod)].sort().at(-1);
+const urls = [{path:'/', lastmod: libraryLastmod}, {path:'/library/', lastmod: libraryLastmod}, {path:'/about/'}, {path:'/privacy/'}, ...sitemapEntries];
 fs.writeFileSync('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u=>`<url><loc>${ORIGIN}${escape(u.path)}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`);
 if (fs.existsSync('dist/llms.txt')) {
   const llms = fs.readFileSync('dist/llms.txt', 'utf8');

@@ -1,0 +1,18 @@
+{
+  "id": "psalms-web-classic",
+  "title": "Psalms (World English Bible Classic)",
+  "author": "Traditional · Biblical",
+  "language": "English",
+  "period": "2020 stable text edition",
+  "description": "The complete Book of Psalms in the World English Bible Classic translation, with hymns, laments, prayers and songs of praise.",
+  "editionNote": "World English Bible Classic (eng-web), American English, published by eBible.org.",
+  "rights": "Public domain. World English Bible is a trademark of eBible.org. This edition is unchanged.",
+  "tags": [
+    "Bible",
+    "World English Bible",
+    "Christian Scripture"
+  ],
+  "accent": "sage",
+  "sourceUrl": "https://ebible.org/bible/details.php?id=eng-web",
+  "pages": 220
+}
