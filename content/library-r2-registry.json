@@ -4198,10 +4198,10 @@
     },
     {
       "format": "pdf",
-      "sha256": "df277ae526a76c0c17e6b8887fb857b85efc4b5b24c47aca4c0d5672a04a0bfd",
-      "bytes": 20659344,
-      "key": "library/assets/df277ae526a76c0c17e6b8887fb857b85efc4b5b24c47aca4c0d5672a04a0bfd.pdf",
-      "url": "https://assets.acuity.institute/library/assets/df277ae526a76c0c17e6b8887fb857b85efc4b5b24c47aca4c0d5672a04a0bfd.pdf",
+      "sha256": "15ad3b819f178b12533479e4245119f35afffa1a3268be1ca4f1cf7ba63334ba",
+      "bytes": 5345626,
+      "key": "library/assets/15ad3b819f178b12533479e4245119f35afffa1a3268be1ca4f1cf7ba63334ba.pdf",
+      "url": "https://assets.acuity.institute/library/assets/15ad3b819f178b12533479e4245119f35afffa1a3268be1ca4f1cf7ba63334ba.pdf",
       "legacyUrl": "/library/books/Scripture/Gnostic/the-odes-and-psalms-of-solomon.pdf",
       "visibility": "public",
       "role": "source",
@@ -4209,7 +4209,7 @@
         "the-odes-and-psalms-of-solomon"
       ],
       "status": "verified",
-      "verifiedAt": "2026-10-27T10:52:35.163225+00:00",
+      "verifiedAt": "2026-11-16T17:29:32.859347+00:00",
       "verification": "independent GET byte count and SHA-256"
     },
     {
@@ -20196,9 +20196,361 @@
       "status": "verified",
       "verifiedAt": "2026-10-27T19:02:07.367Z",
       "verification": "Upload payload SHA-256; independent R2 full-object MD5 etag and byte count"
+    },
+    {
+      "format": "pdf",
+      "sha256": "5cc80227a1a9df831923a018adee1d607b26fb2070f96fea06848615e2a84867",
+      "bytes": 649291,
+      "key": "library/assets/5cc80227a1a9df831923a018adee1d607b26fb2070f96fea06848615e2a84867.pdf",
+      "url": "https://assets.acuity.institute/library/assets/5cc80227a1a9df831923a018adee1d607b26fb2070f96fea06848615e2a84867.pdf",
+      "legacyUrl": "/library/books/Scripture/Christian/psalms-web-classic.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "psalms-web-classic"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:24.497588+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "f13eba778aede20cb8bbc4023fe0078711a872f6ef2a65dc5b80824294fc4916",
+      "bytes": 6696191,
+      "key": "library/assets/f13eba778aede20cb8bbc4023fe0078711a872f6ef2a65dc5b80824294fc4916.pdf",
+      "url": "https://assets.acuity.institute/library/assets/f13eba778aede20cb8bbc4023fe0078711a872f6ef2a65dc5b80824294fc4916.pdf",
+      "legacyUrl": "/library/books/Scripture/Buddhism/path-of-light-barnett-1909.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "path-of-light-barnett-1909"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:35.113652+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "a63eed983984ebc0f4a2475dc71b4195c1327d7444c942c75e74d2ab04c1ea48",
+      "bytes": 4289841,
+      "key": "library/assets/a63eed983984ebc0f4a2475dc71b4195c1327d7444c942c75e74d2ab04c1ea48.pdf",
+      "url": "https://assets.acuity.institute/library/assets/a63eed983984ebc0f4a2475dc71b4195c1327d7444c942c75e74d2ab04c1ea48.pdf",
+      "legacyUrl": "/library/books/Scripture/Early%20Church%20Fathers/conferences-of-john-cassian.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "conferences-of-john-cassian"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:32.206319+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "551cb0820422b7bb77f1cb7401e76ff46751236c0e63cc846c8404fa5bef5e8e",
+      "bytes": 4933699,
+      "key": "library/assets/551cb0820422b7bb77f1cb7401e76ff46751236c0e63cc846c8404fa5bef5e8e.pdf",
+      "url": "https://assets.acuity.institute/library/assets/551cb0820422b7bb77f1cb7401e76ff46751236c0e63cc846c8404fa5bef5e8e.pdf",
+      "legacyUrl": "/library/books/Scripture/Gnostic/hymn-of-jesus-mead-1907.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "hymn-of-jesus-mead-1907"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:36.360896+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "5ae0de1dd056ce5d478c7a107c597e284489ed032b2ed9e99b2b2e5fbeca198e",
+      "bytes": 2199601,
+      "key": "library/assets/5ae0de1dd056ce5d478c7a107c597e284489ed032b2ed9e99b2b2e5fbeca198e.epub",
+      "url": "https://assets.acuity.institute/library/assets/5ae0de1dd056ce5d478c7a107c597e284489ed032b2ed9e99b2b2e5fbeca198e.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/writings-of-saint-francis-of-assisi.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "writings-of-saint-francis-of-assisi"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:37.894853+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "6115396f9df53fbb20e19277830076c864e0b1687060689c4d261605854f4863",
+      "bytes": 7509041,
+      "key": "library/assets/6115396f9df53fbb20e19277830076c864e0b1687060689c4d261605854f4863.pdf",
+      "url": "https://assets.acuity.institute/library/assets/6115396f9df53fbb20e19277830076c864e0b1687060689c4d261605854f4863.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/writings-of-saint-francis-of-assisi.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "writings-of-saint-francis-of-assisi"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:43.132063+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "232d7e9b9f4980293d50e5981f3ea7175731d970e4a9490ebc505d77b5c2e1ae",
+      "bytes": 13417926,
+      "key": "library/assets/232d7e9b9f4980293d50e5981f3ea7175731d970e4a9490ebc505d77b5c2e1ae.pdf",
+      "url": "https://assets.acuity.institute/library/assets/232d7e9b9f4980293d50e5981f3ea7175731d970e4a9490ebc505d77b5c2e1ae.pdf",
+      "legacyUrl": "/library/books/Scripture/Christian/carmina-gadelica-volume-1.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "carmina-gadelica-volume-1"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:55.336316+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "e5d14c76344ca0b39d0c5f62a1d9198e7224c7874ce26d2d1018d685193d6096",
+      "bytes": 156701,
+      "key": "library/assets/e5d14c76344ca0b39d0c5f62a1d9198e7224c7874ce26d2d1018d685193d6096.epub",
+      "url": "https://assets.acuity.institute/library/assets/e5d14c76344ca0b39d0c5f62a1d9198e7224c7874ce26d2d1018d685193d6096.epub",
+      "legacyUrl": "/library/books/Philosophy/Vedanta/gitanjali-tagore-1913.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "gitanjali-tagore-1913"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:38.037247+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "cfc782454e8265f4a81fa7baabe787cdc3991a1ecf75760ca9c5a02ff88c58f5",
+      "bytes": 284662,
+      "key": "library/assets/cfc782454e8265f4a81fa7baabe787cdc3991a1ecf75760ca9c5a02ff88c58f5.pdf",
+      "url": "https://assets.acuity.institute/library/assets/cfc782454e8265f4a81fa7baabe787cdc3991a1ecf75760ca9c5a02ff88c58f5.pdf",
+      "legacyUrl": "/library/books/Philosophy/Vedanta/gitanjali-tagore-1913.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "gitanjali-tagore-1913"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:40.482463+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "e275871ba9a111ae988f47fc385af3a3726cb200d0e682ef78c7b985beb1c7dd",
+      "bytes": 3560545,
+      "key": "library/assets/e275871ba9a111ae988f47fc385af3a3726cb200d0e682ef78c7b985beb1c7dd.epub",
+      "url": "https://assets.acuity.institute/library/assets/e275871ba9a111ae988f47fc385af3a3726cb200d0e682ef78c7b985beb1c7dd.epub",
+      "legacyUrl": "/library/books/Scripture/Christian/world-english-bible-classic.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "world-english-bible-classic"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:45.707037+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "530e4fe6c81d77c2cdd7c123c699ee960d8bdcaded65ac81d34eda1e202cdd92",
+      "bytes": 95767,
+      "key": "library/assets/530e4fe6c81d77c2cdd7c123c699ee960d8bdcaded65ac81d34eda1e202cdd92.pdf",
+      "url": "https://assets.acuity.institute/library/assets/530e4fe6c81d77c2cdd7c123c699ee960d8bdcaded65ac81d34eda1e202cdd92.pdf",
+      "legacyUrl": "/library/books/Scripture/Christian/ephesians-web-classic.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "ephesians-web-classic"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:42.085468+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "ad8774d5c879520d9d900d4b61a04073852e3a383f4dd04b8057126390309435",
+      "bytes": 83754,
+      "key": "library/assets/ad8774d5c879520d9d900d4b61a04073852e3a383f4dd04b8057126390309435.pdf",
+      "url": "https://assets.acuity.institute/library/assets/ad8774d5c879520d9d900d4b61a04073852e3a383f4dd04b8057126390309435.pdf",
+      "legacyUrl": "/library/books/Scripture/Christian/philippians-web-classic.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "philippians-web-classic"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:43.380943+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "e74816320f6d0a5c948db8c8baea689fc433b48fb0330c4c37207513286b5fb1",
+      "bytes": 324974,
+      "key": "library/assets/e74816320f6d0a5c948db8c8baea689fc433b48fb0330c4c37207513286b5fb1.pdf",
+      "url": "https://assets.acuity.institute/library/assets/e74816320f6d0a5c948db8c8baea689fc433b48fb0330c4c37207513286b5fb1.pdf",
+      "legacyUrl": "/library/books/Scripture/Christian/gospel-of-john-web-classic.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "gospel-of-john-web-classic"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:45.122423+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "e6c7e51ce06a46191071d0db7f7d5ded538beceb31ade1dc1facd76ad55ee51a",
+      "bytes": 1699587,
+      "key": "library/assets/e6c7e51ce06a46191071d0db7f7d5ded538beceb31ade1dc1facd76ad55ee51a.pdf",
+      "url": "https://assets.acuity.institute/library/assets/e6c7e51ce06a46191071d0db7f7d5ded538beceb31ade1dc1facd76ad55ee51a.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/dialogue-catherine-of-siena-thorold-1907.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "dialogue-catherine-of-siena-thorold-1907"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:47.403043+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "8a7381ee94d2da947f649d609499437846b04d9be3c0ace1c72d78e0f8423564",
+      "bytes": 98861,
+      "key": "library/assets/8a7381ee94d2da947f649d609499437846b04d9be3c0ace1c72d78e0f8423564.epub",
+      "url": "https://assets.acuity.institute/library/assets/8a7381ee94d2da947f649d609499437846b04d9be3c0ace1c72d78e0f8423564.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/practical-mysticism-evelyn-underhill.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "practical-mysticism-evelyn-underhill"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:46.523137+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "b4ff7d5508390e54780e9f7fccda5c1a5157ac6f9a4a8f84cc334de9cb3225e5",
+      "bytes": 527258,
+      "key": "library/assets/b4ff7d5508390e54780e9f7fccda5c1a5157ac6f9a4a8f84cc334de9cb3225e5.epub",
+      "url": "https://assets.acuity.institute/library/assets/b4ff7d5508390e54780e9f7fccda5c1a5157ac6f9a4a8f84cc334de9cb3225e5.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/journal-of-john-woolman.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "journal-of-john-woolman"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:47.995046+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "28fd8c1b9b3d24be4d9841a7acf3d02ac6174e427fa68fc1e0d65f340cd0592b",
+      "bytes": 4899255,
+      "key": "library/assets/28fd8c1b9b3d24be4d9841a7acf3d02ac6174e427fa68fc1e0d65f340cd0592b.epub",
+      "url": "https://assets.acuity.institute/library/assets/28fd8c1b9b3d24be4d9841a7acf3d02ac6174e427fa68fc1e0d65f340cd0592b.epub",
+      "legacyUrl": "/library/books/Scripture/Buddhism/prayer-of-good-conduct-toh-4377.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "prayer-of-good-conduct-toh-4377"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:30:00.164889+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "4940268b3d651af7f5d60a10e143ec2e185f6ce01b48baf21d9e767e09c39125",
+      "bytes": 414636,
+      "key": "library/assets/4940268b3d651af7f5d60a10e143ec2e185f6ce01b48baf21d9e767e09c39125.pdf",
+      "url": "https://assets.acuity.institute/library/assets/4940268b3d651af7f5d60a10e143ec2e185f6ce01b48baf21d9e767e09c39125.pdf",
+      "legacyUrl": "/library/books/Scripture/Buddhism/prayer-of-good-conduct-toh-4377.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "prayer-of-good-conduct-toh-4377"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:50.258983+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "147159f9f60a4249c76a504f3bcf50cea8a82fc8d2d8f691e44126b3d669210f",
+      "bytes": 5446754,
+      "key": "library/assets/147159f9f60a4249c76a504f3bcf50cea8a82fc8d2d8f691e44126b3d669210f.pdf",
+      "url": "https://assets.acuity.institute/library/assets/147159f9f60a4249c76a504f3bcf50cea8a82fc8d2d8f691e44126b3d669210f.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/symphonia-hildegard-riesencodex.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "symphonia-hildegard-riesencodex"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:30:00.846926+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "324dcd6cc49f2d0bb10167874e2861eca26e6be8ffd2cb14da6cbeadb9b91792",
+      "bytes": 2764473,
+      "key": "library/assets/324dcd6cc49f2d0bb10167874e2861eca26e6be8ffd2cb14da6cbeadb9b91792.pdf",
+      "url": "https://assets.acuity.institute/library/assets/324dcd6cc49f2d0bb10167874e2861eca26e6be8ffd2cb14da6cbeadb9b91792.pdf",
+      "legacyUrl": "/library/books/Scripture/Buddhism/linked-discourses-volume-5-sujato.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "linked-discourses-volume-5-sujato"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:29:57.838647+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "1286cc44d8e13313cef1e64adc039c5800fff3675715238cdd641f3151e30195",
+      "bytes": 5931810,
+      "key": "library/assets/1286cc44d8e13313cef1e64adc039c5800fff3675715238cdd641f3151e30195.pdf",
+      "url": "https://assets.acuity.institute/library/assets/1286cc44d8e13313cef1e64adc039c5800fff3675715238cdd641f3151e30195.pdf",
+      "legacyUrl": "/library/books/Scripture/Buddhism/middle-discourses-volume-1-sujato.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "middle-discourses-volume-1-sujato"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:30:03.110093+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "8f69af7913d879bccb82458846d6853d1c5135c9b401b17f8e58cb6b2c804f0d",
+      "bytes": 11155774,
+      "key": "library/assets/8f69af7913d879bccb82458846d6853d1c5135c9b401b17f8e58cb6b2c804f0d.pdf",
+      "url": "https://assets.acuity.institute/library/assets/8f69af7913d879bccb82458846d6853d1c5135c9b401b17f8e58cb6b2c804f0d.pdf",
+      "legacyUrl": "/library/books/Scripture/Judaism/essays-and-miscellanies-grace-aguilar.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "essays-and-miscellanies-grace-aguilar"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-16T17:30:08.327100+00:00",
+      "verification": "independent GET byte count and SHA-256"
     }
   ],
-  "release": "2026-10-27-r2-v3",
+  "release": "2026-11-16-r2-v4",
   "publication": {
     "confirmedAt": "2026-10-27T13:47:54.019Z",
     "scope": "All 617 unique approved corpus files are public; user explicitly confirmed the 391 previously flagged files."

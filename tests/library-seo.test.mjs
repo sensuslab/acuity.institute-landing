@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
+import JSZip from 'jszip';
 import { attribution, categoryHubs, isPublicSourceUrl, pageTexts, validateSlugs } from '../scripts/library-seo.mjs';
 
 const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json', 'utf8'));
@@ -91,14 +92,37 @@ test('Collection hubs and the sitemap list every record page', async () => {
   assert.equal(new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])).size, [...sitemap.matchAll(/<loc>/g)].length);
 });
 
+test('The reader guide ships with chapter navigation and stays outside the indexed book collection', async () => {
+  const guide = JSON.parse(fs.readFileSync('src/data/readerGuide.json', 'utf8'));
+  const index = await (await fetch(origin + '/library/')).text();
+  const guideLink = index.indexOf(`?book=${guide.id}`);
+  assert.ok(guideLink >= 0 && guideLink < index.indexOf(`href="/library/${books[0].id}/"`));
+  const response = await fetch(`${origin}/library/${guide.id}.epub`);
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get('content-type'), 'application/epub+zip');
+  const bytes = Buffer.from(await response.arrayBuffer());
+  assert.equal(bytes.readUInt16LE(8), 0); // The EPUB mimetype entry is stored first and uncompressed.
+  assert.equal(bytes.subarray(30, 38).toString(), 'mimetype');
+  const epub = await JSZip.loadAsync(bytes);
+  const toc = await epub.file('EPUB/nav.xhtml').async('string');
+  for (const [index, chapter] of guide.chapters.entries()) {
+    const filename = `chapter-${index + 1}.xhtml`;
+    assert.ok(toc.includes(`href="${filename}">${chapter.title}</a>`));
+    assert.ok(await epub.file(`EPUB/${filename}`).async('string'));
+  }
+  const sitemap = await (await fetch(origin + '/sitemap.xml')).text();
+  assert.ok(!sitemap.includes(guide.id));
+});
+
 test('Published site copy and llms.txt match the real catalogue size', () => {
   const texts = books.filter(b => b.kind !== 'presentation').length;
   const presentations = books.length - texts;
-  for (const file of ['index.html', 'src/data/faq.json', 'public/llms.txt']) {
-    const copy = fs.readFileSync(file, 'utf8');
-    for (const [, n] of copy.matchAll(/(\d{3}) (?:texts and presentations|records)/g)) assert.equal(Number(n), books.length, file);
-    for (const [, n] of copy.matchAll(/(\d{3}) (?:sacred, philosophical|wisdom) texts/g)) assert.equal(Number(n), texts, file);
-  }
+  const home = fs.readFileSync('dist/index.html', 'utf8');
+  assert.ok(home.includes(`${books.length} texts and presentations (${texts} texts and ${presentations} research presentations)`));
+  assert.doesNotMatch(home, /\{\{LIBRARY_/);
+  const textCounts = [...home.matchAll(/(\d{3}) (?:sacred, philosophical|wisdom) texts/g)];
+  assert.ok(textCounts.length > 0);
+  for (const [, count] of textCounts) assert.equal(Number(count), texts);
   const llms = fs.readFileSync('dist/llms.txt', 'utf8');
   assert.ok(llms.includes(`${books.length} records: ${texts} texts and ${presentations} research presentations`));
   assert.ok(llms.includes('## Library'));

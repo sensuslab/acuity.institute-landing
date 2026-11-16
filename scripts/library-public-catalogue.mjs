@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
-const fields=['id','title','subtitle','author','translator','collection','period','language','description','shortDescription','editionNote','tags','accent','order','categoryKey','categoryPath','categoryLabel','kind','capabilities','pages','pdfBytes','direction','rights','rightsMetadata','trademark','sourceMetadata','sourcePath','upstreamCommit','sourceBodySha256','relatedEditionIds','atlasSourceId'];
+const fields=['id','title','subtitle','author','translator','collection','period','language','description','shortDescription','editionNote','tags','accent','order','categoryKey','categoryPath','categoryLabel','kind','primaryFormat','capabilities','pages','pdfBytes','direction','rights','rightsMetadata','trademark','sourceMetadata','sourcePath','upstreamCommit','sourceBodySha256','relatedEditionIds','atlasSourceId'];
 function clean(value) {
   if(typeof value==='string')return value.replace(/https?:\/\/[^\s"'<>]+/gi,url=>{
     try {const u=new URL(url);if(/(^|\.)dropbox\.com$|(^|\.)dropboxusercontent\.com$/.test(u.hostname)||[...u.searchParams.keys()].some(k=>/token|signature|secret|^(rlkey|api_key|key|sig|auth)$/i.test(k)))return '[provenance retained privately]';}catch { /* Ordinary text is retained. */ }
@@ -26,7 +26,7 @@ export function publicLibraryCatalogue(full) {
     const assets=(b.assets||[]).filter(a=>visible.has(a.sha256)).map(view);if(!assets.length)return [];
     const out=clean(Object.fromEntries(fields.filter(k=>k in b).map(k=>[k,b[k]])));out.sourceUrl='';out.assets=assets;
     for(const a of assets)out[a.format]=a.url;
-    out.capabilities={pdf:!!out.pdf,ebook:!!(out.epub&&(out.pdf||out.markdown)),present:!!out.pdf};
+    out.capabilities={pdf:!!out.pdf,ebook:!!(out.epub && (out.pdf || out.markdown || out.primaryFormat === 'epub')),present:!!out.pdf};
     out.overviews=(b.overviews||[]).flatMap(o=>{
       const oa=(o.assets||[]).filter(a=>visible.has(a.sha256)).map(view);if(!oa.some(a=>a.format==='pdf'))return [];
       const v=clean({id:o.id,title:o.title,sourceBookIds:o.sourceBookIds,language:o.language,pages:o.pages,imageOnly:o.imageOnly,pdfBytes:o.pdfBytes});v.assets=oa;

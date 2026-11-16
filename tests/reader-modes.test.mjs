@@ -29,6 +29,8 @@ test('Optional ebook preferences validate stored data and version positions by E
  assert.equal(parseEbookPreferences('{bad'),undefined);
  assert.equal(parseEbookPreferences('{"fontSize":"large"}'),undefined);
  assert.deepEqual(parseEbookPreferences('{"fontSize":99,"cfi":"epubcfi(/6/2)"}'),{fontSize:32,cfi:'epubcfi(/6/2)'});
+ assert.equal(parseEbookPreferences('{"fontSize":22,"fontFamily":"sans"}').fontFamily,'sans');
+ assert.equal(parseEbookPreferences('{"fontSize":22,"fontFamily":"toString"}').fontFamily,undefined);
  assert.equal(parseEbookPreferences('{"fontSize":20,"cfi":"javascript:bad"}').cfi,undefined);
  assert.notEqual(ebookPreferenceKey('book','old'),ebookPreferenceKey('book','new'));
 });

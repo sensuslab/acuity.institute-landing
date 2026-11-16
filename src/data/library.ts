@@ -1,5 +1,6 @@
 import catalogue from './libraryCatalogue.json';
 import categoryIndex from './libraryCategories.json';
+import readerGuideData from './readerGuide.json';
 export type LibraryOverview = {
   id:string; title:string; sourceBookIds:string[]; language:string; pages:number;
   imageOnly:boolean; pdf?:string; pptx?:string; pdfBytes?:number;
@@ -12,6 +13,7 @@ export type LibraryBook = {
   editionNote: string; tags: string[]; sourceUrl: string; sourceId?: number; rights: string;
   markdown?: string; rightsMetadata?:Record<string,unknown>; trademark?:{status:string;marks:string[];use_rules:string}; sourceMetadata?:Record<string,unknown>; pdf?: string; epub?: string; text?: string; pptx?: string; accent: string; pages?: number; pdfBytes?: number;
   categoryKey: string; categoryPath: string[]; categoryLabel: string; kind: string;
+  primaryFormat?: string;
   capabilities: {pdf:boolean; ebook:boolean; present:boolean};
   assets: {format:string;url:string;bytes:number;sha256:string}[];
   direction?: 'ltr' | 'rtl';
@@ -23,9 +25,34 @@ export const books: LibraryBook[] = catalogue.map(book => ({
   direction: book.direction === 'rtl' ? 'rtl' : 'ltr',
 }));
 export const categories: LibraryCategory[] = categoryIndex;
+export const readerGuide: LibraryBook = {
+  id: readerGuideData.id,
+  title: readerGuideData.title,
+  description: readerGuideData.description,
+  author: 'Acuity Institute',
+  subtitle: '',
+  translator: null,
+  collection: '',
+  period: '',
+  language: 'English',
+  editionNote: 'A practice edition for the Acuity Library reader.',
+  rights: '',
+  tags: [],
+  sourceUrl: '',
+  epub: `/library/${readerGuideData.id}.epub`,
+  markdown: `/library/${readerGuideData.id}.md`,
+  accent: 'sage',
+  categoryKey: '',
+  categoryPath: [],
+  categoryLabel: 'Reader guide',
+  kind: 'guide',
+  capabilities: { pdf: false, ebook: true, present: false },
+  assets: [],
+};
 export const collections = [...new Set(books.map(book => book.collection))];
-// Curated scans require PDF + EPUB; Atlas texts pair canonical Markdown + EPUB.
-export const canReadEbook = (book: Pick<LibraryBook, 'pdf' | 'epub' | 'markdown'>) => !!(book.epub && (book.pdf || book.markdown));
+// Companion EPUBs require their paired source. An EPUB can also be the primary edition.
+export const canReadEbook = (book: Pick<LibraryBook, 'pdf' | 'epub' | 'markdown' | 'primaryFormat'>) =>
+  !!(book.epub && (book.pdf || book.markdown || book.primaryFormat === 'epub'));
 export function inCategory(book: Pick<LibraryBook,'categoryKey'>, category: string) {
   return category === 'all' || (category === '_uncategorised' ? !book.categoryKey : book.categoryKey === category || book.categoryKey.startsWith(category + '/'));
 }

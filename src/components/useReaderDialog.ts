@@ -1,14 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useReaderDialog(onClose: () => void) {
+export function useReaderDialog(onClose: () => void, allowWindowFullscreen = false) {
   const dialog = useRef<HTMLDialogElement>(null);
-  const [fullscreen, setFullscreen] = useState(false);
+  const [nativeFullscreen, setNativeFullscreen] = useState(false);
+  const [windowFullscreen, setWindowFullscreen] = useState(false);
   const [fullscreenError, setFullscreenError] = useState('');
   useEffect(() => {
     const element = dialog.current; element?.showModal();
     const overflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    const changed = () => setFullscreen(!!document.fullscreenElement && !!element?.contains(document.fullscreenElement));
+    const changed = () => setNativeFullscreen(!!document.fullscreenElement && !!element?.contains(document.fullscreenElement));
     document.addEventListener('fullscreenchange',changed);
     return () => {
       document.removeEventListener('fullscreenchange',changed);
@@ -18,21 +19,30 @@ export function useReaderDialog(onClose: () => void) {
   },[]);
   const toggleFullscreen = async () => {
     setFullscreenError('');
+    if (windowFullscreen) {
+      setWindowFullscreen(false);
+      return;
+    }
     try {
       const target=dialog.current?.firstElementChild as HTMLElement | undefined;
       // Native <dialog> elements cannot enter fullscreen. Its application wrapper can.
       if (document.fullscreenElement && dialog.current?.contains(document.fullscreenElement)) await document.exitFullscreen();
       else if (target?.requestFullscreen) await target.requestFullscreen();
+      else if (allowWindowFullscreen) setWindowFullscreen(true);
       else setFullscreenError('Browser fullscreen is unavailable. The reader already fills this window.');
-    } catch (reason) {
-      console.warn('Acuity: browser fullscreen request was declined',reason);
-      setFullscreenError('Fullscreen was unavailable. You can keep reading in this window.');
+    } catch {
+      if (allowWindowFullscreen && !nativeFullscreen) setWindowFullscreen(true);
+      else setFullscreenError('Fullscreen was unavailable. You can keep reading in this window.');
     }
+  };
+  const dismiss = () => {
+    if (document.fullscreenElement && dialog.current?.contains(document.fullscreenElement)) void document.exitFullscreen().catch(()=>{});
+    else if (windowFullscreen) setWindowFullscreen(false);
+    else onClose();
   };
   const cancel = (event: React.SyntheticEvent<HTMLDialogElement>) => {
     event.preventDefault();
-    if (document.fullscreenElement && dialog.current?.contains(document.fullscreenElement)) void document.exitFullscreen().catch(()=>{});
-    else onClose();
+    dismiss();
   };
-  return {dialog,fullscreen,fullscreenError,toggleFullscreen,cancel};
+  return {dialog,fullscreen: nativeFullscreen || windowFullscreen,fullscreenError,toggleFullscreen,cancel,dismiss};
 }

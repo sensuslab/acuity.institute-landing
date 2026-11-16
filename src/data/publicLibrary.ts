@@ -1,4 +1,4 @@
-import type {LibraryBook,LibraryCategory} from './library';
+import {canReadEbook, type LibraryBook, type LibraryCategory} from './library';
 const origin='https://assets.acuity.institute';
 export async function fetchPublicLibrary(signal:AbortSignal):Promise<{books:LibraryBook[];categories:LibraryCategory[]}> {
   const pointerResponse=await fetch(origin+'/library/catalogues/public-latest.json',{signal,cache:'no-cache'});
@@ -28,7 +28,7 @@ export function validatePublicLibrary(catalogue:unknown):{books:LibraryBook[];ca
     const metadata={...b};
     delete metadata.pdf;delete metadata.epub;delete metadata.pptx;delete metadata.text;delete metadata.markdown;
     const formats=Object.fromEntries(assets.map(a=>[a.format,a.url]));
-    const book={...metadata,...formats,assets,direction:b.direction==='rtl'?'rtl' as const:'ltr' as const,capabilities:{pdf:!!formats.pdf,ebook:!!(formats.epub&&(formats.pdf||formats.markdown)),present:!!formats.pdf}};
+    const book={...metadata,...formats,assets,direction:b.direction==='rtl'?'rtl' as const:'ltr' as const,capabilities:{pdf:!!formats.pdf,ebook:canReadEbook({...metadata,...formats}),present:!!formats.pdf}};
     // Overview URLs are validated under the same immutable asset contract.
     for(const overview of book.overviews||[])for(const a of overview.assets){const ext=a.format;if(!['pdf','pptx'].includes(ext)||!/^([a-f0-9]{64})$/.test(a.sha256)||a.url!==`${origin}/library/assets/${a.sha256}.${ext}`||overview[ext as 'pdf'|'pptx']!==a.url)throw new Error('Invalid public overview');}
     for(let depth=1;depth<=b.categoryPath.length;depth++){
