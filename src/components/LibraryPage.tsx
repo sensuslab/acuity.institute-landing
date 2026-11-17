@@ -1,14 +1,31 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowLeft, ArrowUpRight, Bookmark, BookOpen, Hexagon, LayoutGrid, List, Search, X } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Bookmark, BookOpen, HelpCircle, Hexagon, LayoutGrid, List, Search, X } from 'lucide-react';
 import { books as bundledBooks, categories as bundledCategories, canReadEbook, filterBooks, readerGuide, type LibraryBook, type LibraryOverview } from '../data/library';
 import './library.css';
 import {fetchPublicLibrary} from '../data/publicLibrary';
 import BookActions, {type ReaderMode} from './BookActions';
 import { BookmarkButton, LibraryFormatActions } from './LibraryEntryActions';
 import LibraryOverviews from './LibraryOverviews';
+import LibraryWalkthrough from './LibraryWalkthrough';
 import { useReadingList } from './useReadingList';
 const PdfReader = lazy(() => import('./PdfReader'));
 const EbookReader = lazy(() => import('./EbookReader'));
+
+const libraryWalkthroughAnchor = '#library-guide';
+const seenKey = 'acuity.library.walkthrough.v1';
+let shownThisSession = false;
+
+function shouldOpenLibraryWalkthrough() {
+  if (window.location.hash === libraryWalkthroughAnchor) return true;
+  const params = new URLSearchParams(window.location.search);
+  if (['book', 'q', 'format', 'overview'].some(key => params.has(key))) return false;
+  if (shownThisSession) return false;
+  try {
+    return window.localStorage.getItem(seenKey) !== 'seen';
+  } catch {
+    return true;
+  }
+}
 
 function selectedIdFromUrl() {
   return new URLSearchParams(window.location.search).get('book');
@@ -42,9 +59,29 @@ export default function LibraryPage() {
   const { savedIds, toggleBookmark, canSave } = useReadingList();
   const readingListTab = useRef<HTMLButtonElement>(null);
   const [selectedId, setSelectedId] = useState(selectedIdFromUrl);
-  const selected = selectedId === readerGuide.id ? readerGuide : books.find(book => book.id === selectedId);
-  const [reading, setReading] = useState<{mode:ReaderMode; overviewId?:string} | undefined>(readingFromUrl);
+  const [reading, setReading] = useState<{mode:ReaderMode; overviewId?:string; practice?:boolean} | undefined>(readingFromUrl);
+  const selected = reading?.practice || selectedId === readerGuide.id ? readerGuide : books.find(book => book.id === selectedId);
   const [category, setCategory] = useState('all');
+  const [walkthroughOpen, setWalkthroughOpen] = useState(shouldOpenLibraryWalkthrough);
+  useEffect(() => {
+    if (!walkthroughOpen) return;
+    shownThisSession = true;
+    try {
+      window.localStorage.setItem(seenKey, 'seen');
+    } catch {
+      // The walkthrough still stays dismissed for this session if storage is unavailable.
+    }
+  }, [walkthroughOpen]);
+  const helpLink = useRef<HTMLAnchorElement>(null);
+  const closeWalkthrough = () => {
+    if (window.location.hash === libraryWalkthroughAnchor) {
+      const url = new URL(window.location.href);
+      url.hash = '';
+      window.history.replaceState(window.history.state, '', url);
+    }
+    setWalkthroughOpen(false);
+    requestAnimationFrame(() => helpLink.current?.focus({ preventScroll: true }));
+  };
   const closeReader = useCallback(() => {clearOverviewUrl(); setReading(undefined);}, []);
   const readPdf = useCallback(() => setReading({mode:'pdf'}), []);
   const openOverview = (overview:LibraryOverview, present:boolean) => {
@@ -102,7 +139,11 @@ export default function LibraryPage() {
         <div className="library-eyebrow">THE ARCHIVE <span /> OPEN READING COLLECTION</div>
         <h1>A library for<br /><em>the enquiring mind.</em></h1>
         <p>Ancient wisdom. Enduring questions. Explore texts across philosophy and esoteric traditions, with room to form your own understanding.</p>
-        <div className="library-intro-meta"><span><BookOpen size={15} /> {books.length} texts & presentations</span><span>Free to read & download</span><span>No account needed</span></div>
+        <div className="library-intro-meta"><span><BookOpen size={15} /> {books.length} texts & presentations</span><span>Free to read & download</span><span>No account needed</span><a ref={helpLink} className="library-help-link" href={libraryWalkthroughAnchor} aria-haspopup="dialog" onClick={event => {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          setWalkthroughOpen(true);
+        }}><HelpCircle size={16} aria-hidden="true" /> How to use the Library</a></div>
       </section>
       <section id="catalogue" className="library-catalogue" aria-label="Browse the library">
         <div className="library-toolbar">
@@ -123,7 +164,7 @@ export default function LibraryPage() {
         </div>
         <div className="library-results"><h2>{scope === 'saved' ? 'Your reading list' : category === 'all' ? 'The collection' : categories.find(item => item.key === category)?.path.join(' / ')}</h2><span role="status">{filtered.length} {filtered.length === 1 ? 'match' : 'matches'}</span></div>
         {scope === 'saved' && <p className="library-saved-note">{canSave ? 'Bookmarks are stored in this browser.' : 'Browser storage is unavailable. Bookmarks last for this visit.'}</p>}
-        <ol className={layout === 'grid' ? 'library-grid' : 'library-list'} role="list">{[readerGuide, ...filtered].map((book, index) => layout === 'list' ? <li key={book.id} className="library-list-row">
+        <ol className={layout === 'grid' ? 'library-grid' : 'library-list'} role="list">{filtered.map((book, index) => layout === 'list' ? <li key={book.id} className="library-list-row">
           <div className="library-list-entry">
             <span className="library-eyebrow">{book.categoryLabel}</span>
             <h3><button onClick={() => choose(book)}>{book.title}</button></h3>
@@ -135,11 +176,11 @@ export default function LibraryPage() {
           </div>
         </li> : <li key={book.id} className="library-card">
           <button className={`library-cover cover-${book.accent}`} onClick={() => choose(book)} aria-label={`View ${book.title}`}>
-            <span className="cover-top">{book.kind === 'presentation' ? 'ACUITY PRESENTATIONS' : book.kind === 'guide' ? 'ACUITY READER GUIDE' : 'ACUITY READING EDITIONS'} <span>{String(index + 1).padStart(2, '0')}</span></span>
+            <span className="cover-top">{book.kind === 'presentation' ? 'ACUITY PRESENTATIONS' : 'ACUITY READING EDITIONS'} <span>{String(index + 1).padStart(2, '0')}</span></span>
             <span className="cover-symbol" aria-hidden="true"><span />✧</span>
             <span className="cover-title">{book.title}</span><span className="cover-author">{book.author}</span><span className="cover-bottom">{book.period}<ArrowUpRight size={16} /></span>
           </button>
-          <div className="library-card-body"><div className="library-card-label"><span className="library-eyebrow">{book.categoryLabel}</span>{bookmark(book)}</div><h3><button onClick={() => choose(book)}>{book.title}</button></h3><p className="library-byline">{book.translator ? `Translated by ${book.translator}` : book.author}</p><p>{book.shortDescription || book.description}</p>{!!book.overviews?.length && <button className="library-overview-badge" onClick={() => choose(book)}>Visual overview available</button>}<div className="library-card-meta"><span>{book.language}{book.pages ? ` · ${book.pages} ${book.kind === 'presentation' ? 'slides' : 'pages'}` : ''}</span><span>{[book.pdf && 'PDF', book.epub && 'EPUB', book.pptx && 'PPTX', book.markdown && 'Markdown'].filter(Boolean).join(' / ')}</span></div>{book.kind !== 'guide' && <button className="library-read-link" onClick={() => choose(book, book.pdf ? 'pdf' : undefined)}>{book.pdf ? 'Open PDF' : 'View edition'}<ArrowUpRight size={17} /></button>}{canReadEbook(book) && <button className="library-read-link ebook-launch" onClick={() => choose(book, 'ebook')}>{book.kind === 'guide' ? 'Start reader guide' : 'Read E-Book'} <BookOpen size={17}/></button>}</div>
+          <div className="library-card-body"><div className="library-card-label"><span className="library-eyebrow">{book.categoryLabel}</span>{bookmark(book)}</div><h3><button onClick={() => choose(book)}>{book.title}</button></h3><p className="library-byline">{book.translator ? `Translated by ${book.translator}` : book.author}</p><p>{book.shortDescription || book.description}</p>{!!book.overviews?.length && <button className="library-overview-badge" onClick={() => choose(book)}>Visual overview available</button>}<div className="library-card-meta"><span>{book.language}{book.pages ? ` · ${book.pages} ${book.kind === 'presentation' ? 'slides' : 'pages'}` : ''}</span><span>{[book.pdf && 'PDF', book.epub && 'EPUB', book.pptx && 'PPTX', book.markdown && 'Markdown'].filter(Boolean).join(' / ')}</span></div><button className="library-read-link" onClick={() => choose(book, book.pdf ? 'pdf' : undefined)}>{book.pdf ? 'Open PDF' : 'View edition'}<ArrowUpRight size={17} /></button>{canReadEbook(book) && <button className="library-read-link ebook-launch" onClick={() => choose(book, 'ebook')}>Read E-Book <BookOpen size={17}/></button>}</div>
         </li>)}</ol>
         {!filtered.length && (scope === 'saved' && !catalogue.length
           ? <div className="library-empty"><Bookmark size={32} /><h3>Your reading list is empty.</h3><p>Use the bookmark button on any Library entry to save it here.</p><button className="library-primary" onClick={() => setScope('all')}>Browse all entries</button></div>
@@ -148,8 +189,12 @@ export default function LibraryPage() {
       <section className="library-next"><span className="library-eyebrow">A FOUNDATION FOR DEEPER INQUIRY</span><h2>Begin with the source.</h2><p>This is the first chapter of the Acuity Library. Our next step is a workspace for asking questions across texts, comparing passages and tracing answers back to their sources.</p><span className="library-planned">AI-assisted inquiry · In development</span><a href="https://acuity.institute/#contact">Suggest a text or share an idea <ArrowUpRight size={16} /></a></section>
     </main>
     <footer className="library-footer"><span>© 2026 Acuity Institute</span><p>Historical texts invite interpretation, not unquestioning acceptance.</p><div className="flex gap-4"><a href="https://acuity.institute/about/">About Acuity</a><a href="https://acuity.institute/privacy/">Privacy</a></div></footer>
-    {selected && !readerOpen && <BookDetails book={selected} bookmark={bookmark(selected, true)} onClose={closeDetails} onRead={mode => setReading({mode})} onOverview={openOverview} />}
-    {selected && reading && readerOpen && <Suspense fallback={<div className="library-loading" role="status">Opening the reading room… <button onClick={closeReader}>Cancel</button></div>}>{reading.mode === 'ebook' && canReadEbook(selected) ? <EbookReader key={selected.id} book={selected} onClose={closeReader} onReadPdf={readPdf}/> : pdfDocument && <PdfReader key={activeOverview?.id || selected.id} book={pdfDocument} onClose={closeReader} initialPresentation={reading.mode === 'present'} documentLabel={activeOverview ? 'Visual overview · Companion slides' : undefined} onReadSource={activeOverview ? readSource : undefined}/>}</Suspense>}
+    {walkthroughOpen && <LibraryWalkthrough onClose={closeWalkthrough} onPractice={() => {
+      closeWalkthrough();
+      setReading({ mode: 'ebook', practice: true });
+    }} />}
+    {!walkthroughOpen && selected && !readerOpen && <BookDetails book={selected} bookmark={bookmark(selected, true)} onClose={closeDetails} onRead={mode => setReading({mode})} onOverview={openOverview} />}
+    {!walkthroughOpen && selected && reading && readerOpen && <Suspense fallback={<div className="library-loading" role="status">Opening the reading room… <button onClick={closeReader}>Cancel</button></div>}>{reading.mode === 'ebook' && canReadEbook(selected) ? <EbookReader key={selected.id} book={selected} onClose={closeReader} onReadPdf={readPdf}/> : pdfDocument && <PdfReader key={activeOverview?.id || selected.id} book={pdfDocument} onClose={closeReader} initialPresentation={reading.mode === 'present'} documentLabel={activeOverview ? 'Visual overview · Companion slides' : undefined} onReadSource={activeOverview ? readSource : undefined}/>}</Suspense>}
   </div>;
 }
 

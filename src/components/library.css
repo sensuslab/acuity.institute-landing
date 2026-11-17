@@ -102,7 +102,6 @@
   padding: 12px 16px;
   border-bottom: 1px solid var(--line);
 }
-.library-list-row:first-child { background: #d4a8430d; }
 .library-list-row:hover,
 .library-list-row:focus-within { background: #d4a84312; }
 .library-list-entry h3 {
