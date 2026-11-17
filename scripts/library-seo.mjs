@@ -292,12 +292,11 @@ ${children.length ? `<h2>Sub-collections</h2><ul>${children.map(c => `<li><a hre
   return shell({title, description, canonical, graph, body});
 }
 
-export function renderIndexBody(books, {hubs, description, readerGuide}) {
+export function renderIndexBody(books, {hubs, description}) {
   const tops = hubs.filter(h => h.depth === 0);
   const uncategorised = books.filter(b => !b.categoryKey);
   return `<main><h1>The Acuity Open Library</h1><p>${escapeHtml(description)}</p>
 <p>${books.length} records: ${books.filter(b => b.kind !== 'presentation').length} texts and ${books.filter(b => b.kind === 'presentation').length} research presentations, all free to read and download.</p>
-${readerGuide ? `<p><a href="/library/?book=${encodeURIComponent(readerGuide.id)}">${escapeHtml(readerGuide.title)}</a> · <a href="/library/${encodeURIComponent(readerGuide.id)}.epub" download>Download practice EPUB</a></p>` : ''}
 <nav aria-label="Collections"><h2>Collections</h2><ul>${tops.map(h => `<li><a href="${h.path}">${escapeHtml(h.label)}</a> (${h.books.length})</li>`).join('')}</ul></nav>
 ${tops.map(h => `<section><h2><a href="${h.path}">${escapeHtml(h.label)}</a></h2><ul>${h.books.map(b => `<li><a href="${bookPath(b)}">${escapeHtml(b.title)}</a> — ${escapeHtml(b.author)}${b.translator ? `, trans. ${escapeHtml(b.translator)}` : ''}</li>`).join('')}</ul></section>`).join('\n')}
 ${uncategorised.length ? `<section><h2>Other texts</h2><ul>${uncategorised.map(b => `<li><a href="${bookPath(b)}">${escapeHtml(b.title)}</a></li>`).join('')}</ul></section>` : ''}

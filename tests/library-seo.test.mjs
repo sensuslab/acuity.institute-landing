@@ -92,11 +92,10 @@ test('Collection hubs and the sitemap list every record page', async () => {
   assert.equal(new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])).size, [...sitemap.matchAll(/<loc>/g)].length);
 });
 
-test('The reader guide ships with chapter navigation and stays outside the indexed book collection', async () => {
+test('The practice edition remains available without featuring in the catalogue index', async () => {
   const guide = JSON.parse(fs.readFileSync('src/data/readerGuide.json', 'utf8'));
   const index = await (await fetch(origin + '/library/')).text();
-  const guideLink = index.indexOf(`?book=${guide.id}`);
-  assert.ok(guideLink >= 0 && guideLink < index.indexOf(`href="/library/${books[0].id}/"`));
+  assert.ok(!index.includes(guide.id));
   const response = await fetch(`${origin}/library/${guide.id}.epub`);
   assert.equal(response.status, 200);
   assert.equal(response.headers.get('content-type'), 'application/epub+zip');

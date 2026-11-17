@@ -3,7 +3,6 @@ import { withBrandIcons } from './apply-brand-icons.mjs';
 import { ORIGIN, TEMPLATE_DATE, bookPath, categoryHubs, isPublicSourceUrl, lastmodFor, llmsSection, pageTexts, renderBookPage, renderHubPage, renderIndexBody, validateSlugs } from './library-seo.mjs';
 const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json', 'utf8'));
 const categories = JSON.parse(fs.readFileSync('src/data/libraryCategories.json', 'utf8'));
-const readerGuide = JSON.parse(fs.readFileSync('src/data/readerGuide.json', 'utf8'));
 const registry = fs.existsSync('content/library-r2-registry.json') ? JSON.parse(fs.readFileSync('content/library-r2-registry.json', 'utf8')) : {assets: []};
 const verifiedAt = new Map(registry.assets.map(asset => [asset.sha256, asset.verifiedAt]));
 const escape = text => String(text).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -28,7 +27,7 @@ html = html.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
   .replace(/(<meta (?:property="og:title"|name="twitter:title") content=")[^"]*/g, `$1${title}`)
   .replace(/(<meta (?:property="og:description"|name="twitter:description") content=")[^"]*/g, `$1${description}`);
 // Crawlable index: plain links to every record page and collection hub. React replaces it on mount.
-html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root">${renderIndexBody(books, {hubs, description, readerGuide})}</div>`);
+html = html.replace(/<div id="root">[\s\S]*?<\/div>/, () => `<div id="root">${renderIndexBody(books, {hubs, description})}</div>`);
 const structured = {'@context':'https://schema.org','@type':'CollectionPage','@id':'https://acuity.institute/library/#collection',url:'https://acuity.institute/library/',name:'Acuity Open Library',description,
   isPartOf:{'@id':'https://acuity.institute/#website'},publisher:{'@id':'https://acuity.institute/#organization'},
   hasPart:hubs.filter(h=>h.depth===0).map(h=>({'@type':'CollectionPage',name:h.label,url:ORIGIN+h.path})),
