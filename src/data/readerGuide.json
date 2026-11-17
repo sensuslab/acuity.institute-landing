@@ -6,32 +6,39 @@
     {
       "title": "Turn a page",
       "paragraphs": [
-        "You're in the Acuity e-book reader. Tap or click the arrow at the right edge to go forward. The arrow at the left edge takes you back.",
-        "On a keyboard, try the Right Arrow key. In the standard view you can also use Next and Previous at the bottom of the page.",
-        "Turn forward now to practise jumping between chapters."
-      ]
+        "Tap the highlighted arrow on the right edge to move forward. The left edge takes you back.",
+        "You can also use the keyboard arrow keys or the Previous and Next buttons in the footer. Continue to the next chapter to try Contents."
+      ],
+      "cue": "pages",
+      "diagramAlt": "Reader diagram. Previous is on the left edge and Next is on the right edge."
     },
     {
       "title": "Jump to a chapter",
       "paragraphs": [
-        "Open Contents using the list icon in the top bar. Choose “Make the page your own” to jump there directly.",
-        "Try returning to “Turn a page” the same way, then choose “Make the page your own” again to continue."
-      ]
+        "Choose the highlighted Contents icon in the top bar. Select “Make the page your own” to jump directly to that chapter.",
+        "Try reopening Contents and choosing “Turn a page” to go back."
+      ],
+      "cue": "contents",
+      "diagramAlt": "Reader toolbar diagram. Contents is the first icon in the top-right group, shown as three horizontal lines."
     },
     {
       "title": "Make the page your own",
       "paragraphs": [
-        "Open Settings using the gear icon. Choose a different text font, increase the text size and try the Warm page colour. Close Settings to see how this page reads.",
-        "Try Fullscreen using the expand icon. The compact top bar keeps Contents and Settings within reach. Use the same icon to return to the standard view.",
-        "When you're ready, turn forward or choose “Save your place” in Contents."
-      ]
+        "Open the highlighted Settings gear. Choose a font, increase the text size and try the Warm page colour.",
+        "Use the expand icon to enter or leave fullscreen. Choose “Save your place” in Contents when you are ready."
+      ],
+      "cue": "settings",
+      "diagramAlt": "Reader toolbar diagram. Settings is the gear beside Contents. Fullscreen is the expand icon near Close."
     },
     {
       "title": "Save your place",
       "paragraphs": [
-        "In Settings, tick “Remember my place on this device”. Close the reader, then open this guide again in the same browser. It should reopen at your saved passage.",
-        "To start fresh next time, untick the option. To save an entire Library entry for later, use its bookmark button and open Reading list in the catalogue."
-      ]
+        "Open Settings. Tick “Remember my place on this device” below Page colour, then close and reopen this practice e-book to test it.",
+        "Untick it to clear the saved position. To save a whole entry instead, use its bookmark and open the Library’s Reading list."
+      ],
+      "cue": "remember",
+      "diagramAlt": "Settings diagram. The “Remember my place on this device” checkbox sits below Page colour."
     }
-  ]
+  ],
+  "version": "2"
 }

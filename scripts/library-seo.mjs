@@ -7,7 +7,7 @@ export const WEBSITE_ID = ORIGIN + '/#website';
 export const LIBRARY_ID = ORIGIN + '/library/#collection';
 export const DEFAULT_OG_IMAGE = ORIGIN + '/og.png';
 // Bump when the generated page templates change so sitemap lastmod stays truthful.
-export const TEMPLATE_DATE = '2026-11-11';
+export const TEMPLATE_DATE = '2026-11-17';
 // Paths already used under /library/ by assets, data files and hubs.
 export const RESERVED_SLUGS = new Set(['books', 'overviews', 'collections', 'assets', 'catalogues', 'pdfjs', 'index.html', 'provenance.json', 'redirects.json', 'categories.json', 'release.json']);
 
@@ -134,7 +134,7 @@ const crumbHtml = trail => `<nav class="crumbs" aria-label="Breadcrumb"><ol>${tr
 
 const STYLE = `:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#09090f;color:#e8e4da;font:300 17px/1.7 Inter,system-ui,sans-serif;-webkit-tap-highlight-color:transparent}a{color:#f3d38a}a:hover{color:#fff}.wrap{max-width:860px;margin:0 auto;padding:max(24px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) 64px max(20px,env(safe-area-inset-left))}header.site{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid #d4a94a33;padding-bottom:16px;margin-bottom:24px}header.site a{text-decoration:none;letter-spacing:.18em;font-size:13px}.crumbs ol{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:#a9a39a}.crumbs li+li:before{content:"›";margin-right:6px;color:#d4a94a}h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;color:#f3d38a;line-height:1.2}h1{font-size:clamp(32px,6vw,48px);margin:.2em 0}h2{font-size:28px;margin-top:2em}.subtitle{font-size:20px;color:#cfc8ba;margin-top:0}dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:24px 0;padding:18px;border:1px solid #d4a94a33;border-radius:12px}dt{color:#a9a39a}dd{margin:0}.actions{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.actions a{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid #d4a94a88;border-radius:999px;text-decoration:none}.actions a.primary{background:#d4a94a;color:#09090f;font-weight:500}ul.books{list-style:none;padding:0}ul.books li{padding:12px 0;border-bottom:1px solid #ffffff14}ul.books li p{margin:4px 0 0;color:#bdb6aa;font-size:15px}.tags{color:#a9a39a;font-size:14px}footer{margin-top:48px;padding-top:16px;border-top:1px solid #d4a94a33;font-size:14px;color:#a9a39a}@media (hover:hover) and (pointer:fine){.actions a:hover{border-color:#f3d38a}}`;
 
-function shell({title, description, canonical, graph, body, ogType = 'website'}) {
+function shell({title, description, canonical, graph, body, ogType = 'website', shareable = false}) {
   return `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -167,6 +167,7 @@ ${jsonLd({'@context': 'https://schema.org', '@graph': graph})}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet" />
 <style>${STYLE}</style>
+${shareable ? '<link rel="stylesheet" href="/library/share.css" /><script type="module" src="/library/share.js"></script>' : ''}
 </head>
 <body>
 <div class="wrap">
@@ -251,7 +252,7 @@ export function renderBookPage(book, {books, texts, byKey, lastmod}) {
 <h1>${escapeHtml(book.title)}</h1>
 ${book.subtitle ? `<p class="subtitle">${escapeHtml(book.subtitle)}</p>` : ''}
 <dl class="facts">${facts.map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd>`).join('')}</dl>
-<div class="actions"><a class="primary" href="/library/?book=${escapeHtml(book.id)}">Open in the Acuity reader</a>${formats.filter(x => x.format !== 'markdown').map(x => `<a href="${escapeHtml(x.url)}"${x.format === 'pdf' || x.format === 'text' ? '' : ' download'}>${x.format === 'pdf' ? 'Read or download PDF' : `Download ${FORMAT_LABEL[x.format]}`}</a>`).join('')}</div>
+<div class="actions"><a class="primary" href="/library/?book=${escapeHtml(book.id)}">Open in the Acuity reader</a><button type="button" class="article-share-trigger" data-article-share aria-haspopup="dialog" hidden>Share</button>${formats.filter(x => x.format !== 'markdown').map(x => `<a href="${escapeHtml(x.url)}"${x.format === 'pdf' || x.format === 'text' ? '' : ' download'}>${x.format === 'pdf' ? 'Read or download PDF' : `Download ${FORMAT_LABEL[x.format]}`}</a>`).join('')}</div>
 <h2>About this ${isPresentation ? 'presentation' : 'text'}</h2>
 ${String(book.description || '').split(/\n{2,}/).map(p => `<p>${escapeHtml(p)}</p>`).join('\n')}
 ${book.editionNote ? `<h2>About this edition</h2><p>${escapeHtml(book.editionNote)}</p>` : ''}
@@ -262,7 +263,7 @@ ${book.tags?.length ? `<p class="tags">Topics: ${book.tags.map(escapeHtml).join(
 </article>
 ${related.length ? `<section><h2>Related in the Library</h2><ul class="books">${related.map(b => listItem(b)).join('')}</ul></section>` : ''}
 <p>${hub ? `<a href="${hub.path}">More from ${escapeHtml(hub.name)}</a> · ` : ''}<a href="/library/">All ${books.length} texts and presentations</a></p>`;
-  return shell({title, description, canonical, graph, body, ogType: isPresentation ? 'article' : 'book'});
+  return shell({title, description, canonical, graph, body, ogType: isPresentation ? 'article' : 'book', shareable: true});
 }
 
 export function renderHubPage(hub, {hubs, texts, byKey, books}) {

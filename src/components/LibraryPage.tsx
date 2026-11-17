@@ -4,7 +4,7 @@ import { books as bundledBooks, categories as bundledCategories, canReadEbook, f
 import './library.css';
 import {fetchPublicLibrary} from '../data/publicLibrary';
 import BookActions, {type ReaderMode} from './BookActions';
-import { BookmarkButton, LibraryFormatActions } from './LibraryEntryActions';
+import { BookmarkButton, LibraryFormatActions, ShareArticleButton } from './LibraryEntryActions';
 import LibraryOverviews from './LibraryOverviews';
 import LibraryWalkthrough from './LibraryWalkthrough';
 import { useReadingList } from './useReadingList';
@@ -172,6 +172,7 @@ export default function LibraryPage() {
           </div>
           <div className="library-entry-actions">
             <LibraryFormatActions book={book} onOpen={mode => choose(book, mode)} onOverview={() => choose(book)} />
+            <ShareArticleButton book={book} />
             {bookmark(book)}
           </div>
         </li> : <li key={book.id} className="library-card">
@@ -180,7 +181,7 @@ export default function LibraryPage() {
             <span className="cover-symbol" aria-hidden="true"><span />✧</span>
             <span className="cover-title">{book.title}</span><span className="cover-author">{book.author}</span><span className="cover-bottom">{book.period}<ArrowUpRight size={16} /></span>
           </button>
-          <div className="library-card-body"><div className="library-card-label"><span className="library-eyebrow">{book.categoryLabel}</span>{bookmark(book)}</div><h3><button onClick={() => choose(book)}>{book.title}</button></h3><p className="library-byline">{book.translator ? `Translated by ${book.translator}` : book.author}</p><p>{book.shortDescription || book.description}</p>{!!book.overviews?.length && <button className="library-overview-badge" onClick={() => choose(book)}>Visual overview available</button>}<div className="library-card-meta"><span>{book.language}{book.pages ? ` · ${book.pages} ${book.kind === 'presentation' ? 'slides' : 'pages'}` : ''}</span><span>{[book.pdf && 'PDF', book.epub && 'EPUB', book.pptx && 'PPTX', book.markdown && 'Markdown'].filter(Boolean).join(' / ')}</span></div><button className="library-read-link" onClick={() => choose(book, book.pdf ? 'pdf' : undefined)}>{book.pdf ? 'Open PDF' : 'View edition'}<ArrowUpRight size={17} /></button>{canReadEbook(book) && <button className="library-read-link ebook-launch" onClick={() => choose(book, 'ebook')}>Read E-Book <BookOpen size={17}/></button>}</div>
+          <div className="library-card-body"><div className="library-card-label"><span className="library-eyebrow">{book.categoryLabel}</span><div className="library-entry-actions"><ShareArticleButton book={book} />{bookmark(book)}</div></div><h3><button onClick={() => choose(book)}>{book.title}</button></h3><p className="library-byline">{book.translator ? `Translated by ${book.translator}` : book.author}</p><p>{book.shortDescription || book.description}</p>{!!book.overviews?.length && <button className="library-overview-badge" onClick={() => choose(book)}>Visual overview available</button>}<div className="library-card-meta"><span>{book.language}{book.pages ? ` · ${book.pages} ${book.kind === 'presentation' ? 'slides' : 'pages'}` : ''}</span><span>{[book.pdf && 'PDF', book.epub && 'EPUB', book.pptx && 'PPTX', book.markdown && 'Markdown'].filter(Boolean).join(' / ')}</span></div><button className="library-read-link" onClick={() => choose(book, book.pdf ? 'pdf' : undefined)}>{book.pdf ? 'Open PDF' : 'View edition'}<ArrowUpRight size={17} /></button>{canReadEbook(book) && <button className="library-read-link ebook-launch" onClick={() => choose(book, 'ebook')}>Read E-Book <BookOpen size={17}/></button>}</div>
         </li>)}</ol>
         {!filtered.length && (scope === 'saved' && !catalogue.length
           ? <div className="library-empty"><Bookmark size={32} /><h3>Your reading list is empty.</h3><p>Use the bookmark button on any Library entry to save it here.</p><button className="library-primary" onClick={() => setScope('all')}>Browse all entries</button></div>
@@ -204,7 +205,7 @@ function BookDetails({ book, bookmark, onClose, onRead, onOverview }: {book: Lib
   return <dialog ref={setDialog} className="library-details" onCancel={event => { event.preventDefault(); onClose(); }} aria-labelledby="book-title">
     <button className="library-close" onClick={onClose} aria-label="Close book details" autoFocus><X /></button>
     <div className="library-eyebrow">{book.categoryLabel}{book.period && ` / ${book.period}`}</div><h2 id="book-title">{book.title}</h2><p className="library-byline">{book.author}{book.translator && ` · Translation by ${book.translator}`}</p><p>{book.description}</p>
-    {bookmark}
+    <div className="library-detail-actions">{bookmark}<ShareArticleButton book={book} showLabel /></div>
     <BookActions book={book} onRead={onRead}/>
     <LibraryOverviews overviews={book.overviews || []} onOpen={onOverview}/>
     <div className="library-edition"><h3>About this edition</h3><p>{book.editionNote}</p><p>{book.rights}</p>{book.sourceUrl && <a href={book.sourceUrl} target="_blank" rel="noreferrer">{book.sourceId ? 'View source at Project Gutenberg' : 'View edition source'} <ArrowUpRight size={14} /></a>}{book.markdown && <a href={book.markdown} download>Download Markdown source <ArrowUpRight size={14}/></a>}{book.trademark && <><h3>Trademark metadata</h3><p>{book.trademark.marks.join(', ') || book.trademark.status}. {book.trademark.use_rules}</p></>}{book.text && <a href={book.text} target="_blank" rel="noreferrer">Read accessible plain text <ArrowUpRight size={14} /></a>}{bundledBooks.some(item => item.id === book.id) && <a href={`/library/${book.id}/`}>Permanent page for this {book.kind === 'presentation' ? 'presentation' : 'text'} <ArrowUpRight size={14} /></a>}</div>

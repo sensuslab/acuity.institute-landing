@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState, type CSSProperties } from 're
 import ePub, {type Book, type Contents, type Location, type NavItem, type Rendition} from 'epubjs';
 import { ArrowDownToLine, ChevronLeft, ChevronRight, List, Maximize, Minimize, Settings, X } from 'lucide-react';
 import { canReadEbook, type LibraryBook } from '../data/library';
+import readerGuide from '../data/readerGuide.json';
 import { useReaderDialog } from './useReaderDialog';
 import { bindEbookLinks } from './ebookLinks';
 import { ebookAppearanceKey, ebookFonts, ebookPageTones, ebookReadingTheme, parseEbookPageTone, type EbookFont, type EbookPageTone } from './ebookAppearance';
@@ -19,7 +20,8 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
   const {dialog,fullscreen,fullscreenError,toggleFullscreen,dismiss}=useReaderDialog(onClose, true);
   const stage=useRef<HTMLDivElement>(null);
   const engine=useRef<Rendition>();
-  const version=book.assets.find(asset=>asset.format==='epub')?.sha256.slice(0,12)||'original';
+  const isPractice = book.id === readerGuide.id;
+  const version = isPractice ? readerGuide.version : book.assets.find(asset => asset.format === 'epub')?.sha256.slice(0, 12) || 'original';
   const storageKey=ebookPreferenceKey(book.id,version);
   const [saved]=useState(()=>stored(storageKey));
   const [pageTone,setPageTone]=useState<EbookPageTone>(()=>{try{return parseEbookPageTone(localStorage.getItem(ebookAppearanceKey));}catch{return 'white';}});
@@ -225,12 +227,14 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
     else if(event.key===back||event.key==='PageUp'){event.preventDefault();turnRef.current('prev');}
   };
   const rtl = book.direction === 'rtl';
+  const practiceChapter = isPractice ? chapters.findIndex(chapter => chapter.href === activeChapter) : -1;
+  const practiceCue = isPractice && !busy && !error ? readerGuide.chapters[Math.max(0, practiceChapter)]?.cue : undefined;
   const fullscreenLabel = fullscreen ? 'Exit fullscreen' : 'Enter fullscreen';
-  return <dialog ref={dialog} className={`library-reader ebook-reader${fullscreen ? ' ebook-fullscreen' : ''}`} style={{'--ebook-page':ebookPageTones[pageTone].background} as CSSProperties} aria-labelledby="ebook-title" onCancel={event => {event.preventDefault();escapeRef.current();}} onKeyDown={keyboard}><div className="reader-application">
+  return <dialog ref={dialog} className={`library-reader ebook-reader${fullscreen ? ' ebook-fullscreen' : ''}`} data-practice-cue={practiceCue} style={{'--ebook-page':ebookPageTones[pageTone].background} as CSSProperties} aria-labelledby="ebook-title" onCancel={event => {event.preventDefault();escapeRef.current();}} onKeyDown={keyboard}><div className="reader-application">
     <header className="reader-heading">
       <div className="ebook-heading-text"><span className="library-eyebrow">ACUITY / E-BOOK</span><h2 id="ebook-title">{book.title}</h2></div>
       <div className="reader-actions">
-        <button ref={contentsButton} aria-label="Contents" title="Contents" aria-expanded={panel === 'contents'} aria-controls="ebook-contents" onClick={() => setPanel(panel === 'contents' ? null : 'contents')}><List size={19}/></button>
+        <button ref={contentsButton} data-reader-control="contents" aria-label="Contents" title="Contents" aria-expanded={panel === 'contents'} aria-controls="ebook-contents" onClick={() => setPanel(panel === 'contents' ? null : 'contents')}><List size={19}/></button>
         <section className="ebook-panel" id="ebook-contents" aria-labelledby="ebook-contents-title" hidden={panel !== 'contents'}>
           <h3 id="ebook-contents-title">Contents</h3>
           <select aria-label="Chapter" value={activeChapter} disabled={busy||!chapters.length} onChange={event => {void navigate({href: event.target.value});closePanel();}}>
@@ -239,7 +243,7 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
           </select>
           {!busy && !chapters.length && <p>This edition has no chapter list. Use the page arrows to continue.</p>}
         </section>
-        <button ref={settingsButton} aria-label="Settings" title="Settings" aria-expanded={panel === 'settings'} aria-controls="ebook-settings" onClick={() => setPanel(panel === 'settings' ? null : 'settings')}><Settings size={19}/></button>
+        <button ref={settingsButton} data-reader-control="settings" aria-label="Settings" title="Settings" aria-expanded={panel === 'settings'} aria-controls="ebook-settings" onClick={() => setPanel(panel === 'settings' ? null : 'settings')}><Settings size={19}/></button>
         <section className="ebook-panel" id="ebook-settings" aria-labelledby="ebook-settings-title" hidden={panel !== 'settings'}>
           <h3 id="ebook-settings-title">Settings</h3>
           <label className="ebook-setting-row">Text font
@@ -265,7 +269,7 @@ export default function EbookReader({book,onClose,onReadPdf}:{book:LibraryBook;o
           {saveFailed && <p role="status">This browser did not save the change to your reading place.</p>}
         </section>
         <a className="ebook-download" href={book.epub} download aria-label="Download EPUB" title="Download EPUB"><ArrowDownToLine size={18}/></a>
-        <button onClick={() => {setPanel(null);void toggleFullscreen();}} aria-label={fullscreenLabel} title={fullscreenLabel}>{fullscreen?<Minimize size={19}/>:<Maximize size={19}/>}</button>
+        <button data-reader-control="fullscreen" onClick={() => {setPanel(null);void toggleFullscreen();}} aria-label={fullscreenLabel} title={fullscreenLabel}>{fullscreen?<Minimize size={19}/>:<Maximize size={19}/>}</button>
         <button autoFocus aria-label="Close ebook reader" title="Close ebook reader" onClick={onClose}><X size={21}/></button>
       </div>
     </header>

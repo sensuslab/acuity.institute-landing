@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { build } from 'esbuild';
 import { withBrandIcons } from './apply-brand-icons.mjs';
 import { ORIGIN, TEMPLATE_DATE, bookPath, categoryHubs, isPublicSourceUrl, lastmodFor, llmsSection, pageTexts, renderBookPage, renderHubPage, renderIndexBody, validateSlugs } from './library-seo.mjs';
 const books = JSON.parse(fs.readFileSync('src/data/libraryCatalogue.json', 'utf8'));
@@ -34,6 +35,8 @@ const structured = {'@context':'https://schema.org','@type':'CollectionPage','@i
   mainEntity:{'@type':'ItemList',numberOfItems:books.length,itemListElement:books.map((book,i)=>({'@type':'ListItem',position:i+1,url:ORIGIN+bookPath(book),name:book.title}))}};
 html = html.replace('</head>', `<script type="application/ld+json">${JSON.stringify(structured).replace(/</g,'\\u003c')}</script></head>`);
 fs.mkdirSync('dist/library', {recursive:true}); fs.writeFileSync('dist/library/index.html',withBrandIcons(html, 'library'));
+await build({ entryPoints: ['src/components/libraryShare.ts'], bundle: true, format: 'esm', minify: true, outfile: 'dist/library/share.js' });
+fs.copyFileSync('src/components/libraryShare.css', 'dist/library/share.css');
 
 // One server-rendered page per record, plus collection hubs.
 const sitemapEntries = [];

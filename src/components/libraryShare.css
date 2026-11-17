@@ -1,0 +1,92 @@
+.article-share-dialog {
+  --share-gold: #ecce8b;
+  position: fixed;
+  inset: 0;
+  width: min(480px, calc(100% - 24px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid #a188617a;
+  border-radius: 14px;
+  background: #191714;
+  color: #f3ecdc;
+  box-shadow: 0 24px 90px #000b;
+  font: 14px/1.5 'Inter', sans-serif;
+}
+
+body:has(.article-share-dialog[open]) { overflow: hidden; }
+.article-share-dialog::backdrop { background: #09080dcf; backdrop-filter: blur(4px); }
+
+.article-share-panel { padding: 22px; }
+.article-share-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.article-share-panel h2 {
+  margin: 0;
+  color: #f3ecdc;
+  font: 500 32px/1.1 'Cormorant Garamond', Georgia, serif;
+}
+.article-share-panel p { margin: 0; }
+.article-share-panel #article-share-work { margin: 4px 0 20px; color: #c9beaa; overflow-wrap: anywhere; }
+.article-share-panel label { display: block; margin-bottom: 6px; font-weight: 500; }
+.article-share-controls { display: flex; gap: 8px; }
+.article-share-panel button,
+.article-share-panel input {
+  min-height: 44px;
+  border: 1px solid #a188616b;
+  border-radius: 6px;
+  font: inherit;
+}
+.article-share-panel button { cursor: pointer; }
+.article-share-panel form button {
+  background: transparent;
+  color: inherit;
+  width: 44px;
+  padding: 0;
+  font-size: 25px;
+}
+.article-share-panel input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 10px;
+  background: #231f19;
+  color: #f3ecdc;
+  font-size: 13px;
+}
+.article-share-panel .article-share-copy {
+  padding: 0 14px;
+  background: var(--share-gold);
+  color: #251c0e;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.article-share-panel .article-share-copy:hover { background: #f8dfaa; }
+.article-share-panel form button:hover { background: #f7e8c411; }
+.article-share-panel :is(button, input):focus-visible { outline: 2px solid var(--share-gold); outline-offset: 3px; }
+.article-share-panel .article-share-status { min-height: 20px; margin-top: 10px; color: var(--share-gold); font-size: 13px; }
+
+.actions .article-share-trigger:not([hidden]) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid #d4a94a88;
+  border-radius: 999px;
+  background: transparent;
+  color: #f3d38a;
+  font: inherit;
+  cursor: pointer;
+}
+.actions .article-share-trigger:hover { border-color: #f3d38a; }
+.library-details .library-detail-actions { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px; margin-top: 12px; }
+.library-details .library-detail-actions > button { margin-top: 0; min-height: 44px; }
+
+@media (max-width: 360px) {
+  .article-share-panel { padding: 17px; }
+  .article-share-controls { flex-direction: column; }
+  .article-share-controls > input { flex-basis: 44px; }
+}

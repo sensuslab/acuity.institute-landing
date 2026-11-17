@@ -1,6 +1,8 @@
-import { ArrowDownToLine, Bookmark, BookOpen, FileText, Presentation } from 'lucide-react';
+import { ArrowDownToLine, Bookmark, BookOpen, FileText, Presentation, Share2 } from 'lucide-react';
 import { canReadEbook, type LibraryBook } from '../data/library';
 import type { ReaderMode } from './BookActions';
+import { libraryArticleUrl, showArticleShare } from './libraryShare';
+import './libraryShare.css';
 
 export function BookmarkButton({ book, saved, onToggle, showLabel = false }: {
   book: LibraryBook;
@@ -19,6 +21,26 @@ export function BookmarkButton({ book, saved, onToggle, showLabel = false }: {
     <Bookmark size={17} aria-hidden="true" />
     {showLabel && (saved ? 'In reading list' : label)}
   </button>;
+}
+
+export function ShareArticleButton({ book, showLabel = false }: {
+  book: Pick<LibraryBook, 'id' | 'title' | 'kind'>;
+  showLabel?: boolean;
+}) {
+  if (book.kind === 'guide') return null;
+  return (
+    <button
+      type="button"
+      className={showLabel ? 'library-secondary' : 'library-icon-action'}
+      aria-label={`Share ${book.title}`}
+      aria-haspopup="dialog"
+      title="Share this entry"
+      onClick={event => showArticleShare(event.currentTarget, libraryArticleUrl(book.id), book.title)}
+    >
+      <Share2 size={17} aria-hidden="true" />
+      {showLabel && 'Share'}
+    </button>
+  );
 }
 
 export function LibraryFormatActions({ book, onOpen, onOverview }: {

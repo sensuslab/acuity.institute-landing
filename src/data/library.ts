@@ -39,7 +39,7 @@ export const readerGuide: LibraryBook = {
   rights: '',
   tags: [],
   sourceUrl: '',
-  epub: `/library/${readerGuideData.id}.epub`,
+  epub: `/library/${readerGuideData.id}.epub?edition=${readerGuideData.version}`,
   markdown: `/library/${readerGuideData.id}.md`,
   accent: 'sage',
   categoryKey: '',
