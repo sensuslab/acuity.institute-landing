@@ -61,6 +61,8 @@ test('Each record page is server-rendered with canonical, OG image, Book JSON-LD
     assert.ok(html.includes(`<meta property="og:url" content="${canonical}" />`));
     assert.match(html, /<meta property="og:image" content="https:\/\/acuity\.institute\/og\.png" \/>/);
     assert.ok(html.includes('<h1>'));
+    assert.match(html, /data-article-share aria-haspopup="dialog" hidden>Share/);
+    assert.match(html, /src="\/library\/share\.js"/);
     assert.ok(html.includes('href="/library/"'));
     const graph = graphOf(html);
     const work = graph.find(n => n['@id'] === canonical + '#work');
@@ -104,10 +106,16 @@ test('The practice edition remains available without featuring in the catalogue 
   assert.equal(bytes.subarray(30, 38).toString(), 'mimetype');
   const epub = await JSZip.loadAsync(bytes);
   const toc = await epub.file('EPUB/nav.xhtml').async('string');
+  const manifest = await epub.file('EPUB/book.opf').async('string');
   for (const [index, chapter] of guide.chapters.entries()) {
     const filename = `chapter-${index + 1}.xhtml`;
     assert.ok(toc.includes(`href="${filename}">${chapter.title}</a>`));
-    assert.ok(await epub.file(`EPUB/${filename}`).async('string'));
+    const content = await epub.file(`EPUB/${filename}`).async('string');
+    const figure = `controls-${chapter.cue}.svg`;
+    assert.ok(content.includes('ACUITY INSTITUTE'));
+    assert.ok(content.includes(`src="${figure}" alt="${chapter.diagramAlt}"`));
+    assert.ok(manifest.includes(`href="${figure}" media-type="image/svg+xml"`));
+    assert.match(await epub.file(`EPUB/${figure}`).async('string'), /marker-end="url\(#tip\)"/);
   }
   const sitemap = await (await fetch(origin + '/sitemap.xml')).text();
   assert.ok(!sitemap.includes(guide.id));

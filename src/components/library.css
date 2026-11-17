@@ -226,3 +226,19 @@
   border-top: 1px solid #e5e1db;
 }
 .ebook-remember input { width: 16px; height: 16px; accent-color: #83662c; }
+
+/* Only the practice edition highlights the real controls named on its pages. */
+.ebook-reader[data-practice-cue="pages"] .ebook-edge:not(:disabled) { opacity: 1; }
+.ebook-reader[data-practice-cue="pages"] .ebook-edge:not(:disabled) svg {
+  color: #684616;
+  background: #f0ddb7;
+  border-radius: 4px;
+  outline: 1px solid #966d2a;
+}
+.ebook-reader[data-practice-cue="contents"] [data-reader-control="contents"],
+.ebook-reader[data-practice-cue="settings"] :is([data-reader-control="settings"], [data-reader-control="fullscreen"]),
+.ebook-reader[data-practice-cue="remember"] :is([data-reader-control="settings"], .ebook-remember) {
+  color: #f2d79c;
+  background: #6b4d2d;
+  box-shadow: inset 0 0 0 1px #deb876;
+}
