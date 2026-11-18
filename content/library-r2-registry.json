@@ -20548,9 +20548,1257 @@
       "status": "verified",
       "verifiedAt": "2026-11-16T17:30:08.327100+00:00",
       "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "f38f1dee152d0b01d78a191d86ce55c67d17ef561b69adbb2f1f9ddfdc3b35f0",
+      "bytes": 3027720,
+      "key": "library/assets/f38f1dee152d0b01d78a191d86ce55c67d17ef561b69adbb2f1f9ddfdc3b35f0.epub",
+      "url": "https://assets.acuity.institute/library/assets/f38f1dee152d0b01d78a191d86ce55c67d17ef561b69adbb2f1f9ddfdc3b35f0.epub",
+      "legacyUrl": "/library/books/Esoteric/Occult/agrippa-occult-philosophy-freake-1898.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "agrippa-occult-philosophy-freake-1898"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:23:08.678750+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "e86f73e3bd56363cdfada1752b5acf11dd00090add2c9156b79744f16f10387b",
+      "bytes": 7633095,
+      "key": "library/assets/e86f73e3bd56363cdfada1752b5acf11dd00090add2c9156b79744f16f10387b.pdf",
+      "url": "https://assets.acuity.institute/library/assets/e86f73e3bd56363cdfada1752b5acf11dd00090add2c9156b79744f16f10387b.pdf",
+      "legacyUrl": "/library/books/Esoteric/Occult/agrippa-occult-philosophy-freake-1898.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "agrippa-occult-philosophy-freake-1898"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:23:42.658141+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "fb14803fd2c4f583c9250c8afe6f2632eddb6ae326b592dd863412b02b50b32b",
+      "bytes": 7278264,
+      "key": "library/assets/fb14803fd2c4f583c9250c8afe6f2632eddb6ae326b592dd863412b02b50b32b.epub",
+      "url": "https://assets.acuity.institute/library/assets/fb14803fd2c4f583c9250c8afe6f2632eddb6ae326b592dd863412b02b50b32b.epub",
+      "legacyUrl": "/library/books/Esoteric/Hermeticism/atwood-suggestive-inquiry-hermetic-1850.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "atwood-suggestive-inquiry-hermetic-1850"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:23:34.263962+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "b00da48159435d053a6bdd718b874718f5d046ed502a1e79086709217104efe3",
+      "bytes": 35744515,
+      "key": "library/assets/b00da48159435d053a6bdd718b874718f5d046ed502a1e79086709217104efe3.pdf",
+      "url": "https://assets.acuity.institute/library/assets/b00da48159435d053a6bdd718b874718f5d046ed502a1e79086709217104efe3.pdf",
+      "legacyUrl": "/library/books/Esoteric/Hermeticism/atwood-suggestive-inquiry-hermetic-1850.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "atwood-suggestive-inquiry-hermetic-1850"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:36:21.282450+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "a2668fcff72015e06fbb7dd852f69610699ec080bb6c701a1955dec1ca352a4d",
+      "bytes": 10866577,
+      "key": "library/assets/a2668fcff72015e06fbb7dd852f69610699ec080bb6c701a1955dec1ca352a4d.pdf",
+      "url": "https://assets.acuity.institute/library/assets/a2668fcff72015e06fbb7dd852f69610699ec080bb6c701a1955dec1ca352a4d.pdf",
+      "legacyUrl": "/library/books/Philosophy/Process%20Philosophy/bergson-creative-evolution-mitchell-1911.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "bergson-creative-evolution-mitchell-1911"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:23:51.685467+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "9473204e8e48f9759d2bf1983a5f1d4109cdbd460822997b45514209933b7c24",
+      "bytes": 1984955,
+      "key": "library/assets/9473204e8e48f9759d2bf1983a5f1d4109cdbd460822997b45514209933b7c24.epub",
+      "url": "https://assets.acuity.institute/library/assets/9473204e8e48f9759d2bf1983a5f1d4109cdbd460822997b45514209933b7c24.epub",
+      "legacyUrl": "/library/books/Esoteric/Theosophy/blavatsky-isis-unveiled-v1-science-1877.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "blavatsky-isis-unveiled-v1-science-1877"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:23:10.153986+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "8dcf5dd6a66f9eae701113e29370708dc738335e06e1fe7532243d53923b0788",
+      "bytes": 31291690,
+      "key": "library/assets/8dcf5dd6a66f9eae701113e29370708dc738335e06e1fe7532243d53923b0788.pdf",
+      "url": "https://assets.acuity.institute/library/assets/8dcf5dd6a66f9eae701113e29370708dc738335e06e1fe7532243d53923b0788.pdf",
+      "legacyUrl": "/library/books/Esoteric/Theosophy/blavatsky-isis-unveiled-v1-science-1877.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "blavatsky-isis-unveiled-v1-science-1877"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:25:56.059921+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "eb2ad888317740624f76086011b818352751dc347d89182e95c2e94cf4b80642",
+      "bytes": 2298470,
+      "key": "library/assets/eb2ad888317740624f76086011b818352751dc347d89182e95c2e94cf4b80642.epub",
+      "url": "https://assets.acuity.institute/library/assets/eb2ad888317740624f76086011b818352751dc347d89182e95c2e94cf4b80642.epub",
+      "legacyUrl": "/library/books/Esoteric/Theosophy/blavatsky-isis-unveiled-v2-theology-1877.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "blavatsky-isis-unveiled-v2-theology-1877"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:23:24.307931+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "262b52db3a94f6f4c8b02525692dc69054338e0f7d55d466e27f1b78a371b71d",
+      "bytes": 33950705,
+      "key": "library/assets/262b52db3a94f6f4c8b02525692dc69054338e0f7d55d466e27f1b78a371b71d.pdf",
+      "url": "https://assets.acuity.institute/library/assets/262b52db3a94f6f4c8b02525692dc69054338e0f7d55d466e27f1b78a371b71d.pdf",
+      "legacyUrl": "/library/books/Esoteric/Theosophy/blavatsky-isis-unveiled-v2-theology-1877.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "blavatsky-isis-unveiled-v2-theology-1877"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:37:56.283646+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "e9b068d636d0a0420a2fa3dbe83092841d74d4f39a64e5a2269a29acdb91f2ab",
+      "bytes": 6958692,
+      "key": "library/assets/e9b068d636d0a0420a2fa3dbe83092841d74d4f39a64e5a2269a29acdb91f2ab.epub",
+      "url": "https://assets.acuity.institute/library/assets/e9b068d636d0a0420a2fa3dbe83092841d74d4f39a64e5a2269a29acdb91f2ab.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/bohme-mysterium-magnum-sparrow-1924-v1.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "bohme-mysterium-magnum-sparrow-1924-v1"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:24:07.518152+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "49bb9a6a0a29640ee2da3099f2203e40a0528035f81455fb8003f5bbb3e399aa",
+      "bytes": 28454654,
+      "key": "library/assets/49bb9a6a0a29640ee2da3099f2203e40a0528035f81455fb8003f5bbb3e399aa.pdf",
+      "url": "https://assets.acuity.institute/library/assets/49bb9a6a0a29640ee2da3099f2203e40a0528035f81455fb8003f5bbb3e399aa.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/bohme-mysterium-magnum-sparrow-1924-v1.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "bohme-mysterium-magnum-sparrow-1924-v1"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:26:27.545124+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "e8457dcee9bd0fe34e9d3acaba3a8c63f8d9cba2b78b5b724ba9e7499ab19679",
+      "bytes": 4459947,
+      "key": "library/assets/e8457dcee9bd0fe34e9d3acaba3a8c63f8d9cba2b78b5b724ba9e7499ab19679.epub",
+      "url": "https://assets.acuity.institute/library/assets/e8457dcee9bd0fe34e9d3acaba3a8c63f8d9cba2b78b5b724ba9e7499ab19679.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/bohme-mysterium-magnum-sparrow-1924-v2.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "bohme-mysterium-magnum-sparrow-1924-v2"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:24:17.839424+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "36b7c5748759465c839cfe69c1a3526dec5a4e07c9f6c0ef9820489a2b48ebb7",
+      "bytes": 28570868,
+      "key": "library/assets/36b7c5748759465c839cfe69c1a3526dec5a4e07c9f6c0ef9820489a2b48ebb7.pdf",
+      "url": "https://assets.acuity.institute/library/assets/36b7c5748759465c839cfe69c1a3526dec5a4e07c9f6c0ef9820489a2b48ebb7.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/bohme-mysterium-magnum-sparrow-1924-v2.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "bohme-mysterium-magnum-sparrow-1924-v2"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:26:43.292560+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "f6edeaba5e839e102a7d7c524e18a00fe2e50b31027e90823c592a868bebed89",
+      "bytes": 2743060,
+      "key": "library/assets/f6edeaba5e839e102a7d7c524e18a00fe2e50b31027e90823c592a868bebed89.pdf",
+      "url": "https://assets.acuity.institute/library/assets/f6edeaba5e839e102a7d7c524e18a00fe2e50b31027e90823c592a868bebed89.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/bohme-way-to-christ-sparrow-1894.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "bohme-way-to-christ-sparrow-1894"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:24:30.429344+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "2816f24bb56d72f0b4202ad73098623053daf985c48b95bb68bcdca1662cb26f",
+      "bytes": 49803489,
+      "key": "library/assets/2816f24bb56d72f0b4202ad73098623053daf985c48b95bb68bcdca1662cb26f.epub",
+      "url": "https://assets.acuity.institute/library/assets/2816f24bb56d72f0b4202ad73098623053daf985c48b95bb68bcdca1662cb26f.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/brother-lawrence-practice-presence-1906.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "brother-lawrence-practice-presence-1906"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:49:13.511Z",
+      "verification": "independent R2 object GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "2a405a5191893fb16ca35d8f7f7b1d1b5d719603ece4fbe1d2f527797d1e97e0",
+      "bytes": 1713069,
+      "key": "library/assets/2a405a5191893fb16ca35d8f7f7b1d1b5d719603ece4fbe1d2f527797d1e97e0.pdf",
+      "url": "https://assets.acuity.institute/library/assets/2a405a5191893fb16ca35d8f7f7b1d1b5d719603ece4fbe1d2f527797d1e97e0.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/brother-lawrence-practice-presence-1906.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "brother-lawrence-practice-presence-1906"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:26:04.385420+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "fb39f65023f617823035ab7164fb95fbad53f7a374e227ada0af2c16eadcbdaf",
+      "bytes": 7270709,
+      "key": "library/assets/fb39f65023f617823035ab7164fb95fbad53f7a374e227ada0af2c16eadcbdaf.epub",
+      "url": "https://assets.acuity.institute/library/assets/fb39f65023f617823035ab7164fb95fbad53f7a374e227ada0af2c16eadcbdaf.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/bucke-cosmic-consciousness-1905.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "bucke-cosmic-consciousness-1905"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:26:33.608306+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "c9e04a2edcefd29478cd599f9fff8675e8501a5fa7f67c830ce758c45e1add15",
+      "bytes": 18798524,
+      "key": "library/assets/c9e04a2edcefd29478cd599f9fff8675e8501a5fa7f67c830ce758c45e1add15.pdf",
+      "url": "https://assets.acuity.institute/library/assets/c9e04a2edcefd29478cd599f9fff8675e8501a5fa7f67c830ce758c45e1add15.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/bucke-cosmic-consciousness-1905.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "bucke-cosmic-consciousness-1905"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:28:16.148069+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "b3ebe819ed275410ea3610584e210944468c79cce77161024560715aad2e866b",
+      "bytes": 28604689,
+      "key": "library/assets/b3ebe819ed275410ea3610584e210944468c79cce77161024560715aad2e866b.pdf",
+      "url": "https://assets.acuity.institute/library/assets/b3ebe819ed275410ea3610584e210944468c79cce77161024560715aad2e866b.pdf",
+      "legacyUrl": "/library/books/Scripture/Early%20Church%20Fathers/budge-paradise-holy-fathers-1907-v1.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "budge-paradise-holy-fathers-1907-v1"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:28:58.525521+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "67b394cf13fe2399eadaaa179937b6e96e084c649be06644ac1ac7192b5eca94",
+      "bytes": 22893630,
+      "key": "library/assets/67b394cf13fe2399eadaaa179937b6e96e084c649be06644ac1ac7192b5eca94.pdf",
+      "url": "https://assets.acuity.institute/library/assets/67b394cf13fe2399eadaaa179937b6e96e084c649be06644ac1ac7192b5eca94.pdf",
+      "legacyUrl": "/library/books/Scripture/Early%20Church%20Fathers/budge-paradise-holy-fathers-1907-v2.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "budge-paradise-holy-fathers-1907-v2"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:28:50.732320+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "36422baef81e5ad5d4f9412005c4bb99ca1b59e639b7fc7663f585fc6b7f770f",
+      "bytes": 2096286,
+      "key": "library/assets/36422baef81e5ad5d4f9412005c4bb99ca1b59e639b7fc7663f585fc6b7f770f.pdf",
+      "url": "https://assets.acuity.institute/library/assets/36422baef81e5ad5d4f9412005c4bb99ca1b59e639b7fc7663f585fc6b7f770f.pdf",
+      "legacyUrl": "/library/books/Scripture/Early%20Church%20Fathers/nicene-post-nicene-fathers-second-series-vol-11.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "nicene-post-nicene-fathers-second-series-vol-11"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:28:29.435069+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "8e850dec15e83222c2fc595632e396cbbc34595031b76e5811667068554e3bea",
+      "bytes": 3022302,
+      "key": "library/assets/8e850dec15e83222c2fc595632e396cbbc34595031b76e5811667068554e3bea.epub",
+      "url": "https://assets.acuity.institute/library/assets/8e850dec15e83222c2fc595632e396cbbc34595031b76e5811667068554e3bea.epub",
+      "legacyUrl": "/library/books/Esoteric/Hermeticism/chymical-wedding-foxcroft-1690.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "chymical-wedding-foxcroft-1690"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:28:43.037200+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "9a0bceb8c98494956224b3df27daeebbc410a0dc4d676f9691dbc371139b3392",
+      "bytes": 11230115,
+      "key": "library/assets/9a0bceb8c98494956224b3df27daeebbc410a0dc4d676f9691dbc371139b3392.pdf",
+      "url": "https://assets.acuity.institute/library/assets/9a0bceb8c98494956224b3df27daeebbc410a0dc4d676f9691dbc371139b3392.pdf",
+      "legacyUrl": "/library/books/Esoteric/Hermeticism/chymical-wedding-foxcroft-1690.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "chymical-wedding-foxcroft-1690"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:32:13.369253+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "f9f49f5be807b955a0b97477dc871d48556e5490774bd52b22bfa2c8377faa2a",
+      "bytes": 1242478,
+      "key": "library/assets/f9f49f5be807b955a0b97477dc871d48556e5490774bd52b22bfa2c8377faa2a.epub",
+      "url": "https://assets.acuity.institute/library/assets/f9f49f5be807b955a0b97477dc871d48556e5490774bd52b22bfa2c8377faa2a.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/de-sales-devout-life-richards-1878.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "de-sales-devout-life-richards-1878"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:29:03.004003+00:00",
+      "verification": "independent GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "da510e9fc08dfb4907657bda758d459fd3aa2c3b06ce95d51ce470132138482a",
+      "bytes": 6899267,
+      "key": "library/assets/da510e9fc08dfb4907657bda758d459fd3aa2c3b06ce95d51ce470132138482a.pdf",
+      "url": "https://assets.acuity.institute/library/assets/da510e9fc08dfb4907657bda758d459fd3aa2c3b06ce95d51ce470132138482a.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/de-sales-devout-life-richards-1878.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "de-sales-devout-life-richards-1878"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:31:04.497436+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "4136cf965be3adb74a590d1ffbac987745e870dcbc6e9a44569c4c5a59b2f924",
+      "bytes": 5577221,
+      "key": "library/assets/4136cf965be3adb74a590d1ffbac987745e870dcbc6e9a44569c4c5a59b2f924.epub",
+      "url": "https://assets.acuity.institute/library/assets/4136cf965be3adb74a590d1ffbac987745e870dcbc6e9a44569c4c5a59b2f924.epub",
+      "legacyUrl": "/library/books/Esoteric/Occult/dee-true-faithful-relation-casaubon-1659.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "dee-true-faithful-relation-casaubon-1659"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:30:33.349591+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "be86019452c8e9761d694ecb19e6a00359af5405ae17debf8d3b952bac56fb03",
+      "bytes": 43160634,
+      "key": "library/assets/be86019452c8e9761d694ecb19e6a00359af5405ae17debf8d3b952bac56fb03.pdf",
+      "url": "https://assets.acuity.institute/library/assets/be86019452c8e9761d694ecb19e6a00359af5405ae17debf8d3b952bac56fb03.pdf",
+      "legacyUrl": "/library/books/Esoteric/Occult/dee-true-faithful-relation-casaubon-1659.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "dee-true-faithful-relation-casaubon-1659"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:37:51.751018+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "8683b999468712243714de08b13a0362169988d23667b00493c9d141324a6ed9",
+      "bytes": 1873180,
+      "key": "library/assets/8683b999468712243714de08b13a0362169988d23667b00493c9d141324a6ed9.epub",
+      "url": "https://assets.acuity.institute/library/assets/8683b999468712243714de08b13a0362169988d23667b00493c9d141324a6ed9.epub",
+      "legacyUrl": "/library/books/Philosophy/Neoplatonism/enneads-mackenna-v2-1921.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "enneads-mackenna-v2-1921"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:29:36.304541+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "f31d9dbfbde0afbf8d522641bc383a446f4acf415a6e504d819edc926bc5b675",
+      "bytes": 22546387,
+      "key": "library/assets/f31d9dbfbde0afbf8d522641bc383a446f4acf415a6e504d819edc926bc5b675.pdf",
+      "url": "https://assets.acuity.institute/library/assets/f31d9dbfbde0afbf8d522641bc383a446f4acf415a6e504d819edc926bc5b675.pdf",
+      "legacyUrl": "/library/books/Philosophy/Neoplatonism/enneads-mackenna-v2-1921.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "enneads-mackenna-v2-1921"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:02.062625+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "451713cedf3ca2bc7552931af0b0fb0005dcbe9e3b73cc0551c2f1ead9fcf374",
+      "bytes": 6105482,
+      "key": "library/assets/451713cedf3ca2bc7552931af0b0fb0005dcbe9e3b73cc0551c2f1ead9fcf374.epub",
+      "url": "https://assets.acuity.institute/library/assets/451713cedf3ca2bc7552931af0b0fb0005dcbe9e3b73cc0551c2f1ead9fcf374.epub",
+      "legacyUrl": "/library/books/Philosophy/Neoplatonism/enneads-mackenna-v3-1924.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "enneads-mackenna-v3-1924"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:30:31.986804+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "5de631011b2dd8f72f1baea472fcdc70f18442a25d2bab577605defc363deb8b",
+      "bytes": 12197873,
+      "key": "library/assets/5de631011b2dd8f72f1baea472fcdc70f18442a25d2bab577605defc363deb8b.pdf",
+      "url": "https://assets.acuity.institute/library/assets/5de631011b2dd8f72f1baea472fcdc70f18442a25d2bab577605defc363deb8b.pdf",
+      "legacyUrl": "/library/books/Philosophy/Neoplatonism/enneads-mackenna-v3-1924.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "enneads-mackenna-v3-1924"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:32:01.296179+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "db069b81f555a0c8b087e7c50688c4a41d09810775c029debfd5845fb9aea8cf",
+      "bytes": 5789064,
+      "key": "library/assets/db069b81f555a0c8b087e7c50688c4a41d09810775c029debfd5845fb9aea8cf.epub",
+      "url": "https://assets.acuity.institute/library/assets/db069b81f555a0c8b087e7c50688c4a41d09810775c029debfd5845fb9aea8cf.epub",
+      "legacyUrl": "/library/books/Philosophy/Neoplatonism/enneads-mackenna-v4-1926.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "enneads-mackenna-v4-1926"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:30:48.172537+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "d58e353d8f2fec901daa3d5c10338c8ccd4a1ee7d35927f0949c73f0c6985541",
+      "bytes": 8341100,
+      "key": "library/assets/d58e353d8f2fec901daa3d5c10338c8ccd4a1ee7d35927f0949c73f0c6985541.pdf",
+      "url": "https://assets.acuity.institute/library/assets/d58e353d8f2fec901daa3d5c10338c8ccd4a1ee7d35927f0949c73f0c6985541.pdf",
+      "legacyUrl": "/library/books/Philosophy/Neoplatonism/enneads-mackenna-v4-1926.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "enneads-mackenna-v4-1926"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:31:13.308672+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "03026011239d53f9076999b103cdf5c682c81ed5487585fba0a2f8757580e357",
+      "bytes": 2649719,
+      "key": "library/assets/03026011239d53f9076999b103cdf5c682c81ed5487585fba0a2f8757580e357.epub",
+      "url": "https://assets.acuity.institute/library/assets/03026011239d53f9076999b103cdf5c682c81ed5487585fba0a2f8757580e357.epub",
+      "legacyUrl": "/library/books/Philosophy/Stoicism/epictetus-discourses-long-1900.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "epictetus-discourses-long-1900"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:29:49.125100+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "2b4b37859d62e6db11c653c3c836aac99ebe2cc29250433289bd3346177f4092",
+      "bytes": 30641221,
+      "key": "library/assets/2b4b37859d62e6db11c653c3c836aac99ebe2cc29250433289bd3346177f4092.pdf",
+      "url": "https://assets.acuity.institute/library/assets/2b4b37859d62e6db11c653c3c836aac99ebe2cc29250433289bd3346177f4092.pdf",
+      "legacyUrl": "/library/books/Philosophy/Stoicism/epictetus-discourses-long-1900.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "epictetus-discourses-long-1900"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:35:38.817736+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "1b7953e4e5876b1622ee1f7b93733ec74df1d5e5aea33d3047ad229b1678b8f5",
+      "bytes": 53299168,
+      "key": "library/assets/1b7953e4e5876b1622ee1f7b93733ec74df1d5e5aea33d3047ad229b1678b8f5.epub",
+      "url": "https://assets.acuity.institute/library/assets/1b7953e4e5876b1622ee1f7b93733ec74df1d5e5aea33d3047ad229b1678b8f5.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/guyon-short-easy-method-brooke-1775.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "guyon-short-easy-method-brooke-1775"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:36:28.148355+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "e3cf60791faec8ad05bd686cf2016ef4514cc3fa33a1f9845c5f3dcc10134f2b",
+      "bytes": 42211716,
+      "key": "library/assets/e3cf60791faec8ad05bd686cf2016ef4514cc3fa33a1f9845c5f3dcc10134f2b.pdf",
+      "url": "https://assets.acuity.institute/library/assets/e3cf60791faec8ad05bd686cf2016ef4514cc3fa33a1f9845c5f3dcc10134f2b.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/guyon-short-easy-method-brooke-1775.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "guyon-short-easy-method-brooke-1775"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:36:17.241944+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "e0b5f502d8bff2627f3a4a50207eec88a26238e79576a7b38a63bd455d244485",
+      "bytes": 977037,
+      "key": "library/assets/e0b5f502d8bff2627f3a4a50207eec88a26238e79576a7b38a63bd455d244485.epub",
+      "url": "https://assets.acuity.institute/library/assets/e0b5f502d8bff2627f3a4a50207eec88a26238e79576a7b38a63bd455d244485.epub",
+      "legacyUrl": "/library/books/Philosophy/Neoplatonism/hermetica-scott-v2-1925.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "hermetica-scott-v2-1925"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:29:41.311625+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "5dd0f342d876821329e9cb7a2d2d7279a167e2d37dcb2ece81695f8c03547a17",
+      "bytes": 26731253,
+      "key": "library/assets/5dd0f342d876821329e9cb7a2d2d7279a167e2d37dcb2ece81695f8c03547a17.pdf",
+      "url": "https://assets.acuity.institute/library/assets/5dd0f342d876821329e9cb7a2d2d7279a167e2d37dcb2ece81695f8c03547a17.pdf",
+      "legacyUrl": "/library/books/Philosophy/Neoplatonism/hermetica-scott-v2-1925.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "hermetica-scott-v2-1925"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:35.612699+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "9d83aa3e96d0725e18509c6ba967d603de7d5751c0d0f21cf1cb75c0adb7991e",
+      "bytes": 517322,
+      "key": "library/assets/9d83aa3e96d0725e18509c6ba967d603de7d5751c0d0f21cf1cb75c0adb7991e.epub",
+      "url": "https://assets.acuity.institute/library/assets/9d83aa3e96d0725e18509c6ba967d603de7d5751c0d0f21cf1cb75c0adb7991e.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/hilton-scale-of-perfection-underhill-1923.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "hilton-scale-of-perfection-underhill-1923"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:29:31.394774+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "550b9e5e25909cfdaf4382a80877ea0f36451a7e6f83234961794bd54aaf1781",
+      "bytes": 16838985,
+      "key": "library/assets/550b9e5e25909cfdaf4382a80877ea0f36451a7e6f83234961794bd54aaf1781.pdf",
+      "url": "https://assets.acuity.institute/library/assets/550b9e5e25909cfdaf4382a80877ea0f36451a7e6f83234961794bd54aaf1781.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/hilton-scale-of-perfection-underhill-1923.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "hilton-scale-of-perfection-underhill-1923"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:33:08.041881+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "326d985efdf77bd21fe25286b9abf41d9be8dbac1c63a9652a841d5a2f072c3c",
+      "bytes": 66720224,
+      "key": "library/assets/326d985efdf77bd21fe25286b9abf41d9be8dbac1c63a9652a841d5a2f072c3c.epub",
+      "url": "https://assets.acuity.institute/library/assets/326d985efdf77bd21fe25286b9abf41d9be8dbac1c63a9652a841d5a2f072c3c.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/ignatius-spiritual-exercises-mullan-1914.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "ignatius-spiritual-exercises-mullan-1914"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:36:28.080039+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "638efa98cba848ff9928aa5c5e40bdb25ed1c0aa9e7de80ee97a21a1cddadb44",
+      "bytes": 3056595,
+      "key": "library/assets/638efa98cba848ff9928aa5c5e40bdb25ed1c0aa9e7de80ee97a21a1cddadb44.pdf",
+      "url": "https://assets.acuity.institute/library/assets/638efa98cba848ff9928aa5c5e40bdb25ed1c0aa9e7de80ee97a21a1cddadb44.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/ignatius-spiritual-exercises-mullan-1914.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "ignatius-spiritual-exercises-mullan-1914"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:30:15.300637+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "a31084a2dc068d7309b2e3da9ee323d81f27d4d8424d969e2891722be1429c45",
+      "bytes": 50132181,
+      "key": "library/assets/a31084a2dc068d7309b2e3da9ee323d81f27d4d8424d969e2891722be1429c45.epub",
+      "url": "https://assets.acuity.institute/library/assets/a31084a2dc068d7309b2e3da9ee323d81f27d4d8424d969e2891722be1429c45.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/imitation-of-christ-benham-1886.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "imitation-of-christ-benham-1886"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:01.920763+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "b486f63cdf5255bb12e7997b0e80dfd3f9fb4e750db2d15babebb171fc2f2977",
+      "bytes": 50092833,
+      "key": "library/assets/b486f63cdf5255bb12e7997b0e80dfd3f9fb4e750db2d15babebb171fc2f2977.pdf",
+      "url": "https://assets.acuity.institute/library/assets/b486f63cdf5255bb12e7997b0e80dfd3f9fb4e750db2d15babebb171fc2f2977.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/imitation-of-christ-benham-1886.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "imitation-of-christ-benham-1886"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:49:15.287Z",
+      "verification": "independent R2 object GET byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "396ab70abf10ac9bf13c752e0332f7cabb38ebef08ab57ec1280a2488e26dd06",
+      "bytes": 9060311,
+      "key": "library/assets/396ab70abf10ac9bf13c752e0332f7cabb38ebef08ab57ec1280a2488e26dd06.pdf",
+      "url": "https://assets.acuity.institute/library/assets/396ab70abf10ac9bf13c752e0332f7cabb38ebef08ab57ec1280a2488e26dd06.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/inge-christian-mysticism-1899.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "inge-christian-mysticism-1899"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:32:19.659491+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "e5439228b168852aba7591d4be29b34eaa4a12511a7a2d7dd2d394feaa610a1a",
+      "bytes": 22386724,
+      "key": "library/assets/e5439228b168852aba7591d4be29b34eaa4a12511a7a2d7dd2d394feaa610a1a.pdf",
+      "url": "https://assets.acuity.institute/library/assets/e5439228b168852aba7591d4be29b34eaa4a12511a7a2d7dd2d394feaa610a1a.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/james-varieties-religious-experience-1902.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "james-varieties-religious-experience-1902"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:35:31.683173+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "5c2685753b2f97cd0e0eb832d96a75513e6ad2bc7137a7e8b7f53d486309f355",
+      "bytes": 16348280,
+      "key": "library/assets/5c2685753b2f97cd0e0eb832d96a75513e6ad2bc7137a7e8b7f53d486309f355.pdf",
+      "url": "https://assets.acuity.institute/library/assets/5c2685753b2f97cd0e0eb832d96a75513e6ad2bc7137a7e8b7f53d486309f355.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/law-spirit-of-prayer-1823.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "law-spirit-of-prayer-1823"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:00.629203+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "78eff815d01cbf0baab6b653bacd6a1820c54173f519f0ce7ff0c7ffe108e34b",
+      "bytes": 16799844,
+      "key": "library/assets/78eff815d01cbf0baab6b653bacd6a1820c54173f519f0ce7ff0c7ffe108e34b.pdf",
+      "url": "https://assets.acuity.institute/library/assets/78eff815d01cbf0baab6b653bacd6a1820c54173f519f0ce7ff0c7ffe108e34b.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/law-works-vol7-1892.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "law-works-vol7-1892"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:28.813002+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "9b8a97944cf6503b86653b21661a2f38a03d79347a8c1ec8759c98d24d14eac3",
+      "bytes": 15782011,
+      "key": "library/assets/9b8a97944cf6503b86653b21661a2f38a03d79347a8c1ec8759c98d24d14eac3.pdf",
+      "url": "https://assets.acuity.institute/library/assets/9b8a97944cf6503b86653b21661a2f38a03d79347a8c1ec8759c98d24d14eac3.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/law-works-vol8-1892.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "law-works-vol8-1892"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:27.888004+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "0e2d41985343bf5ec81d50b0170979acb7b3695ef6d71186e52ee0a63f7e23e1",
+      "bytes": 11042312,
+      "key": "library/assets/0e2d41985343bf5ec81d50b0170979acb7b3695ef6d71186e52ee0a63f7e23e1.epub",
+      "url": "https://assets.acuity.institute/library/assets/0e2d41985343bf5ec81d50b0170979acb7b3695ef6d71186e52ee0a63f7e23e1.epub",
+      "legacyUrl": "/library/books/Esoteric/Occult/levi-transcendental-magic-waite-1896.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "levi-transcendental-magic-waite-1896"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:18.637943+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "db8e9a7fb6045b074f838661e753942da5944eb79abaeb7c94f18d9559d436be",
+      "bytes": 22818454,
+      "key": "library/assets/db8e9a7fb6045b074f838661e753942da5944eb79abaeb7c94f18d9559d436be.pdf",
+      "url": "https://assets.acuity.institute/library/assets/db8e9a7fb6045b074f838661e753942da5944eb79abaeb7c94f18d9559d436be.pdf",
+      "legacyUrl": "/library/books/Esoteric/Occult/levi-transcendental-magic-waite-1896.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "levi-transcendental-magic-waite-1896"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:04.326948+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "523b3ade658933dd06a4abebc121ca5d68bf3a3a60eb345cb1b40a361774351d",
+      "bytes": 3174942,
+      "key": "library/assets/523b3ade658933dd06a4abebc121ca5d68bf3a3a60eb345cb1b40a361774351d.epub",
+      "url": "https://assets.acuity.institute/library/assets/523b3ade658933dd06a4abebc121ca5d68bf3a3a60eb345cb1b40a361774351d.epub",
+      "legacyUrl": "/library/books/Esoteric/Sufism/mathnawi-nicholson-v3-1929.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "mathnawi-nicholson-v3-1929"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:33:04.264776+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "5a9a8d1ad9c26ce5af1ee3f40d4959ee6ecf802622ad6c12869b9d0ca6b2f284",
+      "bytes": 65478728,
+      "key": "library/assets/5a9a8d1ad9c26ce5af1ee3f40d4959ee6ecf802622ad6c12869b9d0ca6b2f284.pdf",
+      "url": "https://assets.acuity.institute/library/assets/5a9a8d1ad9c26ce5af1ee3f40d4959ee6ecf802622ad6c12869b9d0ca6b2f284.pdf",
+      "legacyUrl": "/library/books/Esoteric/Sufism/mathnawi-nicholson-v3-1929.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "mathnawi-nicholson-v3-1929"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:41:47.166Z",
+      "verification": "independent R2 object GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "e8006bff2247c486c8fc4db5275df08b9a00bd5eef5bc6f655d4318ec25c160a",
+      "bytes": 1508544,
+      "key": "library/assets/e8006bff2247c486c8fc4db5275df08b9a00bd5eef5bc6f655d4318ec25c160a.epub",
+      "url": "https://assets.acuity.institute/library/assets/e8006bff2247c486c8fc4db5275df08b9a00bd5eef5bc6f655d4318ec25c160a.epub",
+      "legacyUrl": "/library/books/Scripture/Judaism/philo-works-yonge-v2-1854.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "philo-works-yonge-v2-1854"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:33:34.981105+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "abf216511751117e3e914bc10b9cec83abf56c1c91a0bc5cb13654000fa7a59e",
+      "bytes": 32507036,
+      "key": "library/assets/abf216511751117e3e914bc10b9cec83abf56c1c91a0bc5cb13654000fa7a59e.pdf",
+      "url": "https://assets.acuity.institute/library/assets/abf216511751117e3e914bc10b9cec83abf56c1c91a0bc5cb13654000fa7a59e.pdf",
+      "legacyUrl": "/library/books/Scripture/Judaism/philo-works-yonge-v2-1854.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "philo-works-yonge-v2-1854"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:36:55.663895+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "c9ccebf0211165eb73ad73c0b88479bd7582631e69a9f847a457687bc7387108",
+      "bytes": 1619098,
+      "key": "library/assets/c9ccebf0211165eb73ad73c0b88479bd7582631e69a9f847a457687bc7387108.epub",
+      "url": "https://assets.acuity.institute/library/assets/c9ccebf0211165eb73ad73c0b88479bd7582631e69a9f847a457687bc7387108.epub",
+      "legacyUrl": "/library/books/Scripture/Judaism/philo-works-yonge-v3-1855.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "philo-works-yonge-v3-1855"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:28.441521+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "7ff415a256e4262083aa259015a5ef32c7aa7ba4e6ba565893e1142d50eca5d4",
+      "bytes": 34105924,
+      "key": "library/assets/7ff415a256e4262083aa259015a5ef32c7aa7ba4e6ba565893e1142d50eca5d4.pdf",
+      "url": "https://assets.acuity.institute/library/assets/7ff415a256e4262083aa259015a5ef32c7aa7ba4e6ba565893e1142d50eca5d4.pdf",
+      "legacyUrl": "/library/books/Scripture/Judaism/philo-works-yonge-v3-1855.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "philo-works-yonge-v3-1855"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:41:49.305Z",
+      "verification": "independent R2 object GET byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "c023bedbabfc424a61ed3a2899fd8badf9c14f851e917a5091abce8a2008b554",
+      "bytes": 1719160,
+      "key": "library/assets/c023bedbabfc424a61ed3a2899fd8badf9c14f851e917a5091abce8a2008b554.epub",
+      "url": "https://assets.acuity.institute/library/assets/c023bedbabfc424a61ed3a2899fd8badf9c14f851e917a5091abce8a2008b554.epub",
+      "legacyUrl": "/library/books/Scripture/Judaism/philo-works-yonge-v4-1855.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "philo-works-yonge-v4-1855"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:38.286984+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "622f706d276ac04b9a7657f822eada1801ab9db8a804b76e8b98fed6988ececc",
+      "bytes": 30185642,
+      "key": "library/assets/622f706d276ac04b9a7657f822eada1801ab9db8a804b76e8b98fed6988ececc.pdf",
+      "url": "https://assets.acuity.institute/library/assets/622f706d276ac04b9a7657f822eada1801ab9db8a804b76e8b98fed6988ececc.pdf",
+      "legacyUrl": "/library/books/Scripture/Judaism/philo-works-yonge-v4-1855.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "philo-works-yonge-v4-1855"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:00.609579+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "21ebf237496cfa2529dffd03269e3c958782af212fec394c27e9e7978fb9e11e",
+      "bytes": 28402216,
+      "key": "library/assets/21ebf237496cfa2529dffd03269e3c958782af212fec394c27e9e7978fb9e11e.pdf",
+      "url": "https://assets.acuity.institute/library/assets/21ebf237496cfa2529dffd03269e3c958782af212fec394c27e9e7978fb9e11e.pdf",
+      "legacyUrl": "/library/books/Philosophy/Ancient%20Greek%20Philosophy/plato-dialogues-jowett-v2-1892.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "plato-dialogues-jowett-v2-1892"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:08.521590+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "08629b99932c2d256f27160c36008e6ba93a17a8819a1f9d4f1a911d9eefb517",
+      "bytes": 895162,
+      "key": "library/assets/08629b99932c2d256f27160c36008e6ba93a17a8819a1f9d4f1a911d9eefb517.epub",
+      "url": "https://assets.acuity.institute/library/assets/08629b99932c2d256f27160c36008e6ba93a17a8819a1f9d4f1a911d9eefb517.epub",
+      "legacyUrl": "/library/books/Philosophy/Stoicism/seneca-epistles-morell-1786-v1.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "seneca-epistles-morell-1786-v1"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:44.979440+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "7a5e66ea1314d9ad6e83047e64b3f620af3ab2ffaefa051bfafe29b97b5e04a4",
+      "bytes": 956926,
+      "key": "library/assets/7a5e66ea1314d9ad6e83047e64b3f620af3ab2ffaefa051bfafe29b97b5e04a4.epub",
+      "url": "https://assets.acuity.institute/library/assets/7a5e66ea1314d9ad6e83047e64b3f620af3ab2ffaefa051bfafe29b97b5e04a4.epub",
+      "legacyUrl": "/library/books/Philosophy/Stoicism/seneca-epistles-morell-1786-v2.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "seneca-epistles-morell-1786-v2"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:48.581097+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "42e6402d646773e7e0ff63dd3d08e028d590bfd5758f497bed9ac1874367cbbe",
+      "bytes": 1479909,
+      "key": "library/assets/42e6402d646773e7e0ff63dd3d08e028d590bfd5758f497bed9ac1874367cbbe.pdf",
+      "url": "https://assets.acuity.institute/library/assets/42e6402d646773e7e0ff63dd3d08e028d590bfd5758f497bed9ac1874367cbbe.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/silesius-cherubic-wanderer-carus-1909.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "silesius-cherubic-wanderer-carus-1909"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:34:53.968017+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "9cd9dbdd79e17af9db15ffc58711700384c3abf3d0cf74f08a87c2a61d420fc2",
+      "bytes": 28461684,
+      "key": "library/assets/9cd9dbdd79e17af9db15ffc58711700384c3abf3d0cf74f08a87c2a61d420fc2.pdf",
+      "url": "https://assets.acuity.institute/library/assets/9cd9dbdd79e17af9db15ffc58711700384c3abf3d0cf74f08a87c2a61d420fc2.pdf",
+      "legacyUrl": "/library/books/Philosophy/Rationalism/spinoza-ethics-elwes-v1-1901.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "spinoza-ethics-elwes-v1-1901"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:39:40.964694+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "b83df3f192e81ae19cde58743a3dbf201b612724b3942b08ebfdde997de4cd89",
+      "bytes": 2557336,
+      "key": "library/assets/b83df3f192e81ae19cde58743a3dbf201b612724b3942b08ebfdde997de4cd89.epub",
+      "url": "https://assets.acuity.institute/library/assets/b83df3f192e81ae19cde58743a3dbf201b612724b3942b08ebfdde997de4cd89.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/swedenborg-divine-love-wisdom-wilkinson-1883.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "swedenborg-divine-love-wisdom-wilkinson-1883"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:35:21.340664+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "221709157a735c4fe5b88f5051e48df4ffb5a35a868d7bc995ae6e91ea9ff6eb",
+      "bytes": 23909538,
+      "key": "library/assets/221709157a735c4fe5b88f5051e48df4ffb5a35a868d7bc995ae6e91ea9ff6eb.pdf",
+      "url": "https://assets.acuity.institute/library/assets/221709157a735c4fe5b88f5051e48df4ffb5a35a868d7bc995ae6e91ea9ff6eb.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/swedenborg-divine-providence-wilkinson-1886.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "swedenborg-divine-providence-wilkinson-1886"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:21.589951+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "971ff032c752e6ae17d5b1c07bf5faff830b4955e580b6bb2253bcb7585f6fe8",
+      "bytes": 2869337,
+      "key": "library/assets/971ff032c752e6ae17d5b1c07bf5faff830b4955e580b6bb2253bcb7585f6fe8.epub",
+      "url": "https://assets.acuity.institute/library/assets/971ff032c752e6ae17d5b1c07bf5faff830b4955e580b6bb2253bcb7585f6fe8.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/teresa-interior-castle-stanbrook-1921.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "teresa-interior-castle-stanbrook-1921"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:35:53.753608+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "c795d843f48f15eb1ee6624c6f2a1e298287622b0dcf41c3d45e1d03465f31dc",
+      "bytes": 13668899,
+      "key": "library/assets/c795d843f48f15eb1ee6624c6f2a1e298287622b0dcf41c3d45e1d03465f31dc.pdf",
+      "url": "https://assets.acuity.institute/library/assets/c795d843f48f15eb1ee6624c6f2a1e298287622b0dcf41c3d45e1d03465f31dc.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/teresa-interior-castle-stanbrook-1921.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "teresa-interior-castle-stanbrook-1921"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:17.399040+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "078cc98b6ede8881d6b3ac843b62b3936dfe55cb0809274950b90fdd124f7841",
+      "bytes": 37799710,
+      "key": "library/assets/078cc98b6ede8881d6b3ac843b62b3936dfe55cb0809274950b90fdd124f7841.pdf",
+      "url": "https://assets.acuity.institute/library/assets/078cc98b6ede8881d6b3ac843b62b3936dfe55cb0809274950b90fdd124f7841.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/teresa-life-lewis-1904.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "teresa-life-lewis-1904"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:16.592661+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "b5ecc338753d4e31880d677a306df904a003bf1048977477605f16f17c0b92e4",
+      "bytes": 2075286,
+      "key": "library/assets/b5ecc338753d4e31880d677a306df904a003bf1048977477605f16f17c0b92e4.epub",
+      "url": "https://assets.acuity.institute/library/assets/b5ecc338753d4e31880d677a306df904a003bf1048977477605f16f17c0b92e4.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/teresa-way-of-perfection-stanbrook-1919.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "teresa-way-of-perfection-stanbrook-1919"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:19.255529+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "b9f86616785936be6cebd5131baca5941788c4a1b86ff2d8d1fe4d2e6ec0e5ca",
+      "bytes": 17482299,
+      "key": "library/assets/b9f86616785936be6cebd5131baca5941788c4a1b86ff2d8d1fe4d2e6ec0e5ca.pdf",
+      "url": "https://assets.acuity.institute/library/assets/b9f86616785936be6cebd5131baca5941788c4a1b86ff2d8d1fe4d2e6ec0e5ca.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/teresa-way-of-perfection-stanbrook-1919.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "teresa-way-of-perfection-stanbrook-1919"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:35.875529+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "0f73ffab9efdf13ed2e3c5ac0f7021787c767687164c60899f0db81932dc9a89",
+      "bytes": 2010637,
+      "key": "library/assets/0f73ffab9efdf13ed2e3c5ac0f7021787c767687164c60899f0db81932dc9a89.epub",
+      "url": "https://assets.acuity.institute/library/assets/0f73ffab9efdf13ed2e3c5ac0f7021787c767687164c60899f0db81932dc9a89.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/traherne-centuries-dobell-1908.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "traherne-centuries-dobell-1908"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:22.291651+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "3f861908f60886356fc72aebf84cc0ea956a5d73c4eaf797e3eedaf66eae52c1",
+      "bytes": 17776690,
+      "key": "library/assets/3f861908f60886356fc72aebf84cc0ea956a5d73c4eaf797e3eedaf66eae52c1.pdf",
+      "url": "https://assets.acuity.institute/library/assets/3f861908f60886356fc72aebf84cc0ea956a5d73c4eaf797e3eedaf66eae52c1.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/traherne-centuries-dobell-1908.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "traherne-centuries-dobell-1908"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:42.121730+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "291a7d9eb5a952c2554fd8070e63734c09ef4e5bdb3fd374ab83d1903ff466c2",
+      "bytes": 3609795,
+      "key": "library/assets/291a7d9eb5a952c2554fd8070e63734c09ef4e5bdb3fd374ab83d1903ff466c2.epub",
+      "url": "https://assets.acuity.institute/library/assets/291a7d9eb5a952c2554fd8070e63734c09ef4e5bdb3fd374ab83d1903ff466c2.epub",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/underhill-mysticism-1912.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "underhill-mysticism-1912"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:39:57.498560+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "ff400a0966b12c779d3d855dfecf6e08a4768fb49362ee36c081271e243d3cfa",
+      "bytes": 52633945,
+      "key": "library/assets/ff400a0966b12c779d3d855dfecf6e08a4768fb49362ee36c081271e243d3cfa.pdf",
+      "url": "https://assets.acuity.institute/library/assets/ff400a0966b12c779d3d855dfecf6e08a4768fb49362ee36c081271e243d3cfa.pdf",
+      "legacyUrl": "/library/books/Esoteric/Christian%20Mysticism/underhill-mysticism-1912.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "underhill-mysticism-1912"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:38:48.818612+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "epub",
+      "sha256": "d86392a7335c4ce226b8fe500741d78e7fe23d72bf1e18da7f23ba287d45bc37",
+      "bytes": 4031306,
+      "key": "library/assets/d86392a7335c4ce226b8fe500741d78e7fe23d72bf1e18da7f23ba287d45bc37.epub",
+      "url": "https://assets.acuity.institute/library/assets/d86392a7335c4ce226b8fe500741d78e7fe23d72bf1e18da7f23ba287d45bc37.epub",
+      "legacyUrl": "/library/books/Esoteric/Occult/waite-real-history-rosicrucians-1887.epub",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "waite-real-history-rosicrucians-1887"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:40:26.899005+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
+    },
+    {
+      "format": "pdf",
+      "sha256": "65b8ef4542a56b980769f59cd623d91ff6a438190bc2781d52245d7b72f7c9cb",
+      "bytes": 23883048,
+      "key": "library/assets/65b8ef4542a56b980769f59cd623d91ff6a438190bc2781d52245d7b72f7c9cb.pdf",
+      "url": "https://assets.acuity.institute/library/assets/65b8ef4542a56b980769f59cd623d91ff6a438190bc2781d52245d7b72f7c9cb.pdf",
+      "legacyUrl": "/library/books/Esoteric/Occult/waite-real-history-rosicrucians-1887.pdf",
+      "visibility": "public",
+      "role": "source",
+      "recordIds": [
+        "waite-real-history-rosicrucians-1887"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-11-18T11:40:32.488341+00:00",
+      "verification": "independent R2 GET stream byte count and SHA-256"
     }
   ],
-  "release": "2026-11-16-r2-v4",
+  "release": "2026-11-18-r2-v5",
   "publication": {
     "confirmedAt": "2026-10-27T13:47:54.019Z",
     "scope": "All 617 unique approved corpus files are public; user explicitly confirmed the 391 previously flagged files."

@@ -1,0 +1,22 @@
+{
+  "id": "hermetica-scott-v2-1925",
+  "title": "Hermetica, Vol. 2",
+  "author": "Corpus Hermeticum",
+  "language": "English",
+  "period": "1925",
+  "description": "Walter Scott’s second volume of Hermetica provides notes and commentary on the Corpus Hermeticum and other writings attributed to Hermes Trismegistus.",
+  "editionNote": "1925 edition. Oxford: Clarendon Press. Edition credit: Walter Scott (1866–1925).",
+  "rights": "Public-domain historical edition. Source credit and notices are retained.",
+  "sourceUrl": "https://archive.org/details/ScottHermeticaVolTwo",
+  "tags": [
+    "Neoplatonism",
+    "Corpus Hermeticum"
+  ],
+  "accent": "sage",
+  "translator": "Walter Scott",
+  "relatedEditionIds": [
+    "hermetica-vol-1",
+    "hermetica-vol-3"
+  ],
+  "pages": 488
+}

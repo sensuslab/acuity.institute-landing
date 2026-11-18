@@ -67,6 +67,13 @@ test('Crossed emphasis tags recover without discarding text after the XML error'
   assert.equal(document.getElementById('later').textContent,'Later passage');
 });
 
+test('Recovery drops malformed OCR names and preserves readable content', () => {
+  const source = xhtml('<p><span t::="" j:i="">First words</span> and <tst:>the rest</tst:> of the passage.<!-- OCR--comment --></p>');
+  const document = new DOMParser().parseFromString(normalizeEpubXhtml(source), 'application/xhtml+xml');
+  assert.doesNotThrow(() => assertReadableEpubDocument(document));
+  assert.equal(document.querySelector('p').textContent, 'First words and the rest of the passage.');
+});
+
 test('Recovery retains EPUB namespaces and attributes, while valid XHTML stays byte-for-byte unchanged',()=>{
   const source=xhtml('<section epub:type="chapter" id="one"><h1>One & Two</h1></section>').replace('<html xmlns=', '<html xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xmlns=');
   const repaired=normalizeEpubXhtml(source);
@@ -128,6 +135,28 @@ test('EPUB.js renders the complete repaired chapter through its real archive and
     assert.doesNotMatch(markup,/<parsererror/);
     assert.equal(publication.navigation.toc[0].href,'chapter.xhtml');
   }finally{publication.destroy();}
+});
+
+test('An omitted cover does not block EPUB.js from opening the first real chapter', async () => {
+  const zip = await JSZip.loadAsync(await epub(xhtml('<p>First chapter text</p>')));
+  zip.file('META-INF/container.xml', '<container xmlns="urn:oasis:names:tc:opendocument:xmlns:container" version="1.0"><rootfiles><rootfile full-path="EPUB/content.opf" media-type="application/oebps-package+xml"/></rootfiles></container>');
+  const packageXml = '<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:identifier id="uid">reader-optional-cover</dc:identifier><dc:title>Optional cover</dc:title></metadata><manifest><item id="chapter" href="chapter.xhtml" media-type="application/xhtml+xml"/></manifest><spine><itemref idref="cover"/><itemref idref="chapter"/></spine></package>';
+  zip.file('EPUB/content.opf', packageXml);
+  const original = await zip.generateAsync({ type: 'arraybuffer' });
+  const publication = ePub(await prepareEpubForReader(original), { replacements: 'none' });
+  try {
+    await publication.ready;
+    assert.match(await publication.spine.get().render(publication.load.bind(publication)), /First chapter text/);
+    const source = await JSZip.loadAsync(original);
+    assert.equal(await source.file('EPUB/content.opf').async('string'), packageXml);
+  } finally {
+    publication.destroy();
+  }
+
+  zip.file('EPUB/content.opf', packageXml.replace('<manifest>', '<manifest><item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>'));
+  zip.file('EPUB/cover.xhtml', xhtml('<p>Real cover</p>'));
+  const valid = await zip.generateAsync({ type: 'arraybuffer' });
+  assert.equal(await prepareEpubForReader(valid), valid);
 });
 
 test('Remaining native XML parser errors are surfaced instead of displayed as book content',()=>{
