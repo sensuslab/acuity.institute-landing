@@ -21,6 +21,9 @@ export function sanitizeEpubXml(source:string):string{
     });
 }
 
+const namePart = String.raw`[_\p{L}](?:[._\p{L}\p{N}\p{M}\u00B7\u203F\u2040-]|\u200C|\u200D)*`;
+const qualifiedName = new RegExp(`^${namePart}(?::${namePart})?$`, 'u');
+
 function hasXmlError(document:Document){return document.getElementsByTagName('parsererror').length>0;}
 
 export function normalizeEpubXhtml(source:string):string{
@@ -32,17 +35,63 @@ export function normalizeEpubXhtml(source:string):string{
   const document=parser.parseFromString(source,'text/html');
   // HTML parsing leaves xmlns attributes outside the XMLNS namespace. Bind
   // them correctly so XMLSerializer does not emit duplicate declarations.
-  document.querySelectorAll('*').forEach(element=>{
-    for(const attribute of Array.from(element.attributes)){
-      if(attribute.name==='xmlns'||attribute.name.startsWith('xmlns:')){
+  const elements = Array.from(document.querySelectorAll('*'));
+  for (const element of elements) {
+    for (const attribute of Array.from(element.attributes)) {
+      if ((attribute.name === 'xmlns' || attribute.name.startsWith('xmlns:')) && qualifiedName.test(attribute.name)) {
         element.removeAttribute(attribute.name);
-        element.setAttributeNS('http://www.w3.org/2000/xmlns/',attribute.name,attribute.value);
+        element.setAttributeNS('http://www.w3.org/2000/xmlns/', attribute.name, attribute.value);
       }
     }
-  });
+  }
+
+  const serializableName = (name: string, element: Element) => {
+    if (!qualifiedName.test(name)) return false;
+    const separator = name.indexOf(':');
+    if (separator < 0) return true;
+    const prefix = name.slice(0, separator);
+    return prefix === 'xml' || prefix === 'xmlns' || !!element.lookupNamespaceURI(prefix);
+  };
+
+  // OCR can end up as tag and attribute names that the HTML parser accepts.
+  // Drop invalid attributes and retain the children of unrecognizable tags.
+  for (const element of elements) {
+    if (!serializableName(element.localName, element)) {
+      element.replaceWith(...element.childNodes);
+      continue;
+    }
+    for (const attribute of Array.from(element.attributes)) {
+      if (!serializableName(attribute.name, element)) element.removeAttribute(attribute.name);
+    }
+  }
+  const comments = document.createTreeWalker(document, 128); // NodeFilter.SHOW_COMMENT
+  while (comments.nextNode()) {
+    const comment = comments.currentNode as Comment;
+    comment.data = comment.data.replace(/-(?=-|$)/g, '- ');
+  }
   const repaired=new XMLSerializer().serializeToString(document);
   assertReadableEpubDocument(parser.parseFromString(repaired,'application/xhtml+xml'));
   return repaired;
+}
+
+function normalizeEpubPackage(source: string): string {
+  const document = new DOMParser().parseFromString(source, 'application/xml');
+  if (hasXmlError(document)) return source;
+
+  const packageNamespace = document.documentElement.namespaceURI;
+  const manifest = document.getElementsByTagNameNS(packageNamespace, 'manifest')[0];
+  const spine = document.getElementsByTagNameNS(packageNamespace, 'spine')[0];
+  if (!manifest || !spine) return source;
+
+  const manifestIds = new Set(Array.from(manifest.children, item => item.getAttribute('id')));
+  const readingOrder = Array.from(spine.getElementsByTagNameNS(packageNamespace, 'itemref'));
+  if (manifestIds.has('cover') || !readingOrder.some(item => manifestIds.has(item.getAttribute('idref')))) return source;
+
+  // Some Internet Archive editions list an omitted cover before the first real page.
+  const missingCovers = readingOrder.filter(item => item.getAttribute('idref') === 'cover');
+  if (!missingCovers.length) return source;
+  missingCovers.forEach(item => item.remove());
+  return new XMLSerializer().serializeToString(document);
 }
 
 export async function prepareEpubForReader(bytes:ArrayBuffer):Promise<ArrayBuffer>{
@@ -52,7 +101,9 @@ export async function prepareEpubForReader(bytes:ArrayBuffer):Promise<ArrayBuffe
     if(entry.dir||!/\.(?:xhtml|html?|xml|opf|ncx|svg)$/i.test(entry.name))continue;
     const source=await entry.async('string');
     const sanitized=sanitizeEpubXml(source);
-    const repaired=/\.(?:xhtml|html?)$/i.test(entry.name)?normalizeEpubXhtml(sanitized):sanitized;
+    let repaired = sanitized;
+    if (/\.(?:xhtml|html?)$/i.test(entry.name)) repaired = normalizeEpubXhtml(sanitized);
+    if (/\.opf$/i.test(entry.name)) repaired = normalizeEpubPackage(sanitized);
     if(source!==repaired){archive.file(entry.name,repaired,{createFolders:false});changed=true;}
   }
   // Preserve the original bytes for well-formed editions. Repaired editions
